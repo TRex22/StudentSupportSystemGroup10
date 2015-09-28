@@ -14,15 +14,21 @@ namespace SSS
     {
 
         //global vars
-        String sUser = "";
-        String sPassword = "";
+        readonly string _sUser;
+        string _sPassword;
+        readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
         public Coordinator(String sUsr, String sPsswrd)
         {
             InitializeComponent();
-            sUser = sUsr;
-            sPassword = sPsswrd;
-            lblCoordinatorName.Text = "Gerhard Snell - " + sUser;
+            _sUser = sUsr;
+            _sPassword = sPsswrd;
+            lblCoordinatorName.Text = "Gerhard Snell - " + _sUser;
             tmrSecond.Start();
+
+            //init internal window
+            _registerStudentModal.TopLevel = false;
+            _registerStudentModal.AutoScroll = true;
+            this.panel7.Controls.Add(_registerStudentModal);
         }
 
         private void Coordinator_Load(object sender, EventArgs e)
@@ -46,6 +52,49 @@ namespace SSS
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Show();
+            //TODO Add hide for other modals
+        }
+
+        private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+            //TODO add show for tutor modal
+        }
+
+        private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+        }
+
+        private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+        }
+
+        private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+        }
+
+        private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _registerStudentModal.Hide();
+            //TODO Add logout
         }
     }
 }

@@ -33,6 +33,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +43,8 @@
             this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationFrequencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorTrainingStatusAndRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lowActivityRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
@@ -58,14 +63,11 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lowActivityRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.menuStrip9.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip4.SuspendLayout();
@@ -75,8 +77,6 @@
             this.menuStrip8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.menuStrip9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,6 +126,32 @@
             this.panel6.Size = new System.Drawing.Size(243, 539);
             this.panel6.TabIndex = 1;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.menuStrip9);
+            this.panel8.Location = new System.Drawing.Point(3, 507);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(235, 31);
+            this.panel8.TabIndex = 9;
+            // 
+            // menuStrip9
+            // 
+            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem});
+            this.menuStrip9.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip9.Name = "menuStrip9";
+            this.menuStrip9.Size = new System.Drawing.Size(235, 27);
+            this.menuStrip9.TabIndex = 0;
+            this.menuStrip9.Text = "menuStrip9";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,30 +184,43 @@
             this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
             this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
             this.generateReportToolStripMenuItem.Text = "Generate Report";
+            this.generateReportToolStripMenuItem.Click += new System.EventHandler(this.generateReportToolStripMenuItem_Click);
             // 
             // studentDisengagementToolStripMenuItem
             // 
             this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
-            this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.studentDisengagementToolStripMenuItem.Text = "Student Disengagement";
             // 
             // courseDisengagementToolStripMenuItem
             // 
             this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
-            this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.courseDisengagementToolStripMenuItem.Text = "Course Disengagement";
             // 
             // lowTutorRatingsToolStripMenuItem
             // 
             this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
-            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.lowTutorRatingsToolStripMenuItem.Text = "Low Tutor Ratings";
             // 
             // consultationFrequencyToolStripMenuItem
             // 
             this.consultationFrequencyToolStripMenuItem.Name = "consultationFrequencyToolStripMenuItem";
-            this.consultationFrequencyToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.consultationFrequencyToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.consultationFrequencyToolStripMenuItem.Text = "Consultation Frequency";
+            // 
+            // tutorTrainingStatusAndRatingsToolStripMenuItem
+            // 
+            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Name = "tutorTrainingStatusAndRatingsToolStripMenuItem";
+            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Text = "Tutor Training Status and Ratings";
+            // 
+            // lowActivityRatingsToolStripMenuItem
+            // 
+            this.lowActivityRatingsToolStripMenuItem.Name = "lowActivityRatingsToolStripMenuItem";
+            this.lowActivityRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.lowActivityRatingsToolStripMenuItem.Text = "Low Activity Ratings";
             // 
             // menuStrip2
             // 
@@ -199,6 +238,7 @@
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // menuStrip4
             // 
@@ -216,6 +256,7 @@
             this.assignTutorToolStripMenuItem.Name = "assignTutorToolStripMenuItem";
             this.assignTutorToolStripMenuItem.Size = new System.Drawing.Size(97, 23);
             this.assignTutorToolStripMenuItem.Text = "AssignTutor";
+            this.assignTutorToolStripMenuItem.Click += new System.EventHandler(this.assignTutorToolStripMenuItem_Click);
             // 
             // menuStrip5
             // 
@@ -233,6 +274,7 @@
             this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
             this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(121, 23);
             this.updateStudentToolStripMenuItem.Text = "Update Student";
+            this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
             // 
             // menuStrip6
             // 
@@ -250,6 +292,7 @@
             this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
             this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
             this.updateTutorToolStripMenuItem.Text = "Update Tutor";
+            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // menuStrip7
             // 
@@ -267,6 +310,7 @@
             this.createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
             this.createStudentToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
             this.createStudentToolStripMenuItem.Text = "Register Student";
+            this.createStudentToolStripMenuItem.Click += new System.EventHandler(this.createStudentToolStripMenuItem_Click);
             // 
             // menuStrip8
             // 
@@ -284,6 +328,7 @@
             this.createTutorToolStripMenuItem.Name = "createTutorToolStripMenuItem";
             this.createTutorToolStripMenuItem.Size = new System.Drawing.Size(112, 23);
             this.createTutorToolStripMenuItem.Text = "Register Tutor";
+            this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
             // panel3
             // 
@@ -336,43 +381,6 @@
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.menuStrip9);
-            this.panel8.Location = new System.Drawing.Point(3, 507);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(235, 31);
-            this.panel8.TabIndex = 9;
-            // 
-            // menuStrip9
-            // 
-            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logoutToolStripMenuItem});
-            this.menuStrip9.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip9.Name = "menuStrip9";
-            this.menuStrip9.Size = new System.Drawing.Size(235, 27);
-            this.menuStrip9.TabIndex = 0;
-            this.menuStrip9.Text = "menuStrip9";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
-            // tutorTrainingStatusAndRatingsToolStripMenuItem
-            // 
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Name = "tutorTrainingStatusAndRatingsToolStripMenuItem";
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Text = "Tutor Training Status and Ratings";
-            // 
-            // lowActivityRatingsToolStripMenuItem
-            // 
-            this.lowActivityRatingsToolStripMenuItem.Name = "lowActivityRatingsToolStripMenuItem";
-            this.lowActivityRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.lowActivityRatingsToolStripMenuItem.Text = "Low Activity Ratings";
-            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +395,10 @@
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.menuStrip9.ResumeLayout(false);
+            this.menuStrip9.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -405,10 +417,6 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.menuStrip9.ResumeLayout(false);
-            this.menuStrip9.PerformLayout();
             this.ResumeLayout(false);
 
         }
