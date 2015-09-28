@@ -17,6 +17,12 @@ namespace SSS
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            //TODO check if this is what is wanted
+            Application.Exit();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string sInput = "";

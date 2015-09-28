@@ -35,6 +35,12 @@ namespace SSS
             _updateStudentAttendanceModal.Hide();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            //TODO check if this is what is wanted
+            Application.Exit();
+        }
+
         private void Tutor_Load(object sender, EventArgs e)
         {
             //TODO Select default modal

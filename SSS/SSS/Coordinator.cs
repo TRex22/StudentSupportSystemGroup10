@@ -28,6 +28,12 @@ namespace SSS
             initModals();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            //TODO check if this is what is wanted
+            Application.Exit();
+        }
+
         private void initModals()
         {
             //init internal window
