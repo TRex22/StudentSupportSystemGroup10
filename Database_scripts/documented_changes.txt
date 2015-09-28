@@ -35,3 +35,18 @@ IDS PKS for
 STUDENT
 TUTOR
 SSS COORDINATOR are not autonumbers anymore. Manual input of unique ids. Must be validated
+
+
+Some Questions:
+---------------
+1. fake ids?
+
+
+COMPLETE:
+student_activtity_description
+groups
+Sessions
+MORE consultations?
+More coordinators?
+enrollemnt
+attendance

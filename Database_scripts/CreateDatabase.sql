@@ -56,7 +56,7 @@ CREATE TABLE TUTOR (
 	tutor_id_passport nvarchar(255),
 	tutor_dateofbirth datetime,
 	tutor_emailaddress nvarchar(255),
-	tutor_cellnumber nvarchar(255),
+	tutor_cellnumber nvarchar(14),
 	tutor_trainingstatus bit 
 );
 GO
@@ -67,7 +67,7 @@ CREATE TABLE SSS_COORDINATOR(
 	coordinator_id_passport nvarchar(255),
 	coordinator_dateofbirth datetime,
 	coordinator_emailaddress nvarchar(255),
-	coordinator_cellnumber nvarchar(255)
+	coordinator_cellnumber nvarchar(14)
 );
 GO
 CREATE TABLE COURSE (
@@ -90,7 +90,7 @@ CREATE TABLE STUDENT (
 	student_id_passport nvarchar(255),
 	student_dateofbirth datetime,
 	student_emailaddress nvarchar(255),
-	student_mobilenumber nvarchar(255),
+	student_mobilenumber nvarchar(14),
 	student_yearofstudy int,
 	student_degreeprogramme nvarchar(255),
 	student_status nvarchar(255),
