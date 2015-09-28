@@ -50,7 +50,7 @@ CREATE TABLE STUDENT_ACTIVITY (
 );
 GO
 CREATE TABLE TUTOR (
-	tutor_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	tutor_id int NOT NULL PRIMARY KEY,
 	tutor_firstname nvarchar(255),
 	tutor_lastname nvarchar(255),
 	tutor_id_passport nvarchar(255),
@@ -61,7 +61,7 @@ CREATE TABLE TUTOR (
 );
 GO
 CREATE TABLE SSS_COORDINATOR(
-	coordinator_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	coordinator_id int NOT NULL PRIMARY KEY,
 	coordinator_firstname nvarchar(255),
 	coordinator_lastname nvarchar(255),
 	coordinator_id_passport nvarchar(255),
@@ -82,7 +82,7 @@ CREATE TABLE [GROUP] (
 );
 GO
 CREATE TABLE STUDENT (
-	student_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	student_id int NOT NULL PRIMARY KEY,
 	coordinator_id int FOREIGN KEY REFERENCES SSS_COORDINATOR(coordinator_id),
 	group_id int FOREIGN KEY REFERENCES [GROUP](group_id),
 	student_firstname nvarchar(255),
