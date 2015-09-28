@@ -1,0 +1,2 @@
+problem with login as primary form
+when other forms are closed program still runs in the background

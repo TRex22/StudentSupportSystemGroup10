@@ -50,11 +50,11 @@
     <Compile Include="Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateStudentAttendanceModal.cs">
+    <Compile Include="RegisterStudentAttendanceModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateStudentAttendanceModal.Designer.cs">
-      <DependentUpon>CreateStudentAttendanceModal.cs</DependentUpon>
+    <Compile Include="RegisterStudentAttendanceModal.Designer.cs">
+      <DependentUpon>RegisterStudentAttendanceModal.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterStudentModal.cs">
       <SubType>Form</SubType>
@@ -97,8 +97,8 @@
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateStudentAttendanceModal.resx">
-      <DependentUpon>CreateStudentAttendanceModal.cs</DependentUpon>
+    <EmbeddedResource Include="RegisterStudentAttendanceModal.resx">
+      <DependentUpon>RegisterStudentAttendanceModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterStudentModal.resx">
       <DependentUpon>RegisterStudentModal.cs</DependentUpon>

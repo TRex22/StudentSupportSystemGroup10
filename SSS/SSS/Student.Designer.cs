@@ -185,12 +185,14 @@
             this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
             this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.studentDisengagementToolStripMenuItem.Text = "Low Activity Ratings";
+            this.studentDisengagementToolStripMenuItem.Click += new System.EventHandler(this.studentDisengagementToolStripMenuItem_Click);
             // 
             // courseDisengagementToolStripMenuItem
             // 
             this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
             this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.courseDisengagementToolStripMenuItem.Text = "Low Tutor ratings";
+            this.courseDisengagementToolStripMenuItem.Click += new System.EventHandler(this.courseDisengagementToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -208,6 +210,7 @@
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(115, 23);
             this.searchToolStripMenuItem.Text = "View Schedule";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // menuStrip4
             // 
@@ -225,6 +228,7 @@
             this.assignTutorToolStripMenuItem.Name = "assignTutorToolStripMenuItem";
             this.assignTutorToolStripMenuItem.Size = new System.Drawing.Size(150, 23);
             this.assignTutorToolStripMenuItem.Text = "Create Consultation";
+            this.assignTutorToolStripMenuItem.Click += new System.EventHandler(this.assignTutorToolStripMenuItem_Click);
             // 
             // menuStrip5
             // 
@@ -242,6 +246,7 @@
             this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
             this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(113, 23);
             this.updateStudentToolStripMenuItem.Text = "Update Profile";
+            this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
             // 
             // menuStrip6
             // 
@@ -259,6 +264,7 @@
             this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
             this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(161, 23);
             this.updateTutorToolStripMenuItem.Text = "Register for Activities";
+            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // menuStrip7
             // 
@@ -276,6 +282,7 @@
             this.createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
             this.createStudentToolStripMenuItem.Size = new System.Drawing.Size(103, 23);
             this.createStudentToolStripMenuItem.Text = "Rate Activity";
+            this.createStudentToolStripMenuItem.Click += new System.EventHandler(this.createStudentToolStripMenuItem_Click);
             // 
             // menuStrip8
             // 
@@ -293,6 +300,7 @@
             this.createTutorToolStripMenuItem.Name = "createTutorToolStripMenuItem";
             this.createTutorToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
             this.createTutorToolStripMenuItem.Text = "Rate Tutor";
+            this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
             // panel2
             // 

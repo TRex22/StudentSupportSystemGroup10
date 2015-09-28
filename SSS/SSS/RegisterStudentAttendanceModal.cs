@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SSS
 {
-    public partial class CreateStudentAttendanceModal : Form
+    public partial class RegisterStudentAttendanceModal : Form
     {
-        public CreateStudentAttendanceModal()
+        public RegisterStudentAttendanceModal()
         {
             InitializeComponent();
         }

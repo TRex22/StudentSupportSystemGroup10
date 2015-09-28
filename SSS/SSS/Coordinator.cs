@@ -14,9 +14,10 @@ namespace SSS
     {
 
         //global vars
-        readonly string _sUser;
-        string _sPassword;
-        readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
+        private readonly string _sUser;
+        private string _sPassword;
+        private readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
+
         public Coordinator(String sUsr, String sPsswrd)
         {
             InitializeComponent();
@@ -24,7 +25,11 @@ namespace SSS
             _sPassword = sPsswrd;
             lblCoordinatorName.Text = "Gerhard Snell - " + _sUser;
             tmrSecond.Start();
+            initModals();
+        }
 
+        private void initModals()
+        {
             //init internal window
             _registerStudentModal.TopLevel = false;
             _registerStudentModal.AutoScroll = true;
@@ -33,7 +38,7 @@ namespace SSS
 
         private void Coordinator_Load(object sender, EventArgs e)
         {
-
+            //TODO Select default modal
         }
 
         private void tmrSecond_Tick(object sender, EventArgs e)

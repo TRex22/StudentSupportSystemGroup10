@@ -1,6 +1,6 @@
 ﻿namespace SSS
 {
-    partial class CreateStudentAttendanceModal
+    partial class RegisterStudentAttendanceModal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStudentAttendanceModal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterStudentAttendanceModal));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +39,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -144,14 +144,6 @@
             this.panel1.Size = new System.Drawing.Size(859, 474);
             this.panel1.TabIndex = 9;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(14, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(831, 63);
-            this.panel2.TabIndex = 10;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox1);
@@ -170,23 +162,6 @@
             this.panel3.Size = new System.Drawing.Size(828, 371);
             this.panel3.TabIndex = 11;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(633, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 19);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Search";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(725, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -197,21 +172,47 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // createstudentattendancemodal
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(725, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(633, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 19);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Search";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(14, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(831, 63);
+            this.panel2.TabIndex = 10;
+            // 
+            // RegisterStudentAttendanceModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 600);
             this.Controls.Add(this.panel1);
-            this.Name = "createstudentattendancemodal";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "RegisterStudentAttendanceModal";
             this.Text = "createstudentattendancemodal";
             this.Load += new System.EventHandler(this.createstudentattendancemodal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
