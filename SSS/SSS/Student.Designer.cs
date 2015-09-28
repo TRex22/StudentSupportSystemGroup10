@@ -257,8 +257,8 @@
             // updateTutorToolStripMenuItem
             // 
             this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
-            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
-            this.updateTutorToolStripMenuItem.Text = "Join Group";
+            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(161, 23);
+            this.updateTutorToolStripMenuItem.Text = "Register for Activities";
             // 
             // menuStrip7
             // 
