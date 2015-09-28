@@ -1,6 +1,6 @@
 ﻿namespace SSS
 {
-    partial class updatestudentattendancemodal
+    partial class UpdateStudentAttendanceModal
     {
         /// <summary>
         /// Required designer variable.

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SSS
 {
-    public partial class Splash_Screen : Form
+    public partial class SplashScreen : Form
     {
-        public Splash_Screen()
+        public SplashScreen()
         {
             InitializeComponent();
-        }
-
-        private void Splash_Screen_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

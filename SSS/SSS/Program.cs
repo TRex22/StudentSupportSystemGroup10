@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +17,19 @@ namespace SSS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ShowSplashScreen();
             Application.Run(new Login());
+        }
+
+        private static void ShowSplashScreen()
+        {
+            //Display splash screen
+            SplashScreen splashScreen = new SplashScreen();
+            splashScreen.Show();
+            Thread.Sleep(5000);//5 sec
+            splashScreen.Hide();
+            //then destory it
+            splashScreen.Dispose();
         }
     }
 }

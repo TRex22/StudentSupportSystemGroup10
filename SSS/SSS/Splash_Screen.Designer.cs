@@ -1,6 +1,6 @@
 ﻿namespace SSS
 {
-    partial class Splash_Screen
+    partial class SplashScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // Splash_Screen
+            // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(355, 345);
-            this.Name = "Splash_Screen";
+            this.ClientSize = new System.Drawing.Size(472, 506);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "SplashScreen";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
-            this.Load += new System.EventHandler(this.Splash_Screen_Load);
             this.ResumeLayout(false);
 
         }
