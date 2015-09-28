@@ -1,0 +1,31 @@
+RENAMED TABLES
+[GROUP]
+[SESSION]
+
+
+PROBLEMS FIXED:
+
+no to id:
+
+STUDENT_ACTIVITY
+	student_activity_id
+TUTOR
+	tutor_id
+SSS_COORDINATOR
+	coordinator_id
+GROUPtbl
+	group_id
+STUDENT
+	student_id
+	coordinator_id
+	group_id
+CONSULTATION
+	consultation_id
+	coordinator_id
+	student_id
+ATTENDANCE
+	student_id
+	student_activity_id
+SESSIONtbl
+	tutor_id
+	group_id
