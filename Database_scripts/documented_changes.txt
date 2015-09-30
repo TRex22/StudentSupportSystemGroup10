@@ -13,8 +13,9 @@ TUTOR
 	tutor_id
 SSS_COORDINATOR
 	coordinator_id
-GROUPtbl
+GROUP
 	group_id
+	group_name
 STUDENT
 	student_id
 	coordinator_id
@@ -26,7 +27,7 @@ CONSULTATION
 ATTENDANCE
 	student_id
 	student_activity_id
-SESSIONtbl
+SESSION
 	tutor_id
 	group_id
 
@@ -36,17 +37,28 @@ STUDENT
 TUTOR
 SSS COORDINATOR are not autonumbers anymore. Manual input of unique ids. Must be validated
 
+Added Tables:
+-------------
+GROUP_DATETIME
+GROUP_TIME (removed)
+SETTING - later on
+
 
 Some Questions:
 ---------------
 1. fake ids?
+2. Gamification
 
 
 COMPLETE:
 student_activtity_description
-groups
-Sessions
+groups -1
+Sessions -1
 MORE consultations?
 More coordinators?
 enrollemnt
 attendance
+GROUP_DATETIME -1
+
+
+
