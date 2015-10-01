@@ -37,8 +37,7 @@ namespace SSS
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            //TODO check if this is what is wanted
-            Application.Exit();
+            this.Owner.Show();
         }
 
         private void Tutor_Load(object sender, EventArgs e)
@@ -81,6 +80,12 @@ namespace SSS
         {
             //TODO Add hide for other modals
             _updateStudentAttendanceModal.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _updateStudentAttendanceModal.Close();
+            this.Close();
         }
     }
 }

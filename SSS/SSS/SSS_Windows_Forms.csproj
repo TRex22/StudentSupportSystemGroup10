@@ -50,6 +50,17 @@
     <Compile Include="Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </Compile>
+    <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="registerforactivitiesmodal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerforactivitiesmodal.Designer.cs">
+      <DependentUpon>registerforactivitiesmodal.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterStudentAttendanceModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +108,9 @@
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="registerforactivitiesmodal.resx">
+      <DependentUpon>registerforactivitiesmodal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterStudentAttendanceModal.resx">
       <DependentUpon>RegisterStudentAttendanceModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +141,17 @@
     <EmbeddedResource Include="UpdateStudentAttendanceModal.resx">
       <DependentUpon>UpdateStudentAttendanceModal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="IS2G10_DBSSSDataSet.xsc">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IS2G10_DBSSSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IS2G10_DBSSSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IS2G10_DBSSSDataSet.xss">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

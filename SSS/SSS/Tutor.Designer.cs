@@ -54,6 +54,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
+            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -66,6 +68,7 @@
             this.menuStrip7.SuspendLayout();
             this.menuStrip8.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -116,6 +119,7 @@
             this.panel6.Controls.Add(this.menuStrip6);
             this.panel6.Controls.Add(this.menuStrip7);
             this.panel6.Controls.Add(this.menuStrip8);
+            this.panel6.Controls.Add(this.menuStrip9);
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 539);
@@ -145,11 +149,12 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 189);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 24);
             this.menuStrip1.TabIndex = 0;
@@ -160,7 +165,7 @@
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generateReportToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 135);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 162);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(241, 27);
             this.menuStrip3.TabIndex = 2;
@@ -193,7 +198,7 @@
             this.menuStrip4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateStudentConsultationToolStripMenuItem});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 108);
+            this.menuStrip4.Location = new System.Drawing.Point(0, 135);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Size = new System.Drawing.Size(241, 27);
             this.menuStrip4.TabIndex = 4;
@@ -211,7 +216,7 @@
             this.menuStrip5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateStudentToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(0, 81);
+            this.menuStrip5.Location = new System.Drawing.Point(0, 108);
             this.menuStrip5.Name = "menuStrip5";
             this.menuStrip5.Size = new System.Drawing.Size(241, 27);
             this.menuStrip5.TabIndex = 5;
@@ -229,7 +234,7 @@
             this.menuStrip6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateTutorToolStripMenuItem});
-            this.menuStrip6.Location = new System.Drawing.Point(0, 54);
+            this.menuStrip6.Location = new System.Drawing.Point(0, 81);
             this.menuStrip6.Name = "menuStrip6";
             this.menuStrip6.Size = new System.Drawing.Size(241, 27);
             this.menuStrip6.TabIndex = 6;
@@ -247,7 +252,7 @@
             this.menuStrip7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createStudentToolStripMenuItem});
-            this.menuStrip7.Location = new System.Drawing.Point(0, 27);
+            this.menuStrip7.Location = new System.Drawing.Point(0, 54);
             this.menuStrip7.Name = "menuStrip7";
             this.menuStrip7.Size = new System.Drawing.Size(241, 27);
             this.menuStrip7.TabIndex = 7;
@@ -265,7 +270,7 @@
             this.menuStrip8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createTutorToolStripMenuItem});
-            this.menuStrip8.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip8.Location = new System.Drawing.Point(0, 27);
             this.menuStrip8.Name = "menuStrip8";
             this.menuStrip8.Size = new System.Drawing.Size(241, 27);
             this.menuStrip8.TabIndex = 8;
@@ -304,6 +309,23 @@
             this.lblCoordinatorName.Size = new System.Drawing.Size(0, 13);
             this.lblCoordinatorName.TabIndex = 0;
             // 
+            // menuStrip9
+            // 
+            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem});
+            this.menuStrip9.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip9.Name = "menuStrip9";
+            this.menuStrip9.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip9.TabIndex = 10;
+            this.menuStrip9.Text = "menuStrip9";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
             // Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +361,8 @@
             this.menuStrip8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip9.ResumeLayout(false);
+            this.menuStrip9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,5 +395,7 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tutorTrainingStatusAndRatingsToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip9;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
     }
 }

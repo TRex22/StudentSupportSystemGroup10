@@ -30,10 +30,7 @@ namespace SSS
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            //TODO check if this is what is wanted
-            /*Login.ActiveForm.Show();
-            this.Close();*/
-            Application.Exit();
+            this.Owner.Show();
         }
 
         private void initModals()
@@ -54,12 +51,6 @@ namespace SSS
           //  lblDate.Text = DateTime.Now.ToShortTimeString();
             lblDate.Text = DateTime.Now.ToLongTimeString().ToString();
 
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            this.Owner.Show();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -106,8 +97,8 @@ namespace SSS
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
-            //TODO Add logout
+            _registerStudentModal.Close();
+            this.Close(); 
         }
     }
 }
