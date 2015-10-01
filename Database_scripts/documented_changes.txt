@@ -48,6 +48,7 @@ Some Questions:
 ---------------
 1. fake ids?
 2. Gamification
+3. exits
 
 
 COMPLETE:
@@ -56,7 +57,7 @@ groups -1
 Sessions -1
 MORE consultations?
 More coordinators?
-enrollemnt
+enrollemnt -1
 attendance
 GROUP_DATETIME -1
 

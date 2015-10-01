@@ -18,7 +18,8 @@ namespace SSS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ShowSplashScreen();
-            Application.Run(new Login());
+            var login = new Login();
+            Application.Run(login);
         }
 
         private static void ShowSplashScreen()

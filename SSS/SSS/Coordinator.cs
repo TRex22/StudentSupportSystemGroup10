@@ -31,6 +31,8 @@ namespace SSS
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             //TODO check if this is what is wanted
+            /*Login.ActiveForm.Show();
+            this.Close();*/
             Application.Exit();
         }
 
