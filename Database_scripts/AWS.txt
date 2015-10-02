@@ -1,0 +1,6 @@
+Since this is secure enough
+Our password is also stored in plaintext in our code
+
+54.171.42.9,1433
+Group10
+pass: PointBreak@Blank5
