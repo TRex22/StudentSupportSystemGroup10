@@ -4,3 +4,23 @@ Our password is also stored in plaintext in our code
 54.171.42.9,1433
 Group10
 pass: PointBreak@Blank5
+
+
+
+
+<add name="SSS.Properties.Settings.IS2G10_DBSSSConnectionString_AWS"
+            connectionString="Data Source=54.171.42.9,1433;Initial Catalog=IS2G10_DBSSS;Persist Security Info=True;UserID=Group10;Password=PointBreak@Blank5"
+            providerName="System.Data.SqlClient" />
+
+
+
+LOCAL:
+<add name="SSS.Properties.Settings.IS2G10_DBSSSConnectionString_Local"
+            connectionString="Data Source=(LocalDB)\V11.0;Initial Catalog=IS2G10_DBSSS;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+
+
+For local db:
+https://www.mssqltips.com/sqlservertip/2694/getting-started-with-sql-server-2012-express-localdb/
+download and install this,
+Then update database using sql data tools in visual studio or sql server management studio

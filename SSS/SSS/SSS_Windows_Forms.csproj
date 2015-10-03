@@ -50,11 +50,6 @@
     <Compile Include="Forms\Coordinator\Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </Compile>
-    <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Student\RegisterGroupModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +73,11 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Forms\Splash_Screen.cs">
@@ -150,6 +150,7 @@
     <EmbeddedResource Include="Forms\Student\UpdateStudentProfileModal.resx">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.Release.config" />
     <None Include="IS2G10_DBSSSDataSet.xsc">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
     </None>
@@ -172,7 +173,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SSS_Library\SSS_Library.csproj">
@@ -181,6 +184,12 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "Debug"=="$(ConfigurationName)" goto :nocopy
+del "$(TargetPath).config"
+copy "$(ProjectDir)\App.Release.config" "$(TargetPath).config"
+:nocopy</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
