@@ -28,9 +28,6 @@ namespace SSS
             SplashScreen splashScreen = new SplashScreen();
             splashScreen.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             splashScreen.ShowDialog();
-            
-            //then destory it
-            splashScreen.Dispose();
         }
     }
 }

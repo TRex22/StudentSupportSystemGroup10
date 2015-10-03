@@ -68,5 +68,19 @@ namespace SSS
         {
             Application.Exit();
         }
+
+        private void Login_Shown(object sender, EventArgs e)
+        {
+            medPassword.Clear();
+            medUsername.Clear();
+            medUsername.Focus();
+        }
+
+        private void Login_Activated(object sender, EventArgs e)
+        {
+            medPassword.Clear();
+            medUsername.Clear();
+            medUsername.Focus();
+        }
     }
 }

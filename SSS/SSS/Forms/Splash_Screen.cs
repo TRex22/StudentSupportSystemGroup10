@@ -37,7 +37,8 @@ namespace SSS
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
             //super neat trick
-            this.Invoke((MethodInvoker)Close);
+            if (this.IsHandleCreated)
+                this.Invoke((MethodInvoker)Close);
         }
     }
 }

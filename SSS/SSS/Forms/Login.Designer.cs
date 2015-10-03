@@ -169,6 +169,8 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Activated += new System.EventHandler(this.Login_Activated);
+            this.Shown += new System.EventHandler(this.Login_Shown);
             this.pnlLoginTitle.ResumeLayout(false);
             this.pnlLoginTitle.PerformLayout();
             this.panel1.ResumeLayout(false);
