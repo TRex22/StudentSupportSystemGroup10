@@ -17,22 +17,28 @@ namespace SSS
         private readonly String sUser = "";
         private readonly String sPassword = "";
         private readonly RegisterStudentAttendanceModal _registerStudentAttendanceModal = new RegisterStudentAttendanceModal();
+        private readonly UpdateStudentProfileModal _updateStudentProfileModalModal = new UpdateStudentProfileModal();
 
         public Student(String sUsr, String sPsswrd)
         {
             InitializeComponent();
             sUser = sUsr;
             sPassword = sPsswrd;
-            initModals();
+            InitModals();
         }
 
-        private void initModals()
+        private void InitModals()
         {
             //init internal window
-            _registerStudentAttendanceModal.TopLevel = false;
-            _registerStudentAttendanceModal.AutoScroll = true;
             this.panel7.Controls.Add(_registerStudentAttendanceModal);
+            this.panel7.Controls.Add(_updateStudentProfileModalModal);
+        }
+
+        private void HideAllModals()
+        {
             _registerStudentAttendanceModal.Hide();
+            _updateStudentProfileModalModal.Hide();
+            //TODO Add hide for other modals
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -42,61 +48,49 @@ namespace SSS
 
         private void Student_Load(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
+            HideAllModals();
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HideAllModals();
             _registerStudentAttendanceModal.Show();
-            //TODO Add hide for other modals
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
+            _updateStudentProfileModalModal.Show();
         }
 
         private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void courseDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

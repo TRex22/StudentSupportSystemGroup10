@@ -106,7 +106,6 @@
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Study Skills??><";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -206,7 +205,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterStudentAttendanceModal";
             this.Text = "createstudentattendancemodal";
-            this.Load += new System.EventHandler(this.createstudentattendancemodal_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

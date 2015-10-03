@@ -23,16 +23,19 @@ namespace SSS
             InitializeComponent();
             sUser = sUsr;
             sPassword = sPsswrd;
-            initModals();
+            InitModals();
         }
 
-        private void initModals()
+        private void InitModals()
         {
             //init internal window
-            _updateStudentAttendanceModal.TopLevel = false;
-            _updateStudentAttendanceModal.AutoScroll = true;
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
+        }
+
+        private void HideAllModals()
+        {
             _updateStudentAttendanceModal.Hide();
+            //TODO Add hide for other modals
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -48,38 +51,33 @@ namespace SSS
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _updateStudentAttendanceModal.Hide();
-            //TODO Add hide for other modals
+            HideAllModals();
         }
 
         private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO Add hide for other modals
-            _updateStudentAttendanceModal.Hide();
+            HideAllModals();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HideAllModals();
             _updateStudentAttendanceModal.Show();
-            //TODO Add hide for other modals
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO Add hide for other modals
-            _updateStudentAttendanceModal.Hide();
+            HideAllModals();
         }
 
         private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO Add hide for other modals
-            _updateStudentAttendanceModal.Hide();
+            HideAllModals();
         }
 
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO Add hide for other modals
-            _updateStudentAttendanceModal.Hide();
+            HideAllModals();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

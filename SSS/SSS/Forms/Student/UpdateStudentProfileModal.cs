@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace SSS
 {
-    public partial class UpdateStudentAttendanceModal : Form
+    public partial class UpdateStudentProfileModal : Form
     {
-        public UpdateStudentAttendanceModal()
+        public UpdateStudentProfileModal()
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
         }
     }
 }

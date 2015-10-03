@@ -48,16 +48,16 @@
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.joinGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip7 = new System.Windows.Forms.MenuStrip();
             this.createStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
-            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -70,8 +70,8 @@
             this.menuStrip6.SuspendLayout();
             this.menuStrip7.SuspendLayout();
             this.menuStrip8.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.menuStrip10.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -128,7 +128,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 539);
             this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel8
             // 
@@ -257,19 +256,19 @@
             // 
             this.menuStrip6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateTutorToolStripMenuItem});
+            this.joinGroupToolStripMenuItem});
             this.menuStrip6.Location = new System.Drawing.Point(0, 81);
             this.menuStrip6.Name = "menuStrip6";
             this.menuStrip6.Size = new System.Drawing.Size(241, 27);
             this.menuStrip6.TabIndex = 6;
             this.menuStrip6.Text = "menuStrip6";
             // 
-            // updateTutorToolStripMenuItem
+            // joinGroupToolStripMenuItem
             // 
-            this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
-            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
-            this.updateTutorToolStripMenuItem.Text = "Join Group";
-            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
+            this.joinGroupToolStripMenuItem.Name = "joinGroupToolStripMenuItem";
+            this.joinGroupToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
+            this.joinGroupToolStripMenuItem.Text = "Join Group";
+            this.joinGroupToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // menuStrip7
             // 
@@ -307,6 +306,23 @@
             this.createTutorToolStripMenuItem.Text = "Rate Tutor";
             this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
+            // menuStrip10
+            // 
+            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem});
+            this.menuStrip10.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip10.Name = "menuStrip10";
+            this.menuStrip10.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip10.TabIndex = 10;
+            this.menuStrip10.Text = "menuStrip10";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -332,23 +348,6 @@
             this.lblCoordinatorName.Name = "lblCoordinatorName";
             this.lblCoordinatorName.Size = new System.Drawing.Size(0, 13);
             this.lblCoordinatorName.TabIndex = 0;
-            // 
-            // menuStrip10
-            // 
-            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem});
-            this.menuStrip10.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip10.Name = "menuStrip10";
-            this.menuStrip10.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip10.TabIndex = 10;
-            this.menuStrip10.Text = "menuStrip10";
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
-            this.dashboardToolStripMenuItem.Text = "Dashboard";
             // 
             // Student
             // 
@@ -385,10 +384,10 @@
             this.menuStrip7.PerformLayout();
             this.menuStrip8.ResumeLayout(false);
             this.menuStrip8.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.menuStrip10.ResumeLayout(false);
             this.menuStrip10.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -415,7 +414,7 @@
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip6;
-        private System.Windows.Forms.ToolStripMenuItem updateTutorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem joinGroupToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip7;
         private System.Windows.Forms.ToolStripMenuItem createStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip8;

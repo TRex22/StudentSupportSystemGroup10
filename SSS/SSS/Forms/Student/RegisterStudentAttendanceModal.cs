@@ -15,16 +15,15 @@ namespace SSS
         public RegisterStudentAttendanceModal()
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
         }
 
-        private void createstudentattendancemodal_Load(object sender, EventArgs e)
+        public override sealed bool AutoScroll
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            get { return base.AutoScroll; }
+            set { base.AutoScroll = value; }
         }
     }
 }

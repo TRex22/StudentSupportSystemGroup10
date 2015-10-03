@@ -1,6 +1,6 @@
 ﻿namespace SSS
 {
-    partial class registerforactivitiesmodal
+    partial class RegisterGroupModal
     {
         /// <summary>
         /// Required designer variable.
