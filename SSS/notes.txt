@@ -34,3 +34,4 @@ red *tooltips
 TAB ORDER
 login enter
 Forms for register and update tutor same a student besides details
+resizeable windows

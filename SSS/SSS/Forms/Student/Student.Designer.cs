@@ -361,6 +361,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip10;
             this.Name = "Student";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
             this.panel3.ResumeLayout(false);
