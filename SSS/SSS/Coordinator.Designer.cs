@@ -57,14 +57,14 @@
             this.createStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip10 = new System.Windows.Forms.MenuStrip();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -77,9 +77,9 @@
             this.menuStrip6.SuspendLayout();
             this.menuStrip7.SuspendLayout();
             this.menuStrip8.SuspendLayout();
+            this.menuStrip10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.menuStrip10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -334,6 +334,23 @@
             this.createTutorToolStripMenuItem.Text = "Register Tutor";
             this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
+            // menuStrip10
+            // 
+            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem});
+            this.menuStrip10.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip10.Name = "menuStrip10";
+            this.menuStrip10.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip10.TabIndex = 10;
+            this.menuStrip10.Text = "menuStrip10";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -385,23 +402,6 @@
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
-            // menuStrip10
-            // 
-            this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem});
-            this.menuStrip10.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip10.Name = "menuStrip10";
-            this.menuStrip10.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip10.TabIndex = 10;
-            this.menuStrip10.Text = "menuStrip10";
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
-            this.dashboardToolStripMenuItem.Text = "Dashboard";
-            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +410,7 @@
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip9;
             this.Name = "Coordinator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coordinator";
             this.Load += new System.EventHandler(this.Coordinator_Load);
             this.panel1.ResumeLayout(false);
@@ -434,12 +435,12 @@
             this.menuStrip7.PerformLayout();
             this.menuStrip8.ResumeLayout(false);
             this.menuStrip8.PerformLayout();
+            this.menuStrip10.ResumeLayout(false);
+            this.menuStrip10.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.menuStrip10.ResumeLayout(false);
-            this.menuStrip10.PerformLayout();
             this.ResumeLayout(false);
 
         }

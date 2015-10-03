@@ -1,2 +1,36 @@
-problem with login as primary form
-when other forms are closed program still runs in the background
+Updatestudent attendance:
+LJ and JASON!!!!!!!!!!!!!! we do not know how to provide the tut with their different attendance lists.
+ do they only have one with all he students or can they have multiple groups and then we will have
+ to give them the option of which group attendance they want to update. this could be done in the 
+m,enu bar but how do we populate it ???
+
+
+Please also center each scren when it loads
+
+also dont forget tool tips with validation
+
+if we logout please clear the username and password fields and focus on usaername
+
+as a group we need to come up with a dashboard example. so we can work from it.
+
+this modal needs to be popoulated with data from out database, a table would be nice
+
+REGISTERFORACTIVITIES:
+add datagrid with checkbox and some update button
+
+message boxes confirming creations
+
+Note: submenus for tutor and student
+
+
+
+Do:
+AWS
+DB
+datagrids
+splash screen
+registerstudent modal text disappear
+red *tooltips
+TAB ORDER
+login enter
+Forms for register and update tutor same a student besides details
