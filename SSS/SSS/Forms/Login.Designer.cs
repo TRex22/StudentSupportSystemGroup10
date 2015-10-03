@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlLoginTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -160,6 +161,7 @@
             this.ClientSize = new System.Drawing.Size(486, 260);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLoginTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.pnlLoginTitle.ResumeLayout(false);

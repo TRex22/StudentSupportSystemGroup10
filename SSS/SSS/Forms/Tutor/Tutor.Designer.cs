@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tutor));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,11 +52,11 @@
             this.createStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
-            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,8 +68,8 @@
             this.menuStrip6.SuspendLayout();
             this.menuStrip7.SuspendLayout();
             this.menuStrip8.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.menuStrip9.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -283,6 +284,23 @@
             this.createTutorToolStripMenuItem.Text = "Update Activity";
             this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
+            // menuStrip9
+            // 
+            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem});
+            this.menuStrip9.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip9.Name = "menuStrip9";
+            this.menuStrip9.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip9.TabIndex = 10;
+            this.menuStrip9.Text = "menuStrip9";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -309,23 +327,6 @@
             this.lblCoordinatorName.Size = new System.Drawing.Size(0, 13);
             this.lblCoordinatorName.TabIndex = 0;
             // 
-            // menuStrip9
-            // 
-            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem});
-            this.menuStrip9.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip9.Name = "menuStrip9";
-            this.menuStrip9.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip9.TabIndex = 10;
-            this.menuStrip9.Text = "menuStrip9";
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
-            this.dashboardToolStripMenuItem.Text = "Dashboard";
-            // 
             // Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,6 +335,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "Tutor";
             this.Text = "Tutor";
@@ -359,10 +361,10 @@
             this.menuStrip7.PerformLayout();
             this.menuStrip8.ResumeLayout(false);
             this.menuStrip8.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
             this.menuStrip9.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
