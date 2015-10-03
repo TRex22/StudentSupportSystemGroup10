@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coordinator\Coordinator.cs">
+    <Compile Include="Forms\Coordinator\Coordinator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Coordinator\Coordinator.Designer.cs">
+    <Compile Include="Forms\Coordinator\Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
@@ -55,75 +55,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Student\RegisterGroupModal.cs">
+    <Compile Include="Forms\Student\RegisterGroupModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\RegisterGroupModal.Designer.cs">
+    <Compile Include="Forms\Student\RegisterGroupModal.Designer.cs">
       <DependentUpon>RegisterGroupModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\RegisterStudentAttendanceModal.cs">
+    <Compile Include="Forms\Student\RegisterStudentAttendanceModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\RegisterStudentAttendanceModal.Designer.cs">
+    <Compile Include="Forms\Student\RegisterStudentAttendanceModal.Designer.cs">
       <DependentUpon>RegisterStudentAttendanceModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisterStudentModal.cs">
+    <Compile Include="Forms\Coordinator\RegisterStudentModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterStudentModal.Designer.cs">
+    <Compile Include="Forms\Coordinator\RegisterStudentModal.Designer.cs">
       <DependentUpon>RegisterStudentModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Splash_Screen.cs">
+    <Compile Include="Forms\Splash_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Splash_Screen.Designer.cs">
+    <Compile Include="Forms\Splash_Screen.Designer.cs">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\Student.cs">
+    <Compile Include="Forms\Student\Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\Student.Designer.cs">
+    <Compile Include="Forms\Student\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\Tutor.cs">
+    <Compile Include="Forms\Tutor\Tutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tutor\Tutor.Designer.cs">
+    <Compile Include="Forms\Tutor\Tutor.Designer.cs">
       <DependentUpon>Tutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\UpdateStudentAttendanceModal.cs">
+    <Compile Include="Forms\Tutor\UpdateStudentAttendanceModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tutor\UpdateStudentAttendanceModal.Designer.cs">
+    <Compile Include="Forms\Tutor\UpdateStudentAttendanceModal.Designer.cs">
       <DependentUpon>UpdateStudentAttendanceModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\UpdateStudentProfileModal.cs">
+    <Compile Include="Forms\Student\UpdateStudentProfileModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\UpdateStudentProfileModal.Designer.cs">
+    <Compile Include="Forms\Student\UpdateStudentProfileModal.Designer.cs">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Coordinator\Coordinator.resx">
+    <EmbeddedResource Include="Forms\Coordinator\Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\RegisterGroupModal.resx">
+    <EmbeddedResource Include="Forms\Student\RegisterGroupModal.resx">
       <DependentUpon>RegisterGroupModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\RegisterStudentAttendanceModal.resx">
+    <EmbeddedResource Include="Forms\Student\RegisterStudentAttendanceModal.resx">
       <DependentUpon>RegisterStudentAttendanceModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterStudentModal.resx">
+    <EmbeddedResource Include="Forms\Coordinator\RegisterStudentModal.resx">
       <DependentUpon>RegisterStudentModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,19 +135,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Splash_Screen.resx">
+    <EmbeddedResource Include="Forms\Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\Student.resx">
+    <EmbeddedResource Include="Forms\Student\Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tutor\Tutor.resx">
+    <EmbeddedResource Include="Forms\Tutor\Tutor.resx">
       <DependentUpon>Tutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tutor\UpdateStudentAttendanceModal.resx">
+    <EmbeddedResource Include="Forms\Tutor\UpdateStudentAttendanceModal.resx">
       <DependentUpon>UpdateStudentAttendanceModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\UpdateStudentProfileModal.resx">
+    <EmbeddedResource Include="Forms\Student\UpdateStudentProfileModal.resx">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IS2G10_DBSSSDataSet.xsc">
