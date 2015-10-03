@@ -26,9 +26,9 @@ namespace SSS
         {
             //Display splash screen
             SplashScreen splashScreen = new SplashScreen();
-            splashScreen.Show();
-            Thread.Sleep(5000);//5 sec
-            splashScreen.Hide();
+            splashScreen.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            splashScreen.ShowDialog();
+            
             //then destory it
             splashScreen.Dispose();
         }

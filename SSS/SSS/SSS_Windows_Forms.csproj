@@ -134,6 +134,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
@@ -182,6 +183,9 @@
       <Project>{c3ecbfe7-9966-42f7-8e24-2a89773d6d16}</Project>
       <Name>SSS_Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PointBlankIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
