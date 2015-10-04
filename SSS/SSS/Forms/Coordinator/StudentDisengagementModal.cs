@@ -19,5 +19,11 @@ namespace SSS.Forms.Coordinator
             this.AutoScroll = true;
             this.Hide();
         }
+
+        private void StudentDisengagementModal_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

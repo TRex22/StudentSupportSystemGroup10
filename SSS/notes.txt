@@ -49,5 +49,8 @@ schedule - add no people in group
 Corner info from coordinator to other forms
 
 Extra - dashboard profile pic
+extra - logn from db
 
 LJ - create student_attendance SD for the presentation
+
+fix login error
