@@ -19,7 +19,8 @@ namespace SSS
         private readonly String sPassword = "";
         private readonly RegisterStudentAttendanceModal _registerStudentAttendanceModal = new RegisterStudentAttendanceModal();
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
-        private readonly  ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
+        private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
+        private readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
 
         public Student(String sUsr, String sPsswrd)
         {
@@ -36,6 +37,7 @@ namespace SSS
             this.panel7.Controls.Add(_registerStudentAttendanceModal);
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
             this.panel7.Controls.Add(_viewScheduleModal);
+            this.panel7.Controls.Add(_studentDashboardModal);
         }
 
         private void HideAllModals()
@@ -43,6 +45,7 @@ namespace SSS
             _registerStudentAttendanceModal.Hide();
             _updateStudentProfileModalModal.Hide();
             _viewScheduleModal.Hide();
+            _studentDashboardModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -54,6 +57,7 @@ namespace SSS
         private void Student_Load(object sender, EventArgs e)
         {
             HideAllModals();
+            _studentDashboardModal.Show();
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,6 +101,12 @@ namespace SSS
         private void courseDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _studentDashboardModal.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

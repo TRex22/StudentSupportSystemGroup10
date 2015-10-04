@@ -113,7 +113,6 @@
             this.textBox6.Size = new System.Drawing.Size(209, 27);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "Enter Students Email Address";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
@@ -123,7 +122,6 @@
             this.textBox7.Size = new System.Drawing.Size(216, 27);
             this.textBox7.TabIndex = 6;
             this.textBox7.Text = "Enter Students Mobile Number";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox9
             // 
@@ -133,7 +131,6 @@
             this.textBox9.Size = new System.Drawing.Size(216, 27);
             this.textBox9.TabIndex = 8;
             this.textBox9.Text = "Enter Students Programme";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // comboBox1
             // 
@@ -149,7 +146,6 @@
             this.comboBox1.Size = new System.Drawing.Size(209, 27);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Select Year Of Study";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -190,7 +186,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -201,7 +196,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 18;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox6
             // 
@@ -212,7 +206,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox7
             // 
@@ -243,7 +236,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 22;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // button1
             // 
@@ -253,7 +245,6 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "&Submit";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -311,7 +302,6 @@
             this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 29;
             this.label5.Text = "Email Address";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -322,7 +312,6 @@
             this.label6.Size = new System.Drawing.Size(93, 19);
             this.label6.TabIndex = 30;
             this.label6.Text = "Year of Study";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -333,7 +322,6 @@
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 34;
             this.label7.Text = "Student Programme";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -344,7 +332,6 @@
             this.label8.Size = new System.Drawing.Size(109, 19);
             this.label8.TabIndex = 33;
             this.label8.Text = "Mobile Number";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -402,7 +389,6 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterStudentModal";
-            this.Load += new System.EventHandler(this.RegisterStudentModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

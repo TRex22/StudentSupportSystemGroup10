@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS
+namespace SSS.Forms.Student
 {
-    public partial class RegisterStudentModal : Form
+    public partial class StudentDashboardModal : Form
     {
-        public RegisterStudentModal()
+        public StudentDashboardModal()
         {
             InitializeComponent();
             this.TopLevel = false;
@@ -20,6 +20,10 @@ namespace SSS
             this.Hide();
         }
 
-        
+        private void StudentDashboardModal_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

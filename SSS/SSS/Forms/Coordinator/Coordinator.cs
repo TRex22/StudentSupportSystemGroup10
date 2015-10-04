@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS.Forms.Coordinator;
 
 namespace SSS
 {
@@ -17,6 +18,7 @@ namespace SSS
         private readonly string _sUser;
         private string _sPassword;
         private readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
+        private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
 
         public Coordinator(String sUsr, String sPsswrd)
         {
@@ -25,7 +27,7 @@ namespace SSS
             _sPassword = sPsswrd;
             lblCoordinatorName.Text = "Gerhard Snell - " + _sUser;
             tmrSecond.Start();
-            initModals();
+            InitModals();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -33,72 +35,77 @@ namespace SSS
             this.Owner.Show();
         }
 
-        private void initModals()
+        private void InitModals()
         {
             //init internal window
-            _registerStudentModal.TopLevel = false;
-            _registerStudentModal.AutoScroll = true;
             this.panel7.Controls.Add(_registerStudentModal);
+            this.panel7.Controls.Add(_coordinatorDashboardModal);
+        }
+
+        private void HideAllModals()
+        {
+            _registerStudentModal.Hide();
+            _coordinatorDashboardModal.Hide();
+            //TODO Add hide for other modals
         }
 
         private void Coordinator_Load(object sender, EventArgs e)
         {
-            //TODO Select default modal
+            HideAllModals();
+            _coordinatorDashboardModal.Show();
         }
 
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
-          //  lblDate.Text = DateTime.Now.ToShortTimeString();
             lblDate.Text = DateTime.Now.ToLongTimeString().ToString();
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HideAllModals();
             _registerStudentModal.Show();
-            //TODO Add hide for other modals
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
-            //TODO add show for tutor modal
+            HideAllModals();
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
+            HideAllModals();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
+            HideAllModals();
         }
 
         private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
+            HideAllModals();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
+            HideAllModals();
         }
 
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentModal.Hide();
+            HideAllModals();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _registerStudentModal.Close();
             this.Close(); 
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _coordinatorDashboardModal.Show();
         }
     }
 }

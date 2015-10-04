@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS.Forms.Tutor;
 
 namespace SSS
 {
@@ -17,6 +18,7 @@ namespace SSS
         private String sUser = "";
         private String sPassword = "";
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal = new UpdateStudentAttendanceModal();
+        private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
 
         public Tutor(String sUsr, String sPsswrd)
         {
@@ -30,11 +32,13 @@ namespace SSS
         {
             //init internal window
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
+            this.panel7.Controls.Add(_tutorDashboardModal);
         }
 
         private void HideAllModals()
         {
             _updateStudentAttendanceModal.Hide();
+            _tutorDashboardModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -46,7 +50,8 @@ namespace SSS
         private void Tutor_Load(object sender, EventArgs e)
         {
             //TODO Select default modal
-
+            HideAllModals();
+            _tutorDashboardModal.Show();
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,6 +89,12 @@ namespace SSS
         {
             _updateStudentAttendanceModal.Close();
             this.Close();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _tutorDashboardModal.Show();
         }
     }
 }

@@ -42,3 +42,10 @@ window corner name bindings
 insert user login table?
 
 Added resource dictionary
+
+display number in a group
+lock datagrids
+schedule - add no people in group
+Corner info from coordinator to other forms
+
+Extra - dashboard profile pic

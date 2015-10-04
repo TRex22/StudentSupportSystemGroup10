@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS
+namespace SSS.Forms.Coordinator
 {
-    public partial class RegisterStudentModal : Form
+    public partial class CoordinatorDashboardModal : Form
     {
-        public RegisterStudentModal()
+        public CoordinatorDashboardModal()
         {
             InitializeComponent();
             this.TopLevel = false;
@@ -20,6 +20,10 @@ namespace SSS
             this.Hide();
         }
 
-        
+        private void CoordinatorDashboardModal_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
