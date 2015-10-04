@@ -1,2 +1,3 @@
-SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus 
-FROM dbo.TUTOR INNER JOIN dbo.CONSULTATION ON dbo.TUTOR.tutor_id = dbo.CONSULTATION.[tutor_id];
+SELECT dbo.TUTOR.tutor_id, dbo.TUTOR.tutor_firstname, dbo.TUTOR.tutor_lastname, dbo.TUTOR.tutor_id_passport, dbo.TUTOR.tutor_dateofbirth, dbo.TUTOR.tutor_emailaddress, dbo.TUTOR.tutor_cellnumber, dbo.TUTOR.tutor_trainingstatus, AVG(consultation_rating) AS 'Average_consultation_rating'
+FROM dbo.TUTOR RIGHT JOIN dbo.CONSULTATION ON TUTOR.tutor_id = CONSULTATION.tutor_id
+GROUP BY dbo.TUTOR.tutor_id, dbo.TUTOR.tutor_firstname, dbo.TUTOR.tutor_lastname, dbo.TUTOR.tutor_id_passport, dbo.TUTOR.tutor_dateofbirth, dbo.TUTOR.tutor_emailaddress, dbo.TUTOR.tutor_cellnumber, dbo.TUTOR.tutor_trainingstatus;
