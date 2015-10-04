@@ -61,6 +61,18 @@
     <Compile Include="Forms\Coordinator\CoordinatorDashboardModal.Designer.cs">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Coordinator\LowTutorRatingsModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\LowTutorRatingsModal.Designer.cs">
+      <DependentUpon>LowTutorRatingsModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\StudentDisengagementModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\StudentDisengagementModal.Designer.cs">
+      <DependentUpon>StudentDisengagementModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student\RegisterGroupModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     <EmbeddedResource Include="Forms\Coordinator\CoordinatorDashboardModal.resx">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatingsModal.resx">
+      <DependentUpon>LowTutorRatingsModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\StudentDisengagementModal.resx">
+      <DependentUpon>StudentDisengagementModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\RegisterGroupModal.resx">
       <DependentUpon>RegisterGroupModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +211,8 @@
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRatingReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\StudentDisengagementReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
     <None Include="App.Release.config" />

@@ -49,3 +49,5 @@ schedule - add no people in group
 Corner info from coordinator to other forms
 
 Extra - dashboard profile pic
+
+LJ - create student_attendance SD for the presentation

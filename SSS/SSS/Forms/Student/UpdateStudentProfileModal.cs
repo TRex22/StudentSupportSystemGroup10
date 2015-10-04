@@ -13,16 +13,14 @@ namespace SSS
 {
     public partial class UpdateStudentProfileModal : Form
     {
-        private readonly int _userId;
         private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
-        public UpdateStudentProfileModal(string userid)
+        public UpdateStudentProfileModal(int userid)
         {
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
-            _userId = Convert.ToInt32(userid);
-            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(_userId);
+            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userid);
             PopulateData();
         }
 

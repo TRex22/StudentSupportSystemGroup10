@@ -66,6 +66,9 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
+            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sSS_COORDINATORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -81,6 +84,8 @@
             this.menuStrip10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -180,8 +185,8 @@
             // 
             this.generateReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentDisengagementToolStripMenuItem,
-            this.courseDisengagementToolStripMenuItem,
             this.lowTutorRatingsToolStripMenuItem,
+            this.courseDisengagementToolStripMenuItem,
             this.consultationFrequencyToolStripMenuItem,
             this.tutorTrainingStatusAndRatingsToolStripMenuItem,
             this.lowActivityRatingsToolStripMenuItem});
@@ -195,6 +200,7 @@
             this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
             this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.studentDisengagementToolStripMenuItem.Text = "Student Disengagement";
+            this.studentDisengagementToolStripMenuItem.Click += new System.EventHandler(this.studentDisengagementToolStripMenuItem_Click);
             // 
             // courseDisengagementToolStripMenuItem
             // 
@@ -207,6 +213,7 @@
             this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
             this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.lowTutorRatingsToolStripMenuItem.Text = "Low Tutor Ratings";
+            this.lowTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.lowTutorRatingsToolStripMenuItem_Click);
             // 
             // consultationFrequencyToolStripMenuItem
             // 
@@ -384,7 +391,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(937, 5);
+            this.lblDate.Location = new System.Drawing.Point(890, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(0, 13);
             this.lblDate.TabIndex = 1;
@@ -402,6 +409,20 @@
             this.tmrSecond.Enabled = true;
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sSSCOORDINATORBindingSource
+            // 
+            this.sSSCOORDINATORBindingSource.DataMember = "SSS_COORDINATOR";
+            this.sSSCOORDINATORBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // sSS_COORDINATORTableAdapter
+            // 
+            this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
             // Coordinator
             // 
@@ -443,6 +464,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +508,8 @@
         private System.Windows.Forms.ToolStripMenuItem lowActivityRatingsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip10;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private System.Windows.Forms.BindingSource sSSCOORDINATORBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter sSS_COORDINATORTableAdapter;
     }
 }

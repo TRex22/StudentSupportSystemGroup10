@@ -15,19 +15,25 @@ namespace SSS
     {
 
         //global vars
-        private readonly String sUser = "";
         private readonly String sPassword = "";
+
+        //database stuff
+        private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+
+        //Modals
         private readonly RegisterStudentAttendanceModal _registerStudentAttendanceModal = new RegisterStudentAttendanceModal();
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
         private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
         private readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
 
-        public Student(String sUsr, String sPsswrd)
+        public Student(String sUsrId, String sPsswrd)
         {
             InitializeComponent();
-            sUser = sUsr;
             sPassword = sPsswrd;
-            _updateStudentProfileModalModal = new UpdateStudentProfileModal(sUser);
+            var userId = Convert.ToInt32(sUsrId);
+            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userId);
+            lblStudentName.Text = String.Format("{0} {1} {2}", _studentData.student_firstname, _studentData.student_lastname, userId);
+            _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
             InitModals();
         }
 
@@ -56,6 +62,8 @@ namespace SSS
 
         private void Student_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.STUDENT' table. You can move, or remove it, as needed.
+            this.sTUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.STUDENT);
             HideAllModals();
             _studentDashboardModal.Show();
         }
@@ -113,6 +121,11 @@ namespace SSS
         {
             _registerStudentAttendanceModal.Close();
             this.Close();
+        }
+
+        private void tmrSecond_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
     }
 }

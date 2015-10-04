@@ -15,15 +15,21 @@ namespace SSS
     {
 
         //global vars
-        private String sUser = "";
-        private String sPassword = "";
+        private readonly String sPassword = "";
+
+        //database stuff
+        private readonly IS2G10_DBSSSDataSet.TUTORRow _tutorData;
+
+        //Modals
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal = new UpdateStudentAttendanceModal();
         private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
 
-        public Tutor(String sUsr, String sPsswrd)
+        public Tutor(String sUsrId, String sPsswrd)
         {
             InitializeComponent();
-            sUser = sUsr;
+            var userId = Convert.ToInt32(sUsrId);
+            _tutorData = tUTORTableAdapter.GetData().FindBytutor_id(userId);
+            lblTutorName.Text = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
             sPassword = sPsswrd;
             InitModals();
         }
@@ -49,6 +55,8 @@ namespace SSS
 
         private void Tutor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.TUTOR' table. You can move, or remove it, as needed.
+            this.tUTORTableAdapter.Fill(this.iS2G10_DBSSSDataSet.TUTOR);
             //TODO Select default modal
             HideAllModals();
             _tutorDashboardModal.Show();
@@ -95,6 +103,11 @@ namespace SSS
         {
             HideAllModals();
             _tutorDashboardModal.Show();
+        }
+
+        private void tmrSecond_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
     }
 }

@@ -32,7 +32,7 @@ namespace SSS
             sInput = medUsername.Text;
             sPassword = medPassword.Text;
 
-            if (sInput.Equals("AB005"))
+            if (sInput.Equals("76582"))
             {
                 Form CoordinatorShow = new Coordinator(sInput, sPassword);
                 CoordinatorShow.Owner = this;
@@ -47,7 +47,7 @@ namespace SSS
                 StudentShow.Show();
                 this.Hide();
             }
-            else if(sInput.Equals("918761"))
+            else if(sInput.Equals("20001"))
             {
                 Form TutorShow = new Tutor(sInput, sPassword);
                 TutorShow.Owner = this;
@@ -56,7 +56,7 @@ namespace SSS
             }
             else
             {
-                MessageBox.Show(Resources.IncorrectLoginDetailsMessage);
+                MessageBox.Show(String.Format("{0}", Resources.IncorrectLoginDetailsMessage));
                 medPassword.Clear();
                 medUsername.Clear();
                 medUsername.Focus();

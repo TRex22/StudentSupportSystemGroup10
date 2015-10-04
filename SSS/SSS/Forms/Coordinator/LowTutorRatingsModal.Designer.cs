@@ -1,6 +1,6 @@
-﻿namespace SSS.Forms.Student
+﻿namespace SSS.Forms.Coordinator
 {
-    partial class StudentDashboardModal
+    partial class LowTutorRatingsModal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Student.StudentDashboardReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(753, 539);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // StudentDashboardModal
+            // LowTutorRatingsModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 539);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
-            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StudentDashboardModal";
-            this.Text = "StudentDashboard";
-            this.Load += new System.EventHandler(this.StudentDashboardModal_Load);
+            this.Name = "LowTutorRatingsModal";
+            this.Text = "LowTutorRatingsModal";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

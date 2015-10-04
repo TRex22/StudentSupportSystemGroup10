@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +60,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
+            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.lblStudentName = new System.Windows.Forms.Label();
+            this.tmrSecond = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -73,6 +79,8 @@
             this.menuStrip8.SuspendLayout();
             this.menuStrip10.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -328,6 +336,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblStudentName);
             this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.lblCoordinatorName);
             this.panel2.Location = new System.Drawing.Point(3, 638);
@@ -338,7 +347,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(937, 5);
+            this.lblDate.Location = new System.Drawing.Point(890, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(0, 13);
             this.lblDate.TabIndex = 1;
@@ -350,6 +359,34 @@
             this.lblCoordinatorName.Name = "lblCoordinatorName";
             this.lblCoordinatorName.Size = new System.Drawing.Size(0, 13);
             this.lblCoordinatorName.TabIndex = 0;
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblStudentName
+            // 
+            this.lblStudentName.AutoSize = true;
+            this.lblStudentName.Location = new System.Drawing.Point(3, 5);
+            this.lblStudentName.Name = "lblStudentName";
+            this.lblStudentName.Size = new System.Drawing.Size(0, 13);
+            this.lblStudentName.TabIndex = 2;
+            // 
+            // tmrSecond
+            // 
+            this.tmrSecond.Enabled = true;
+            this.tmrSecond.Interval = 1000;
+            this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
             // Student
             // 
@@ -392,6 +429,8 @@
             this.menuStrip10.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +467,10 @@
         private System.Windows.Forms.Label lblCoordinatorName;
         private System.Windows.Forms.MenuStrip menuStrip10;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private System.Windows.Forms.Label lblStudentName;
+        private System.Windows.Forms.Timer tmrSecond;
     }
 }

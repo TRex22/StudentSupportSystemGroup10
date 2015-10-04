@@ -15,17 +15,23 @@ namespace SSS
     {
 
         //global vars
-        private readonly string _sUser;
-        private string _sPassword;
+        private readonly String _sPassword = "";
+
+        //database stuff
+
+        //modals
         private readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
+        private readonly StudentDisengagementModal _studentDisengagementModal = new StudentDisengagementModal();
+        private readonly LowTutorRatingsModal _lowTutorRatingsModal = new LowTutorRatingsModal();
 
-        public Coordinator(String sUsr, String sPsswrd)
+        public Coordinator(String sUsrId, String sPsswrd)
         {
             InitializeComponent();
-            _sUser = sUsr;
             _sPassword = sPsswrd;
-            lblCoordinatorName.Text = "Gerhard Snell - " + _sUser;
+            var userId = Convert.ToInt32(sUsrId);
+            var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
+            lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
             InitModals();
         }
@@ -40,24 +46,30 @@ namespace SSS
             //init internal window
             this.panel7.Controls.Add(_registerStudentModal);
             this.panel7.Controls.Add(_coordinatorDashboardModal);
+            this.panel7.Controls.Add(_studentDisengagementModal);
+            this.panel7.Controls.Add(_lowTutorRatingsModal);
         }
 
         private void HideAllModals()
         {
             _registerStudentModal.Hide();
             _coordinatorDashboardModal.Hide();
+            _studentDisengagementModal.Hide();
+            _lowTutorRatingsModal.Hide();
             //TODO Add hide for other modals
         }
 
         private void Coordinator_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.SSS_COORDINATOR' table. You can move, or remove it, as needed.
+            this.sSS_COORDINATORTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SSS_COORDINATOR);
             HideAllModals();
             _coordinatorDashboardModal.Show();
         }
 
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToLongTimeString().ToString();
+            lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
 
         private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,7 +105,9 @@ namespace SSS
 
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideAllModals();
+            //HideAllModals();
+
+            //TODO remove
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,6 +120,18 @@ namespace SSS
         {
             HideAllModals();
             _coordinatorDashboardModal.Show();
+        }
+
+        private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _studentDisengagementModal.Show();
+        }
+
+        private void lowTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _lowTutorRatingsModal.Show();
         }
     }
 }
