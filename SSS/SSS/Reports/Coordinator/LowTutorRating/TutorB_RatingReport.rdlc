@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Your Dashboard</Value>
+                <Value>Tutor Ratings Report</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -17,10 +17,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.54667cm</Top>
-        <Left>0.69469cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.32021cm</Width>
+        <Top>0.24875in</Top>
+        <Left>0.45708in</Left>
+        <Height>0.25in</Height>
+        <Width>1.95833in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -38,7 +38,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Signed in as:</Value>
+                <Value>02/01/2015 to //todays date</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -46,10 +46,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.54667cm</Top>
-        <Left>15.74948cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Top>0.69667in</Top>
+        <Left>0.45708in</Left>
+        <Height>0.25in</Height>
+        <Width>1.95833in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -68,49 +68,19 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Your Current Status</Value>
+                <Value>Signed in as:</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.74307cm</Top>
-        <Left>0.69469cm</Left>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.63182cm</Top>
+        <Left>15.8024cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.32021cm</Width>
+        <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox4">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Points Accumulated to date:</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.9337cm</Top>
-        <Left>0.69469cm</Left>
-        <Height>0.6cm</Height>
-        <Width>5.11938cm</Width>
-        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -128,7 +98,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Upcoming Activities </Value>
+                <Value>Name</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -136,10 +106,40 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>4.89162cm</Top>
-        <Left>0.69469cm</Left>
-        <Height>0.6cm</Height>
-        <Width>5.11938cm</Width>
+        <Top>1.17583in</Top>
+        <Left>0.45708in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tutor Number</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>1.17583in</Top>
+        <Left>3.24875in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -152,21 +152,18 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.95833in</Height>
+    <Height>3.86458in</Height>
     <Style />
   </Body>
-  <Width>8.67708in</Width>
+  <Width>8.59375in</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
-    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>23375e45-214d-41e6-9b16-ffbd19697ca7</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>58465bcf-5a92-4f08-a8b5-4aa56b5bda53</rd:ReportID>
 </Report>

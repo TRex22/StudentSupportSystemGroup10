@@ -61,16 +61,22 @@
     <Compile Include="Forms\Coordinator\CoordinatorDashboardModal.Designer.cs">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.cs">
+    <Compile Include="Forms\Coordinator\RegisterTutorModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.Designer.cs">
+    <Compile Include="Forms\Coordinator\RegisterTutorModal.Designer.cs">
+      <DependentUpon>RegisterTutorModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.Designer.cs">
       <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.cs">
+    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.Designer.cs">
+    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.Designer.cs">
       <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Coordinator\StudentDisengagementModal.cs">
@@ -121,6 +127,12 @@
     <Compile Include="Forms\Tutor\TutorDashboardModal.Designer.cs">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tutor\UpdateTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tutor\UpdateTutor.Designer.cs">
+      <DependentUpon>UpdateTutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,10 +176,13 @@
     <EmbeddedResource Include="Forms\Coordinator\CoordinatorDashboardModal.resx">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.resx">
+    <EmbeddedResource Include="Forms\Coordinator\RegisterTutorModal.resx">
+      <DependentUpon>RegisterTutorModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.resx">
       <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.resx">
+    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.resx">
       <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\StudentDisengagementModal.resx">
@@ -193,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tutor\UpdateTutor.resx">
+      <DependentUpon>UpdateTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,9 +238,10 @@
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
-    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\LowTutorRatingB_IndividualTutorRating.rdlc" />
-    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\LowTutorA_RatingReport.rdlc" />
-    <EmbeddedResource Include="Reports\Coordinator\StudentDisengagementReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorA.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorRatingC_IndividualTutorRating.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorB_RatingReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\StudentEngagementStatuses.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
     <None Include="App.Release.config" />

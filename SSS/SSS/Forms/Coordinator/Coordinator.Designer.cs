@@ -41,8 +41,8 @@
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationFrequencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorTrainingStatusAndRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowActivityRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -202,18 +202,18 @@
             this.studentDisengagementToolStripMenuItem.Text = "Student Disengagement";
             this.studentDisengagementToolStripMenuItem.Click += new System.EventHandler(this.studentDisengagementToolStripMenuItem_Click);
             // 
+            // lowTutorRatingsToolStripMenuItem
+            // 
+            this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
+            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.lowTutorRatingsToolStripMenuItem.Text = "Tutor Ratings";
+            this.lowTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.lowTutorRatingsToolStripMenuItem_Click);
+            // 
             // courseDisengagementToolStripMenuItem
             // 
             this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
             this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
             this.courseDisengagementToolStripMenuItem.Text = "Course Disengagement";
-            // 
-            // lowTutorRatingsToolStripMenuItem
-            // 
-            this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
-            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.lowTutorRatingsToolStripMenuItem.Text = "Low Tutor Ratings";
-            this.lowTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.lowTutorRatingsToolStripMenuItem_Click);
             // 
             // consultationFrequencyToolStripMenuItem
             // 

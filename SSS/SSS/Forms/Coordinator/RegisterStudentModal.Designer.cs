@@ -94,7 +94,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(209, 27);
             this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Enter Students\' First Name";
+            this.textBox3.Text = "Enter Student\'s First Name";
             // 
             // textBox4
             // 
@@ -103,7 +103,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(216, 27);
             this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Enter Students Last Name";
+            this.textBox4.Text = "Enter Student\'s Last Name";
             // 
             // textBox6
             // 
@@ -112,7 +112,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(209, 27);
             this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Enter Students Email Address";
+            this.textBox6.Text = "Enter Student\'s Email Address";
             // 
             // textBox7
             // 
@@ -121,7 +121,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(216, 27);
             this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "Enter Students Mobile Number";
+            this.textBox7.Text = "Enter Student\'s Mobile Number";
             // 
             // textBox9
             // 
@@ -130,7 +130,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(216, 27);
             this.textBox9.TabIndex = 8;
-            this.textBox9.Text = "Enter Students Programme";
+            this.textBox9.Text = "Enter Student\'s Programme";
             // 
             // comboBox1
             // 
