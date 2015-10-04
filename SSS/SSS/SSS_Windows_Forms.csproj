@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -167,8 +168,8 @@
     </None>
     <None Include="IS2G10_DBSSSDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IS2G10_DBSSSDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>IS2G10_DBSSSDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="IS2G10_DBSSSDataSet.xss">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>

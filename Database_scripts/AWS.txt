@@ -24,3 +24,14 @@ For local db:
 https://www.mssqltips.com/sqlservertip/2694/getting-started-with-sql-server-2012-express-localdb/
 download and install this,
 Then update database using sql data tools in visual studio or sql server management studio
+
+
+
+
+
+original connection string:
+ApplicationSettings.SSS.Properties.Settings.GlobalReference.Default.IS2G10_DBSSSConnectionString
+from settings
+
+Settings.designer
+"Data Source=(LocalDB)\\V11.0;Initial Catalog=IS2G10_DBSSS;Integrated Security=True"

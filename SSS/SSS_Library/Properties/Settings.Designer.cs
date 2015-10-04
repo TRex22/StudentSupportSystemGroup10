@@ -37,9 +37,9 @@ namespace SSS_Library.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=IS2G10_DBSSS;Integrated Security=True")]
-        public string IS2G10_DBSSSConnectionString_Local {
+        public string IS2G10_DBSSSConnectionString {
             get {
-                return ((string)(this["IS2G10_DBSSSConnectionString_Local"]));
+                return ((string)(this["IS2G10_DBSSSConnectionString"]));
             }
         }
     }

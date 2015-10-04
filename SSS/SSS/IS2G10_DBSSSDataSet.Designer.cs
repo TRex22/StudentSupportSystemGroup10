@@ -6278,7 +6278,7 @@ SELECT student_id, student_activity_id, student_activity_tutorrating, student_ac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6695,7 +6695,7 @@ SELECT consultation_id, coordinator_id, student_id, consultation_details, consul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7136,7 +7136,7 @@ SELECT course_id, course_name FROM COURSE WHERE (course_id = @course_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7478,7 +7478,7 @@ SELECT course_id, student_id, class_mark, exam_mark, year_mark FROM ENROLLMENT W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7877,7 +7877,7 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8263,7 +8263,7 @@ SELECT tutor_id, group_id, updated_attendance FROM SESSION WHERE (group_id = @gr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8620,7 +8620,7 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9207,7 +9207,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9886,7 +9886,7 @@ SELECT student_activity_id, student_activity_name, student_activity_pointvalue, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10336,7 +10336,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString_Local;
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
