@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -133,7 +136,11 @@
     <Compile Include="Forms\Tutor\UpdateTutor.Designer.cs">
       <DependentUpon>UpdateTutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
+    <Compile Include="IS2G10_DBSSSDataSet.cs">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IS2G10_DBSSSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
@@ -244,14 +251,16 @@
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagementStatuses.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
-    <None Include="App.Release.config" />
+    <None Include="App.Release.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="IS2G10_DBSSSDataSet.xsc">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
     </None>
     <None Include="IS2G10_DBSSSDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>IS2G10_DBSSSDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>IS2G10_DBSSSDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="IS2G10_DBSSSDataSet.xss">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
@@ -285,7 +294,7 @@
   <PropertyGroup>
     <PostBuildEvent>if "Debug"=="$(ConfigurationName)" goto :nocopy
 del "$(TargetPath).config"
-copy "$(ProjectDir)\App.Release.config" "$(TargetPath).config"
+copy /Y "$(ProjectDir)\App.Release.config" "$(TargetPath).config"
 :nocopy</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -39,6 +40,10 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(803, 561);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // reportTableAdapter
+            // 
+            this.reportTableAdapter.ClearBeforeFill = true;
             // 
             // StudentDisengagementModal
             // 
@@ -58,5 +63,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter reportTableAdapter;
     }
 }

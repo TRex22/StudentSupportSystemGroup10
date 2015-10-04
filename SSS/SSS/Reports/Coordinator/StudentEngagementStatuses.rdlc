@@ -426,11 +426,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SoftDev\Downloads\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>STUDENT_ENGAGEMENT_STATUSES</rd:TableName>
-        <rd:TableAdapterFillMethod>FillEngagement</rd:TableAdapterFillMethod>
+        <rd:SchemaPath>C:\Users\TRex22\work\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>STUDENT_ENGAGEMENT_STATUS_REPORT</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>STUDENT_ENGAGEMENT_STATUSESTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>STUDENT_ENGAGEMENT_STATUS_REPORTTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
