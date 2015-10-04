@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateStudentProfileModal));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -38,9 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.submitButton = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -50,14 +51,17 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.yearOfStudycomboBox = new System.Windows.Forms.ComboBox();
+            this.programmeTextBox = new System.Windows.Forms.TextBox();
+            this.mobileNumberTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.studentLastNameTextBox = new System.Windows.Forms.TextBox();
+            this.studentFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.idPassportTextBox = new System.Windows.Forms.TextBox();
+            this.studentIdTextBox = new System.Windows.Forms.TextBox();
+            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -67,13 +71,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(368, 346);
+            this.label7.Location = new System.Drawing.Point(368, 337);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 88;
@@ -159,12 +165,12 @@
             this.label2.TabIndex = 80;
             this.label2.Text = "Student ID";
             // 
-            // dateTimePicker1
+            // dateOfBirthdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(32, 183);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
-            this.dateTimePicker1.TabIndex = 79;
+            this.dateOfBirthdateTimePicker.Location = new System.Drawing.Point(28, 183);
+            this.dateOfBirthdateTimePicker.Name = "dateOfBirthdateTimePicker";
+            this.dateOfBirthdateTimePicker.Size = new System.Drawing.Size(213, 20);
+            this.dateOfBirthdateTimePicker.TabIndex = 79;
             // 
             // label1
             // 
@@ -176,19 +182,20 @@
             this.label1.TabIndex = 78;
             this.label1.Text = "Update Profile";
             // 
-            // button1
+            // submitButton
             // 
-            this.button1.Location = new System.Drawing.Point(542, 433);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "&Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitButton.Location = new System.Drawing.Point(545, 415);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 77;
+            this.submitButton.Text = "&Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(591, 368);
+            this.pictureBox6.Location = new System.Drawing.Point(591, 359);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(29, 27);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,7 +235,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(588, 289);
+            this.pictureBox12.Location = new System.Drawing.Point(591, 289);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(29, 27);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +255,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(244, 176);
+            this.pictureBox15.Location = new System.Drawing.Point(242, 183);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(29, 27);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,83 +282,91 @@
             this.pictureBox17.TabIndex = 68;
             this.pictureBox17.TabStop = false;
             // 
-            // comboBox1
+            // yearOfStudycomboBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.yearOfStudycomboBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearOfStudycomboBox.FormattingEnabled = true;
+            this.yearOfStudycomboBox.Items.AddRange(new object[] {
             "YOS1",
             "YOS2",
             "YOS3",
             "Postgraduate"});
-            this.comboBox1.Location = new System.Drawing.Point(29, 359);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 27);
-            this.comboBox1.TabIndex = 67;
-            this.comboBox1.Text = "Select Year Of Study";
+            this.yearOfStudycomboBox.Location = new System.Drawing.Point(29, 359);
+            this.yearOfStudycomboBox.Name = "yearOfStudycomboBox";
+            this.yearOfStudycomboBox.Size = new System.Drawing.Size(209, 27);
+            this.yearOfStudycomboBox.TabIndex = 67;
+            this.yearOfStudycomboBox.Text = "Select Year Of Study";
             // 
-            // textBox9
+            // programmeTextBox
             // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(369, 368);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(216, 27);
-            this.textBox9.TabIndex = 66;
-            this.textBox9.Text = "Enter Students Programme";
+            this.programmeTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.programmeTextBox.Location = new System.Drawing.Point(369, 359);
+            this.programmeTextBox.Name = "programmeTextBox";
+            this.programmeTextBox.Size = new System.Drawing.Size(216, 27);
+            this.programmeTextBox.TabIndex = 66;
             // 
-            // textBox7
+            // mobileNumberTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(366, 289);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(216, 27);
-            this.textBox7.TabIndex = 65;
-            this.textBox7.Text = "Enter Students Mobile Number";
+            this.mobileNumberTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobileNumberTextBox.Location = new System.Drawing.Point(366, 289);
+            this.mobileNumberTextBox.Name = "mobileNumberTextBox";
+            this.mobileNumberTextBox.Size = new System.Drawing.Size(219, 27);
+            this.mobileNumberTextBox.TabIndex = 65;
             // 
-            // textBox6
+            // emailTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(28, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 27);
-            this.textBox6.TabIndex = 64;
-            this.textBox6.Text = "Enter Students Email Address";
+            this.emailTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(28, 289);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(209, 27);
+            this.emailTextBox.TabIndex = 64;
             // 
-            // textBox4
+            // studentLastNameTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(363, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 27);
-            this.textBox4.TabIndex = 63;
-            this.textBox4.Text = "Enter Students Last Name";
+            this.studentLastNameTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentLastNameTextBox.Location = new System.Drawing.Point(363, 122);
+            this.studentLastNameTextBox.Name = "studentLastNameTextBox";
+            this.studentLastNameTextBox.Size = new System.Drawing.Size(216, 27);
+            this.studentLastNameTextBox.TabIndex = 63;
             // 
-            // textBox3
+            // studentFirstNameTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(32, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 27);
-            this.textBox3.TabIndex = 62;
-            this.textBox3.Text = "Enter Students\' First Name";
+            this.studentFirstNameTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentFirstNameTextBox.Location = new System.Drawing.Point(28, 122);
+            this.studentFirstNameTextBox.Name = "studentFirstNameTextBox";
+            this.studentFirstNameTextBox.Size = new System.Drawing.Size(213, 27);
+            this.studentFirstNameTextBox.TabIndex = 62;
             // 
-            // textBox2
+            // idPassportTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(363, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 27);
-            this.textBox2.TabIndex = 61;
-            this.textBox2.Text = "Enter ID or Passport Number";
+            this.idPassportTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idPassportTextBox.Location = new System.Drawing.Point(363, 60);
+            this.idPassportTextBox.Name = "idPassportTextBox";
+            this.idPassportTextBox.Size = new System.Drawing.Size(216, 27);
+            this.idPassportTextBox.TabIndex = 61;
             // 
-            // textBox1
+            // studentIdTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(29, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 27);
-            this.textBox1.TabIndex = 60;
-            this.textBox1.Text = "Enter Student\'s student ID";
+            this.studentIdTextBox.Enabled = false;
+            this.studentIdTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentIdTextBox.Location = new System.Drawing.Point(28, 60);
+            this.studentIdTextBox.Name = "studentIdTextBox";
+            this.studentIdTextBox.Size = new System.Drawing.Size(210, 27);
+            this.studentIdTextBox.TabIndex = 60;
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
             // 
             // UpdateStudentProfileModal
             // 
@@ -368,9 +383,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateOfBirthdateTimePicker);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox10);
@@ -380,17 +395,18 @@
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.yearOfStudycomboBox);
+            this.Controls.Add(this.programmeTextBox);
+            this.Controls.Add(this.mobileNumberTextBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.studentLastNameTextBox);
+            this.Controls.Add(this.studentFirstNameTextBox);
+            this.Controls.Add(this.idPassportTextBox);
+            this.Controls.Add(this.studentIdTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateStudentProfileModal";
             this.Text = "UpdateStudentProfileModal";
+            this.Load += new System.EventHandler(this.UpdateStudentProfileModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -400,6 +416,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,9 +434,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateOfBirthdateTimePicker;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -428,13 +446,16 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox yearOfStudycomboBox;
+        private System.Windows.Forms.TextBox programmeTextBox;
+        private System.Windows.Forms.TextBox mobileNumberTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox studentLastNameTextBox;
+        private System.Windows.Forms.TextBox studentFirstNameTextBox;
+        private System.Windows.Forms.TextBox idPassportTextBox;
+        private System.Windows.Forms.TextBox studentIdTextBox;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
     }
 }

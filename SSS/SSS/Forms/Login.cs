@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS.Properties;
 
 namespace SSS
 {
@@ -55,7 +56,7 @@ namespace SSS
             }
             else
             {
-                MessageBox.Show("INVALID LOGIN DETAILS!");
+                MessageBox.Show(Resources.IncorrectLoginDetailsMessage);
                 medPassword.Clear();
                 medUsername.Clear();
                 medUsername.Focus();

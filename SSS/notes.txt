@@ -35,3 +35,10 @@ TAB ORDER
 login enter
 Forms for register and update tutor same a student besides details
 resizeable windows
+Audit trail
+Database error handling i.e. no database
+using waffle.io for these tasks
+window corner name bindings
+insert user login table?
+
+Added resource dictionary

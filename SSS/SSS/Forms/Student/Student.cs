@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS.Forms.Student;
 
 namespace SSS
 {
@@ -17,13 +18,15 @@ namespace SSS
         private readonly String sUser = "";
         private readonly String sPassword = "";
         private readonly RegisterStudentAttendanceModal _registerStudentAttendanceModal = new RegisterStudentAttendanceModal();
-        private readonly UpdateStudentProfileModal _updateStudentProfileModalModal = new UpdateStudentProfileModal();
+        private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
+        private readonly  ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
 
         public Student(String sUsr, String sPsswrd)
         {
             InitializeComponent();
             sUser = sUsr;
             sPassword = sPsswrd;
+            _updateStudentProfileModalModal = new UpdateStudentProfileModal(sUser);
             InitModals();
         }
 
@@ -32,12 +35,14 @@ namespace SSS
             //init internal window
             this.panel7.Controls.Add(_registerStudentAttendanceModal);
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
+            this.panel7.Controls.Add(_viewScheduleModal);
         }
 
         private void HideAllModals()
         {
             _registerStudentAttendanceModal.Hide();
             _updateStudentProfileModalModal.Hide();
+            _viewScheduleModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -78,9 +83,10 @@ namespace SSS
             HideAllModals();
         }
 
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _viewScheduleModal.Show();
         }
 
         private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)

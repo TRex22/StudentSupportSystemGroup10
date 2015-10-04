@@ -61,12 +61,30 @@ namespace SSS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect Login Details.\nPlease try again..
+        /// </summary>
+        internal static string IncorrectLoginDetailsMessage {
+            get {
+                return ResourceManager.GetString("IncorrectLoginDetailsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap PointBlankIcon {
             get {
                 object obj = ResourceManager.GetObject("PointBlankIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile Update Successful..
+        /// </summary>
+        internal static string UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_ {
+            get {
+                return ResourceManager.GetString("UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_", resourceCulture);
             }
         }
     }
