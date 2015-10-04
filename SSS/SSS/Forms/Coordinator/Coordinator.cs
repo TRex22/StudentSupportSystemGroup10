@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SSS.Forms.Coordinator;
+using SSS.Forms.Coordinator.LowTutorRatings;
 
 namespace SSS
 {
@@ -23,7 +24,8 @@ namespace SSS
         private readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
         private readonly StudentDisengagementModal _studentDisengagementModal = new StudentDisengagementModal();
-        private readonly LowTutorRatingsModal _lowTutorRatingsModal = new LowTutorRatingsModal();
+        private readonly LowTutorRatingsA_ListModal _lowTutorRatingsAModal = new LowTutorRatingsA_ListModal();
+        private readonly LowTutorRatingB_IndividualModal _lowTutorRatingBIndividualModal = new LowTutorRatingB_IndividualModal();
 
         public Coordinator(String sUsrId, String sPsswrd)
         {
@@ -47,7 +49,8 @@ namespace SSS
             this.panel7.Controls.Add(_registerStudentModal);
             this.panel7.Controls.Add(_coordinatorDashboardModal);
             this.panel7.Controls.Add(_studentDisengagementModal);
-            this.panel7.Controls.Add(_lowTutorRatingsModal);
+            this.panel7.Controls.Add(_lowTutorRatingsAModal);
+            this.panel7.Controls.Add(_lowTutorRatingBIndividualModal);
         }
 
         private void HideAllModals()
@@ -55,7 +58,8 @@ namespace SSS
             _registerStudentModal.Hide();
             _coordinatorDashboardModal.Hide();
             _studentDisengagementModal.Hide();
-            _lowTutorRatingsModal.Hide();
+            _lowTutorRatingsAModal.Hide();
+            _lowTutorRatingBIndividualModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -131,7 +135,9 @@ namespace SSS
         private void lowTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            _lowTutorRatingsModal.Show();
+            //_lowTutorRatingsAModal.Show();
+            //hack for design
+            _lowTutorRatingBIndividualModal.Show();
         }
     }
 }

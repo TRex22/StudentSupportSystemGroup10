@@ -1,0 +1,1 @@
+ALTER TABLE dbo.CONSULTATION ADD tutor_id int FOREIGN KEY REFERENCES dbo.Tutor(tutor_id)

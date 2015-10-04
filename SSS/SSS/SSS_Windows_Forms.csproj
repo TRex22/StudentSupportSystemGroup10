@@ -61,11 +61,17 @@
     <Compile Include="Forms\Coordinator\CoordinatorDashboardModal.Designer.cs">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatingsModal.cs">
+    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\LowTutorRatingsModal.Designer.cs">
-      <DependentUpon>LowTutorRatingsModal.cs</DependentUpon>
+    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.Designer.cs">
+      <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.Designer.cs">
+      <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Coordinator\StudentDisengagementModal.cs">
       <SubType>Form</SubType>
@@ -158,8 +164,11 @@
     <EmbeddedResource Include="Forms\Coordinator\CoordinatorDashboardModal.resx">
       <DependentUpon>CoordinatorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatingsModal.resx">
-      <DependentUpon>LowTutorRatingsModal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingB_IndividualModal.resx">
+      <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\LowTutorRatings\LowTutorRatingsA_ListModal.resx">
+      <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\StudentDisengagementModal.resx">
       <DependentUpon>StudentDisengagementModal.cs</DependentUpon>
@@ -211,7 +220,8 @@
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
-    <EmbeddedResource Include="Reports\Coordinator\LowTutorRatingReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\LowTutorRatingB_IndividualTutorRating.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\LowTutorA_RatingReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentDisengagementReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />

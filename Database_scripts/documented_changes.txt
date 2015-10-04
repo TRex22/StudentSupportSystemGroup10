@@ -62,4 +62,6 @@ attendance
 GROUP_DATETIME -1
 
 
+Tutor -> consultation added tutor_no FK
+
 

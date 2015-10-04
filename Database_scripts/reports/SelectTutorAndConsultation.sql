@@ -1,0 +1,2 @@
+SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus 
+FROM dbo.TUTOR INNER JOIN dbo.CONSULTATION ON dbo.TUTOR.tutor_id = dbo.CONSULTATION.[tutor_id];
