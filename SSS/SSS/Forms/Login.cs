@@ -32,9 +32,6 @@ namespace SSS
             sInput = medUsername.Text;
             sPassword = medPassword.Text;
 
-#if DEBUG
-            sInput = string.IsNullOrEmpty(sInput) ? "76582" : sInput;
-#endif
             if (sInput.Equals("76582"))
             {
                 Form CoordinatorShow = new Coordinator(sInput, sPassword);
