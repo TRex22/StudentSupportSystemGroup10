@@ -29,7 +29,7 @@ namespace SSS.Forms.Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            updateTutor();
         }
 
         private void PopulateData()
@@ -47,7 +47,7 @@ namespace SSS.Forms.Tutor
             datOfBirthdateTimePicker.Value = _tutorData.tutor_dateofbirth;
         }
 
-        private void submitButton_Click(object sender, EventArgs e)
+        private void updateTutor()
         {
             //mapping
             _tutorData.tutor_id_passport = tutorIDPassportTxtBox.Text;
