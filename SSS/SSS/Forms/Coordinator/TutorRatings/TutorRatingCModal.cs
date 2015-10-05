@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace SSS.Forms.Coordinator.TutorRatings
 {
-    public partial class LowTutorRatingCModal : Form
+    public partial class TutorRatingCModal : Form
     {
-        public LowTutorRatingCModal()
+        public TutorRatingCModal()
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
         }
     }
 }

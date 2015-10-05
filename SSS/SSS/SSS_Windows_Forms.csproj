@@ -70,23 +70,23 @@
     <Compile Include="Forms\Coordinator\RegisterTutorModal.Designer.cs">
       <DependentUpon>RegisterTutorModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.cs">
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.Designer.cs">
-      <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.Designer.cs">
+      <DependentUpon>TutorRatingB_IndividualModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingCModal.cs">
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingCModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingCModal.Designer.cs">
-      <DependentUpon>LowTutorRatingCModal.cs</DependentUpon>
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingCModal.Designer.cs">
+      <DependentUpon>TutorRatingCModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.cs">
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingsA_ListModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.Designer.cs">
-      <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
+    <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingsA_ListModal.Designer.cs">
+      <DependentUpon>TutorRatingsA_ListModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Coordinator\StudentDisengagementModal.cs">
       <SubType>Form</SubType>
@@ -191,14 +191,14 @@
     <EmbeddedResource Include="Forms\Coordinator\RegisterTutorModal.resx">
       <DependentUpon>RegisterTutorModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\LowTutorRatingB_IndividualModal.resx">
-      <DependentUpon>LowTutorRatingB_IndividualModal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.resx">
+      <DependentUpon>TutorRatingB_IndividualModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\LowTutorRatingCModal.resx">
-      <DependentUpon>LowTutorRatingCModal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingCModal.resx">
+      <DependentUpon>TutorRatingCModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\LowTutorRatingsA_ListModal.resx">
-      <DependentUpon>LowTutorRatingsA_ListModal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingsA_ListModal.resx">
+      <DependentUpon>TutorRatingsA_ListModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\StudentDisengagementModal.resx">
       <DependentUpon>StudentDisengagementModal.cs</DependentUpon>

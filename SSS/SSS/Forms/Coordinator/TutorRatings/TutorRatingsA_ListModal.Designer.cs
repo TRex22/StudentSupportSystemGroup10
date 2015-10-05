@@ -1,6 +1,6 @@
-﻿namespace SSS.Forms.Coordinator.LowTutorRatings
+﻿namespace SSS.Forms.Coordinator
 {
-    partial class LowTutorRatingB_IndividualModal
+    partial class TutorRatingsA_ListModal
     {
         /// <summary>
         /// Required designer variable.
@@ -34,23 +34,23 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.LowTutorRating.TutorB_RatingReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.LowTutorRating.TutorA.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(834, 546);
+            this.reportViewer1.Size = new System.Drawing.Size(762, 539);
             this.reportViewer1.TabIndex = 0;
             // 
-            // LowTutorRatingB_IndividualModal
+            // TutorRatingsA_ListModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 546);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LowTutorRatingB_IndividualModal";
-            this.Text = "LowTutorRatingB_IndividualModal";
-            this.Load += new System.EventHandler(this.LowTutorRatingB_IndividualModal_Load);
+            this.Name = "TutorRatingsA_ListModal";
+            this.Text = "LowTutorRatingsModal";
+            this.Load += new System.EventHandler(this.LowTutorRatingsModal_Load);
             this.ResumeLayout(false);
 
         }

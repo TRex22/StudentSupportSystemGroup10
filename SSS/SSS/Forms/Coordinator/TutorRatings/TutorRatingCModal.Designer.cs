@@ -1,6 +1,6 @@
 ﻿namespace SSS.Forms.Coordinator.TutorRatings
 {
-    partial class LowTutorRatingCModal
+    partial class TutorRatingCModal
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(818, 508);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LowTutorRatingCModal";
+            this.Name = "TutorRatingCModal";
             this.Text = "LowTutorRatingCModal";
             this.ResumeLayout(false);
 

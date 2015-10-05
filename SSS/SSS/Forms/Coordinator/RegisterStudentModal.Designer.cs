@@ -88,7 +88,6 @@
             this.studentIdTxtBox.TabIndex = 0;
             this.studentIdTxtBox.Text = "Enter Student\'s student ID";
             this.studentIdTxtBox.Enter += new System.EventHandler(this.studentIdTxtBox_Enter);
-            this.studentIdTxtBox.Leave += new System.EventHandler(this.studentIdTxtBox_Leave);
             // 
             // IdPassportTxtBox
             // 
@@ -99,7 +98,6 @@
             this.IdPassportTxtBox.TabIndex = 1;
             this.IdPassportTxtBox.Text = "Enter ID or Passport Number";
             this.IdPassportTxtBox.Enter += new System.EventHandler(this.IdPasswordTxtBox_Enter);
-            this.IdPassportTxtBox.Leave += new System.EventHandler(this.IdPassportTxtBox_Leave);
             // 
             // FirstNameTxtBox
             // 
@@ -110,7 +108,6 @@
             this.FirstNameTxtBox.TabIndex = 2;
             this.FirstNameTxtBox.Text = "Enter Student\'s First Name";
             this.FirstNameTxtBox.Enter += new System.EventHandler(this.FirstNameTxtBox_Enter);
-            this.FirstNameTxtBox.Leave += new System.EventHandler(this.FirstNameTxtBox_Leave);
             // 
             // LastNameTxtBox
             // 
@@ -121,7 +118,6 @@
             this.LastNameTxtBox.TabIndex = 3;
             this.LastNameTxtBox.Text = "Enter Student\'s Last Name";
             this.LastNameTxtBox.Enter += new System.EventHandler(this.LastNameTxtBox_Enter);
-            this.LastNameTxtBox.Leave += new System.EventHandler(this.LastNameTxtBox_Leave);
             // 
             // EmailTxtBox
             // 
@@ -133,7 +129,6 @@
             this.EmailTxtBox.TabIndex = 5;
             this.EmailTxtBox.Text = "Enter Student\'s Email Address";
             this.EmailTxtBox.Enter += new System.EventHandler(this.EmailTxtBox_Enter);
-            this.EmailTxtBox.Leave += new System.EventHandler(this.EmailTxtBox_Leave);
             // 
             // StudentProgrammeTxtBox
             // 
@@ -144,7 +139,6 @@
             this.StudentProgrammeTxtBox.TabIndex = 8;
             this.StudentProgrammeTxtBox.Text = "Enter Student\'s Programme";
             this.StudentProgrammeTxtBox.Enter += new System.EventHandler(this.StudentProgrammeTxtBox_Enter);
-            this.StudentProgrammeTxtBox.Leave += new System.EventHandler(this.StudentProgrammeTxtBox_Leave);
             // 
             // YearOfStudyComboBox1
             // 

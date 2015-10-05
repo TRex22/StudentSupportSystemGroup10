@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SSS.Forms.Coordinator;
 using SSS.Forms.Coordinator.LowTutorRatings;
+using SSS.Forms.Coordinator.TutorRatings;
 
 namespace SSS
 {
@@ -24,8 +25,9 @@ namespace SSS
         private readonly RegisterStudentModal _registerStudentModal;
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
         private readonly StudentDisengagementModal _studentDisengagementModal = new StudentDisengagementModal();
-        private readonly LowTutorRatingsA_ListModal _lowTutorRatingsAModal = new LowTutorRatingsA_ListModal();
-        private readonly LowTutorRatingB_IndividualModal _lowTutorRatingBIndividualModal = new LowTutorRatingB_IndividualModal();
+        private readonly TutorRatingsA_ListModal _tutorRatingsAModal = new TutorRatingsA_ListModal();
+        private readonly TutorRatingB_IndividualModal _tutorRatingBIndividualModal = new TutorRatingB_IndividualModal();
+        private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();
 
         public Coordinator(String sUsrId, String sPsswrd)
         {
@@ -51,8 +53,9 @@ namespace SSS
             this.panel7.Controls.Add(_registerStudentModal);
             this.panel7.Controls.Add(_coordinatorDashboardModal);
             this.panel7.Controls.Add(_studentDisengagementModal);
-            this.panel7.Controls.Add(_lowTutorRatingsAModal);
-            this.panel7.Controls.Add(_lowTutorRatingBIndividualModal);
+            this.panel7.Controls.Add(_tutorRatingsAModal);
+            this.panel7.Controls.Add(_tutorRatingBIndividualModal);
+            this.panel7.Controls.Add(_tutorRatingCModal);
         }
 
         private void HideAllModals()
@@ -60,8 +63,9 @@ namespace SSS
             _registerStudentModal.Hide();
             _coordinatorDashboardModal.Hide();
             _studentDisengagementModal.Hide();
-            _lowTutorRatingsAModal.Hide();
-            _lowTutorRatingBIndividualModal.Hide();
+            _tutorRatingsAModal.Hide();
+            _tutorRatingBIndividualModal.Hide();
+            _tutorRatingCModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -137,10 +141,19 @@ namespace SSS
 
         private void lowTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void averageTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             HideAllModals();
-            //_lowTutorRatingsAModal.Show();
-            //hack for design
-            _lowTutorRatingBIndividualModal.Show();
+            _tutorRatingsAModal.Show();
+        }
+
+        private void viewTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _tutorRatingBIndividualModal.Show();
         }
     }
 }
