@@ -33,9 +33,9 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dISENGAGEDSTUDENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dISENGAGED_STUDENTSTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dISENGAGED_STUDENTS_AGGREGATETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dISENGAGEDSTUDENTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
@@ -51,6 +51,11 @@
             // 
             this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
             this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dISENGAGEDSTUDENTSAGGREGATEBindingSource
+            // 
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataMember = "DISENGAGED_STUDENTS_AGGREGATE";
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
             // reportViewer1
             // 
@@ -70,11 +75,6 @@
             // dISENGAGED_STUDENTSTableAdapter
             // 
             this.dISENGAGED_STUDENTSTableAdapter.ClearBeforeFill = true;
-            // 
-            // dISENGAGEDSTUDENTSAGGREGATEBindingSource
-            // 
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataMember = "DISENGAGED_STUDENTS_AGGREGATE";
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
             // dISENGAGED_STUDENTS_AGGREGATETableAdapter
             // 

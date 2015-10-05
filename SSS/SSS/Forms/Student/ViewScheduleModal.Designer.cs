@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
-            this.eNROLLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eNROLLMENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ENROLLMENTTableAdapter();
             this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gROUPTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +40,6 @@
             this.grouptimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNROLLMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,24 +63,15 @@
             this.groupdateDataGridViewTextBoxColumn,
             this.grouptimeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.gROUPBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(75, 96);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(464, 224);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 1;
             // 
             // iS2G10_DBSSSDataSet
             // 
             this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
             this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eNROLLMENTBindingSource
-            // 
-            this.eNROLLMENTBindingSource.DataMember = "ENROLLMENT";
-            this.eNROLLMENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // eNROLLMENTTableAdapter
-            // 
-            this.eNROLLMENTTableAdapter.ClearBeforeFill = true;
             // 
             // gROUPBindingSource
             // 
@@ -133,7 +121,6 @@
             this.Load += new System.EventHandler(this.ViewScheduleModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNROLLMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,8 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
-        private System.Windows.Forms.BindingSource eNROLLMENTBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.ENROLLMENTTableAdapter eNROLLMENTTableAdapter;
         private System.Windows.Forms.BindingSource gROUPBindingSource;
         private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter gROUPTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupidDataGridViewTextBoxColumn;
