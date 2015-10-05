@@ -51,7 +51,7 @@ namespace SSS
 
             int result = sTUDENTTableAdapter.Update(_studentData);
             //TODO check result
-            MessageBox.Show(Resources.UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_, Resources.UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_);
+            MessageBox.Show(Resources.Profile_Update_Successful, Resources.Profile_Update_Successful);
         }
 
         private void UpdateStudentProfileModal_Load(object sender, EventArgs e)

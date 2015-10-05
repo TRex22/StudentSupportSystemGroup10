@@ -59,7 +59,7 @@ namespace SSS
             studentData.group_id = groupId;
             int result = studentTableAdapter1.Update(studentData);
             //TODO check result
-            MessageBox.Show(Resources.UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_, Resources.UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_);
+            MessageBox.Show(Resources.UpdateGroupSuccess, Resources.UpdateGroupSuccess);
 
         }
     }

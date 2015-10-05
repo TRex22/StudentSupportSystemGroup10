@@ -23,7 +23,7 @@ namespace SSS
         //Modals
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal = new UpdateStudentAttendanceModal();
         private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
-        private readonly UpdateTutorModal _updateTutorModal = new UpdateTutorModal();
+        private readonly UpdateTutorModal _updateTutorModal;
 
         public Tutor(String sUsrId, String sPsswrd)
         {
@@ -31,6 +31,7 @@ namespace SSS
             var userId = Convert.ToInt32(sUsrId);
             _tutorData = tUTORTableAdapter.GetData().FindBytutor_id(userId);
             lblTutorName.Text = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
+            _updateTutorModal = new UpdateTutorModal(userId);
             sPassword = sPsswrd;
             InitModals();
         }

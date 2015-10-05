@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailBuilder\IMailSender.cs" />
+    <Compile Include="EmailBuilder\MailBuilder.cs" />
     <Compile Include="PasswordHandler\PasswordBuilder.cs" />
     <Compile Include="PasswordHandler\StringHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

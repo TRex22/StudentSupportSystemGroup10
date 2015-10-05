@@ -89,6 +89,15 @@ namespace SSS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profile Update Successful..
+        /// </summary>
+        internal static string Profile_Update_Successful {
+            get {
+                return ResourceManager.GetString("Profile_Update_Successful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email Sent To New Student.
         /// </summary>
         internal static string SendEmailSuccessfulMessage {
@@ -98,11 +107,11 @@ namespace SSS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Profile Update Successful..
+        ///   Looks up a localized string similar to Added to Group Successful.
         /// </summary>
-        internal static string UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_ {
+        internal static string UpdateGroupSuccess {
             get {
-                return ResourceManager.GetString("UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_", resourceCulture);
+                return ResourceManager.GetString("UpdateGroupSuccess", resourceCulture);
             }
         }
     }
