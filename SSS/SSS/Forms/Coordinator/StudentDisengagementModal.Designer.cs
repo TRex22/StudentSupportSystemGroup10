@@ -30,6 +30,7 @@
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
+            this.disengageD_STUDENTSTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -42,11 +43,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(803, 561);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ReportRefresh += new System.ComponentModel.CancelEventHandler(this.reportViewer1_ReportRefresh);
-            this.reportViewer1.Hyperlink += new Microsoft.Reporting.WinForms.HyperlinkEventHandler(this.reportViewer1_Hyperlink);
+            this.reportViewer1.Drillthrough += new Microsoft.Reporting.WinForms.DrillthroughEventHandler(this.reportViewer1_Drillthrough);
+            this.reportViewer1.RenderingComplete += new Microsoft.Reporting.WinForms.RenderingCompleteEventHandler(this.reportViewer1_RenderingComplete);
             // 
             // reportTableAdapter
             // 
             this.reportTableAdapter.ClearBeforeFill = true;
+            // 
+            // disengageD_STUDENTSTableAdapter1
+            // 
+            this.disengageD_STUDENTSTableAdapter1.ClearBeforeFill = true;
             // 
             // StudentDisengagementModal
             // 
@@ -67,5 +73,6 @@
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter reportTableAdapter;
+        private IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter disengageD_STUDENTSTableAdapter1;
     }
 }

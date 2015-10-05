@@ -599,24 +599,25 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox18">
+      <Textbox Name="Textbox10">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>View Disengaged students</Value>
+                <Value>View Disengaged Students</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>12pt</FontSize>
+                  <Color>Blue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
         <ActionInfo>
           <Actions>
             <Action>
@@ -626,10 +627,10 @@
             </Action>
           </Actions>
         </ActionInfo>
-        <Top>3.37523cm</Top>
+        <Top>3.40995cm</Top>
         <Left>0.49073cm</Left>
-        <Height>0.73201cm</Height>
-        <Width>5.56917cm</Width>
+        <Height>0.73257cm</Height>
+        <Width>5.86904cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -645,7 +646,7 @@
     <Height>5.26934in</Height>
     <Style />
   </Body>
-  <Width>6.80567in</Width>
+  <Width>7.48276in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -689,6 +690,74 @@
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>STUDENT_ENGAGEMENT_STATUS_REPORTTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DisengagedStudents">
+      <Query>
+        <DataSourceName>IS2G10_DBSSSDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="student_id">
+          <DataField>student_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="coordinator_id">
+          <DataField>coordinator_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="group_id">
+          <DataField>group_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="student_firstname">
+          <DataField>student_firstname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_lastname">
+          <DataField>student_lastname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_id_passport">
+          <DataField>student_id_passport</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_dateofbirth">
+          <DataField>student_dateofbirth</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="student_emailaddress">
+          <DataField>student_emailaddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_mobilenumber">
+          <DataField>student_mobilenumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_yearofstudy">
+          <DataField>student_yearofstudy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="student_degreeprogramme">
+          <DataField>student_degreeprogramme</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_status">
+          <DataField>student_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_points">
+          <DataField>student_points</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\SoftDev\Downloads\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>DISENGAGED_STUDENTS</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>DISENGAGED_STUDENTSTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

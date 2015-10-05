@@ -69,6 +69,7 @@
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.viewDisengagedStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -197,9 +198,11 @@
             // 
             // studentDisengagementToolStripMenuItem
             // 
+            this.studentDisengagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewDisengagedStudentsToolStripMenuItem});
             this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
             this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.studentDisengagementToolStripMenuItem.Text = "Student Disengagement";
+            this.studentDisengagementToolStripMenuItem.Text = "Student Engagement";
             this.studentDisengagementToolStripMenuItem.Click += new System.EventHandler(this.studentDisengagementToolStripMenuItem_Click);
             // 
             // lowTutorRatingsToolStripMenuItem
@@ -247,8 +250,8 @@
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
-            this.searchToolStripMenuItem.Text = "Search ";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(124, 23);
+            this.searchToolStripMenuItem.Text = "Search Students";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // menuStrip4
@@ -424,6 +427,12 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
+            // viewDisengagedStudentsToolStripMenuItem
+            // 
+            this.viewDisengagedStudentsToolStripMenuItem.Name = "viewDisengagedStudentsToolStripMenuItem";
+            this.viewDisengagedStudentsToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
+            this.viewDisengagedStudentsToolStripMenuItem.Text = "View Disengaged Students";
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,5 +520,6 @@
         private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sSSCOORDINATORBindingSource;
         private IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter sSS_COORDINATORTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem viewDisengagedStudentsToolStripMenuItem;
     }
 }

@@ -101,6 +101,16 @@ namespace SSS
             }
         }
 
+        private bool ValidateInput()
+        {
+            bool blnValid = false;
+
+
+
+
+            return (blnValid);
+        }
+
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             //todo validate later

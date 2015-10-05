@@ -24,21 +24,39 @@ namespace SSS.Forms.Coordinator
         private void StudentDisengagementModal_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();
-            var studentEngagementStatusReportDataTable = new IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
-            reportTableAdapter.Fill(studentEngagementStatusReportDataTable);
-            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentEngagementStatuses", (DataTable)studentEngagementStatusReportDataTable));
+            ReportDataConnect();
             this.reportViewer1.RefreshReport();
             
         }
 
-        private void reportViewer1_Hyperlink(object sender, HyperlinkEventArgs e)
-        {
-            MessageBox.Show("You pressed a button");
-        }
-
         private void reportViewer1_ReportRefresh(object sender, CancelEventArgs e)
         {
-            this.reportViewer1.Reset();
+            
+        }
+
+        private void reportViewer1_Drillthrough(object sender, DrillthroughEventArgs e)
+        {
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.StudentEngagement.ViewDisengagedStudentsReport.rdlc";
+            reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataConnect();
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void ReportDataConnect()
+        {
+            //student status
+            var studentEngagementStatusReportDataTable = new IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
+            reportTableAdapter.Fill(studentEngagementStatusReportDataTable);
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentEngagementStatuses", (DataTable)studentEngagementStatusReportDataTable));
+
+            //disengaged students
+            var disengagedStudentsReportDataTable = new IS2G10_DBSSSDataSet.DISENGAGED_STUDENTSDataTable();
+            disengageD_STUDENTSTableAdapter1.Fill(disengagedStudentsReportDataTable);
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudents", (DataTable)disengagedStudentsReportDataTable));
+        }
+
+        private void reportViewer1_RenderingComplete(object sender, RenderingCompleteEventArgs e)
+        {
         }
     }
 }
