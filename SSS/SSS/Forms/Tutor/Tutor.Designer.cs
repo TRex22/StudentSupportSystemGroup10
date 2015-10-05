@@ -40,9 +40,6 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lowTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.updateStudentConsultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
@@ -69,7 +66,6 @@
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.menuStrip6.SuspendLayout();
@@ -166,7 +162,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 189);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 186);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 24);
             this.menuStrip1.TabIndex = 0;
@@ -175,35 +171,11 @@
             // menuStrip3
             // 
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generateReportToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 162);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip3.Size = new System.Drawing.Size(241, 24);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
-            // 
-            // generateReportToolStripMenuItem
-            // 
-            this.generateReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lowTutorRatingsToolStripMenuItem,
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem});
-            this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
-            this.generateReportToolStripMenuItem.Text = "Generate Report";
-            this.generateReportToolStripMenuItem.Click += new System.EventHandler(this.generateReportToolStripMenuItem_Click);
-            // 
-            // lowTutorRatingsToolStripMenuItem
-            // 
-            this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
-            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.lowTutorRatingsToolStripMenuItem.Text = "Low Tutor Ratings";
-            // 
-            // tutorTrainingStatusAndRatingsToolStripMenuItem
-            // 
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Name = "tutorTrainingStatusAndRatingsToolStripMenuItem";
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.tutorTrainingStatusAndRatingsToolStripMenuItem.Text = "Tutor Training Status and Ratings";
             // 
             // menuStrip4
             // 
@@ -392,8 +364,6 @@
             this.panel8.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
             this.menuStrip5.ResumeLayout(false);
@@ -426,8 +396,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem generateReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lowTutorRatingsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip6;
@@ -443,7 +411,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateStudentConsultationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tutorTrainingStatusAndRatingsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip9;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.Timer tmrSecond;

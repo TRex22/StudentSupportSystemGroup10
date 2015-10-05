@@ -40,9 +40,6 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.viewScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
@@ -58,19 +55,18 @@
             this.menuStrip10 = new System.Windows.Forms.MenuStrip();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblStudentName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
-            this.lblStudentName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip9.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
@@ -167,7 +163,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 216);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 213);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 24);
             this.menuStrip1.TabIndex = 0;
@@ -176,36 +172,11 @@
             // menuStrip3
             // 
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generateReportToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 189);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip3.Size = new System.Drawing.Size(241, 24);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
-            // 
-            // generateReportToolStripMenuItem
-            // 
-            this.generateReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentDisengagementToolStripMenuItem,
-            this.courseDisengagementToolStripMenuItem});
-            this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
-            this.generateReportToolStripMenuItem.Text = "Generate Report";
-            // 
-            // studentDisengagementToolStripMenuItem
-            // 
-            this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
-            this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.studentDisengagementToolStripMenuItem.Text = "Low Activity Ratings";
-            this.studentDisengagementToolStripMenuItem.Click += new System.EventHandler(this.studentDisengagementToolStripMenuItem_Click);
-            // 
-            // courseDisengagementToolStripMenuItem
-            // 
-            this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
-            this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.courseDisengagementToolStripMenuItem.Text = "Low Tutor ratings";
-            this.courseDisengagementToolStripMenuItem.Click += new System.EventHandler(this.courseDisengagementToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -344,6 +315,14 @@
             this.panel2.Size = new System.Drawing.Size(1025, 23);
             this.panel2.TabIndex = 4;
             // 
+            // lblStudentName
+            // 
+            this.lblStudentName.AutoSize = true;
+            this.lblStudentName.Location = new System.Drawing.Point(3, 5);
+            this.lblStudentName.Name = "lblStudentName";
+            this.lblStudentName.Size = new System.Drawing.Size(0, 13);
+            this.lblStudentName.TabIndex = 2;
+            // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
@@ -374,14 +353,6 @@
             // 
             this.sTUDENTTableAdapter.ClearBeforeFill = true;
             // 
-            // lblStudentName
-            // 
-            this.lblStudentName.AutoSize = true;
-            this.lblStudentName.Location = new System.Drawing.Point(3, 5);
-            this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(0, 13);
-            this.lblStudentName.TabIndex = 2;
-            // 
             // tmrSecond
             // 
             this.tmrSecond.Enabled = true;
@@ -411,8 +382,6 @@
             this.panel8.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
             this.menuStrip9.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
@@ -447,9 +416,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem generateReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem studentDisengagementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem courseDisengagementToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem viewScheduleToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip4;

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterStudentModal));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.studentIdTxtBox = new System.Windows.Forms.TextBox();
+            this.IdPasswordTxtBox = new System.Windows.Forms.TextBox();
+            this.FirstNameTxtBox = new System.Windows.Forms.TextBox();
+            this.LastNameTxtBox = new System.Windows.Forms.TextBox();
+            this.EmailTxtBox = new System.Windows.Forms.TextBox();
+            this.MobileTxtBox = new System.Windows.Forms.TextBox();
+            this.StudentProgrammeTxtBox = new System.Windows.Forms.TextBox();
+            this.YearOfStudyComboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,9 +46,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datOfBirthDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,83 +69,91 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // studentIdTxtBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(56, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 27);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Enter Student\'s student ID";
+            this.studentIdTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentIdTxtBox.Location = new System.Drawing.Point(56, 86);
+            this.studentIdTxtBox.Name = "studentIdTxtBox";
+            this.studentIdTxtBox.Size = new System.Drawing.Size(209, 27);
+            this.studentIdTxtBox.TabIndex = 0;
+            this.studentIdTxtBox.Text = "Enter Student\'s student ID";
+            this.studentIdTxtBox.Enter += new System.EventHandler(this.studentIdTxtBox_Enter);
             // 
-            // textBox2
+            // IdPasswordTxtBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(393, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 27);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Enter ID or Passport Number";
+            this.IdPasswordTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdPasswordTxtBox.Location = new System.Drawing.Point(393, 86);
+            this.IdPasswordTxtBox.Name = "IdPasswordTxtBox";
+            this.IdPasswordTxtBox.Size = new System.Drawing.Size(216, 27);
+            this.IdPasswordTxtBox.TabIndex = 1;
+            this.IdPasswordTxtBox.Text = "Enter ID or Passport Number";
+            this.IdPasswordTxtBox.Enter += new System.EventHandler(this.IdPasswordTxtBox_Enter);
             // 
-            // textBox3
+            // FirstNameTxtBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(56, 148);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 27);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Enter Student\'s First Name";
+            this.FirstNameTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTxtBox.Location = new System.Drawing.Point(56, 148);
+            this.FirstNameTxtBox.Name = "FirstNameTxtBox";
+            this.FirstNameTxtBox.Size = new System.Drawing.Size(209, 27);
+            this.FirstNameTxtBox.TabIndex = 2;
+            this.FirstNameTxtBox.Text = "Enter Student\'s First Name";
+            this.FirstNameTxtBox.Enter += new System.EventHandler(this.FirstNameTxtBox_Enter);
             // 
-            // textBox4
+            // LastNameTxtBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(393, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 27);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Enter Student\'s Last Name";
+            this.LastNameTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTxtBox.Location = new System.Drawing.Point(393, 148);
+            this.LastNameTxtBox.Name = "LastNameTxtBox";
+            this.LastNameTxtBox.Size = new System.Drawing.Size(216, 27);
+            this.LastNameTxtBox.TabIndex = 3;
+            this.LastNameTxtBox.Text = "Enter Student\'s Last Name";
+            this.LastNameTxtBox.Enter += new System.EventHandler(this.LastNameTxtBox_Enter);
             // 
-            // textBox6
+            // EmailTxtBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(58, 315);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 27);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Enter Student\'s Email Address";
+            this.EmailTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTxtBox.HideSelection = false;
+            this.EmailTxtBox.Location = new System.Drawing.Point(58, 315);
+            this.EmailTxtBox.Name = "EmailTxtBox";
+            this.EmailTxtBox.Size = new System.Drawing.Size(209, 27);
+            this.EmailTxtBox.TabIndex = 5;
+            this.EmailTxtBox.Text = "Enter Student\'s Email Address";
+            this.EmailTxtBox.Enter += new System.EventHandler(this.EmailTxtBox_Enter);
             // 
-            // textBox7
+            // MobileTxtBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(396, 315);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(216, 27);
-            this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "Enter Student\'s Mobile Number";
+            this.MobileTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobileTxtBox.Location = new System.Drawing.Point(396, 315);
+            this.MobileTxtBox.Name = "MobileTxtBox";
+            this.MobileTxtBox.Size = new System.Drawing.Size(216, 27);
+            this.MobileTxtBox.TabIndex = 6;
+            this.MobileTxtBox.Text = "Enter Student\'s Mobile Number";
+            this.MobileTxtBox.Enter += new System.EventHandler(this.MobileTxtBox_Enter);
             // 
-            // textBox9
+            // StudentProgrammeTxtBox
             // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(399, 394);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(216, 27);
-            this.textBox9.TabIndex = 8;
-            this.textBox9.Text = "Enter Student\'s Programme";
+            this.StudentProgrammeTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentProgrammeTxtBox.Location = new System.Drawing.Point(399, 385);
+            this.StudentProgrammeTxtBox.Name = "StudentProgrammeTxtBox";
+            this.StudentProgrammeTxtBox.Size = new System.Drawing.Size(216, 27);
+            this.StudentProgrammeTxtBox.TabIndex = 8;
+            this.StudentProgrammeTxtBox.Text = "Enter Student\'s Programme";
+            this.StudentProgrammeTxtBox.Enter += new System.EventHandler(this.StudentProgrammeTxtBox_Enter);
             // 
-            // comboBox1
+            // YearOfStudyComboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.YearOfStudyComboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearOfStudyComboBox1.FormattingEnabled = true;
+            this.YearOfStudyComboBox1.Items.AddRange(new object[] {
             "YOS1",
             "YOS2",
             "YOS3",
             "Postgraduate"});
-            this.comboBox1.Location = new System.Drawing.Point(59, 385);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 27);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Select Year Of Study";
+            this.YearOfStudyComboBox1.Location = new System.Drawing.Point(59, 385);
+            this.YearOfStudyComboBox1.Name = "YearOfStudyComboBox1";
+            this.YearOfStudyComboBox1.Size = new System.Drawing.Size(209, 27);
+            this.YearOfStudyComboBox1.TabIndex = 9;
+            this.YearOfStudyComboBox1.Text = "Select Year Of Study";
             // 
             // pictureBox2
             // 
@@ -230,21 +238,22 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(621, 394);
+            this.pictureBox9.Location = new System.Drawing.Point(621, 385);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(29, 27);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 22;
             this.pictureBox9.TabStop = false;
             // 
-            // button1
+            // SubmitButton
             // 
-            this.button1.Location = new System.Drawing.Point(572, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "&Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SubmitButton.Location = new System.Drawing.Point(575, 453);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.TabIndex = 23;
+            this.SubmitButton.Text = "&Submit";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label1
             // 
@@ -256,12 +265,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Please enter student details";
             // 
-            // dateTimePicker1
+            // datOfBirthDateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(56, 207);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
-            this.dateTimePicker1.TabIndex = 25;
+            this.datOfBirthDateTimePicker1.Location = new System.Drawing.Point(56, 207);
+            this.datOfBirthDateTimePicker1.Name = "datOfBirthDateTimePicker1";
+            this.datOfBirthDateTimePicker1.Size = new System.Drawing.Size(209, 20);
+            this.datOfBirthDateTimePicker1.TabIndex = 25;
             // 
             // label2
             // 
@@ -317,7 +326,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(398, 372);
+            this.label7.Location = new System.Drawing.Point(398, 363);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 34;
@@ -367,9 +376,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datOfBirthDateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -379,14 +388,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.YearOfStudyComboBox1);
+            this.Controls.Add(this.StudentProgrammeTxtBox);
+            this.Controls.Add(this.MobileTxtBox);
+            this.Controls.Add(this.EmailTxtBox);
+            this.Controls.Add(this.LastNameTxtBox);
+            this.Controls.Add(this.FirstNameTxtBox);
+            this.Controls.Add(this.IdPasswordTxtBox);
+            this.Controls.Add(this.studentIdTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterStudentModal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -405,14 +414,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox studentIdTxtBox;
+        private System.Windows.Forms.TextBox IdPasswordTxtBox;
+        private System.Windows.Forms.TextBox FirstNameTxtBox;
+        private System.Windows.Forms.TextBox LastNameTxtBox;
+        private System.Windows.Forms.TextBox EmailTxtBox;
+        private System.Windows.Forms.TextBox MobileTxtBox;
+        private System.Windows.Forms.TextBox StudentProgrammeTxtBox;
+        private System.Windows.Forms.ComboBox YearOfStudyComboBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -422,9 +431,9 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datOfBirthDateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
