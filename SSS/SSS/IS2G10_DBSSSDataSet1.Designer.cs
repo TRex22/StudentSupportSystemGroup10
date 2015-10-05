@@ -9250,8 +9250,8 @@ SELECT consultation_id, coordinator_id, student_id, consultation_details, consul
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_course_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "course_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[COURSE] ([course_name]) VALUES (@course_name);\nSELECT course_i" +
-                "d, course_name FROM COURSE WHERE (course_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[COURSE] ([course_name]) VALUES (@course_name);\r\nSELECT course_" +
+                "id, course_name FROM COURSE WHERE (course_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@course_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "course_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -9983,8 +9983,8 @@ SELECT course_id, student_id, class_mark, exam_mark, year_mark FROM ENROLLMENT W
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GROUP] ([group_name], [group_date], [group_time]) VALUES (@gro" +
-                "up_name, @group_date, @group_time);\nSELECT group_id, group_name, group_date, gro" +
-                "up_time FROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
+                "up_name, @group_date, @group_time);\r\nSELECT group_id, group_name, group_date, gr" +
+                "oup_time FROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10373,9 +10373,9 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[SESSION] ([tutor_id], [group_id], [updated_attendance]) VALUES" +
-                " (@tutor_id, @group_id, @updated_attendance);\nSELECT tutor_id, group_id, updated" +
-                "_attendance FROM SESSION WHERE (group_id = @group_id) AND (tutor_id = @tutor_id)" +
-                "";
+                " (@tutor_id, @group_id, @updated_attendance);\r\nSELECT tutor_id, group_id, update" +
+                "d_attendance FROM SESSION WHERE (group_id = @group_id) AND (tutor_id = @tutor_id" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10723,10 +10723,10 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
                 "ailaddress = 1 AND [coordinator_emailaddress] IS NULL) OR ([coordinator_emailadd" +
                 "ress] = @Original_coordinator_emailaddress)) AND ((@IsNull_coordinator_cellnumbe" +
                 "r = 1 AND [coordinator_cellnumber] IS NULL) OR ([coordinator_cellnumber] = @Orig" +
-                "inal_coordinator_cellnumber)));\nSELECT coordinator_id, coordinator_firstname, co" +
-                "ordinator_lastname, coordinator_id_passport, coordinator_dateofbirth, coordinato" +
-                "r_emailaddress, coordinator_cellnumber FROM SSS_COORDINATOR WHERE (coordinator_i" +
-                "d = @coordinator_id)";
+                "inal_coordinator_cellnumber)));\r\nSELECT coordinator_id, coordinator_firstname, c" +
+                "oordinator_lastname, coordinator_id_passport, coordinator_dateofbirth, coordinat" +
+                "or_emailaddress, coordinator_cellnumber FROM SSS_COORDINATOR WHERE (coordinator_" +
+                "id = @coordinator_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11292,11 +11292,11 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 "ogramme] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 " +
                 "AND [student_status] IS NULL) OR ([student_status] = @Original_student_status)) " +
                 "AND ((@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_poin" +
-                "ts] = @Original_student_points)));\nSELECT student_id, coordinator_id, group_id, " +
-                "student_firstname, student_lastname, student_id_passport, student_dateofbirth, s" +
-                "tudent_emailaddress, student_mobilenumber, student_yearofstudy, student_degreepr" +
-                "ogramme, student_status, student_points FROM STUDENT WHERE (student_id = @studen" +
-                "t_id)";
+                "ts] = @Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id," +
+                " student_firstname, student_lastname, student_id_passport, student_dateofbirth, " +
+                "student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreep" +
+                "rogramme, student_status, student_points FROM STUDENT WHERE (student_id = @stude" +
+                "nt_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12965,8 +12965,8 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT student_status, COUNT(student_status) AS \'student_statuses\'\nFROM STUDENT\nG" +
-                "ROUP BY student_status";
+            this._commandCollection[0].CommandText = "SELECT student_status, COUNT(student_status) AS \'student_statuses\'\r\nFROM STUDENT\r" +
+                "\nGROUP BY student_status";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13221,11 +13221,11 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 "ogramme] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 " +
                 "AND [student_status] IS NULL) OR ([student_status] = @Original_student_status)) " +
                 "AND ((@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_poin" +
-                "ts] = @Original_student_points)));\nSELECT student_id, coordinator_id, group_id, " +
-                "student_firstname, student_lastname, student_id_passport, student_dateofbirth, s" +
-                "tudent_emailaddress, student_mobilenumber, student_yearofstudy, student_degreepr" +
-                "ogramme, student_status, student_points FROM STUDENT WHERE (student_id = @studen" +
-                "t_id) ORDER BY student_points";
+                "ts] = @Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id," +
+                " student_firstname, student_lastname, student_id_passport, student_dateofbirth, " +
+                "student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreep" +
+                "rogramme, student_status, student_points FROM STUDENT WHERE (student_id = @stude" +
+                "nt_id) ORDER BY student_points";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13279,8 +13279,8 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT *\nFROM dbo.STUDENT\nWHERE dbo.STUDENT.student_points < 35\nORDER BY dbo.STUD" +
-                "ENT.student_points ASC;";
+            this._commandCollection[0].CommandText = "SELECT *\r\nFROM dbo.STUDENT\r\nWHERE dbo.STUDENT.student_points < 35\r\nORDER BY dbo.S" +
+                "TUDENT.student_points ASC;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14082,8 +14082,8 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT COUNT(student_id) AS \'NumberOfStudents\'\r\nFROM dbo.STUDENT\r\nGROUP BY studen" +
-                "t_points\nHAVING dbo.STUDENT.student_points < 35\nORDER BY dbo.STUDENT.student_poi" +
-                "nts ASC;";
+                "t_points\r\nHAVING dbo.STUDENT.student_points < 35\r\nORDER BY dbo.STUDENT.student_p" +
+                "oints ASC;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
