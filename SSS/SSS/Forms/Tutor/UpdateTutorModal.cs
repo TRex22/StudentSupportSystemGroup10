@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace SSS.Forms.Tutor
 {
-    public partial class UpdateTutor : Form
+    public partial class UpdateTutorModal : Form
     {
-        public UpdateTutor()
+        public UpdateTutorModal()
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

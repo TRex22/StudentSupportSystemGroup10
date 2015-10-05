@@ -15,6 +15,14 @@ namespace SSS.Forms.Coordinator
         public RegisterTutorModal()
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@ namespace SSS
         private readonly TutorRatingsA_ListModal _tutorRatingsAModal = new TutorRatingsA_ListModal();
         private readonly TutorRatingB_IndividualModal _tutorRatingBIndividualModal = new TutorRatingB_IndividualModal();
         private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();
+        private readonly RegisterTutorModal _registerTutorModal = new RegisterTutorModal();
 
         public Coordinator(String sUsrId, String sPsswrd)
         {
@@ -56,6 +57,7 @@ namespace SSS
             this.panel7.Controls.Add(_tutorRatingsAModal);
             this.panel7.Controls.Add(_tutorRatingBIndividualModal);
             this.panel7.Controls.Add(_tutorRatingCModal);
+            this.panel7.Controls.Add(_registerTutorModal);
         }
 
         private void HideAllModals()
@@ -66,6 +68,7 @@ namespace SSS
             _tutorRatingsAModal.Hide();
             _tutorRatingBIndividualModal.Hide();
             _tutorRatingCModal.Hide();
+            _registerTutorModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -91,6 +94,7 @@ namespace SSS
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _registerTutorModal.Show();
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace SSS
         //Modals
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal = new UpdateStudentAttendanceModal();
         private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
+        private readonly UpdateTutorModal _updateTutorModal = new UpdateTutorModal();
 
         public Tutor(String sUsrId, String sPsswrd)
         {
@@ -39,12 +40,14 @@ namespace SSS
             //init internal window
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
             this.panel7.Controls.Add(_tutorDashboardModal);
+            this.panel7.Controls.Add(_updateTutorModal);
         }
 
         private void HideAllModals()
         {
             _updateStudentAttendanceModal.Hide();
             _tutorDashboardModal.Hide();
+            _updateTutorModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -81,6 +84,7 @@ namespace SSS
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _updateTutorModal.Show();
         }
 
         private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)

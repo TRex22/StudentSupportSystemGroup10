@@ -136,11 +136,11 @@
     <Compile Include="Forms\Tutor\TutorDashboardModal.Designer.cs">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tutor\UpdateTutor.cs">
+    <Compile Include="Forms\Tutor\UpdateTutorModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tutor\UpdateTutor.Designer.cs">
-      <DependentUpon>UpdateTutor.cs</DependentUpon>
+    <Compile Include="Forms\Tutor\UpdateTutorModal.Designer.cs">
+      <DependentUpon>UpdateTutorModal.cs</DependentUpon>
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.cs">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
@@ -224,8 +224,8 @@
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tutor\UpdateTutor.resx">
-      <DependentUpon>UpdateTutor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tutor\UpdateTutorModal.resx">
+      <DependentUpon>UpdateTutorModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
