@@ -21,7 +21,6 @@ namespace SSS
         private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
 
         //Modals
-        private readonly RegisterStudentAttendanceModal _registerStudentAttendanceModal = new RegisterStudentAttendanceModal();
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
         private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
         private readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
@@ -40,7 +39,6 @@ namespace SSS
         private void InitModals()
         {
             //init internal window
-            this.panel7.Controls.Add(_registerStudentAttendanceModal);
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
             this.panel7.Controls.Add(_viewScheduleModal);
             this.panel7.Controls.Add(_studentDashboardModal);
@@ -48,7 +46,6 @@ namespace SSS
 
         private void HideAllModals()
         {
-            _registerStudentAttendanceModal.Hide();
             _updateStudentProfileModalModal.Hide();
             _viewScheduleModal.Hide();
             _studentDashboardModal.Hide();
@@ -71,7 +68,7 @@ namespace SSS
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            _registerStudentAttendanceModal.Show();
+            //TODO FIX _registerStudentAttendanceModal.Show();
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,7 +116,6 @@ namespace SSS
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _registerStudentAttendanceModal.Close();
             this.Close();
         }
 

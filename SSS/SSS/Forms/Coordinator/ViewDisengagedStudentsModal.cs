@@ -11,40 +11,20 @@ using Microsoft.Reporting.WinForms;
 
 namespace SSS.Forms.Coordinator
 {
-    public partial class StudentDisengagementModal : Form
+    public partial class ViewDisengagedStudentsModal : Form
     {
-        public StudentDisengagementModal()
+        public ViewDisengagedStudentsModal()
         {
             InitializeComponent();
+
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
         }
 
-        private void StudentDisengagementModal_Load(object sender, EventArgs e)
-        {
-            reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataConnect();
-            this.reportViewer1.RefreshReport();
-            
-        }
-
-        private void reportViewer1_ReportRefresh(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-        private void reportViewer1_Drillthrough(object sender, DrillthroughEventArgs e)
-        {
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.StudentEngagement.ViewDisengagedStudentsReport.rdlc";
-            reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataConnect();
-            this.reportViewer1.RefreshReport();
-        }
-
         private void ReportDataConnect()
         {
-            //student status
+            /*//student status
             var studentEngagementStatusReportDataTable = new IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
             reportTableAdapter.Fill(studentEngagementStatusReportDataTable);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentEngagementStatuses", (DataTable)studentEngagementStatusReportDataTable));
@@ -63,10 +43,18 @@ namespace SSS.Forms.Coordinator
             var disengagedStudentsAggreagteDT = new IS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATEDataTable();
             disengageD_STUDENTS_AGGREGATETableAdapter1.Fill(disengagedStudentsAggreagteDT);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudentsAggregate", (DataTable)disengagedStudentsAggreagteDT));
+        */
         }
 
-        private void reportViewer1_RenderingComplete(object sender, RenderingCompleteEventArgs e)
+
+        private void ViewDisengagedStudentsModal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATE' table. You can move, or remove it, as needed.
+            this.dISENGAGED_STUDENTS_AGGREGATETableAdapter.Fill(this.iS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATE);
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.DISENGAGED_STUDENTS' table. You can move, or remove it, as needed.
+            this.dISENGAGED_STUDENTSTableAdapter.Fill(this.iS2G10_DBSSSDataSet.DISENGAGED_STUDENTS);
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

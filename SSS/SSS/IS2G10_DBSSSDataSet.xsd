@@ -911,6 +911,43 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="STUDENTS_AGGREGATETableAdapter" GeneratorDataComponentClassName="STUDENTS_AGGREGATETableAdapter" Name="STUDENTS_AGGREGATE" UserDataComponentName="STUDENTS_AGGREGATETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IS2G10_DBSSSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(student_id) AS 'NumberOfStudents'
+FROM dbo.STUDENT;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NumberOfStudents" DataSetColumn="NumberOfStudents" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DISENGAGED_STUDENTS_AGGREGATETableAdapter" GeneratorDataComponentClassName="DISENGAGED_STUDENTS_AGGREGATETableAdapter" Name="DISENGAGED_STUDENTS_AGGREGATE" UserDataComponentName="DISENGAGED_STUDENTS_AGGREGATETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IS2G10_DBSSSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(student_id) AS 'NumberOfStudents'
+FROM dbo.STUDENT
+GROUP BY student_points
+HAVING dbo.STUDENT.student_points &lt; 35
+ORDER BY dbo.STUDENT.student_points ASC;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NumberOfStudents" DataSetColumn="NumberOfStudents" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1242,6 +1279,20 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 </xs:simpleType>
               </xs:element>
               <xs:element name="student_points" msprop:Generator_ColumnVarNameInTable="columnstudent_points" msprop:Generator_ColumnPropNameInRow="student_points" msprop:Generator_ColumnPropNameInTable="student_pointsColumn" msprop:Generator_UserColumnName="student_points" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="STUDENTS_AGGREGATE" msprop:Generator_TableClassName="STUDENTS_AGGREGATEDataTable" msprop:Generator_TableVarName="tableSTUDENTS_AGGREGATE" msprop:Generator_RowChangedName="STUDENTS_AGGREGATERowChanged" msprop:Generator_TablePropName="STUDENTS_AGGREGATE" msprop:Generator_RowDeletingName="STUDENTS_AGGREGATERowDeleting" msprop:Generator_RowChangingName="STUDENTS_AGGREGATERowChanging" msprop:Generator_RowEvHandlerName="STUDENTS_AGGREGATERowChangeEventHandler" msprop:Generator_RowDeletedName="STUDENTS_AGGREGATERowDeleted" msprop:Generator_RowClassName="STUDENTS_AGGREGATERow" msprop:Generator_UserTableName="STUDENTS_AGGREGATE" msprop:Generator_RowEvArgName="STUDENTS_AGGREGATERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumberOfStudents" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNumberOfStudents" msprop:Generator_ColumnPropNameInRow="NumberOfStudents" msprop:Generator_ColumnPropNameInTable="NumberOfStudentsColumn" msprop:Generator_UserColumnName="NumberOfStudents" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DISENGAGED_STUDENTS_AGGREGATE" msprop:Generator_TableClassName="DISENGAGED_STUDENTS_AGGREGATEDataTable" msprop:Generator_TableVarName="tableDISENGAGED_STUDENTS_AGGREGATE" msprop:Generator_RowChangedName="DISENGAGED_STUDENTS_AGGREGATERowChanged" msprop:Generator_TablePropName="DISENGAGED_STUDENTS_AGGREGATE" msprop:Generator_RowDeletingName="DISENGAGED_STUDENTS_AGGREGATERowDeleting" msprop:Generator_RowChangingName="DISENGAGED_STUDENTS_AGGREGATERowChanging" msprop:Generator_RowEvHandlerName="DISENGAGED_STUDENTS_AGGREGATERowChangeEventHandler" msprop:Generator_RowDeletedName="DISENGAGED_STUDENTS_AGGREGATERowDeleted" msprop:Generator_RowClassName="DISENGAGED_STUDENTS_AGGREGATERow" msprop:Generator_UserTableName="DISENGAGED_STUDENTS_AGGREGATE" msprop:Generator_RowEvArgName="DISENGAGED_STUDENTS_AGGREGATERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumberOfStudents" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNumberOfStudents" msprop:Generator_ColumnPropNameInRow="NumberOfStudents" msprop:Generator_ColumnPropNameInTable="NumberOfStudentsColumn" msprop:Generator_UserColumnName="NumberOfStudents" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
