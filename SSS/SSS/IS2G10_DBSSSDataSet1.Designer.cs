@@ -84,6 +84,12 @@ namespace SSS {
         
         private global::System.Data.DataRelation relationFK__STUDENT__group_i__2B3F6F97;
         
+        private global::System.Data.DataRelation relationFK__SESSION__group_i__286302EC;
+        
+        private global::System.Data.DataRelation relationFK__STUDENT__group_i__2B3F6F971;
+        
+        private global::System.Data.DataRelation relationFK__STUDENT__group_i__2B3F6F972;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +581,9 @@ namespace SSS {
             this.relationFK__ENROLLMEN__stude__276EDEB3 = this.Relations["FK__ENROLLMEN__stude__276EDEB3"];
             this.relationFK__STUDENT__coordin__2A4B4B5E = this.Relations["FK__STUDENT__coordin__2A4B4B5E"];
             this.relationFK__STUDENT__group_i__2B3F6F97 = this.Relations["FK__STUDENT__group_i__2B3F6F97"];
+            this.relationFK__SESSION__group_i__286302EC = this.Relations["FK__SESSION__group_i__286302EC"];
+            this.relationFK__STUDENT__group_i__2B3F6F971 = this.Relations["FK__STUDENT__group_i__2B3F6F971"];
+            this.relationFK__STUDENT__group_i__2B3F6F972 = this.Relations["FK__STUDENT__group_i__2B3F6F972"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -675,6 +684,18 @@ namespace SSS {
                         this.tableGROUP.group_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableDISENGAGED_STUDENTS.group_idColumn}, false);
             this.Relations.Add(this.relationFK__STUDENT__group_i__2B3F6F97);
+            this.relationFK__SESSION__group_i__286302EC = new global::System.Data.DataRelation("FK__SESSION__group_i__286302EC", new global::System.Data.DataColumn[] {
+                        this.tableGROUP_AGGREGATE.group_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSESSION.group_idColumn}, false);
+            this.Relations.Add(this.relationFK__SESSION__group_i__286302EC);
+            this.relationFK__STUDENT__group_i__2B3F6F971 = new global::System.Data.DataRelation("FK__STUDENT__group_i__2B3F6F971", new global::System.Data.DataColumn[] {
+                        this.tableGROUP_AGGREGATE.group_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT.group_idColumn}, false);
+            this.Relations.Add(this.relationFK__STUDENT__group_i__2B3F6F971);
+            this.relationFK__STUDENT__group_i__2B3F6F972 = new global::System.Data.DataRelation("FK__STUDENT__group_i__2B3F6F972", new global::System.Data.DataColumn[] {
+                        this.tableGROUP_AGGREGATE.group_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDISENGAGED_STUDENTS.group_idColumn}, false);
+            this.Relations.Add(this.relationFK__STUDENT__group_i__2B3F6F972);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2153,9 +2174,9 @@ namespace SSS {
             
             private global::System.Data.DataColumn columngroup_name;
             
-            private global::System.Data.DataColumn columngroup_date;
-            
             private global::System.Data.DataColumn columngroup_time;
+            
+            private global::System.Data.DataColumn columngroup_day;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2208,17 +2229,17 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn group_dateColumn {
+            public global::System.Data.DataColumn group_timeColumn {
                 get {
-                    return this.columngroup_date;
+                    return this.columngroup_time;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn group_timeColumn {
+            public global::System.Data.DataColumn group_dayColumn {
                 get {
-                    return this.columngroup_time;
+                    return this.columngroup_day;
                 }
             }
             
@@ -2259,13 +2280,13 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GROUPRow AddGROUPRow(string group_name, System.DateTime group_date, System.TimeSpan group_time) {
+            public GROUPRow AddGROUPRow(string group_name, System.TimeSpan group_time, string group_day) {
                 GROUPRow rowGROUPRow = ((GROUPRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         group_name,
-                        group_date,
-                        group_time};
+                        group_time,
+                        group_day};
                 rowGROUPRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGROUPRow);
                 return rowGROUPRow;
@@ -2297,8 +2318,8 @@ namespace SSS {
             internal void InitVars() {
                 this.columngroup_id = base.Columns["group_id"];
                 this.columngroup_name = base.Columns["group_name"];
-                this.columngroup_date = base.Columns["group_date"];
                 this.columngroup_time = base.Columns["group_time"];
+                this.columngroup_day = base.Columns["group_day"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2308,10 +2329,10 @@ namespace SSS {
                 base.Columns.Add(this.columngroup_id);
                 this.columngroup_name = new global::System.Data.DataColumn("group_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngroup_name);
-                this.columngroup_date = new global::System.Data.DataColumn("group_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngroup_date);
                 this.columngroup_time = new global::System.Data.DataColumn("group_time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngroup_time);
+                this.columngroup_day = new global::System.Data.DataColumn("group_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngroup_day);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columngroup_id}, true));
                 this.columngroup_id.AutoIncrement = true;
@@ -2321,6 +2342,7 @@ namespace SSS {
                 this.columngroup_id.ReadOnly = true;
                 this.columngroup_id.Unique = true;
                 this.columngroup_name.MaxLength = 255;
+                this.columngroup_day.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5425,6 +5447,8 @@ namespace SSS {
             
             private global::System.Data.DataColumn columnGroupCount;
             
+            private global::System.Data.DataColumn columngroup_id;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GROUP_AGGREGATEDataTable() {
@@ -5492,6 +5516,14 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn group_idColumn {
+                get {
+                    return this.columngroup_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5533,10 +5565,18 @@ namespace SSS {
                         group_name,
                         group_day,
                         group_time,
-                        GroupCount};
+                        GroupCount,
+                        null};
                 rowGROUP_AGGREGATERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGROUP_AGGREGATERow);
                 return rowGROUP_AGGREGATERow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GROUP_AGGREGATERow FindBygroup_id(int group_id) {
+                return ((GROUP_AGGREGATERow)(this.Rows.Find(new object[] {
+                            group_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5560,6 +5600,7 @@ namespace SSS {
                 this.columngroup_day = base.Columns["group_day"];
                 this.columngroup_time = base.Columns["group_time"];
                 this.columnGroupCount = base.Columns["GroupCount"];
+                this.columngroup_id = base.Columns["group_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5573,9 +5614,19 @@ namespace SSS {
                 base.Columns.Add(this.columngroup_time);
                 this.columnGroupCount = new global::System.Data.DataColumn("GroupCount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGroupCount);
+                this.columngroup_id = new global::System.Data.DataColumn("group_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngroup_id);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columngroup_id}, true));
                 this.columngroup_name.MaxLength = 255;
                 this.columngroup_day.MaxLength = 10;
                 this.columnGroupCount.ReadOnly = true;
+                this.columngroup_id.AutoIncrement = true;
+                this.columngroup_id.AutoIncrementSeed = -1;
+                this.columngroup_id.AutoIncrementStep = -1;
+                this.columngroup_id.AllowDBNull = false;
+                this.columngroup_id.ReadOnly = true;
+                this.columngroup_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6329,22 +6380,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime group_date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGROUP.group_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'group_date\' in table \'GROUP\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGROUP.group_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.TimeSpan group_time {
                 get {
                     try {
@@ -6356,6 +6391,22 @@ namespace SSS {
                 }
                 set {
                     this[this.tableGROUP.group_timeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string group_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableGROUP.group_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'group_day\' in table \'GROUP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGROUP.group_dayColumn] = value;
                 }
             }
             
@@ -6373,18 +6424,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isgroup_dateNull() {
-                return this.IsNull(this.tableGROUP.group_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setgroup_dateNull() {
-                this[this.tableGROUP.group_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isgroup_timeNull() {
                 return this.IsNull(this.tableGROUP.group_timeColumn);
             }
@@ -6393,6 +6432,18 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setgroup_timeNull() {
                 this[this.tableGROUP.group_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isgroup_dayNull() {
+                return this.IsNull(this.tableGROUP.group_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setgroup_dayNull() {
+                this[this.tableGROUP.group_dayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6495,6 +6546,17 @@ namespace SSS {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__SESSION__tutor_i__286302EC"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GROUP_AGGREGATERow GROUP_AGGREGATERow {
+                get {
+                    return ((GROUP_AGGREGATERow)(this.GetParentRow(this.Table.ParentRelations["FK__SESSION__group_i__286302EC"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__SESSION__group_i__286302EC"]);
                 }
             }
         }
@@ -6963,6 +7025,17 @@ namespace SSS {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__STUDENT__group_i__2A4B4B5E"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GROUP_AGGREGATERow GROUP_AGGREGATERow {
+                get {
+                    return ((GROUP_AGGREGATERow)(this.GetParentRow(this.Table.ParentRelations["FK__STUDENT__group_i__2B3F6F971"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__STUDENT__group_i__2B3F6F971"]);
                 }
             }
             
@@ -7835,6 +7908,17 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GROUP_AGGREGATERow GROUP_AGGREGATERow {
+                get {
+                    return ((GROUP_AGGREGATERow)(this.GetParentRow(this.Table.ParentRelations["FK__STUDENT__group_i__2B3F6F972"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__STUDENT__group_i__2B3F6F972"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isgroup_idNull() {
                 return this.IsNull(this.tableDISENGAGED_STUDENTS.group_idColumn);
             }
@@ -8166,6 +8250,17 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int group_id {
+                get {
+                    return ((int)(this[this.tableGROUP_AGGREGATE.group_idColumn]));
+                }
+                set {
+                    this[this.tableGROUP_AGGREGATE.group_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isgroup_nameNull() {
                 return this.IsNull(this.tableGROUP_AGGREGATE.group_nameColumn);
             }
@@ -8210,6 +8305,39 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGroupCountNull() {
                 this[this.tableGROUP_AGGREGATE.GroupCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SESSIONRow[] GetSESSIONRows() {
+                if ((this.Table.ChildRelations["FK__SESSION__group_i__286302EC"] == null)) {
+                    return new SESSIONRow[0];
+                }
+                else {
+                    return ((SESSIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK__SESSION__group_i__286302EC"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public STUDENTRow[] GetSTUDENTRows() {
+                if ((this.Table.ChildRelations["FK__STUDENT__group_i__2B3F6F971"] == null)) {
+                    return new STUDENTRow[0];
+                }
+                else {
+                    return ((STUDENTRow[])(base.GetChildRows(this.Table.ChildRelations["FK__STUDENT__group_i__2B3F6F971"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DISENGAGED_STUDENTSRow[] GetDISENGAGED_STUDENTSRows() {
+                if ((this.Table.ChildRelations["FK__STUDENT__group_i__2B3F6F972"] == null)) {
+                    return new DISENGAGED_STUDENTSRow[0];
+                }
+                else {
+                    return ((DISENGAGED_STUDENTSRow[])(base.GetChildRows(this.Table.ChildRelations["FK__STUDENT__group_i__2B3F6F972"])));
+                }
             }
         }
         
@@ -10454,42 +10582,42 @@ SELECT course_id, student_id, class_mark, exam_mark, year_mark FROM ENROLLMENT W
             tableMapping.DataSetTable = "GROUP";
             tableMapping.ColumnMappings.Add("group_id", "group_id");
             tableMapping.ColumnMappings.Add("group_name", "group_name");
-            tableMapping.ColumnMappings.Add("group_date", "group_date");
             tableMapping.ColumnMappings.Add("group_time", "group_time");
+            tableMapping.ColumnMappings.Add("group_day", "group_day");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GROUP] WHERE (([group_id] = @Original_group_id) AND ((@IsNull_group_name = 1 AND [group_name] IS NULL) OR ([group_name] = @Original_group_name)) AND ((@IsNull_group_date = 1 AND [group_date] IS NULL) OR ([group_date] = @Original_group_date)) AND ((@IsNull_group_time = 1 AND [group_time] IS NULL) OR ([group_time] = @Original_group_time)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [GROUP] WHERE (([group_id] = @Original_group_id) AND ((@IsNull_group_name = 1 AND [group_name] IS NULL) OR ([group_name] = @Original_group_name)) AND ((@IsNull_group_day = 1 AND [group_day] IS NULL) OR ([group_day] = @Original_group_day)) AND ((@IsNull_group_time = 1 AND [group_time] IS NULL) OR ([group_time] = @Original_group_time)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GROUP] ([group_name], [group_date], [group_time]) VALUES (@gro" +
-                "up_name, @group_date, @group_time);\r\nSELECT group_id, group_name, group_date, gr" +
-                "oup_time FROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [GROUP] ([group_name], [group_day], [group_time]) VALUES (@group_name" +
+                ", @group_day, @group_time);\r\nSELECT group_id, group_name, group_day, group_time " +
+                "FROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GROUP] SET [group_name] = @group_name, [group_date] = @group_date, [group_time] = @group_time WHERE (([group_id] = @Original_group_id) AND ((@IsNull_group_name = 1 AND [group_name] IS NULL) OR ([group_name] = @Original_group_name)) AND ((@IsNull_group_date = 1 AND [group_date] IS NULL) OR ([group_date] = @Original_group_date)) AND ((@IsNull_group_time = 1 AND [group_time] IS NULL) OR ([group_time] = @Original_group_time)));
-SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id = @group_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [GROUP] SET [group_name] = @group_name, [group_day] = @group_day, [group_time] = @group_time WHERE (([group_id] = @Original_group_id) AND ((@IsNull_group_name = 1 AND [group_name] IS NULL) OR ([group_name] = @Original_group_name)) AND ((@IsNull_group_day = 1 AND [group_day] IS NULL) OR ([group_day] = @Original_group_day)) AND ((@IsNull_group_time = 1 AND [group_time] IS NULL) OR ([group_time] = @Original_group_time)));
+SELECT group_id, group_name, group_day, group_time FROM [GROUP] WHERE (group_id = @group_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10508,7 +10636,7 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT group_id, group_name, group_date, group_time FROM dbo.[GROUP]";
+            this._commandCollection[0].CommandText = "SELECT group_id, group_name, group_day, group_time FROM [GROUP]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10569,7 +10697,7 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_group_id, string Original_group_name, global::System.Nullable<global::System.DateTime> Original_group_date, global::System.Nullable<global::System.TimeSpan> Original_group_time) {
+        public virtual int Delete(int Original_group_id, string Original_group_name, string Original_group_day, global::System.Nullable<global::System.TimeSpan> Original_group_time) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_group_id));
             if ((Original_group_name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -10579,13 +10707,13 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_group_name));
             }
-            if ((Original_group_date.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_group_date.Value));
-            }
-            else {
+            if ((Original_group_day == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_group_day));
             }
             if ((Original_group_time.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
@@ -10615,18 +10743,18 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string group_name, global::System.Nullable<global::System.DateTime> group_date, global::System.Nullable<global::System.TimeSpan> group_time) {
+        public virtual int Insert(string group_name, string group_day, global::System.Nullable<global::System.TimeSpan> group_time) {
             if ((group_name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(group_name));
             }
-            if ((group_date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(group_date.Value));
+            if ((group_day == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(group_day));
             }
             if ((group_time.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(group_time.Value));
@@ -10654,18 +10782,18 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string group_name, global::System.Nullable<global::System.DateTime> group_date, global::System.Nullable<global::System.TimeSpan> group_time, int Original_group_id, string Original_group_name, global::System.Nullable<global::System.DateTime> Original_group_date, global::System.Nullable<global::System.TimeSpan> Original_group_time, int group_id) {
+        public virtual int Update(string group_name, string group_day, global::System.Nullable<global::System.TimeSpan> group_time, int Original_group_id, string Original_group_name, string Original_group_day, global::System.Nullable<global::System.TimeSpan> Original_group_time, int group_id) {
             if ((group_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(group_name));
             }
-            if ((group_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(group_date.Value));
+            if ((group_day == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(group_day));
             }
             if ((group_time.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(group_time.Value));
@@ -10682,13 +10810,13 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_group_name));
             }
-            if ((Original_group_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_group_date.Value));
-            }
-            else {
+            if ((Original_group_day == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_group_day));
             }
             if ((Original_group_time.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
@@ -10719,8 +10847,8 @@ SELECT group_id, group_name, group_date, group_time FROM [GROUP] WHERE (group_id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string group_name, global::System.Nullable<global::System.DateTime> group_date, global::System.Nullable<global::System.TimeSpan> group_time, int Original_group_id, string Original_group_name, global::System.Nullable<global::System.DateTime> Original_group_date, global::System.Nullable<global::System.TimeSpan> Original_group_time) {
-            return this.Update(group_name, group_date, group_time, Original_group_id, Original_group_name, Original_group_date, Original_group_time, Original_group_id);
+        public virtual int Update(string group_name, string group_day, global::System.Nullable<global::System.TimeSpan> group_time, int Original_group_id, string Original_group_name, string Original_group_day, global::System.Nullable<global::System.TimeSpan> Original_group_time) {
+            return this.Update(group_name, group_day, group_time, Original_group_id, Original_group_name, Original_group_day, Original_group_time, Original_group_id);
         }
     }
     
@@ -11691,25 +11819,7 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[STUDENT] WHERE (([student_id] = @Original_student_id) AND ([co" +
-                "ordinator_id] = @Original_coordinator_id) AND ((@IsNull_group_id = 1 AND [group_" +
-                "id] IS NULL) OR ([group_id] = @Original_group_id)) AND ((@IsNull_student_firstna" +
-                "me = 1 AND [student_firstname] IS NULL) OR ([student_firstname] = @Original_stud" +
-                "ent_firstname)) AND ((@IsNull_student_lastname = 1 AND [student_lastname] IS NUL" +
-                "L) OR ([student_lastname] = @Original_student_lastname)) AND ((@IsNull_student_i" +
-                "d_passport = 1 AND [student_id_passport] IS NULL) OR ([student_id_passport] = @O" +
-                "riginal_student_id_passport)) AND ((@IsNull_student_dateofbirth = 1 AND [student" +
-                "_dateofbirth] IS NULL) OR ([student_dateofbirth] = @Original_student_dateofbirth" +
-                ")) AND ((@IsNull_student_emailaddress = 1 AND [student_emailaddress] IS NULL) OR" +
-                " ([student_emailaddress] = @Original_student_emailaddress)) AND ((@IsNull_studen" +
-                "t_mobilenumber = 1 AND [student_mobilenumber] IS NULL) OR ([student_mobilenumber" +
-                "] = @Original_student_mobilenumber)) AND ((@IsNull_student_yearofstudy = 1 AND [" +
-                "student_yearofstudy] IS NULL) OR ([student_yearofstudy] = @Original_student_year" +
-                "ofstudy)) AND ((@IsNull_student_degreeprogramme = 1 AND [student_degreeprogramme" +
-                "] IS NULL) OR ([student_degreeprogramme] = @Original_student_degreeprogramme)) A" +
-                "ND ((@IsNull_student_status = 1 AND [student_status] IS NULL) OR ([student_statu" +
-                "s] = @Original_student_status)) AND ((@IsNull_student_points = 1 AND [student_po" +
-                "ints] IS NULL) OR ([student_points] = @Original_student_points)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [STUDENT] WHERE (([student_id] = @Original_student_id) AND ([coordinator_id] = @Original_coordinator_id) AND ((@IsNull_group_id = 1 AND [group_id] IS NULL) OR ([group_id] = @Original_group_id)) AND ((@IsNull_student_firstname = 1 AND [student_firstname] IS NULL) OR ([student_firstname] = @Original_student_firstname)) AND ((@IsNull_student_lastname = 1 AND [student_lastname] IS NULL) OR ([student_lastname] = @Original_student_lastname)) AND ((@IsNull_student_id_passport = 1 AND [student_id_passport] IS NULL) OR ([student_id_passport] = @Original_student_id_passport)) AND ((@IsNull_student_dateofbirth = 1 AND [student_dateofbirth] IS NULL) OR ([student_dateofbirth] = @Original_student_dateofbirth)) AND ((@IsNull_student_emailaddress = 1 AND [student_emailaddress] IS NULL) OR ([student_emailaddress] = @Original_student_emailaddress)) AND ((@IsNull_student_mobilenumber = 1 AND [student_mobilenumber] IS NULL) OR ([student_mobilenumber] = @Original_student_mobilenumber)) AND ((@IsNull_student_yearofstudy = 1 AND [student_yearofstudy] IS NULL) OR ([student_yearofstudy] = @Original_student_yearofstudy)) AND ((@IsNull_student_degreeprogramme = 1 AND [student_degreeprogramme] IS NULL) OR ([student_degreeprogramme] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 AND [student_status] IS NULL) OR ([student_status] = @Original_student_status)) AND ((@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_points] = @Original_student_points)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11737,7 +11847,7 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_points", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_points", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[STUDENT] ([student_id], [coordinator_id], [group_id], [student_firstname], [student_lastname], [student_id_passport], [student_dateofbirth], [student_emailaddress], [student_mobilenumber], [student_yearofstudy], [student_degreeprogramme], [student_status], [student_points]) VALUES (@student_id, @coordinator_id, @group_id, @student_firstname, @student_lastname, @student_id_passport, @student_dateofbirth, @student_emailaddress, @student_mobilenumber, @student_yearofstudy, @student_degreeprogramme, @student_status, @student_points);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [STUDENT] ([student_id], [coordinator_id], [group_id], [student_firstname], [student_lastname], [student_id_passport], [student_dateofbirth], [student_emailaddress], [student_mobilenumber], [student_yearofstudy], [student_degreeprogramme], [student_status], [student_points]) VALUES (@student_id, @coordinator_id, @group_id, @student_firstname, @student_lastname, @student_id_passport, @student_dateofbirth, @student_emailaddress, @student_mobilenumber, @student_yearofstudy, @student_degreeprogramme, @student_status, @student_points);
 SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogramme, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11755,36 +11865,36 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_points", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_points", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[STUDENT] SET [student_id] = @student_id, [coordinator_id] = @coordi" +
-                "nator_id, [group_id] = @group_id, [student_firstname] = @student_firstname, [stu" +
-                "dent_lastname] = @student_lastname, [student_id_passport] = @student_id_passport" +
-                ", [student_dateofbirth] = @student_dateofbirth, [student_emailaddress] = @studen" +
-                "t_emailaddress, [student_mobilenumber] = @student_mobilenumber, [student_yearofs" +
-                "tudy] = @student_yearofstudy, [student_degreeprogramme] = @student_degreeprogram" +
-                "me, [student_status] = @student_status, [student_points] = @student_points WHERE" +
-                " (([student_id] = @Original_student_id) AND ([coordinator_id] = @Original_coordi" +
-                "nator_id) AND ((@IsNull_group_id = 1 AND [group_id] IS NULL) OR ([group_id] = @O" +
-                "riginal_group_id)) AND ((@IsNull_student_firstname = 1 AND [student_firstname] I" +
-                "S NULL) OR ([student_firstname] = @Original_student_firstname)) AND ((@IsNull_st" +
-                "udent_lastname = 1 AND [student_lastname] IS NULL) OR ([student_lastname] = @Ori" +
-                "ginal_student_lastname)) AND ((@IsNull_student_id_passport = 1 AND [student_id_p" +
-                "assport] IS NULL) OR ([student_id_passport] = @Original_student_id_passport)) AN" +
-                "D ((@IsNull_student_dateofbirth = 1 AND [student_dateofbirth] IS NULL) OR ([stud" +
-                "ent_dateofbirth] = @Original_student_dateofbirth)) AND ((@IsNull_student_emailad" +
-                "dress = 1 AND [student_emailaddress] IS NULL) OR ([student_emailaddress] = @Orig" +
-                "inal_student_emailaddress)) AND ((@IsNull_student_mobilenumber = 1 AND [student_" +
-                "mobilenumber] IS NULL) OR ([student_mobilenumber] = @Original_student_mobilenumb" +
-                "er)) AND ((@IsNull_student_yearofstudy = 1 AND [student_yearofstudy] IS NULL) OR" +
-                " ([student_yearofstudy] = @Original_student_yearofstudy)) AND ((@IsNull_student_" +
-                "degreeprogramme = 1 AND [student_degreeprogramme] IS NULL) OR ([student_degreepr" +
-                "ogramme] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 " +
-                "AND [student_status] IS NULL) OR ([student_status] = @Original_student_status)) " +
-                "AND ((@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_poin" +
-                "ts] = @Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id," +
-                " student_firstname, student_lastname, student_id_passport, student_dateofbirth, " +
-                "student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreep" +
-                "rogramme, student_status, student_points FROM STUDENT WHERE (student_id = @stude" +
-                "nt_id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [STUDENT] SET [student_id] = @student_id, [coordinator_id] = @coordinator_" +
+                "id, [group_id] = @group_id, [student_firstname] = @student_firstname, [student_l" +
+                "astname] = @student_lastname, [student_id_passport] = @student_id_passport, [stu" +
+                "dent_dateofbirth] = @student_dateofbirth, [student_emailaddress] = @student_emai" +
+                "laddress, [student_mobilenumber] = @student_mobilenumber, [student_yearofstudy] " +
+                "= @student_yearofstudy, [student_degreeprogramme] = @student_degreeprogramme, [s" +
+                "tudent_status] = @student_status, [student_points] = @student_points WHERE (([st" +
+                "udent_id] = @Original_student_id) AND ([coordinator_id] = @Original_coordinator_" +
+                "id) AND ((@IsNull_group_id = 1 AND [group_id] IS NULL) OR ([group_id] = @Origina" +
+                "l_group_id)) AND ((@IsNull_student_firstname = 1 AND [student_firstname] IS NULL" +
+                ") OR ([student_firstname] = @Original_student_firstname)) AND ((@IsNull_student_" +
+                "lastname = 1 AND [student_lastname] IS NULL) OR ([student_lastname] = @Original_" +
+                "student_lastname)) AND ((@IsNull_student_id_passport = 1 AND [student_id_passpor" +
+                "t] IS NULL) OR ([student_id_passport] = @Original_student_id_passport)) AND ((@I" +
+                "sNull_student_dateofbirth = 1 AND [student_dateofbirth] IS NULL) OR ([student_da" +
+                "teofbirth] = @Original_student_dateofbirth)) AND ((@IsNull_student_emailaddress " +
+                "= 1 AND [student_emailaddress] IS NULL) OR ([student_emailaddress] = @Original_s" +
+                "tudent_emailaddress)) AND ((@IsNull_student_mobilenumber = 1 AND [student_mobile" +
+                "number] IS NULL) OR ([student_mobilenumber] = @Original_student_mobilenumber)) A" +
+                "ND ((@IsNull_student_yearofstudy = 1 AND [student_yearofstudy] IS NULL) OR ([stu" +
+                "dent_yearofstudy] = @Original_student_yearofstudy)) AND ((@IsNull_student_degree" +
+                "programme = 1 AND [student_degreeprogramme] IS NULL) OR ([student_degreeprogramm" +
+                "e] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 AND [s" +
+                "tudent_status] IS NULL) OR ([student_status] = @Original_student_status)) AND ((" +
+                "@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_points] = " +
+                "@Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id, stude" +
+                "nt_firstname, student_lastname, student_id_passport, student_dateofbirth, studen" +
+                "t_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogram" +
+                "me, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)" +
+                "";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11838,7 +11948,9 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogramme, student_status, student_points FROM dbo.STUDENT";
+            this._commandCollection[0].CommandText = @"SELECT        student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber,
+                          student_yearofstudy, student_degreeprogramme, student_status, student_points
+FROM            STUDENT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14725,6 +14837,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             tableMapping.ColumnMappings.Add("group_day", "group_day");
             tableMapping.ColumnMappings.Add("group_time", "group_time");
             tableMapping.ColumnMappings.Add("GroupCount", "GroupCount");
+            tableMapping.ColumnMappings.Add("group_id", "group_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14741,9 +14854,11 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT [GROUP].group_name, [GROUP].group_day, [GROUP].group_time, COUNT(dbo.STUDENT.group_id) AS 'GroupCount' 
-FROM dbo.STUDENT INNER JOIN [GROUP] ON STUDENT.group_id = [GROUP].group_id
-GROUP BY [GROUP].group_id, [GROUP].group_name, [GROUP].group_day, [GROUP].group_time;";
+            this._commandCollection[0].CommandText = @"SELECT        [GROUP].group_id, [GROUP].group_name, [GROUP].group_day, [GROUP].group_time, COUNT(STUDENT.group_id) AS 'GroupCount'
+FROM            STUDENT INNER JOIN
+                         [GROUP] ON STUDENT.group_id = [GROUP].group_id
+GROUP BY [GROUP].group_id, [GROUP].group_name, [GROUP].group_day, [GROUP].group_time
+ORDER BY [GROUP].group_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

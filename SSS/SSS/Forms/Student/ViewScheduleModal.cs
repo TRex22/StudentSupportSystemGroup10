@@ -24,10 +24,6 @@ namespace SSS.Forms.Student
         {
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.GROUP' table. You can move, or remove it, as needed.
             this.gROUPTableAdapter.Fill(this.iS2G10_DBSSSDataSet.GROUP);
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.GROUP' table. You can move, or remove it, as needed.
-            this.gROUPTableAdapter.Fill(this.iS2G10_DBSSSDataSet.GROUP);
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.GROUP' table. You can move, or remove it, as needed.
-            this.gROUPTableAdapter.Fill(this.iS2G10_DBSSSDataSet.GROUP);
         }
     }
 }

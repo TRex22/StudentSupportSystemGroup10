@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
-            this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gROUPTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouptimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,59 +54,67 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Schedule";
             // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gROUPTableAdapter
+            // 
+            this.gROUPTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.groupidDataGridViewTextBoxColumn,
             this.groupnameDataGridViewTextBoxColumn,
-            this.groupdateDataGridViewTextBoxColumn,
+            this.groupdayDataGridViewTextBoxColumn,
             this.grouptimeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.gROUPBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(134, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // iS2G10_DBSSSDataSet
-            // 
-            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
-            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gROUPBindingSource
             // 
             this.gROUPBindingSource.DataMember = "GROUP";
             this.gROUPBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
-            // gROUPTableAdapter
-            // 
-            this.gROUPTableAdapter.ClearBeforeFill = true;
-            // 
             // groupidDataGridViewTextBoxColumn
             // 
             this.groupidDataGridViewTextBoxColumn.DataPropertyName = "group_id";
-            this.groupidDataGridViewTextBoxColumn.HeaderText = "group_id";
+            this.groupidDataGridViewTextBoxColumn.HeaderText = "Group Id";
             this.groupidDataGridViewTextBoxColumn.Name = "groupidDataGridViewTextBoxColumn";
             this.groupidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // groupnameDataGridViewTextBoxColumn
             // 
             this.groupnameDataGridViewTextBoxColumn.DataPropertyName = "group_name";
-            this.groupnameDataGridViewTextBoxColumn.HeaderText = "group_name";
+            this.groupnameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.groupnameDataGridViewTextBoxColumn.Name = "groupnameDataGridViewTextBoxColumn";
             // 
-            // groupdateDataGridViewTextBoxColumn
+            // groupdayDataGridViewTextBoxColumn
             // 
-            this.groupdateDataGridViewTextBoxColumn.DataPropertyName = "group_date";
-            this.groupdateDataGridViewTextBoxColumn.HeaderText = "group_date";
-            this.groupdateDataGridViewTextBoxColumn.Name = "groupdateDataGridViewTextBoxColumn";
+            this.groupdayDataGridViewTextBoxColumn.DataPropertyName = "group_day";
+            this.groupdayDataGridViewTextBoxColumn.HeaderText = "Day";
+            this.groupdayDataGridViewTextBoxColumn.Name = "groupdayDataGridViewTextBoxColumn";
             // 
             // grouptimeDataGridViewTextBoxColumn
             // 
             this.grouptimeDataGridViewTextBoxColumn.DataPropertyName = "group_time";
-            this.grouptimeDataGridViewTextBoxColumn.HeaderText = "group_time";
+            this.grouptimeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.grouptimeDataGridViewTextBoxColumn.Name = "grouptimeDataGridViewTextBoxColumn";
+            // 
+            // groupTableAdapter1
+            // 
+            this.groupTableAdapter1.ClearBeforeFill = true;
             // 
             // ViewScheduleModal
             // 
@@ -119,8 +128,8 @@
             this.Name = "ViewScheduleModal";
             this.Text = "ViewScheduleModal";
             this.Load += new System.EventHandler(this.ViewScheduleModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,13 +139,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
-        private System.Windows.Forms.BindingSource gROUPBindingSource;
         private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter gROUPTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groupdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grouptimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource gROUPBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
     }
 }

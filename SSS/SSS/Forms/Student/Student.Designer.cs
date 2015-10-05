@@ -423,7 +423,7 @@
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip6;
-        private System.Windows.Forms.ToolStripMenuItem joinGroupToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem joinGroupToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip7;
         private System.Windows.Forms.ToolStripMenuItem createStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip8;

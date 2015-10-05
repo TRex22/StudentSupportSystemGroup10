@@ -50,10 +50,10 @@ CREATE TABLE [GROUP] (
 	group_name nvarchar(255)
 );
 GO
-CREATE TABLE GROUP_DATETIME (
-	group_date_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+CREATE TABLE group_dayTIME (
+	group_day_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	group_id int NOT NULL FOREIGN KEY REFERENCES [GROUP](group_id),
-	group_date datetime,
+	group_day nvarchar(255),
 	group_time time
 );
 CREATE TABLE STUDENT (

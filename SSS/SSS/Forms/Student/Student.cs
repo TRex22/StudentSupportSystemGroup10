@@ -23,7 +23,8 @@ namespace SSS
         //Modals
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
         private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
-        private readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
+        public readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
+        public readonly RegisterGroupModal _registerGroupModal;
 
         public Student(String sUsrId, String sPsswrd)
         {
@@ -33,7 +34,12 @@ namespace SSS
             _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userId);
             lblStudentName.Text = String.Format("{0} {1} {2}", _studentData.student_firstname, _studentData.student_lastname, userId);
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
+            _registerGroupModal = new RegisterGroupModal(userId, this);
             InitModals();
+
+            //check if user has a group
+            if (!_studentData.Isgroup_idNull())
+                joinGroupToolStripMenuItem.Enabled = false;
         }
 
         private void InitModals()
@@ -42,6 +48,7 @@ namespace SSS
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
             this.panel7.Controls.Add(_viewScheduleModal);
             this.panel7.Controls.Add(_studentDashboardModal);
+            this.panel7.Controls.Add(_registerGroupModal);
         }
 
         private void HideAllModals()
@@ -49,6 +56,7 @@ namespace SSS
             _updateStudentProfileModalModal.Hide();
             _viewScheduleModal.Hide();
             _studentDashboardModal.Hide();
+            _registerGroupModal.Hide();
             //TODO Add hide for other modals
         }
 
@@ -68,7 +76,7 @@ namespace SSS
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            //TODO FIX _registerStudentAttendanceModal.Show();
+            _registerGroupModal.Show();
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,16 +104,6 @@ namespace SSS
         {
             HideAllModals();
             _viewScheduleModal.Show();
-        }
-
-        private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-        }
-
-        private void courseDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

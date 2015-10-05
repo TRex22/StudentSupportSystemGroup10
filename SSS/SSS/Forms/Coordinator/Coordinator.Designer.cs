@@ -212,6 +212,7 @@
             this.viewDisengagedStudentsToolStripMenuItem.Name = "viewDisengagedStudentsToolStripMenuItem";
             this.viewDisengagedStudentsToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
             this.viewDisengagedStudentsToolStripMenuItem.Text = "View Disengaged Students";
+            this.viewDisengagedStudentsToolStripMenuItem.Click += new System.EventHandler(this.viewDisengagedStudentsToolStripMenuItem_Click);
             // 
             // lowTutorRatingsToolStripMenuItem
             // 
