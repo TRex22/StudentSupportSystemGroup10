@@ -35,11 +35,14 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.StudentEngagementStatuses.rdlc";
+            this.reportViewer1.LocalReport.EnableHyperlinks = true;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.StudentEngagement.StudentEngagementStatuses.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(803, 561);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ReportRefresh += new System.ComponentModel.CancelEventHandler(this.reportViewer1_ReportRefresh);
+            this.reportViewer1.Hyperlink += new Microsoft.Reporting.WinForms.HyperlinkEventHandler(this.reportViewer1_Hyperlink);
             // 
             // reportTableAdapter
             // 
@@ -62,7 +65,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter reportTableAdapter;
     }
 }

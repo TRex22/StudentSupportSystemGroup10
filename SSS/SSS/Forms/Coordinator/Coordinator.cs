@@ -21,7 +21,7 @@ namespace SSS
         //database stuff
 
         //modals
-        private readonly RegisterStudentModal _registerStudentModal = new RegisterStudentModal();
+        private readonly RegisterStudentModal _registerStudentModal;
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
         private readonly StudentDisengagementModal _studentDisengagementModal = new StudentDisengagementModal();
         private readonly LowTutorRatingsA_ListModal _lowTutorRatingsAModal = new LowTutorRatingsA_ListModal();
@@ -33,6 +33,8 @@ namespace SSS
             _sPassword = sPsswrd;
             var userId = Convert.ToInt32(sUsrId);
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
+            _registerStudentModal = new RegisterStudentModal(userId);
+
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
             InitModals();
@@ -129,6 +131,7 @@ namespace SSS
         private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _studentDisengagementModal.reportViewer1.RefreshReport();
             _studentDisengagementModal.Show();
         }
 

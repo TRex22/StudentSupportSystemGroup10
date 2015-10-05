@@ -23,7 +23,6 @@ namespace SSS.Forms.Coordinator
         private void CoordinatorDashboardModal_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
         }
     }
 }

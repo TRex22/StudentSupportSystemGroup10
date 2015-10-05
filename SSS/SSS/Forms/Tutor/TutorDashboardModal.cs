@@ -22,8 +22,7 @@ namespace SSS.Forms.Tutor
 
         private void TutorDashboardModal_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            
         }
     }
 }

@@ -61,7 +61,16 @@ namespace SSS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Incorrect Login Details.\nPlease try again..
+        ///   Looks up a localized string similar to Student Created Successfully..
+        /// </summary>
+        internal static string CreateStudent_SuccessfulMessage {
+            get {
+                return ResourceManager.GetString("CreateStudent_SuccessfulMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect Login Details. Please try again..
         /// </summary>
         internal static string IncorrectLoginDetailsMessage {
             get {
@@ -76,6 +85,15 @@ namespace SSS.Properties {
             get {
                 object obj = ResourceManager.GetObject("PointBlankIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email Sent To New Student.
+        /// </summary>
+        internal static string SendEmailSuccessfulMessage {
+            get {
+                return ResourceManager.GetString("SendEmailSuccessfulMessage", resourceCulture);
             }
         }
         

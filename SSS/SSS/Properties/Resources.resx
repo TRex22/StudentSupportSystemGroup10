@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateStudent_SuccessfulMessage" xml:space="preserve">
+    <value>Student Created Successfully.</value>
+  </data>
   <data name="IncorrectLoginDetailsMessage" xml:space="preserve">
-    <value>Incorrect Login Details.\nPlease try again.</value>
+    <value>Incorrect Login Details. Please try again.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PointBlankIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -127,5 +130,8 @@
   <data name="UpdateStudentProfileModal_submitButton_Click_Profile_Update_Successful_" xml:space="preserve">
     <value>Profile Update Successful.</value>
     <comment>update student</comment>
+  </data>
+  <data name="SendEmailSuccessfulMessage" xml:space="preserve">
+    <value>Email Sent To New Student</value>
   </data>
 </root>

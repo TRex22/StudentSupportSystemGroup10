@@ -28,6 +28,17 @@ namespace SSS.Forms.Coordinator
             reportTableAdapter.Fill(studentEngagementStatusReportDataTable);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentEngagementStatuses", (DataTable)studentEngagementStatusReportDataTable));
             this.reportViewer1.RefreshReport();
+            
+        }
+
+        private void reportViewer1_Hyperlink(object sender, HyperlinkEventArgs e)
+        {
+            MessageBox.Show("You pressed a button");
+        }
+
+        private void reportViewer1_ReportRefresh(object sender, CancelEventArgs e)
+        {
+            this.reportViewer1.Reset();
         }
     }
 }

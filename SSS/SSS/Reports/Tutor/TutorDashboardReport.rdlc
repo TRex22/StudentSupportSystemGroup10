@@ -10,7 +10,11 @@
             <TextRuns>
               <TextRun>
                 <Value>Your Dashboard</Value>
-                <Style />
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -19,12 +23,10 @@
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.60537cm</Top>
         <Left>0.68474cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.32021cm</Width>
+        <Height>0.73229cm</Height>
+        <Width>3.87584cm</Width>
         <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
+          <Border />
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -61,96 +63,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Your Current AverageRatings</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.76044cm</Top>
-        <Left>0.68474cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.74896cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox4">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Overall Ratings</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.76044cm</Top>
-        <Left>8.51641cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.61125cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox5">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Average tutor ratings:</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>2.80141cm</Top>
-        <Left>8.51641cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.61125cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox6">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -158,7 +70,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Average Consultation Ratings:</Value>
+                <Value>Your Average Consultation Ratings:</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -166,11 +78,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.8953cm</Top>
+        <Top>2.80141cm</Top>
         <Left>8.51641cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.85479cm</Width>
-        <ZIndex>5</ZIndex>
+        <Width>6.20417cm</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -200,7 +112,7 @@
         <Left>0.68474cm</Left>
         <Height>0.6cm</Height>
         <Width>4.74896cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -226,11 +138,41 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>3.8953cm</Top>
+        <Top>5.45634cm</Top>
         <Left>0.68474cm</Left>
         <Height>0.6cm</Height>
         <Width>5.54271cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Overall Average tutor Ratings</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>4.12433cm</Top>
+        <Left>0.68474cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.38396cm</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
