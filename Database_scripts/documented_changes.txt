@@ -64,4 +64,4 @@ GROUP_DATETIME -1
 
 Tutor -> consultation added tutor_no FK
 
-
+Group_date -> group_day
