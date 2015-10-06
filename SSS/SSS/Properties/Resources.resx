@@ -132,9 +132,13 @@
     <comment>update student</comment>
   </data>
   <data name="SendEmailSuccessfulMessage" xml:space="preserve">
-    <value>Email Sent To New Student</value>
+    <value>Email Sent To New Student.</value>
   </data>
   <data name="UpdateGroupSuccess" xml:space="preserve">
-    <value>Added to Group Successful</value>
+    <value>Added to Group Successfully.</value>
+  </data>
+  <data name="UpdateStudentAttendanceSuccess" xml:space="preserve">
+    <value>Attendance Updated Successfully.</value>
+    <comment>please work</comment>
   </data>
 </root>

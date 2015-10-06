@@ -23,7 +23,7 @@ namespace SSS.Forms.Tutor
             this.AutoScroll = true;
             this.Hide();
             _tutorId = tutorId;
-            _tutorData = tutorTableAdapter1.GetData().FindBytutor_id(tutorId);
+            _tutorData = tutorTableAdapter1.GetData().FindBytutor_id(_tutorId);
             PopulateData();
         }
 

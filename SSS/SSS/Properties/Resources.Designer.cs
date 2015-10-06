@@ -98,7 +98,7 @@ namespace SSS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email Sent To New Student.
+        ///   Looks up a localized string similar to Email Sent To New Student..
         /// </summary>
         public static string SendEmailSuccessfulMessage {
             get {
@@ -107,11 +107,20 @@ namespace SSS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Added to Group Successful.
+        ///   Looks up a localized string similar to Added to Group Successfully..
         /// </summary>
         public static string UpdateGroupSuccess {
             get {
                 return ResourceManager.GetString("UpdateGroupSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attendance Updated Successfully..
+        /// </summary>
+        public static string UpdateStudentAttendanceSuccess {
+            get {
+                return ResourceManager.GetString("UpdateStudentAttendanceSuccess", resourceCulture);
             }
         }
     }
