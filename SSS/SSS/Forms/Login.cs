@@ -20,7 +20,8 @@ namespace SSS
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Application.Exit();
+            //clean kill
+            Environment.Exit(0);
         }
 
         //TODO secure login

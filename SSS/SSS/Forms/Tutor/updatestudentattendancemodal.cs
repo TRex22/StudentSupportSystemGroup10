@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace SSS
 {
+
+    //var tutorGroup = new IS2G10_DBSSSDataSet.TUT
+
     public partial class UpdateStudentAttendanceModal : Form
     {
         public UpdateStudentAttendanceModal()
@@ -18,6 +21,7 @@ namespace SSS
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
+
         }
     }
 }
