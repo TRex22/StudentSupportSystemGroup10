@@ -175,18 +175,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(62, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 23);
+            this.label1.Size = new System.Drawing.Size(125, 23);
             this.label1.TabIndex = 78;
             this.label1.Text = "Update Profile";
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(583, 415);
+            this.submitButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.Location = new System.Drawing.Point(573, 415);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.Size = new System.Drawing.Size(85, 35);
             this.submitButton.TabIndex = 77;
             this.submitButton.Text = "&Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -372,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 462);
+            this.ClientSize = new System.Drawing.Size(753, 539);
             this.ControlBox = false;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);

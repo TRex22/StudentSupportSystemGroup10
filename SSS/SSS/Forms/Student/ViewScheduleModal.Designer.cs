@@ -33,11 +33,11 @@
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.gROUPTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouptimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,10 +47,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(71, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 19);
+            this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Schedule";
             // 
@@ -82,11 +82,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // gROUPBindingSource
-            // 
-            this.gROUPBindingSource.DataMember = "GROUP";
-            this.gROUPBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
             // groupidDataGridViewTextBoxColumn
             // 
             this.groupidDataGridViewTextBoxColumn.DataPropertyName = "group_id";
@@ -112,6 +107,11 @@
             this.grouptimeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.grouptimeDataGridViewTextBoxColumn.Name = "grouptimeDataGridViewTextBoxColumn";
             // 
+            // gROUPBindingSource
+            // 
+            this.gROUPBindingSource.DataMember = "GROUP";
+            this.gROUPBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
             // groupTableAdapter1
             // 
             this.groupTableAdapter1.ClearBeforeFill = true;
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 424);
+            this.ClientSize = new System.Drawing.Size(753, 539);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);

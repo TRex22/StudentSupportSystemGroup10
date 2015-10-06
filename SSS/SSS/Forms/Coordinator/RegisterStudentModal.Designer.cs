@@ -86,7 +86,7 @@
             this.studentIdTxtBox.Name = "studentIdTxtBox";
             this.studentIdTxtBox.Size = new System.Drawing.Size(209, 27);
             this.studentIdTxtBox.TabIndex = 0;
-            this.studentIdTxtBox.Text = "Enter Student\'s student ID";
+            this.studentIdTxtBox.Text = "Enter Student\'s Student ID";
             this.studentIdTxtBox.Enter += new System.EventHandler(this.studentIdTxtBox_Enter);
             // 
             // IdPassportTxtBox
@@ -133,7 +133,7 @@
             // StudentProgrammeTxtBox
             // 
             this.StudentProgrammeTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentProgrammeTxtBox.Location = new System.Drawing.Point(399, 362);
+            this.StudentProgrammeTxtBox.Location = new System.Drawing.Point(390, 337);
             this.StudentProgrammeTxtBox.Name = "StudentProgrammeTxtBox";
             this.StudentProgrammeTxtBox.Size = new System.Drawing.Size(216, 27);
             this.StudentProgrammeTxtBox.TabIndex = 8;
@@ -198,7 +198,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(618, 273);
+            this.pictureBox4.Location = new System.Drawing.Point(621, 251);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +238,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(621, 362);
+            this.pictureBox9.Location = new System.Drawing.Point(621, 337);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(29, 27);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,9 +247,10 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(575, 449);
+            this.SubmitButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Location = new System.Drawing.Point(565, 454);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.Size = new System.Drawing.Size(85, 35);
             this.SubmitButton.TabIndex = 23;
             this.SubmitButton.Text = "&Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -258,16 +259,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 23);
+            this.label1.Size = new System.Drawing.Size(236, 23);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Please enter student details";
+            this.label1.Text = "Please Enter Student Details";
             // 
             // dateOfBirthDateTimePicker1
             // 
-            this.dateOfBirthDateTimePicker1.Location = new System.Drawing.Point(396, 178);
+            this.dateOfBirthDateTimePicker1.Location = new System.Drawing.Point(393, 178);
             this.dateOfBirthDateTimePicker1.Name = "dateOfBirthDateTimePicker1";
             this.dateOfBirthDateTimePicker1.Size = new System.Drawing.Size(216, 20);
             this.dateOfBirthDateTimePicker1.TabIndex = 25;
@@ -296,7 +297,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(398, 156);
+            this.label4.Location = new System.Drawing.Point(392, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 19);
             this.label4.TabIndex = 28;
@@ -326,7 +327,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(398, 340);
+            this.label7.Location = new System.Drawing.Point(392, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 34;
@@ -336,7 +337,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(392, 251);
+            this.label8.Location = new System.Drawing.Point(392, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 19);
             this.label8.TabIndex = 33;
@@ -413,7 +414,7 @@
             // 
             // MobileTxtBox
             // 
-            this.MobileTxtBox.Location = new System.Drawing.Point(396, 280);
+            this.MobileTxtBox.Location = new System.Drawing.Point(393, 255);
             this.MobileTxtBox.Mask = "(999)000 0000";
             this.MobileTxtBox.Name = "MobileTxtBox";
             this.MobileTxtBox.Size = new System.Drawing.Size(213, 20);
@@ -440,7 +441,7 @@
             // lblErrMobileNum
             // 
             this.lblErrMobileNum.AutoSize = true;
-            this.lblErrMobileNum.Location = new System.Drawing.Point(399, 303);
+            this.lblErrMobileNum.Location = new System.Drawing.Point(399, 281);
             this.lblErrMobileNum.Name = "lblErrMobileNum";
             this.lblErrMobileNum.Size = new System.Drawing.Size(41, 13);
             this.lblErrMobileNum.TabIndex = 43;
@@ -449,7 +450,7 @@
             // lblErrStdProg
             // 
             this.lblErrStdProg.AutoSize = true;
-            this.lblErrStdProg.Location = new System.Drawing.Point(402, 396);
+            this.lblErrStdProg.Location = new System.Drawing.Point(399, 367);
             this.lblErrStdProg.Name = "lblErrStdProg";
             this.lblErrStdProg.Size = new System.Drawing.Size(41, 13);
             this.lblErrStdProg.TabIndex = 44;
@@ -459,7 +460,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 500);
+            this.ClientSize = new System.Drawing.Size(753, 539);
             this.Controls.Add(this.lblErrStdProg);
             this.Controls.Add(this.lblErrMobileNum);
             this.Controls.Add(this.lblErrDoB);
