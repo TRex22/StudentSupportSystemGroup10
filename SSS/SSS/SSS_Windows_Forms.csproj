@@ -148,6 +148,7 @@
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.cs">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -148,7 +148,7 @@
             // 
             // datOfBirthdateTimePicker
             // 
-            this.datOfBirthdateTimePicker.Location = new System.Drawing.Point(57, 197);
+            this.datOfBirthdateTimePicker.Location = new System.Drawing.Point(55, 197);
             this.datOfBirthdateTimePicker.Name = "datOfBirthdateTimePicker";
             this.datOfBirthdateTimePicker.Size = new System.Drawing.Size(209, 20);
             this.datOfBirthdateTimePicker.TabIndex = 80;
@@ -156,19 +156,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 23);
+            this.label1.Size = new System.Drawing.Size(201, 23);
             this.label1.TabIndex = 79;
-            this.label1.Text = "Please Enter Tutor Details";
+            this.label1.Text = "Please enter tutor details";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(506, 411);
+            this.button1.Location = new System.Drawing.Point(519, 389);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 78;
             this.button1.Text = "&Submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -177,7 +176,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(273, 138);
+            this.pictureBox8.Location = new System.Drawing.Point(270, 138);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(29, 27);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +206,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(562, 304);
+            this.pictureBox4.Location = new System.Drawing.Point(565, 304);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +216,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(273, 304);
+            this.pictureBox3.Location = new System.Drawing.Point(273, 305);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,7 +226,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 190);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 192);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +236,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(273, 75);
+            this.pictureBox5.Location = new System.Drawing.Point(271, 76);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(29, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,7 +260,7 @@
             this.tutorTraningStatusComboBox.Items.AddRange(new object[] {
             "No",
             "Yes"});
-            this.tutorTraningStatusComboBox.Location = new System.Drawing.Point(57, 375);
+            this.tutorTraningStatusComboBox.Location = new System.Drawing.Point(58, 375);
             this.tutorTraningStatusComboBox.Name = "tutorTraningStatusComboBox";
             this.tutorTraningStatusComboBox.Size = new System.Drawing.Size(209, 27);
             this.tutorTraningStatusComboBox.TabIndex = 69;
@@ -269,7 +268,7 @@
             // tutorMobileNumberTxtBox
             // 
             this.tutorMobileNumberTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorMobileNumberTxtBox.Location = new System.Drawing.Point(340, 304);
+            this.tutorMobileNumberTxtBox.Location = new System.Drawing.Point(343, 304);
             this.tutorMobileNumberTxtBox.Name = "tutorMobileNumberTxtBox";
             this.tutorMobileNumberTxtBox.Size = new System.Drawing.Size(216, 27);
             this.tutorMobileNumberTxtBox.TabIndex = 68;
@@ -277,7 +276,7 @@
             // tutorEmailTextBox
             // 
             this.tutorEmailTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorEmailTextBox.Location = new System.Drawing.Point(57, 304);
+            this.tutorEmailTextBox.Location = new System.Drawing.Point(57, 305);
             this.tutorEmailTextBox.Name = "tutorEmailTextBox";
             this.tutorEmailTextBox.Size = new System.Drawing.Size(209, 27);
             this.tutorEmailTextBox.TabIndex = 67;
@@ -293,7 +292,7 @@
             // tutorFirstNameTxtBox
             // 
             this.tutorFirstNameTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorFirstNameTxtBox.Location = new System.Drawing.Point(57, 137);
+            this.tutorFirstNameTxtBox.Location = new System.Drawing.Point(55, 138);
             this.tutorFirstNameTxtBox.Name = "tutorFirstNameTxtBox";
             this.tutorFirstNameTxtBox.Size = new System.Drawing.Size(209, 27);
             this.tutorFirstNameTxtBox.TabIndex = 65;
@@ -310,7 +309,7 @@
             // 
             this.tutorIdTextBox.Enabled = false;
             this.tutorIdTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorIdTextBox.Location = new System.Drawing.Point(57, 76);
+            this.tutorIdTextBox.Location = new System.Drawing.Point(55, 76);
             this.tutorIdTextBox.Name = "tutorIdTextBox";
             this.tutorIdTextBox.Size = new System.Drawing.Size(209, 27);
             this.tutorIdTextBox.TabIndex = 63;
@@ -323,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 539);
+            this.ClientSize = new System.Drawing.Size(705, 424);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);

@@ -10,11 +10,7 @@
             <TextRuns>
               <TextRun>
                 <Value>Your Dashboard</Value>
-                <Style>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -22,11 +18,13 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.36146cm</Top>
-        <Left>2.4674cm</Left>
+        <Left>0.32427cm</Left>
         <Height>0.6cm</Height>
         <Width>3.32021cm</Width>
         <Style>
-          <Border />
+          <Border>
+            <Style>None</Style>
+          </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -41,10 +39,7 @@
             <TextRuns>
               <TextRun>
                 <Value>Signed in as:</Value>
-                <Style>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -53,11 +48,13 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.36146cm</Top>
         <Left>16.53cm</Left>
-        <Height>0.9175cm</Height>
-        <Width>3.135cm</Width>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
-          <Border />
+          <Border>
+            <Style>None</Style>
+          </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
