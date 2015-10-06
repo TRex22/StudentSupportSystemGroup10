@@ -28,20 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.activityComboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attendanceDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.student_activity_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uPDATESTUDENTATTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iS2G10_DBSSSDataSet2 = new SSS.IS2G10_DBSSSDataSet();
             this.groupComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tutoR_SESSION_GROUPTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter();
+            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.tUTORSESSIONGROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studenT_ACTIVITYTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
+            this.iS2G10_DBSSSDataSet1 = new SSS.IS2G10_DBSSSDataSet();
+            this.aTTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aTTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.uPDATE_STUDENT_ATTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPDATESTUDENTATTENDANCEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tUTORSESSIONGROUPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTTENDANCEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,19 +72,90 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.activityComboBox);
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.groupComboBox);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(15, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 486);
             this.panel2.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(248, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Select Activity";
+            // 
+            // activityComboBox
+            // 
+            this.activityComboBox.FormattingEnabled = true;
+            this.activityComboBox.Location = new System.Drawing.Point(251, 31);
+            this.activityComboBox.Name = "activityComboBox";
+            this.activityComboBox.Size = new System.Drawing.Size(225, 21);
+            this.activityComboBox.TabIndex = 10;
+            this.activityComboBox.SelectedIndexChanged += new System.EventHandler(this.activityComboBox_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentNameDataGridViewTextBoxColumn,
+            this.studentIdDataGridViewTextBoxColumn,
+            this.attendanceDataGridViewCheckBoxColumn,
+            this.student_activity_id});
+            this.dataGridView1.DataSource = this.uPDATESTUDENTATTENDANCEBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(182, 173);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(346, 207);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "Student Name";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentIdDataGridViewTextBoxColumn
+            // 
+            this.studentIdDataGridViewTextBoxColumn.DataPropertyName = "Student Id";
+            this.studentIdDataGridViewTextBoxColumn.HeaderText = "Student Id";
+            this.studentIdDataGridViewTextBoxColumn.Name = "studentIdDataGridViewTextBoxColumn";
+            // 
+            // attendanceDataGridViewCheckBoxColumn
+            // 
+            this.attendanceDataGridViewCheckBoxColumn.DataPropertyName = "Attendance";
+            this.attendanceDataGridViewCheckBoxColumn.HeaderText = "Attendance";
+            this.attendanceDataGridViewCheckBoxColumn.Name = "attendanceDataGridViewCheckBoxColumn";
+            // 
+            // student_activity_id
+            // 
+            this.student_activity_id.DataPropertyName = "student_activity_id";
+            this.student_activity_id.HeaderText = "student_activity_id";
+            this.student_activity_id.Name = "student_activity_id";
+            this.student_activity_id.Visible = false;
+            // 
+            // uPDATESTUDENTATTENDANCEBindingSource
+            // 
+            this.uPDATESTUDENTATTENDANCEBindingSource.DataMember = "UPDATE_STUDENT_ATTENDANCE";
+            this.uPDATESTUDENTATTENDANCEBindingSource.DataSource = this.iS2G10_DBSSSDataSet2;
+            // 
+            // iS2G10_DBSSSDataSet2
+            // 
+            this.iS2G10_DBSSSDataSet2.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupComboBox
             // 
@@ -75,6 +164,7 @@
             this.groupComboBox.Name = "groupComboBox";
             this.groupComboBox.Size = new System.Drawing.Size(121, 21);
             this.groupComboBox.TabIndex = 8;
+            this.groupComboBox.SelectedIndexChanged += new System.EventHandler(this.groupComboBox_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -89,72 +179,47 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 119);
+            this.label6.Location = new System.Drawing.Point(44, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(278, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "Select students who have attended";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(312, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "86464";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Jonny Label";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(604, 216);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(568, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Attendance";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Student Number";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student Name";
-            // 
             // tutoR_SESSION_GROUPTableAdapter1
             // 
             this.tutoR_SESSION_GROUPTableAdapter1.ClearBeforeFill = true;
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tUTORSESSIONGROUPBindingSource
+            // 
+            this.tUTORSESSIONGROUPBindingSource.DataMember = "TUTOR_SESSION_GROUP";
+            this.tUTORSESSIONGROUPBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // studenT_ACTIVITYTableAdapter1
+            // 
+            this.studenT_ACTIVITYTableAdapter1.ClearBeforeFill = true;
+            // 
+            // iS2G10_DBSSSDataSet1
+            // 
+            this.iS2G10_DBSSSDataSet1.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aTTENDANCEBindingSource
+            // 
+            this.aTTENDANCEBindingSource.DataMember = "ATTENDANCE";
+            this.aTTENDANCEBindingSource.DataSource = this.iS2G10_DBSSSDataSet1;
+            // 
+            // aTTENDANCETableAdapter
+            // 
+            this.aTTENDANCETableAdapter.ClearBeforeFill = true;
+            // 
+            // uPDATE_STUDENT_ATTENDANCETableAdapter
+            // 
+            this.uPDATE_STUDENT_ATTENDANCETableAdapter.ClearBeforeFill = true;
             // 
             // UpdateStudentAttendanceModal
             // 
@@ -165,9 +230,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateStudentAttendanceModal";
             this.Text = "updatestudentattendancemodal";
+            this.Load += new System.EventHandler(this.UpdateStudentAttendanceModal_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPDATESTUDENTATTENDANCEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tUTORSESSIONGROUPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTTENDANCEBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,16 +248,26 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox groupComboBox;
         private System.Windows.Forms.Label label7;
         private IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter tutoR_SESSION_GROUPTableAdapter1;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private System.Windows.Forms.BindingSource tUTORSESSIONGROUPBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox activityComboBox;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
+        private System.Windows.Forms.BindingSource aTTENDANCEBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter aTTENDANCETableAdapter;
+        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet2;
+        private System.Windows.Forms.BindingSource uPDATESTUDENTATTENDANCEBindingSource;
+        private IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter uPDATE_STUDENT_ATTENDANCETableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn attendanceDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_activity_id;
     }
 }

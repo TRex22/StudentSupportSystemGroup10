@@ -21,7 +21,7 @@ namespace SSS
         private readonly IS2G10_DBSSSDataSet.TUTORRow _tutorData;
 
         //Modals
-        private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal = new UpdateStudentAttendanceModal();
+        private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;
         private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
         private readonly UpdateTutorModal _updateTutorModal;
 
@@ -32,6 +32,7 @@ namespace SSS
             _tutorData = tUTORTableAdapter.GetData().FindBytutor_id(userId);
             lblTutorName.Text = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
             _updateTutorModal = new UpdateTutorModal(userId);
+            _updateStudentAttendanceModal = new UpdateStudentAttendanceModal(userId);
             sPassword = sPsswrd;
             InitModals();
         }
