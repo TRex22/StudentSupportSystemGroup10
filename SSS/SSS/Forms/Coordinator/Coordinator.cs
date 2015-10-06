@@ -24,7 +24,7 @@ namespace SSS
         //modals
         private readonly RegisterStudentModal _registerStudentModal;
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
-        private readonly StudentDisengagementModal _studentDisengagementModal = new StudentDisengagementModal();
+        private readonly StudentEngagementModal _studentDisengagementModal = new StudentEngagementModal();
         private readonly TutorRatingsA_ListModal _tutorRatingsAModal = new TutorRatingsA_ListModal();
         private readonly TutorRatingB_IndividualModal _tutorRatingBIndividualModal = new TutorRatingB_IndividualModal();
         private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();

@@ -11,9 +11,9 @@ using Microsoft.Reporting.WinForms;
 
 namespace SSS.Forms.Coordinator
 {
-    public partial class StudentDisengagementModal : Form
+    public partial class StudentEngagementModal : Form
     {
-        public StudentDisengagementModal()
+        public StudentEngagementModal()
         {
             InitializeComponent();
             this.TopLevel = false;

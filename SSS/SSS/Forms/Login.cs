@@ -20,10 +20,10 @@ namespace SSS
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            //TODO check if this is what is wanted
             Application.Exit();
         }
 
+        //TODO secure login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string sInput = "";

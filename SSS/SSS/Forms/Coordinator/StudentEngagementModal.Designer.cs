@@ -1,6 +1,6 @@
 ﻿namespace SSS.Forms.Coordinator
 {
-    partial class StudentDisengagementModal
+    partial class StudentEngagementModal
     {
         /// <summary>
         /// Required designer variable.
