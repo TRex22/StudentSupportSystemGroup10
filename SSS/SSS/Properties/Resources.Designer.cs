@@ -22,7 +22,7 @@ namespace SSS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SSS.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SSS.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace SSS.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Student Created Successfully..
         /// </summary>
-        internal static string CreateStudent_SuccessfulMessage {
+        public static string CreateStudent_SuccessfulMessage {
             get {
                 return ResourceManager.GetString("CreateStudent_SuccessfulMessage", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Incorrect Login Details. Please try again..
         /// </summary>
-        internal static string IncorrectLoginDetailsMessage {
+        public static string IncorrectLoginDetailsMessage {
             get {
                 return ResourceManager.GetString("IncorrectLoginDetailsMessage", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PointBlankIcon {
+        public static System.Drawing.Bitmap PointBlankIcon {
             get {
                 object obj = ResourceManager.GetObject("PointBlankIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -91,7 +91,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Profile Update Successful..
         /// </summary>
-        internal static string Profile_Update_Successful {
+        public static string Profile_Update_Successful {
             get {
                 return ResourceManager.GetString("Profile_Update_Successful", resourceCulture);
             }
@@ -100,7 +100,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Email Sent To New Student.
         /// </summary>
-        internal static string SendEmailSuccessfulMessage {
+        public static string SendEmailSuccessfulMessage {
             get {
                 return ResourceManager.GetString("SendEmailSuccessfulMessage", resourceCulture);
             }
@@ -109,7 +109,7 @@ namespace SSS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Added to Group Successful.
         /// </summary>
-        internal static string UpdateGroupSuccess {
+        public static string UpdateGroupSuccess {
             get {
                 return ResourceManager.GetString("UpdateGroupSuccess", resourceCulture);
             }

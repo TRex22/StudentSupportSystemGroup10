@@ -10,22 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using MaterialDesignColors;
-using MaterialDesignThemes.Wpf;
 
-namespace VideoStoreExample
+namespace SSS_Materials_Design_Forms
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Student.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class Student : MetroWindow
     {
-        public MainWindow()
+        public Student()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

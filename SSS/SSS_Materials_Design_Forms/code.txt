@@ -1,0 +1,78 @@
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="599*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="126" Margin="0,150,0,0" Grid.ColumnSpan="2">
+            <MenuItem Header="Dashboard" Width="126" Background="MediumPurple" />
+            <MenuItem Header="Rate Tutor" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="Rate Activity" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="Join Group" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="Update Profile" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="Create Consultation" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="View Schedule" Width="126" >
+
+            </MenuItem>
+            <MenuItem Header="Logout" Width="126" />
+        </Menu>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="10,648,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="563"/>
+        <Label x:Name="label1" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="300,648,0,0" VerticalAlignment="Top" Width="56"/>
+        <DockPanel Grid.Column="1" HorizontalAlignment="Left" Height="475" LastChildFill="False" Margin="43,150,0,0" VerticalAlignment="Top" Width="880" Grid.ColumnSpan="2"/>
+        <Label x:Name="label2" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="60,37,0,0" VerticalAlignment="Top" Height="68" Width="798" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="48" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <DockPanel HorizontalAlignment="Left" Height="135" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="1025" Grid.ColumnSpan="3" RenderTransformOrigin="1.1,0.525"/>
+
+    </Grid>
+    
+    
+    
+    
+    
+    
+    
+    ===========================================
+    
+    
+    
+    
+    
+    
+    
+    <dragablz:TabablzControl TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="0"
+                             Background="{DynamicResource MaterialDesignPaper}" >
+        <dragablz:TabablzControl.InterTabController>
+            <dragablz:InterTabController />
+        </dragablz:TabablzControl.InterTabController>
+
+        <TabItem Header="Dashboard" Width="126" Background="MediumPurple" />
+        <TabItem Header="Rate Tutor" Width="126" >
+
+        </TabItem>
+        <TabItem Header="Rate Activity" Width="126" >
+
+        </TabItem>
+        <TabItem Header="Join Group" Width="126" >
+
+        </TabItem>
+        <TabItem Header="Update Profile" Width="126" >
+
+        </TabItem>
+        <TabItem Header="Create Consultation" Width="126" >
+
+        </TabItem>
+        <TabItem Header="View Schedule" Width="126" >
+
+        </TabItem>
+        <TabItem Header="Logout" Width="126" />
+
+    </dragablz:TabablzControl>
