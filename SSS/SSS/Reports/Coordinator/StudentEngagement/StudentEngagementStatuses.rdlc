@@ -396,17 +396,6 @@
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
         </ChartLegends>
-        <ChartTitles>
-          <ChartTitle Name="Default">
-            <Caption>Student Engagement</Caption>
-            <Style>
-              <BackgroundGradientType>None</BackgroundGradientType>
-              <FontWeight>Bold</FontWeight>
-              <TextAlign>General</TextAlign>
-              <VerticalAlign>Top</VerticalAlign>
-            </Style>
-          </ChartTitle>
-        </ChartTitles>
         <Palette>BrightPastel</Palette>
         <ChartBorderSkin>
           <Style>
@@ -729,6 +718,70 @@
         <Height>0.6cm</Height>
         <Width>4.30328cm</Width>
         <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>(Disengaged threshhold = below 35 points)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>3.33995cm</Top>
+        <Left>0.49073cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.81271cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Student Engagement</Value>
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>5.03245cm</Top>
+        <Left>10.81828cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.63771cm</Width>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

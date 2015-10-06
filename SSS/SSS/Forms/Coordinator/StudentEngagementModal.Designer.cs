@@ -33,22 +33,47 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.dISENGAGEDSTUDENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
             this.disengageD_STUDENTSTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
             this.disengageD_STUDENTS_AGGREGATETableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter();
             this.studentS_AGGREGATETableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter();
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
-            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dISENGAGEDSTUDENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTUDENTSAGGREGATEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dISENGAGEDSTUDENTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dISENGAGEDSTUDENTSAGGREGATEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTSAGGREGATEBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sTUDENTENGAGEMENTSTATUSREPORTBindingSource
+            // 
+            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource.DataMember = "STUDENT_ENGAGEMENT_STATUS_REPORT";
+            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dISENGAGEDSTUDENTSBindingSource
+            // 
+            this.dISENGAGEDSTUDENTSBindingSource.DataMember = "DISENGAGED_STUDENTS";
+            this.dISENGAGEDSTUDENTSBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // dISENGAGEDSTUDENTSAGGREGATEBindingSource
+            // 
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataMember = "DISENGAGED_STUDENTS_AGGREGATE";
+            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // sTUDENTSAGGREGATEBindingSource
+            // 
+            this.sTUDENTSAGGREGATEBindingSource.DataMember = "STUDENTS_AGGREGATE";
+            this.sTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
             // reportViewer1
             // 
@@ -69,7 +94,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.StudentEngagement.StudentEngagementStatuses.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(803, 561);
+            this.reportViewer1.Size = new System.Drawing.Size(762, 539);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ReportRefresh += new System.ComponentModel.CancelEventHandler(this.reportViewer1_ReportRefresh);
             this.reportViewer1.Drillthrough += new Microsoft.Reporting.WinForms.DrillthroughEventHandler(this.reportViewer1_Drillthrough);
@@ -91,44 +116,19 @@
             // 
             this.studentS_AGGREGATETableAdapter1.ClearBeforeFill = true;
             // 
-            // iS2G10_DBSSSDataSet
-            // 
-            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
-            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sTUDENTENGAGEMENTSTATUSREPORTBindingSource
-            // 
-            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource.DataMember = "STUDENT_ENGAGEMENT_STATUS_REPORT";
-            this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // dISENGAGEDSTUDENTSBindingSource
-            // 
-            this.dISENGAGEDSTUDENTSBindingSource.DataMember = "DISENGAGED_STUDENTS";
-            this.dISENGAGEDSTUDENTSBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // dISENGAGEDSTUDENTSAGGREGATEBindingSource
-            // 
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataMember = "DISENGAGED_STUDENTS_AGGREGATE";
-            this.dISENGAGEDSTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // sTUDENTSAGGREGATEBindingSource
-            // 
-            this.sTUDENTSAGGREGATEBindingSource.DataMember = "STUDENTS_AGGREGATE";
-            this.sTUDENTSAGGREGATEBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // StudentDisengagementModal
+            // StudentEngagementModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 561);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StudentDisengagementModal";
+            this.Name = "StudentEngagementModal";
             this.Text = "StudentDisengagementModal";
             this.Load += new System.EventHandler(this.StudentDisengagementModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTENGAGEMENTSTATUSREPORTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dISENGAGEDSTUDENTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dISENGAGEDSTUDENTSAGGREGATEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTSAGGREGATEBindingSource)).EndInit();
@@ -142,11 +142,11 @@
         private IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter disengageD_STUDENTSTableAdapter1;
         private IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter disengageD_STUDENTS_AGGREGATETableAdapter1;
         private IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter studentS_AGGREGATETableAdapter1;
-        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource sTUDENTENGAGEMENTSTATUSREPORTBindingSource;
         private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource dISENGAGEDSTUDENTSBindingSource;
         private System.Windows.Forms.BindingSource dISENGAGEDSTUDENTSAGGREGATEBindingSource;
         private System.Windows.Forms.BindingSource sTUDENTSAGGREGATEBindingSource;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

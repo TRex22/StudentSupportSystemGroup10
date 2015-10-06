@@ -105,7 +105,7 @@ namespace SSS
         {
             bool blnValid = true;
 
-            if (studentIdTxtBox.Text.Equals("") || studentIdTxtBox.Text.Equals("Enter Student's student ID"))
+            if (studentIdTxtBox.Text.Equals("") || studentIdTxtBox.Text.Equals("Enter Student's Student ID"))
             {
                 blnValid = false;
                 lblErrStdID.Text = "Please enter Student ID";
@@ -132,28 +132,34 @@ namespace SSS
                 lblErrEmail.Visible = true;
             }
 
-            if (YearOfStudyComboBox1.SelectedItem.Equals("Select Year Of Study"))
+           
+            if (YearOfStudyComboBox1.Text.Equals("Select Year Of Study"))
             {
                 blnValid = false;
                 lblErrYoS.Text = "Please select Year of Study";
                 lblErrYoS.Visible = true;
             }
-            
-            if(IdPassportTxtBox.Text.Equals(""))
+
+            if (IdPassportTxtBox.Text.Equals("") || IdPassportTxtBox.Text.Equals("Enter ID or Passport Number"))
             {
                 blnValid = false;
                 lblErrPassID.Text = "Please enter in ID/Password Number";
                 lblErrPassID.Visible = true;
             }
 
-            if(dateOfBirthDateTimePicker1.Text.Equals(DateTime.Today.ToString()))
+
+            string DATEPICKER = dateOfBirthDateTimePicker1.Value.ToShortDateString();
+           string currDate =  DateTime.Today.ToShortDateString();
+            if (DATEPICKER.Equals(currDate))
+          //  if (dateOfBirthDateTimePicker1.Value)
             {
                 blnValid = false;
                 lblErrDoB.Text = "Please enter in Date of Birth";
                 lblErrDoB.Visible = true;
             }
 
-            if(MobileTxtBox.Text.ToString().Length <=3)
+            
+            if(MobileTxtBox.Text.ToString().Length !=13)
             {
                 blnValid = false;
                 lblErrMobileNum.Text = "Please enter in Mobile Number";
@@ -161,7 +167,7 @@ namespace SSS
 
             }
 
-            if(StudentProgrammeTxtBox.Text.Equals(""))
+            if (StudentProgrammeTxtBox.Text.Equals("") || StudentProgrammeTxtBox.Text.Equals("Enter Student's Programme"))
             {
                 blnValid = false;
                 lblErrStdProg.Text = "Please enter in Student Program";
@@ -191,6 +197,11 @@ namespace SSS
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);
                 MessageBox.Show(Resources.SendEmailSuccessfulMessage, Resources.SendEmailSuccessfulMessage);
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields.", "Error");
+
             }
         }
 

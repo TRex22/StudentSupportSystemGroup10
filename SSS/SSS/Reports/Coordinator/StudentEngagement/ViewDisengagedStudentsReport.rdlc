@@ -40,7 +40,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>(Disengaged threshhold = below 35 points</Value>
+                <Value>(Disengaged threshhold = below 35 points)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                 </Style>

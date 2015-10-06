@@ -142,6 +142,7 @@ namespace SSS
         private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+           
             _studentDisengagementModal.reportViewer1.RefreshReport();
             _studentDisengagementModal.Show();
         }

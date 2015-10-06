@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.datOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.tutorIDPassportTxtBox = new System.Windows.Forms.TextBox();
             this.tutorIdTextBox = new System.Windows.Forms.TextBox();
             this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -153,21 +153,12 @@
             this.datOfBirthdateTimePicker.Size = new System.Drawing.Size(209, 20);
             this.datOfBirthdateTimePicker.TabIndex = 80;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 23);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "Please enter tutor details";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(519, 389);
+            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(506, 372);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(85, 30);
             this.button1.TabIndex = 78;
             this.button1.Text = "&Submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -206,7 +197,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(565, 304);
+            this.pictureBox4.Location = new System.Drawing.Point(562, 305);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +259,7 @@
             // tutorMobileNumberTxtBox
             // 
             this.tutorMobileNumberTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorMobileNumberTxtBox.Location = new System.Drawing.Point(343, 304);
+            this.tutorMobileNumberTxtBox.Location = new System.Drawing.Point(340, 304);
             this.tutorMobileNumberTxtBox.Name = "tutorMobileNumberTxtBox";
             this.tutorMobileNumberTxtBox.Size = new System.Drawing.Size(216, 27);
             this.tutorMobileNumberTxtBox.TabIndex = 68;
@@ -318,11 +309,21 @@
             // 
             this.tutorTableAdapter1.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 23);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Please Enter Tutor Details";
+            // 
             // UpdateTutorModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 424);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -377,7 +378,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datOfBirthdateTimePicker;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -395,5 +395,6 @@
         private System.Windows.Forms.TextBox tutorIDPassportTxtBox;
         private System.Windows.Forms.TextBox tutorIdTextBox;
         private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private System.Windows.Forms.Label label1;
     }
 }

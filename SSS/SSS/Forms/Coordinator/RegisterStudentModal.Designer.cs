@@ -86,7 +86,7 @@
             this.studentIdTxtBox.Name = "studentIdTxtBox";
             this.studentIdTxtBox.Size = new System.Drawing.Size(209, 27);
             this.studentIdTxtBox.TabIndex = 0;
-            this.studentIdTxtBox.Text = "Enter Student\'s student ID";
+            this.studentIdTxtBox.Text = "Enter Student\'s Student ID";
             this.studentIdTxtBox.Enter += new System.EventHandler(this.studentIdTxtBox_Enter);
             // 
             // IdPassportTxtBox
@@ -149,7 +149,7 @@
             "YOS2",
             "YOS3",
             "Postgraduate"});
-            this.YearOfStudyComboBox1.Location = new System.Drawing.Point(59, 424);
+            this.YearOfStudyComboBox1.Location = new System.Drawing.Point(61, 424);
             this.YearOfStudyComboBox1.Name = "YearOfStudyComboBox1";
             this.YearOfStudyComboBox1.Size = new System.Drawing.Size(209, 27);
             this.YearOfStudyComboBox1.TabIndex = 9;
@@ -247,9 +247,10 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(575, 449);
+            this.SubmitButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Location = new System.Drawing.Point(565, 444);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.Size = new System.Drawing.Size(85, 30);
             this.SubmitButton.TabIndex = 23;
             this.SubmitButton.Text = "&Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -258,12 +259,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 23);
+            this.label1.Size = new System.Drawing.Size(236, 23);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Please enter student details";
+            this.label1.Text = "Please Enter Student Details";
             // 
             // dateOfBirthDateTimePicker1
             // 
@@ -493,7 +494,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 500);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.Controls.Add(this.lblErrStdProg);
             this.Controls.Add(this.lblErrMobileNum);
             this.Controls.Add(this.lblErrDoB);
