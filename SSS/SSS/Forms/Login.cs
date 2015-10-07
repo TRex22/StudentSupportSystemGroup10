@@ -17,8 +17,8 @@ namespace SSS
     public partial class Login : Form
     {
         private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(new StringHandler());
-        private int userId;
-        private string password;
+        private int _userId;
+        private string _password;
 
         public Login()
         {
@@ -37,9 +37,9 @@ namespace SSS
             var sInput = medUsername.Text;
             var sPassword = medPassword.Text;
 
-            userId = Convert.ToInt32(sInput);
+            _userId = Convert.ToInt32(sInput);
 
-            var userProfile = userprofileTableAdapter1.GetData().FindByuser_id(userId);
+            var userProfile = userprofileTableAdapter1.GetData().FindByuser_id(_userId);
 
             if (userProfile == null)
             {
@@ -59,7 +59,7 @@ namespace SSS
 
                 if (doILogin)
                 {
-                    if (userProfile.coordinator_id != null && userId == userProfile.coordinator_id)
+                    if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
                     {
                         Form CoordinatorShow = new Coordinator(sInput, sPassword);
                         CoordinatorShow.Owner = this;
@@ -67,14 +67,14 @@ namespace SSS
                         this.Hide();
 
                     }
-                    else if (userProfile.student_id != null && userId == userProfile.student_id)
+                    else if (userProfile.student_id != null && _userId == userProfile.student_id)
                     {
                         Form StudentShow = new Student(sInput, sPassword);
                         StudentShow.Owner = this;
                         StudentShow.Show();
                         this.Hide();
                     }
-                    else if (userProfile.tutor_id!= null && userId == userProfile.tutor_id)
+                    else if (userProfile.tutor_id!= null && _userId == userProfile.tutor_id)
                     {
                         Form TutorShow = new Tutor(sInput, sPassword);
                         TutorShow.Owner = this;
@@ -88,13 +88,7 @@ namespace SSS
         private bool CheckPassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile, string sPass)
         {
             bool login = false;
-            string hash;
-            string salt;
-
-            _passwordBuilder.CreateHash(sPass, out hash, out salt);
-            userProfile.password_hash = hash;
-            userProfile.password_salt = salt;
-
+            
             var check = _passwordBuilder.CheckPassword(sPass, userProfile.password_hash, userProfile.password_salt);
             //check if password is right
             if (!check)
@@ -109,21 +103,21 @@ namespace SSS
 
         private void CreatePassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile)
         {
-            password = null;
+            _password = null;
             using (var form = new CreatePassword())
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    password = form.password;          //values preserved after close
+                    _password = form.password;          //values preserved after close
                 }
             }
 
-            if (password != null && !password.Equals(""))
+            if (_password != null && !_password.Equals(""))
             {
                 string hash;
                 string salt;
-                _passwordBuilder.CreateHash(password, out hash, out salt);
+                _passwordBuilder.CreateHash(_password, out hash, out salt);
                 userProfile.resetPassword = false;
                 userProfile.password_hash = hash;
                 userProfile.password_salt = salt;
@@ -133,7 +127,7 @@ namespace SSS
                     Resources.Login_CheckPassword_Password_Created_Successfully);
             }
 
-            if (password != null && password.Equals(""))
+            if (_password != null && _password.Equals(""))
             {
                 MessageBox.Show(Resources.Login_CheckPassword_Please_Enter_a_Password_,
                     Resources.Login_CheckPassword_Please_Enter_a_Password_);

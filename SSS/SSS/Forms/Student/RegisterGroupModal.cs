@@ -53,9 +53,14 @@ namespace SSS
             }
         }
 
-        private void createAttendance(int studentId , int studentActivityId, int? tutorRating, int? activityRating, bool studentArrived)
+        private void CreateAttendance(int studentId , int studentActivityId, int? tutorRating, int? activityRating, bool studentArrived)
         {
-            var newAttendance = attendanceTableAdapter1.Insert(studentId, studentActivityId, tutorRating, activityRating, studentArrived);
+            //if no attendane exists make it
+            var attendance = attendanceTableAdapter1.GetData().FindBystudent_idstudent_activity_id(studentId, studentActivityId);
+            if (attendance == null)
+            {
+                var newAttendance = attendanceTableAdapter1.Insert(studentId, studentActivityId, tutorRating, activityRating, studentArrived);
+            }
         }
 
         private void RegisterForGroup(int userId, int groupId)
@@ -68,7 +73,7 @@ namespace SSS
             var activitiesTable = studenT_ACTIVITYTableAdapter1.GetData();
             foreach (var activity in activitiesTable)
             {
-                createAttendance(_userId, activity.student_activity_id, null, null, false);
+                CreateAttendance(_userId, activity.student_activity_id, null, null, false);
             }
             
             MessageBox.Show(Resources.UpdateGroupSuccess, Resources.UpdateGroupSuccess);
