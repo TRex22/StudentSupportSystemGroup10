@@ -30,6 +30,9 @@ namespace SSS
         private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();
         private readonly RegisterTutorModal _registerTutorModal = new RegisterTutorModal();
         private readonly ViewDisengagedStudentsModal _viewDisengagedStudentsModal = new ViewDisengagedStudentsModal();
+        private readonly SearchStudentModal _searchStudentModal;
+        private readonly SearchStudentModal _updateStudentModal;
+        private UpdateStudentProfileModal _updateStudentProfileModal;
 
         public Coordinator(String sUsrId, String sPsswrd)
         {
@@ -38,6 +41,10 @@ namespace SSS
             var userId = Convert.ToInt32(sUsrId);
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
             _registerStudentModal = new RegisterStudentModal(userId);
+            _searchStudentModal = new SearchStudentModal(userId, false);
+
+            _updateStudentModal = new SearchStudentModal(userId, true);
+            _updateStudentModal.Parent = this;
 
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
@@ -60,19 +67,22 @@ namespace SSS
             this.panel7.Controls.Add(_tutorRatingCModal);
             this.panel7.Controls.Add(_registerTutorModal);
             this.panel7.Controls.Add(_viewDisengagedStudentsModal);
+            this.panel7.Controls.Add(_searchStudentModal);
+            this.panel7.Controls.Add(_updateStudentModal);
+            this.panel7.Controls.Add(_updateStudentProfileModal);
+        }
+
+        public void SetModal(Control vaule)
+        {
+            this.panel7.Controls.Add(vaule);
         }
 
         private void HideAllModals()
         {
-            _registerStudentModal.Hide();
-            _coordinatorDashboardModal.Hide();
-            _studentDisengagementModal.Hide();
-            _tutorRatingsAModal.Hide();
-            _tutorRatingBIndividualModal.Hide();
-            _tutorRatingCModal.Hide();
-            _registerTutorModal.Hide();
-            _viewDisengagedStudentsModal.Hide();
-            //TODO Add hide for other modals
+            foreach (Form modal in panel7.Controls)
+            {
+                modal.Hide();
+            }
         }
 
         private void Coordinator_Load(object sender, EventArgs e)
@@ -108,6 +118,7 @@ namespace SSS
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _updateStudentModal.Show();
         }
 
         private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +129,7 @@ namespace SSS
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _searchStudentModal.Show();
         }
 
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -168,6 +180,12 @@ namespace SSS
         {
             HideAllModals();
             _viewDisengagedStudentsModal.Show();
+        }
+
+        private void searchTutorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            
         }
     }
 }

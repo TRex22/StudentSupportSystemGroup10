@@ -51,6 +51,7 @@
             this.aTTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aTTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
             this.uPDATE_STUDENT_ATTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,6 +73,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.activityComboBox);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -86,7 +88,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(248, 15);
+            this.label8.Location = new System.Drawing.Point(333, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 11;
@@ -95,7 +97,7 @@
             // activityComboBox
             // 
             this.activityComboBox.FormattingEnabled = true;
-            this.activityComboBox.Location = new System.Drawing.Point(251, 31);
+            this.activityComboBox.Location = new System.Drawing.Point(336, 128);
             this.activityComboBox.Name = "activityComboBox";
             this.activityComboBox.Size = new System.Drawing.Size(225, 21);
             this.activityComboBox.TabIndex = 10;
@@ -115,7 +117,7 @@
             this.attendanceDataGridViewCheckBoxColumn,
             this.student_activity_id});
             this.dataGridView1.DataSource = this.uPDATESTUDENTATTENDANCEBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(182, 173);
+            this.dataGridView1.Location = new System.Drawing.Point(183, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(346, 207);
             this.dataGridView1.TabIndex = 9;
@@ -160,7 +162,7 @@
             // groupComboBox
             // 
             this.groupComboBox.FormattingEnabled = true;
-            this.groupComboBox.Location = new System.Drawing.Point(43, 31);
+            this.groupComboBox.Location = new System.Drawing.Point(128, 128);
             this.groupComboBox.Name = "groupComboBox";
             this.groupComboBox.Size = new System.Drawing.Size(121, 21);
             this.groupComboBox.TabIndex = 8;
@@ -169,7 +171,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 14);
+            this.label7.Location = new System.Drawing.Point(125, 111);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 7;
@@ -179,7 +181,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 95);
+            this.label6.Location = new System.Drawing.Point(211, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(278, 23);
             this.label6.TabIndex = 6;
@@ -220,6 +222,16 @@
             // uPDATE_STUDENT_ATTENDANCETableAdapter
             // 
             this.uPDATE_STUDENT_ATTENDANCETableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(188, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(341, 36);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Update Student Attendance";
             // 
             // UpdateStudentAttendanceModal
             // 
@@ -269,5 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn attendanceDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_activity_id;
+        private System.Windows.Forms.Label label1;
     }
 }

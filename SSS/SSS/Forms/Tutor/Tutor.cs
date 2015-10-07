@@ -47,10 +47,10 @@ namespace SSS
 
         private void HideAllModals()
         {
-            _updateStudentAttendanceModal.Hide();
-            _tutorDashboardModal.Hide();
-            _updateTutorModal.Hide();
-            //TODO Add hide for other modals
+            foreach (Form modal in panel7.Controls)
+            {
+                modal.Hide();
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

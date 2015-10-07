@@ -72,11 +72,13 @@
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.searchTutorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip9.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip4.SuspendLayout();
@@ -167,9 +169,11 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchTutorsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 216);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(241, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(241, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -453,6 +457,13 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
+            // searchTutorsToolStripMenuItem
+            // 
+            this.searchTutorsToolStripMenuItem.Name = "searchTutorsToolStripMenuItem";
+            this.searchTutorsToolStripMenuItem.Size = new System.Drawing.Size(108, 23);
+            this.searchTutorsToolStripMenuItem.Text = "Search Tutors";
+            this.searchTutorsToolStripMenuItem.Click += new System.EventHandler(this.searchTutorsToolStripMenuItem_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +484,8 @@
             this.panel8.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
             this.menuStrip9.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -543,5 +556,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewDisengagedStudentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem averageTutorRatingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewTutorRatingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchTutorsToolStripMenuItem;
     }
 }

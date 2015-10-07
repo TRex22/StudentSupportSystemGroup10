@@ -74,6 +74,18 @@
     <Compile Include="Forms\Coordinator\RegisterTutorModal.Designer.cs">
       <DependentUpon>RegisterTutorModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Coordinator\SearchStudentModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\SearchStudentModal.Designer.cs">
+      <DependentUpon>SearchStudentModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\SearchTutorModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\SearchTutorModal.Designer.cs">
+      <DependentUpon>SearchTutorModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\RegisterTutorModal.resx">
       <DependentUpon>RegisterTutorModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\SearchStudentModal.resx">
+      <DependentUpon>SearchStudentModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\SearchTutorModal.resx">
+      <DependentUpon>SearchTutorModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.resx">
       <DependentUpon>TutorRatingB_IndividualModal.cs</DependentUpon>

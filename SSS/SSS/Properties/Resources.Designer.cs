@@ -98,6 +98,15 @@ namespace SSS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Student Information.
+        /// </summary>
+        public static string SearchStudentMessageBoxHeading {
+            get {
+                return ResourceManager.GetString("SearchStudentMessageBoxHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email Sent To New Student..
         /// </summary>
         public static string SendEmailSuccessfulMessage {
