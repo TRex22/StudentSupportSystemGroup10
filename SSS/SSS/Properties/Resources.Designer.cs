@@ -79,6 +79,24 @@ namespace SSS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password Created Successfully.
+        /// </summary>
+        public static string Login_CheckPassword_Password_Created_Successfully {
+            get {
+                return ResourceManager.GetString("Login_CheckPassword_Password_Created_Successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Insert Correct Password.
+        /// </summary>
+        public static string PassWordCreateDoNotMatchError {
+            get {
+                return ResourceManager.GetString("PassWordCreateDoNotMatchError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap PointBlankIcon {

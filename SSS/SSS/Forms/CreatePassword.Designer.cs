@@ -1,6 +1,6 @@
-﻿namespace SSS
+﻿namespace SSS.Forms
 {
-    partial class Login
+    partial class CreatePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.pnlLoginTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
@@ -39,42 +36,24 @@
             this.medPassword = new System.Windows.Forms.MaskedTextBox();
             this.medUsername = new System.Windows.Forms.MaskedTextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
-            this.pnlLoginTitle.SuspendLayout();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.pnlLoginTitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlLoginTitle.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlLoginTitle
-            // 
-            this.pnlLoginTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLoginTitle.Controls.Add(this.lblTitle);
-            this.pnlLoginTitle.Location = new System.Drawing.Point(12, 12);
-            this.pnlLoginTitle.Name = "pnlLoginTitle";
-            this.pnlLoginTitle.Size = new System.Drawing.Size(464, 63);
-            this.pnlLoginTitle.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(79, 19);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(291, 23);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Welcome to Student Support System";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 81);
+            this.panel1.Location = new System.Drawing.Point(11, 79);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 171);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 3;
             // 
             // panel3
             // 
@@ -94,18 +73,18 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 26);
             this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "&Exit";
+            this.btnExit.Text = "&Cancel";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(93, 3);
+            this.btnLogin.Location = new System.Drawing.Point(79, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 28);
+            this.btnLogin.Size = new System.Drawing.Size(131, 28);
             this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "&Login";
+            this.btnLogin.Text = "&CreatePassword";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -115,7 +94,7 @@
             this.panel2.Controls.Add(this.medPassword);
             this.panel2.Controls.Add(this.medUsername);
             this.panel2.Controls.Add(this.lblPassword);
-            this.panel2.Controls.Add(this.lblUsername);
+            this.panel2.Controls.Add(this.lblPass);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(456, 124);
@@ -123,7 +102,7 @@
             // 
             // medPassword
             // 
-            this.medPassword.Location = new System.Drawing.Point(123, 81);
+            this.medPassword.Location = new System.Drawing.Point(159, 81);
             this.medPassword.Name = "medPassword";
             this.medPassword.PasswordChar = '*';
             this.medPassword.Size = new System.Drawing.Size(280, 20);
@@ -131,8 +110,9 @@
             // 
             // medUsername
             // 
-            this.medUsername.Location = new System.Drawing.Point(123, 37);
+            this.medUsername.Location = new System.Drawing.Point(159, 37);
             this.medUsername.Name = "medUsername";
+            this.medUsername.PasswordChar = '*';
             this.medUsername.Size = new System.Drawing.Size(280, 20);
             this.medUsername.TabIndex = 2;
             // 
@@ -142,54 +122,61 @@
             this.lblPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(24, 82);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(75, 19);
+            this.lblPassword.Size = new System.Drawing.Size(129, 19);
             this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password:";
+            this.lblPassword.Text = "Confirm Password:";
             // 
-            // lblUsername
+            // lblPass
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(24, 38);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(79, 19);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Username:";
+            this.lblPass.AutoSize = true;
+            this.lblPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Location = new System.Drawing.Point(24, 38);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(75, 19);
+            this.lblPass.TabIndex = 0;
+            this.lblPass.Text = "Password:";
             // 
-            // userprofileTableAdapter1
+            // pnlLoginTitle
             // 
-            this.userprofileTableAdapter1.ClearBeforeFill = true;
+            this.pnlLoginTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLoginTitle.Controls.Add(this.lblTitle);
+            this.pnlLoginTitle.Location = new System.Drawing.Point(11, 10);
+            this.pnlLoginTitle.Name = "pnlLoginTitle";
+            this.pnlLoginTitle.Size = new System.Drawing.Size(464, 63);
+            this.pnlLoginTitle.TabIndex = 2;
             // 
-            // Login
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(79, 19);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(223, 23);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Please Enter Your Password";
+            // 
+            // CreatePassword
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(486, 260);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLoginTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            this.Activated += new System.EventHandler(this.Login_Activated);
-            this.Shown += new System.EventHandler(this.Login_Shown);
-            this.pnlLoginTitle.ResumeLayout(false);
-            this.pnlLoginTitle.PerformLayout();
+            this.Name = "CreatePassword";
+            this.Text = "CreatePassword";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlLoginTitle.ResumeLayout(false);
+            this.pnlLoginTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLoginTitle;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnExit;
@@ -198,7 +185,8 @@
         private System.Windows.Forms.MaskedTextBox medPassword;
         private System.Windows.Forms.MaskedTextBox medUsername;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Panel pnlLoginTitle;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

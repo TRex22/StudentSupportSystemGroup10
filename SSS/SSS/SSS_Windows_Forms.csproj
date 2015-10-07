@@ -116,6 +116,12 @@
     <Compile Include="Forms\Coordinator\ViewDisengagedStudentsModal.Designer.cs">
       <DependentUpon>ViewDisengagedStudentsModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreatePassword.Designer.cs">
+      <DependentUpon>CreatePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student\RegisterGroupModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,7 +166,6 @@
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.cs">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -228,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\ViewDisengagedStudentsModal.resx">
       <DependentUpon>ViewDisengagedStudentsModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreatePassword.resx">
+      <DependentUpon>CreatePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\RegisterGroupModal.resx">
       <DependentUpon>RegisterGroupModal.cs</DependentUpon>
