@@ -64,6 +64,7 @@
             this.lblErrFName = new System.Windows.Forms.Label();
             this.lblErrStdID = new System.Windows.Forms.Label();
             this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -433,6 +434,10 @@
             // 
             this.tutorTableAdapter1.ClearBeforeFill = true;
             // 
+            // userprofileTableAdapter1
+            // 
+            this.userprofileTableAdapter1.ClearBeforeFill = true;
+            // 
             // RegisterTutorModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,5 +531,6 @@
         private System.Windows.Forms.Label lblErrFName;
         private System.Windows.Forms.Label lblErrStdID;
         private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
     }
 }

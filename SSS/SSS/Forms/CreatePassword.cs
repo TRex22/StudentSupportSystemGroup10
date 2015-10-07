@@ -14,33 +14,36 @@ namespace SSS.Forms
 {
     public partial class CreatePassword : Form
     {
-        private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(new StringHandler());
         public string password { get; set; }
+        public bool createdPassword { get; set; }
         public CreatePassword()
         {
             InitializeComponent();
+            this.createdPassword = false;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            password = null;
-            lblPassword.Text = "";
-            lblPass.Text = "";
-            this.Close();
-        }
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //check they dont equal
-            if (!lblPass.Text.Equals(lblPassword.Text))
+            if (!passwordTxtBox.Text.Equals(confirmPasswordTxtBox.Text))
             {
                 MessageBox.Show(Resources.PassWordCreateDoNotMatchError, Resources.PassWordCreateDoNotMatchError);
             }
-            else
+            else if (passwordTxtBox.Text.Equals(confirmPasswordTxtBox.Text))
             {
-                this.password = lblPass.Text;
+                this.password = confirmPasswordTxtBox.Text;
+                this.createdPassword = true;
                 this.Close();
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.password = null;
+            this.createdPassword = false;
+            this.Close();
         }
     }
 }

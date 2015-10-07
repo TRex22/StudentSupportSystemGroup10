@@ -41,6 +41,11 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.studentTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.ssS_COORDINATORTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.studenT_ACTIVITYTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
+            this.attendanceTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
             this.pnlLoginTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -160,6 +165,26 @@
             // 
             this.userprofileTableAdapter1.ClearBeforeFill = true;
             // 
+            // tutorTableAdapter1
+            // 
+            this.tutorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
+            // ssS_COORDINATORTableAdapter1
+            // 
+            this.ssS_COORDINATORTableAdapter1.ClearBeforeFill = true;
+            // 
+            // studenT_ACTIVITYTableAdapter1
+            // 
+            this.studenT_ACTIVITYTableAdapter1.ClearBeforeFill = true;
+            // 
+            // attendanceTableAdapter1
+            // 
+            this.attendanceTableAdapter1.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
@@ -200,5 +225,10 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter ssS_COORDINATORTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter attendanceTableAdapter1;
     }
 }

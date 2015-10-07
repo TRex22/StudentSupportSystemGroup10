@@ -1986,10 +1986,10 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="student_id" msprop:Generator_ColumnVarNameInTable="columnstudent_id" msprop:Generator_ColumnPropNameInRow="student_id" msprop:Generator_ColumnPropNameInTable="student_idColumn" msprop:Generator_UserColumnName="student_id" type="xs:int" minOccurs="0" />
-              <xs:element name="coordinator_id" msprop:Generator_ColumnVarNameInTable="columncoordinator_id" msprop:Generator_ColumnPropNameInRow="coordinator_id" msprop:Generator_ColumnPropNameInTable="coordinator_idColumn" msprop:Generator_UserColumnName="coordinator_id" type="xs:int" minOccurs="0" />
-              <xs:element name="tutor_id" msprop:Generator_ColumnVarNameInTable="columntutor_id" msprop:Generator_ColumnPropNameInRow="tutor_id" msprop:Generator_ColumnPropNameInTable="tutor_idColumn" msprop:Generator_UserColumnName="tutor_id" type="xs:int" minOccurs="0" />
-              <xs:element name="password_hash" msprop:Generator_ColumnVarNameInTable="columnpassword_hash" msprop:Generator_ColumnPropNameInRow="password_hash" msprop:Generator_ColumnPropNameInTable="password_hashColumn" msprop:Generator_UserColumnName="password_hash" minOccurs="0">
+              <xs:element name="student_id" msprop:nullValue="_null" msprop:Generator_ColumnVarNameInTable="columnstudent_id" msprop:Generator_ColumnPropNameInRow="student_id" msprop:Generator_ColumnPropNameInTable="student_idColumn" msprop:Generator_UserColumnName="student_id" type="xs:int" minOccurs="0" />
+              <xs:element name="coordinator_id" msprop:nullValue="_null" msprop:Generator_ColumnVarNameInTable="columncoordinator_id" msprop:Generator_ColumnPropNameInRow="coordinator_id" msprop:Generator_ColumnPropNameInTable="coordinator_idColumn" msprop:Generator_UserColumnName="coordinator_id" type="xs:int" minOccurs="0" />
+              <xs:element name="tutor_id" msprop:nullValue="_null" msprop:Generator_ColumnVarNameInTable="columntutor_id" msprop:Generator_ColumnPropNameInRow="tutor_id" msprop:Generator_ColumnPropNameInTable="tutor_idColumn" msprop:Generator_UserColumnName="tutor_id" type="xs:int" minOccurs="0" />
+              <xs:element name="password_hash" msprop:nullValue="_null" msprop:Generator_ColumnVarNameInTable="columnpassword_hash" msprop:Generator_ColumnPropNameInRow="password_hash" msprop:Generator_ColumnPropNameInTable="password_hashColumn" msprop:Generator_UserColumnName="password_hash" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />

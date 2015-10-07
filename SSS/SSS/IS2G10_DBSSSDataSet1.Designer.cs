@@ -12954,13 +12954,14 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int student_id {
+            public int? student_id {
                 get {
                     try {
-                        return ((int)(this[this.tableUSERPROFILE.student_idColumn]));
+                        return ((int?)(this[this.tableUSERPROFILE.student_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'student_id\' in table \'USERPROFILE\' is DBNull.", e);
+                        return null;
+                        //throw new global::System.Data.StrongTypingException("The value for column \'student_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
                 }
                 set {
@@ -12970,13 +12971,14 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int coordinator_id {
+            public int? coordinator_id {
                 get {
                     try {
-                        return ((int)(this[this.tableUSERPROFILE.coordinator_idColumn]));
+                        return ((int?)(this[this.tableUSERPROFILE.coordinator_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_id\' in table \'USERPROFILE\' is DBNull.", e);
+                        return null;
+                        //throw new global::System.Data.StrongTypingException("The value for column \'coordinator_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
                 }
                 set {
@@ -12986,13 +12988,15 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tutor_id {
+            public int? tutor_id {
                 get {
                     try {
-                        return ((int)(this[this.tableUSERPROFILE.tutor_idColumn]));
+                        return ((int?)(this[this.tableUSERPROFILE.tutor_idColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_id\' in table \'USERPROFILE\' is DBNull.", e);
+                    catch (global::System.InvalidCastException e)
+                    {
+                        return null;
+                        //throw new global::System.Data.StrongTypingException("The value for column \'tutor_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
                 }
                 set {

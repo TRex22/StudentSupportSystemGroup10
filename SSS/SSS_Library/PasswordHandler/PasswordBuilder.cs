@@ -31,10 +31,10 @@ namespace SSS_Library.PasswordHandler
             rnd.GetBytes(rndSalt);
 
             // Hash the password and encode the parameters
-            var sha3Hash = Sha_Salt(password, rndSalt);
+            var shaHash = Sha_Salt(password, rndSalt);
 
-            hash = Convert.ToBase64String(rndSalt);
-            salt = Convert.ToBase64String(sha3Hash);
+            salt = Convert.ToBase64String(rndSalt);
+            hash = Convert.ToBase64String(shaHash);
         }
 
         /// <summary>
@@ -47,7 +47,10 @@ namespace SSS_Library.PasswordHandler
         public bool CheckPassword(string password, string hash, string salt)
         {
             var testHash = Sha_Salt(password, _stringHandler.GetBytes(salt));
-            return _stringHandler.SecureByteArrayEquals(_stringHandler.GetBytes(hash), testHash);
+            //TODO Make more secure
+            var testString = Convert.ToBase64String(testHash);
+            //return _stringHandler.SecureByteArrayEquals(_stringHandler.GetBytes(hash), testHash);
+            return testString.Equals(hash);
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace SSS_Library.PasswordHandler
         /// <param name="password">The password to hash.</param>
         /// <param name="salt">The salt.</param>
         /// <returns>A SHA512 hash of the password.</returns>
-        private static byte[] Sha_Salt(string password, IEnumerable salt)
+        private static byte[] Sha_Salt(string password, byte[] salt)
         {
             var sha = new SHA512Cng();
             var concatStr = _stringHandler.GetBytes(String.Concat(password, salt));

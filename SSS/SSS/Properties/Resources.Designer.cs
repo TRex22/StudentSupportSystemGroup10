@@ -79,11 +79,20 @@ namespace SSS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password Created Successfully.
+        ///   Looks up a localized string similar to Password Created Successfully. Please Login With Your New Password..
         /// </summary>
         public static string Login_CheckPassword_Password_Created_Successfully {
             get {
                 return ResourceManager.GetString("Login_CheckPassword_Password_Created_Successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter a Password..
+        /// </summary>
+        public static string Login_CheckPassword_Please_Enter_a_Password_ {
+            get {
+                return ResourceManager.GetString("Login_CheckPassword_Please_Enter_a_Password_", resourceCulture);
             }
         }
         

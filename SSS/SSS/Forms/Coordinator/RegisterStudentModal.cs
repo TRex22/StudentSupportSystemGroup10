@@ -194,6 +194,8 @@ namespace SSS
 
                 studentTableAdapter.Insert(studentId, _coordinatorId, null, student_fname, student_lname, passportNo, dateofbirth, email, mobileNumber, yearOfStudy, programme, "white", 0);
 
+                userprofileTableAdapter1.Insert(studentId, email, studentId, null, null, null, null, null, null, false, true);
+
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);
                 MessageBox.Show(Resources.SendEmailSuccessfulMessage, Resources.SendEmailSuccessfulMessage);

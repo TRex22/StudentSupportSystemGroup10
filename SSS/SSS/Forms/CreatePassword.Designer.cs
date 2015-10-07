@@ -33,8 +33,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.medPassword = new System.Windows.Forms.MaskedTextBox();
-            this.medUsername = new System.Windows.Forms.MaskedTextBox();
+            this.confirmPasswordTxtBox = new System.Windows.Forms.MaskedTextBox();
+            this.passwordTxtBox = new System.Windows.Forms.MaskedTextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.pnlLoginTitle = new System.Windows.Forms.Panel();
@@ -79,6 +79,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(79, 2);
             this.btnLogin.Name = "btnLogin";
@@ -91,8 +92,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.medPassword);
-            this.panel2.Controls.Add(this.medUsername);
+            this.panel2.Controls.Add(this.confirmPasswordTxtBox);
+            this.panel2.Controls.Add(this.passwordTxtBox);
             this.panel2.Controls.Add(this.lblPassword);
             this.panel2.Controls.Add(this.lblPass);
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -100,21 +101,21 @@
             this.panel2.Size = new System.Drawing.Size(456, 124);
             this.panel2.TabIndex = 0;
             // 
-            // medPassword
+            // confirmPasswordTxtBox
             // 
-            this.medPassword.Location = new System.Drawing.Point(159, 81);
-            this.medPassword.Name = "medPassword";
-            this.medPassword.PasswordChar = '*';
-            this.medPassword.Size = new System.Drawing.Size(280, 20);
-            this.medPassword.TabIndex = 3;
+            this.confirmPasswordTxtBox.Location = new System.Drawing.Point(159, 81);
+            this.confirmPasswordTxtBox.Name = "confirmPasswordTxtBox";
+            this.confirmPasswordTxtBox.PasswordChar = '*';
+            this.confirmPasswordTxtBox.Size = new System.Drawing.Size(280, 20);
+            this.confirmPasswordTxtBox.TabIndex = 3;
             // 
-            // medUsername
+            // passwordTxtBox
             // 
-            this.medUsername.Location = new System.Drawing.Point(159, 37);
-            this.medUsername.Name = "medUsername";
-            this.medUsername.PasswordChar = '*';
-            this.medUsername.Size = new System.Drawing.Size(280, 20);
-            this.medUsername.TabIndex = 2;
+            this.passwordTxtBox.Location = new System.Drawing.Point(159, 37);
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.PasswordChar = '*';
+            this.passwordTxtBox.Size = new System.Drawing.Size(280, 20);
+            this.passwordTxtBox.TabIndex = 2;
             // 
             // lblPassword
             // 
@@ -160,11 +161,12 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(486, 260);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLoginTitle);
             this.Name = "CreatePassword";
-            this.Text = "CreatePassword";
+            this.Text = "Create Password";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -182,8 +184,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MaskedTextBox medPassword;
-        private System.Windows.Forms.MaskedTextBox medUsername;
+        private System.Windows.Forms.MaskedTextBox confirmPasswordTxtBox;
+        private System.Windows.Forms.MaskedTextBox passwordTxtBox;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Panel pnlLoginTitle;

@@ -118,11 +118,10 @@ namespace SSS.Forms.Coordinator
                 var email = txtTutorEmailAdd.Text;
                 var mobileNumber = txtMobileNumber.Text;
                 var TrainingStatus = cbxTrainingStatus.SelectedIndex ;
-             //   MessageBox.Show(TrainingStatus.ToString());
-              //  Boolean trainStat = Boolean.Parse(TrainingStatus.ToString());
          
 
-               tutorTableAdapter1.Insert(TutorId, tutor_fname, tutor_lname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(TrainingStatus));
+                tutorTableAdapter1.Insert(TutorId, tutor_fname, tutor_lname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(TrainingStatus));
+                userprofileTableAdapter1.Insert(TutorId, email, null, null, TutorId, null, null, null, null, false, true);
 
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);

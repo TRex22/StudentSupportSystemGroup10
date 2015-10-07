@@ -68,6 +68,7 @@
             this.lblErrDoB = new System.Windows.Forms.Label();
             this.lblErrMobileNum = new System.Windows.Forms.Label();
             this.lblErrStdProg = new System.Windows.Forms.Label();
+            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -490,6 +491,10 @@
             this.lblErrStdProg.Visible = false;
             this.lblErrStdProg.Click += new System.EventHandler(this.lblErrStdProg_Click);
             // 
+            // userprofileTableAdapter1
+            // 
+            this.userprofileTableAdapter1.ClearBeforeFill = true;
+            // 
             // RegisterStudentModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,5 +596,6 @@
         private System.Windows.Forms.Label lblErrDoB;
         private System.Windows.Forms.Label lblErrMobileNum;
         private System.Windows.Forms.Label lblErrStdProg;
+        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
     }
 }

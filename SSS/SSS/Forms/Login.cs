@@ -18,6 +18,7 @@ namespace SSS
     {
         private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(new StringHandler());
         private int userId;
+        private string password;
 
         public Login()
         {
@@ -40,92 +41,111 @@ namespace SSS
 
             var userProfile = userprofileTableAdapter1.GetData().FindByuser_id(userId);
 
-            var doILogin = CheckPassword(userProfile, sPassword);
-
-            if (doILogin)
-            {
-                if (userId == userProfile.coordinator_id)
-                {
-                    Form CoordinatorShow = new Coordinator(sInput, sPassword);
-                    CoordinatorShow.Owner = this;
-                    CoordinatorShow.Show();
-                    this.Hide();
-
-                }
-                else if (userId == userProfile.student_id)
-                {
-                    Form StudentShow = new Student(sInput, sPassword);
-                    StudentShow.Owner = this;
-                    StudentShow.Show();
-                    this.Hide();
-                }
-                else if (userId == userProfile.tutor_id)
-                {
-                    Form TutorShow = new Tutor(sInput, sPassword);
-                    TutorShow.Owner = this;
-                    TutorShow.Show();
-                    this.Hide();
-                }
-            }
-            else
+            if (userProfile == null)
             {
                 MessageBox.Show(String.Format("{0}", Resources.IncorrectLoginDetailsMessage));
                 medPassword.Clear();
                 medUsername.Clear();
                 medUsername.Focus();
-
             }
 
+            if (userProfile.resetPassword)
+            {
+                CreatePassword(userProfile);
+            }
+            else
+            {
+                var doILogin = CheckPassword(userProfile, sPassword);
+
+                if (doILogin)
+                {
+                    if (userProfile.coordinator_id != null && userId == userProfile.coordinator_id)
+                    {
+                        Form CoordinatorShow = new Coordinator(sInput, sPassword);
+                        CoordinatorShow.Owner = this;
+                        CoordinatorShow.Show();
+                        this.Hide();
+
+                    }
+                    else if (userProfile.student_id != null && userId == userProfile.student_id)
+                    {
+                        Form StudentShow = new Student(sInput, sPassword);
+                        StudentShow.Owner = this;
+                        StudentShow.Show();
+                        this.Hide();
+                    }
+                    else if (userProfile.tutor_id!= null && userId == userProfile.tutor_id)
+                    {
+                        Form TutorShow = new Tutor(sInput, sPassword);
+                        TutorShow.Owner = this;
+                        TutorShow.Show();
+                        this.Hide();
+                    }
+                }
+            }
         }
 
         private bool CheckPassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile, string sPass)
         {
             bool login = false;
-            //check if passwrod must be reset
             string hash;
             string salt;
-            if (userProfile.resetPassword)
-            {
-                string password = null;
-                using (var form = new CreatePassword())
-                {
-                    var result = form.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        password = form.password;          //values preserved after close
-                    }
-                }
-                if (!password.Equals("") || password != null)
-                {
-                    _passwordBuilder.CreateHash(password, out hash, out salt);
-                    userProfile.resetPassword = false;
-                    userProfile.password_hash = hash;
-                    userProfile.password_salt = salt;
-                    userprofileTableAdapter1.Update(userProfile);
 
-                    MessageBox.Show(Resources.Login_CheckPassword_Password_Created_Successfully,
-                        Resources.Login_CheckPassword_Password_Created_Successfully);
-                }
-                else
-                {
-                    
-                }
-                return login;
-            }
-            //check if password is right
             _passwordBuilder.CreateHash(sPass, out hash, out salt);
-            userProfile.resetPassword = false;
             userProfile.password_hash = hash;
             userProfile.password_salt = salt;
-            userprofileTableAdapter1.Update(userProfile);
-            if (userProfile.password_hash == hash)
-                return true;
-            return false;
 
+            var check = _passwordBuilder.CheckPassword(sPass, userProfile.password_hash, userProfile.password_salt);
+            //check if password is right
+            if (!check)
+            {
+                MessageBox.Show(Resources.IncorrectLoginDetailsMessage, Resources.IncorrectLoginDetailsMessage);
+                medPassword.Clear();
+                medUsername.Clear();
+                medUsername.Focus();
+            }
+            return check;
+        }
+
+        private void CreatePassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile)
+        {
+            password = null;
+            using (var form = new CreatePassword())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    password = form.password;          //values preserved after close
+                }
+            }
+
+            if (password != null && !password.Equals(""))
+            {
+                string hash;
+                string salt;
+                _passwordBuilder.CreateHash(password, out hash, out salt);
+                userProfile.resetPassword = false;
+                userProfile.password_hash = hash;
+                userProfile.password_salt = salt;
+                userprofileTableAdapter1.Update(userProfile);
+
+                MessageBox.Show(Resources.Login_CheckPassword_Password_Created_Successfully,
+                    Resources.Login_CheckPassword_Password_Created_Successfully);
+            }
+
+            if (password != null && password.Equals(""))
+            {
+                MessageBox.Show(Resources.Login_CheckPassword_Please_Enter_a_Password_,
+                    Resources.Login_CheckPassword_Please_Enter_a_Password_);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //generate database data
+            //GenerateUserProfiles();
+            //GenerateActivities();
+
             Application.Exit();
         }
 
@@ -141,6 +161,53 @@ namespace SSS
             medPassword.Clear();
             medUsername.Clear();
             medUsername.Focus();
+        }
+
+        private void GenerateActivities()
+        {
+            //10004
+            UpdateActivitiesPerStudent(10004);
+            //10005
+            UpdateActivitiesPerStudent(10005);
+            //10010
+            UpdateActivitiesPerStudent(10010);
+            //10013
+            UpdateActivitiesPerStudent(10013);
+        }
+
+        private void UpdateActivitiesPerStudent(int studentId)
+        {
+            Random rnd = new Random();
+
+            var activitiesTable = studenT_ACTIVITYTableAdapter1.GetData();
+            foreach (var activity in activitiesTable)
+            {
+                int tutorRating = rnd.Next(1, 3);
+                int activityRating = rnd.Next(3, 5);
+                var newAttendance = attendanceTableAdapter1.Insert(studentId, activity.student_activity_id, tutorRating, activityRating, true);
+            }
+        }
+
+        private void GenerateUserProfiles()
+        {
+            //quick hack
+            var tutors = tutorTableAdapter1.GetData();
+            foreach (var tutor in tutors)
+            {
+                userprofileTableAdapter1.Insert(tutor.tutor_id, tutor.tutor_emailaddress, null, null, tutor.tutor_id, null, null, null, null, false, true);
+            }
+
+            var students = studentTableAdapter1.GetData();
+            foreach (var student in students)
+            {
+                userprofileTableAdapter1.Insert(student.student_id, student.student_emailaddress, student.student_id, null, null, null, null, null, null, false, true);
+            }
+
+            var coordinators = ssS_COORDINATORTableAdapter1.GetData();
+            foreach (var coordinator in coordinators)
+            {
+                userprofileTableAdapter1.Insert(coordinator.coordinator_id, coordinator.coordinator_emailaddress, null, coordinator.coordinator_id, null, null, null, null, null, false, true);
+            }
         }
     }
 }

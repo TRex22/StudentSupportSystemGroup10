@@ -139,7 +139,6 @@
   </data>
   <data name="UpdateStudentAttendanceSuccess" xml:space="preserve">
     <value>Attendance Updated Successfully.</value>
-    <comment>please work</comment>
   </data>
   <data name="SearchStudentMessageBoxHeading" xml:space="preserve">
     <value>Student Information</value>
@@ -155,6 +154,9 @@
     <comment>dd</comment>
   </data>
   <data name="Login_CheckPassword_Password_Created_Successfully" xml:space="preserve">
-    <value>Password Created Successfully</value>
+    <value>Password Created Successfully. Please Login With Your New Password.</value>
+  </data>
+  <data name="Login_CheckPassword_Please_Enter_a_Password_" xml:space="preserve">
+    <value>Please Enter a Password.</value>
   </data>
 </root>
