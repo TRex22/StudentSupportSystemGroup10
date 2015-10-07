@@ -66,6 +66,8 @@ namespace SSS {
         
         private SEARCH_TUTORDataTable tableSEARCH_TUTOR;
         
+        private ATTENDANCE_AND_ACTIVITYDataTable tableATTENDANCE_AND_ACTIVITY;
+        
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__21B6055D;
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA2996;
@@ -125,6 +127,8 @@ namespace SSS {
         private global::System.Data.DataRelation relationFK__STUDENT__group_i__2B3F6F977;
         
         private global::System.Data.DataRelation relationFK__SESSION__tutor_i__295727251;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA29961;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -216,6 +220,9 @@ namespace SSS {
                 }
                 if ((ds.Tables["SEARCH_TUTOR"] != null)) {
                     base.Tables.Add(new SEARCH_TUTORDataTable(ds.Tables["SEARCH_TUTOR"]));
+                }
+                if ((ds.Tables["ATTENDANCE_AND_ACTIVITY"] != null)) {
+                    base.Tables.Add(new ATTENDANCE_AND_ACTIVITYDataTable(ds.Tables["ATTENDANCE_AND_ACTIVITY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -447,6 +454,16 @@ namespace SSS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ATTENDANCE_AND_ACTIVITYDataTable ATTENDANCE_AND_ACTIVITY {
+            get {
+                return this.tableATTENDANCE_AND_ACTIVITY;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -574,6 +591,9 @@ namespace SSS {
                 }
                 if ((ds.Tables["SEARCH_TUTOR"] != null)) {
                     base.Tables.Add(new SEARCH_TUTORDataTable(ds.Tables["SEARCH_TUTOR"]));
+                }
+                if ((ds.Tables["ATTENDANCE_AND_ACTIVITY"] != null)) {
+                    base.Tables.Add(new ATTENDANCE_AND_ACTIVITYDataTable(ds.Tables["ATTENDANCE_AND_ACTIVITY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -734,6 +754,12 @@ namespace SSS {
                     this.tableSEARCH_TUTOR.InitVars();
                 }
             }
+            this.tableATTENDANCE_AND_ACTIVITY = ((ATTENDANCE_AND_ACTIVITYDataTable)(base.Tables["ATTENDANCE_AND_ACTIVITY"]));
+            if ((initTable == true)) {
+                if ((this.tableATTENDANCE_AND_ACTIVITY != null)) {
+                    this.tableATTENDANCE_AND_ACTIVITY.InitVars();
+                }
+            }
             this.relationFK__ATTENDANC__stude__21B6055D = this.Relations["FK__ATTENDANC__stude__21B6055D"];
             this.relationFK__ATTENDANC__stude__22AA2996 = this.Relations["FK__ATTENDANC__stude__22AA2996"];
             this.relationFK__CONSULTAT__coord__239E4DCF = this.Relations["FK__CONSULTAT__coord__239E4DCF"];
@@ -764,6 +790,7 @@ namespace SSS {
             this.relationFK__STUDENT__group_i__2B3F6F976 = this.Relations["FK__STUDENT__group_i__2B3F6F976"];
             this.relationFK__STUDENT__group_i__2B3F6F977 = this.Relations["FK__STUDENT__group_i__2B3F6F977"];
             this.relationFK__SESSION__tutor_i__295727251 = this.Relations["FK__SESSION__tutor_i__295727251"];
+            this.relationFK__ATTENDANC__stude__22AA29961 = this.Relations["FK__ATTENDANC__stude__22AA29961"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -816,6 +843,8 @@ namespace SSS {
             base.Tables.Add(this.tableSEARCH_STUDENT);
             this.tableSEARCH_TUTOR = new SEARCH_TUTORDataTable();
             base.Tables.Add(this.tableSEARCH_TUTOR);
+            this.tableATTENDANCE_AND_ACTIVITY = new ATTENDANCE_AND_ACTIVITYDataTable();
+            base.Tables.Add(this.tableATTENDANCE_AND_ACTIVITY);
             this.relationFK__ATTENDANC__stude__21B6055D = new global::System.Data.DataRelation("FK__ATTENDANC__stude__21B6055D", new global::System.Data.DataColumn[] {
                         this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableATTENDANCE.student_idColumn}, false);
@@ -936,6 +965,10 @@ namespace SSS {
                         this.tableSEARCH_TUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableSESSION.tutor_idColumn}, false);
             this.Relations.Add(this.relationFK__SESSION__tutor_i__295727251);
+            this.relationFK__ATTENDANC__stude__22AA29961 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__22AA29961", new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT_ACTIVITY.student_activity_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableATTENDANCE_AND_ACTIVITY.student_activity_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__22AA29961);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1066,6 +1099,12 @@ namespace SSS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeATTENDANCE_AND_ACTIVITY() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1181,6 +1220,9 @@ namespace SSS {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void SEARCH_TUTORRowChangeEventHandler(object sender, SEARCH_TUTORRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ATTENDANCE_AND_ACTIVITYRowChangeEventHandler(object sender, ATTENDANCE_AND_ACTIVITYRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -6611,15 +6653,15 @@ namespace SSS {
             
             private global::System.Data.DataColumn columntutor_id;
             
-            private global::System.Data.DataColumn columnTutorAverage;
-            
             private global::System.Data.DataColumn columntutor_firstname;
             
             private global::System.Data.DataColumn columntutor_lastname;
             
-            private global::System.Data.DataColumn columnActivityAverage;
-            
             private global::System.Data.DataColumn columnstudent_activity_name;
+            
+            private global::System.Data.DataColumn columnTutorAverage;
+            
+            private global::System.Data.DataColumn columnActivityAverage;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -6664,14 +6706,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TutorAverageColumn {
-                get {
-                    return this.columnTutorAverage;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn tutor_firstnameColumn {
                 get {
                     return this.columntutor_firstname;
@@ -6688,17 +6722,25 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ActivityAverageColumn {
+            public global::System.Data.DataColumn student_activity_nameColumn {
                 get {
-                    return this.columnActivityAverage;
+                    return this.columnstudent_activity_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn student_activity_nameColumn {
+            public global::System.Data.DataColumn TutorAverageColumn {
                 get {
-                    return this.columnstudent_activity_name;
+                    return this.columnTutorAverage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActivityAverageColumn {
+                get {
+                    return this.columnActivityAverage;
                 }
             }
             
@@ -6739,15 +6781,15 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AVERAGE_TUTOR_RATINGRow AddAVERAGE_TUTOR_RATINGRow(int tutor_id, int TutorAverage, string tutor_firstname, string tutor_lastname, int ActivityAverage, string student_activity_name) {
+            public AVERAGE_TUTOR_RATINGRow AddAVERAGE_TUTOR_RATINGRow(int tutor_id, string tutor_firstname, string tutor_lastname, string student_activity_name, int TutorAverage, int ActivityAverage) {
                 AVERAGE_TUTOR_RATINGRow rowAVERAGE_TUTOR_RATINGRow = ((AVERAGE_TUTOR_RATINGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tutor_id,
-                        TutorAverage,
                         tutor_firstname,
                         tutor_lastname,
-                        ActivityAverage,
-                        student_activity_name};
+                        student_activity_name,
+                        TutorAverage,
+                        ActivityAverage};
                 rowAVERAGE_TUTOR_RATINGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAVERAGE_TUTOR_RATINGRow);
                 return rowAVERAGE_TUTOR_RATINGRow;
@@ -6778,11 +6820,11 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columntutor_id = base.Columns["tutor_id"];
-                this.columnTutorAverage = base.Columns["TutorAverage"];
                 this.columntutor_firstname = base.Columns["tutor_firstname"];
                 this.columntutor_lastname = base.Columns["tutor_lastname"];
-                this.columnActivityAverage = base.Columns["ActivityAverage"];
                 this.columnstudent_activity_name = base.Columns["student_activity_name"];
+                this.columnTutorAverage = base.Columns["TutorAverage"];
+                this.columnActivityAverage = base.Columns["ActivityAverage"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6790,25 +6832,25 @@ namespace SSS {
             private void InitClass() {
                 this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_id);
-                this.columnTutorAverage = new global::System.Data.DataColumn("TutorAverage", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTutorAverage);
                 this.columntutor_firstname = new global::System.Data.DataColumn("tutor_firstname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_firstname);
                 this.columntutor_lastname = new global::System.Data.DataColumn("tutor_lastname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_lastname);
-                this.columnActivityAverage = new global::System.Data.DataColumn("ActivityAverage", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActivityAverage);
                 this.columnstudent_activity_name = new global::System.Data.DataColumn("student_activity_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstudent_activity_name);
+                this.columnTutorAverage = new global::System.Data.DataColumn("TutorAverage", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTutorAverage);
+                this.columnActivityAverage = new global::System.Data.DataColumn("ActivityAverage", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivityAverage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_id}, true));
                 this.columntutor_id.AllowDBNull = false;
                 this.columntutor_id.Unique = true;
-                this.columnTutorAverage.ReadOnly = true;
                 this.columntutor_firstname.MaxLength = 255;
                 this.columntutor_lastname.MaxLength = 255;
-                this.columnActivityAverage.ReadOnly = true;
                 this.columnstudent_activity_name.MaxLength = 255;
+                this.columnTutorAverage.ReadOnly = true;
+                this.columnActivityAverage.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7989,6 +8031,300 @@ namespace SSS {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "SEARCH_TUTORDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ATTENDANCE_AND_ACTIVITYDataTable : global::System.Data.TypedTableBase<ATTENDANCE_AND_ACTIVITYRow> {
+            
+            private global::System.Data.DataColumn columnstudent_activity_id;
+            
+            private global::System.Data.DataColumn columnstudent_activity_name;
+            
+            private global::System.Data.DataColumn columnTutorRating;
+            
+            private global::System.Data.DataColumn columnActivityRating;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYDataTable() {
+                this.TableName = "ATTENDANCE_AND_ACTIVITY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ATTENDANCE_AND_ACTIVITYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ATTENDANCE_AND_ACTIVITYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_idColumn {
+                get {
+                    return this.columnstudent_activity_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_nameColumn {
+                get {
+                    return this.columnstudent_activity_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TutorRatingColumn {
+                get {
+                    return this.columnTutorRating;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActivityRatingColumn {
+                get {
+                    return this.columnActivityRating;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow this[int index] {
+                get {
+                    return ((ATTENDANCE_AND_ACTIVITYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ATTENDANCE_AND_ACTIVITYRowChangeEventHandler ATTENDANCE_AND_ACTIVITYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ATTENDANCE_AND_ACTIVITYRowChangeEventHandler ATTENDANCE_AND_ACTIVITYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ATTENDANCE_AND_ACTIVITYRowChangeEventHandler ATTENDANCE_AND_ACTIVITYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ATTENDANCE_AND_ACTIVITYRowChangeEventHandler ATTENDANCE_AND_ACTIVITYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddATTENDANCE_AND_ACTIVITYRow(ATTENDANCE_AND_ACTIVITYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow AddATTENDANCE_AND_ACTIVITYRow(STUDENT_ACTIVITYRow parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961, string student_activity_name, int TutorRating, int ActivityRating) {
+                ATTENDANCE_AND_ACTIVITYRow rowATTENDANCE_AND_ACTIVITYRow = ((ATTENDANCE_AND_ACTIVITYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        student_activity_name,
+                        TutorRating,
+                        ActivityRating};
+                if ((parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961 != null)) {
+                    columnValuesArray[0] = parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961[0];
+                }
+                rowATTENDANCE_AND_ACTIVITYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowATTENDANCE_AND_ACTIVITYRow);
+                return rowATTENDANCE_AND_ACTIVITYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ATTENDANCE_AND_ACTIVITYDataTable cln = ((ATTENDANCE_AND_ACTIVITYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ATTENDANCE_AND_ACTIVITYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnstudent_activity_id = base.Columns["student_activity_id"];
+                this.columnstudent_activity_name = base.Columns["student_activity_name"];
+                this.columnTutorRating = base.Columns["TutorRating"];
+                this.columnActivityRating = base.Columns["ActivityRating"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnstudent_activity_id = new global::System.Data.DataColumn("student_activity_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_id);
+                this.columnstudent_activity_name = new global::System.Data.DataColumn("student_activity_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_name);
+                this.columnTutorRating = new global::System.Data.DataColumn("TutorRating", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTutorRating);
+                this.columnActivityRating = new global::System.Data.DataColumn("ActivityRating", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivityRating);
+                this.columnstudent_activity_id.AllowDBNull = false;
+                this.columnstudent_activity_name.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow NewATTENDANCE_AND_ACTIVITYRow() {
+                return ((ATTENDANCE_AND_ACTIVITYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ATTENDANCE_AND_ACTIVITYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ATTENDANCE_AND_ACTIVITYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ATTENDANCE_AND_ACTIVITYRowChanged != null)) {
+                    this.ATTENDANCE_AND_ACTIVITYRowChanged(this, new ATTENDANCE_AND_ACTIVITYRowChangeEvent(((ATTENDANCE_AND_ACTIVITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ATTENDANCE_AND_ACTIVITYRowChanging != null)) {
+                    this.ATTENDANCE_AND_ACTIVITYRowChanging(this, new ATTENDANCE_AND_ACTIVITYRowChangeEvent(((ATTENDANCE_AND_ACTIVITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ATTENDANCE_AND_ACTIVITYRowDeleted != null)) {
+                    this.ATTENDANCE_AND_ACTIVITYRowDeleted(this, new ATTENDANCE_AND_ACTIVITYRowChangeEvent(((ATTENDANCE_AND_ACTIVITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ATTENDANCE_AND_ACTIVITYRowDeleting != null)) {
+                    this.ATTENDANCE_AND_ACTIVITYRowDeleting(this, new ATTENDANCE_AND_ACTIVITYRowChangeEvent(((ATTENDANCE_AND_ACTIVITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveATTENDANCE_AND_ACTIVITYRow(ATTENDANCE_AND_ACTIVITYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                IS2G10_DBSSSDataSet ds = new IS2G10_DBSSSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ATTENDANCE_AND_ACTIVITYDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -9731,6 +10067,17 @@ namespace SSS {
                     return ((ATTENDANCERow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__22AA2996"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow[] GetATTENDANCE_AND_ACTIVITYRows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__22AA29961"] == null)) {
+                    return new ATTENDANCE_AND_ACTIVITYRow[0];
+                }
+                else {
+                    return ((ATTENDANCE_AND_ACTIVITYRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__22AA29961"])));
+                }
+            }
         }
         
         /// <summary>
@@ -10947,22 +11294,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TutorAverage {
-                get {
-                    try {
-                        return ((int)(this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TutorAverage\' in table \'AVERAGE_TUTOR_RATING\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string tutor_firstname {
                 get {
                     try {
@@ -10996,23 +11327,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ActivityAverage {
-                get {
-                    try {
-                        return ((int)(this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityAverage\' in table \'AVERAGE_TUTOR_RATING\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string student_activity_name {
                 get {
                     if (this.Isstudent_activity_nameNull()) {
@@ -11029,14 +11343,35 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTutorAverageNull() {
-                return this.IsNull(this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn);
+            public int TutorAverage {
+                get {
+                    try {
+                        return ((int)(this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TutorAverage\' in table \'AVERAGE_TUTOR_RATING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTutorAverageNull() {
-                this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn] = global::System.Convert.DBNull;
+            public int ActivityAverage {
+                get {
+                    try {
+                        return ((int)(this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityAverage\' in table \'AVERAGE_TUTOR_RATING\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11065,18 +11400,6 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsActivityAverageNull() {
-                return this.IsNull(this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetActivityAverageNull() {
-                this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isstudent_activity_nameNull() {
                 return this.IsNull(this.tableAVERAGE_TUTOR_RATING.student_activity_nameColumn);
             }
@@ -11085,6 +11408,30 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setstudent_activity_nameNull() {
                 this[this.tableAVERAGE_TUTOR_RATING.student_activity_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTutorAverageNull() {
+                return this.IsNull(this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTutorAverageNull() {
+                this[this.tableAVERAGE_TUTOR_RATING.TutorAverageColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsActivityAverageNull() {
+                return this.IsNull(this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetActivityAverageNull() {
+                this[this.tableAVERAGE_TUTOR_RATING.ActivityAverageColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11885,6 +12232,129 @@ namespace SSS {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ATTENDANCE_AND_ACTIVITYRow : global::System.Data.DataRow {
+            
+            private ATTENDANCE_AND_ACTIVITYDataTable tableATTENDANCE_AND_ACTIVITY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ATTENDANCE_AND_ACTIVITYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableATTENDANCE_AND_ACTIVITY = ((ATTENDANCE_AND_ACTIVITYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_id {
+                get {
+                    return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_idColumn]));
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_activity_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_name\' in table \'ATTENDANCE_AND_ACTIVITY\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TutorRating {
+                get {
+                    try {
+                        return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.TutorRatingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TutorRating\' in table \'ATTENDANCE_AND_ACTIVITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.TutorRatingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ActivityRating {
+                get {
+                    try {
+                        return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.ActivityRatingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityRating\' in table \'ATTENDANCE_AND_ACTIVITY\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.ActivityRatingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public STUDENT_ACTIVITYRow STUDENT_ACTIVITYRow {
+                get {
+                    return ((STUDENT_ACTIVITYRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__22AA29961"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__22AA29961"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_nameNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.student_activity_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_nameNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTutorRatingNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.TutorRatingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTutorRatingNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.TutorRatingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsActivityRatingNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.ActivityRatingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetActivityRatingNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.ActivityRatingColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -12584,6 +13054,40 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_TUTORRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ATTENDANCE_AND_ACTIVITYRowChangeEvent : global::System.EventArgs {
+            
+            private ATTENDANCE_AND_ACTIVITYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRowChangeEvent(ATTENDANCE_AND_ACTIVITYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -19109,11 +19613,11 @@ WHERE        ([GROUP].group_id = @groupId) AND (ATTENDANCE.student_activity_id =
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "AVERAGE_TUTOR_RATING";
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
-            tableMapping.ColumnMappings.Add("TutorAverage", "TutorAverage");
             tableMapping.ColumnMappings.Add("tutor_firstname", "tutor_firstname");
             tableMapping.ColumnMappings.Add("tutor_lastname", "tutor_lastname");
-            tableMapping.ColumnMappings.Add("ActivityAverage", "ActivityAverage");
             tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
+            tableMapping.ColumnMappings.Add("TutorAverage", "TutorAverage");
+            tableMapping.ColumnMappings.Add("ActivityAverage", "ActivityAverage");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -19607,7 +20111,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber,
@@ -19617,13 +20121,30 @@ WHERE        (coordinator_id = @coordinatorId) AND (group_id = @groupId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinatorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@groupId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber,
+                          student_yearofstudy, student_degreeprogramme, student_status, student_points
+FROM            STUDENT
+WHERE        (coordinator_id = @coordinatorId)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinatorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        student_id, coordinator_id, group_id, student_firstname, student_lastname, student_id_passport, student_dateofbirth, student_emailaddress, student_mobilenumber,
+                          student_yearofstudy, student_degreeprogramme, student_status, student_points
+FROM            STUDENT
+WHERE        (coordinator_id = @coordinatorId) AND (student_id = @studentId) ";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinatorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@studentId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable, int coordinatorId, global::System.Nullable<int> groupId) {
+        public virtual int FillGroupSearch(IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable, int coordinatorId, global::System.Nullable<int> groupId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
             if ((groupId.HasValue == true)) {
@@ -19643,7 +20164,7 @@ WHERE        (coordinator_id = @coordinatorId) AND (group_id = @groupId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable GetData(int coordinatorId, global::System.Nullable<int> groupId) {
+        public virtual IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable GetDataGroupSearch(int coordinatorId, global::System.Nullable<int> groupId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
             if ((groupId.HasValue == true)) {
@@ -19652,6 +20173,60 @@ WHERE        (coordinator_id = @coordinatorId) AND (group_id = @groupId)";
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
+            IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable = new IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int Fill(IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable, int coordinatorId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable GetData(int coordinatorId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable = new IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillById(IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable, int coordinatorId, int studentId) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(studentId));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable GetDataById(int coordinatorId, int studentId) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(studentId));
             IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable dataTable = new IS2G10_DBSSSDataSet.SEARCH_STUDENTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -20339,6 +20914,178 @@ WHERE        (SESSION.group_id = @groupId) OR
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ATTENDANCE_AND_ACTIVITYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ATTENDANCE_AND_ACTIVITYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ATTENDANCE_AND_ACTIVITY";
+            tableMapping.ColumnMappings.Add("student_activity_id", "student_activity_id");
+            tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
+            tableMapping.ColumnMappings.Add("TutorRating", "TutorRating");
+            tableMapping.ColumnMappings.Add("ActivityRating", "ActivityRating");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        ATTENDANCE.student_activity_id, ATTENDANCE.student_activity_tutorrating AS 'TutorRating', ATTENDANCE.student_activity_rating AS 'ActivityRating', STUDENT_ACTIVITY.student_activity_name
+FROM            ATTENDANCE INNER JOIN
+                         STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(IS2G10_DBSSSDataSet.ATTENDANCE_AND_ACTIVITYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual IS2G10_DBSSSDataSet.ATTENDANCE_AND_ACTIVITYDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            IS2G10_DBSSSDataSet.ATTENDANCE_AND_ACTIVITYDataTable dataTable = new IS2G10_DBSSSDataSet.ATTENDANCE_AND_ACTIVITYDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20702,6 +21449,15 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._cOURSETableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.COURSE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -20738,21 +21494,21 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -20783,15 +21539,6 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -20815,6 +21562,14 @@ WHERE        (SESSION.group_id = @groupId) OR
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._sSS_COORDINATORTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -20850,19 +21605,19 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -20890,14 +21645,6 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -20908,14 +21655,6 @@ WHERE        (SESSION.group_id = @groupId) OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(IS2G10_DBSSSDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._cONSULTATIONTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CONSULTATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -20940,19 +21679,19 @@ WHERE        (SESSION.group_id = @groupId) OR
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -20985,6 +21724,14 @@ WHERE        (SESSION.group_id = @groupId) OR
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cOURSETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

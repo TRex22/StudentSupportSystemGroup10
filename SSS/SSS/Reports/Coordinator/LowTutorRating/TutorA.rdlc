@@ -112,8 +112,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>10.56613cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>10.84015cm</Top>
+        <Left>2.48391cm</Left>
         <Height>0.6cm</Height>
         <Width>4.93417cm</Width>
         <ZIndex>3</ZIndex>
@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>11.34252cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>11.61654cm</Top>
+        <Left>2.48391cm</Left>
         <Height>0.6cm</Height>
         <Width>4.93417cm</Width>
         <ZIndex>4</ZIndex>
@@ -172,8 +172,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>12.1189cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>12.39292cm</Top>
+        <Left>2.48391cm</Left>
         <Height>0.6cm</Height>
         <Width>4.93417cm</Width>
         <ZIndex>5</ZIndex>
@@ -202,8 +202,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>12.89529cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>13.16931cm</Top>
+        <Left>2.48391cm</Left>
         <Height>0.6cm</Height>
         <Width>4.93417cm</Width>
         <ZIndex>6</ZIndex>
@@ -232,8 +232,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>AverageTutorRating</rd:DefaultName>
-        <Top>10.56613cm</Top>
-        <Left>5.93641cm</Left>
+        <Top>10.84015cm</Top>
+        <Left>7.41808cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
@@ -262,8 +262,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>AverageActivityRating</rd:DefaultName>
-        <Top>11.34604cm</Top>
-        <Left>5.93641cm</Left>
+        <Top>11.62006cm</Top>
+        <Left>7.41808cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
@@ -292,8 +292,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TotalNumberTutors</rd:DefaultName>
-        <Top>12.1189cm</Top>
-        <Left>5.93641cm</Left>
+        <Top>12.39292cm</Top>
+        <Left>7.41808cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>9</ZIndex>
@@ -322,8 +322,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TotalNumberActivities</rd:DefaultName>
-        <Top>12.89529cm</Top>
-        <Left>5.93641cm</Left>
+        <Top>13.16931cm</Top>
+        <Left>7.41808cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>10</ZIndex>
@@ -337,40 +337,49 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Chart Name="Chart1">
+      <Chart Name="Chart4">
         <ChartCategoryHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Group Name="ChartGroup" />
-              <Label />
+              <Group Name="Chart4_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!student_activity_name.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!student_activity_name.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <Label>=Fields!student_activity_name.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>student activity tutorrating</Label>
+              <Label>Tutor Average</Label>
             </ChartMember>
             <ChartMember>
-              <Label>student activity rating</Label>
+              <Label>Activity Average</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="student_activity_tutorrating">
+            <ChartSeries Name="TutorAverage">
+              <Hidden>=IsNothing(Fields!TutorAverage.Value)</Hidden>
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!student_activity_tutorrating.Value)</Y>
+                    <Y>=Avg(Fields!TutorAverage.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
-                    <UseValueAsLabel>true</UseValueAsLabel>
-                    <Visible>true</Visible>
                   </ChartDataLabel>
                   <Style />
                   <ChartMarker>
+                    <Type>Auto</Type>
                     <Style />
                   </ChartMarker>
                   <DataElementOutput>Output</DataElementOutput>
@@ -394,19 +403,19 @@
                 <MinMovingDistance>0pt</MinMovingDistance>
               </ChartSmartLabel>
             </ChartSeries>
-            <ChartSeries Name="student_activity_rating">
+            <ChartSeries Name="ActivityAverage">
+              <Hidden>=IsNothing(Fields!ActivityAverage.Value)</Hidden>
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!student_activity_rating.Value)</Y>
+                    <Y>=Avg(Fields!ActivityAverage.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
-                    <UseValueAsLabel>true</UseValueAsLabel>
-                    <Visible>true</Visible>
                   </ChartDataLabel>
                   <Style />
                   <ChartMarker>
+                    <Type>Auto</Type>
                     <Style />
                   </ChartMarker>
                   <DataElementOutput>Output</DataElementOutput>
@@ -440,7 +449,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Student</Caption>
+                  <Caption>Student Activity</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -515,7 +524,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Rating</Caption>
+                  <Caption>Average Rating</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -607,7 +616,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>Tutor Ratings Versus Activity Ratings</Caption>
+            <Caption>Tutor Average Rating Versus Student Activity Average Rating</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
@@ -632,11 +641,11 @@
             <VerticalAlign>Top</VerticalAlign>
           </Style>
         </ChartNoDataMessage>
-        <DataSetName>StudentActivityAttendance</DataSetName>
-        <Top>2.3814cm</Top>
-        <Left>1.00224cm</Left>
-        <Height>8.00834cm</Height>
-        <Width>14.97419cm</Width>
+        <DataSetName>AverageTutorRatings</DataSetName>
+        <Top>2.66912cm</Top>
+        <Left>2.6162cm</Left>
+        <Height>7.83104cm</Height>
+        <Width>20.01479cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -648,7 +657,7 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>5.57579in</Height>
+    <Height>6.11746in</Height>
     <Style />
   </Body>
   <Width>11.0824in</Width>
@@ -673,7 +682,39 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="AverageTutorRating">
+    <DataSet Name="AverageRatings">
+      <Query>
+        <DataSourceName>IS2G10_DBSSSDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AverageTutorRating">
+          <DataField>AverageTutorRating</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AverageActivityRating">
+          <DataField>AverageActivityRating</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TotalNumberTutors">
+          <DataField>TotalNumberTutors</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TotalNumberActivities">
+          <DataField>TotalNumberActivities</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
+        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>AVERAGE_RATINGS</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>AVERAGE_RATINGSTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="AverageTutorRatings">
       <Query>
         <DataSourceName>IS2G10_DBSSSDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -681,10 +722,6 @@
       <Fields>
         <Field Name="tutor_id">
           <DataField>tutor_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TutorAverage">
-          <DataField>TutorAverage</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="tutor_firstname">
@@ -695,6 +732,14 @@
           <DataField>tutor_lastname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="student_activity_name">
+          <DataField>student_activity_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TutorAverage">
+          <DataField>TutorAverage</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="ActivityAverage">
           <DataField>ActivityAverage</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -702,14 +747,14 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SoftDev\Downloads\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
         <rd:TableName>AVERAGE_TUTOR_RATING</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>AVERAGE_TUTOR_RATINGTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="StudentActivityAttendance">
+    <DataSet Name="Attendance">
       <Query>
         <DataSourceName>IS2G10_DBSSSDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -738,43 +783,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SoftDev\Downloads\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
         <rd:TableName>ATTENDANCE</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>ATTENDANCETableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="AverageRatings">
-      <Query>
-        <DataSourceName>IS2G10_DBSSSDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="AverageTutorRating">
-          <DataField>AverageTutorRating</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="AverageActivityRating">
-          <DataField>AverageActivityRating</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TotalNumberTutors">
-          <DataField>TotalNumberTutors</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TotalNumberActivities">
-          <DataField>TotalNumberActivities</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SoftDev\Downloads\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>AVERAGE_RATINGS</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>AVERAGE_RATINGSTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

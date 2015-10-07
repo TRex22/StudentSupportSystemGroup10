@@ -51,7 +51,7 @@ namespace SSS
                 activityComboBox.Items.Add(item);
             }
             activityComboBox.SelectedIndex = 0;
-            return Convert.ToInt32((activityComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            return Convert.ToInt32((activityComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
         }
 
         //TODO if null
@@ -68,7 +68,7 @@ namespace SSS
                 groupComboBox.Items.Add(item);
             }
             groupComboBox.SelectedIndex = 0;
-            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
         }
 
         private void UpdateStudentAttendanceModal_Load(object sender, EventArgs e)
@@ -90,13 +90,13 @@ namespace SSS
 
         private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _studentActivityId = Convert.ToInt32((activityComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            _studentActivityId = Convert.ToInt32((activityComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
             this.uPDATE_STUDENT_ATTENDANCETableAdapter.Fill(this.iS2G10_DBSSSDataSet2.UPDATE_STUDENT_ATTENDANCE, _groupId, _studentActivityId);
         }
 
         private void groupComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
             this.uPDATE_STUDENT_ATTENDANCETableAdapter.Fill(this.iS2G10_DBSSSDataSet2.UPDATE_STUDENT_ATTENDANCE, _groupId, _studentActivityId);
         }
     }

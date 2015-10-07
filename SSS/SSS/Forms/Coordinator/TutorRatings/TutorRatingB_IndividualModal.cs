@@ -28,11 +28,10 @@ namespace SSS.Forms.Coordinator.LowTutorRatings
             }
             catch (Exception ex)
             {
-                MessageBox.Show(""+ex);
+                //todo fix db
+                //MessageBox.Show(""+ex);
             }
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING' table. You can move, or remove it, as needed.
-            this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
-
+            
             this.reportViewer1.RefreshReport();
         }
     }

@@ -34,13 +34,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TutorInformation = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.isAssignedGroupCheckBox = new System.Windows.Forms.CheckBox();
             this.tutoridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tutorfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tutorlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorInformation = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sEARCHTUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.isAssignedGroupCheckBox = new System.Windows.Forms.CheckBox();
             this.sEARCH_TUTORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter();
             this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
@@ -102,27 +102,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(98, 238);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(444, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(468, 233);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // TutorInformation
-            // 
-            this.TutorInformation.HeaderText = "Tutor Information";
-            this.TutorInformation.Name = "TutorInformation";
-            this.TutorInformation.ReadOnly = true;
-            // 
-            // isAssignedGroupCheckBox
-            // 
-            this.isAssignedGroupCheckBox.AutoSize = true;
-            this.isAssignedGroupCheckBox.Location = new System.Drawing.Point(56, 150);
-            this.isAssignedGroupCheckBox.Name = "isAssignedGroupCheckBox";
-            this.isAssignedGroupCheckBox.Size = new System.Drawing.Size(140, 17);
-            this.isAssignedGroupCheckBox.TabIndex = 24;
-            this.isAssignedGroupCheckBox.Text = "Filter by Assigned Group";
-            this.isAssignedGroupCheckBox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.isAssignedGroupCheckBox.UseVisualStyleBackColor = true;
-            this.isAssignedGroupCheckBox.CheckedChanged += new System.EventHandler(this.isAssigned_CheckedChanged);
             // 
             // tutoridDataGridViewTextBoxColumn
             // 
@@ -145,6 +127,12 @@
             this.tutorlastnameDataGridViewTextBoxColumn.Name = "tutorlastnameDataGridViewTextBoxColumn";
             this.tutorlastnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // TutorInformation
+            // 
+            this.TutorInformation.HeaderText = "Tutor Information";
+            this.TutorInformation.Name = "TutorInformation";
+            this.TutorInformation.ReadOnly = true;
+            // 
             // sEARCHTUTORBindingSource
             // 
             this.sEARCHTUTORBindingSource.DataMember = "SEARCH_TUTOR";
@@ -154,6 +142,18 @@
             // 
             this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
             this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // isAssignedGroupCheckBox
+            // 
+            this.isAssignedGroupCheckBox.AutoSize = true;
+            this.isAssignedGroupCheckBox.Location = new System.Drawing.Point(56, 150);
+            this.isAssignedGroupCheckBox.Name = "isAssignedGroupCheckBox";
+            this.isAssignedGroupCheckBox.Size = new System.Drawing.Size(140, 17);
+            this.isAssignedGroupCheckBox.TabIndex = 24;
+            this.isAssignedGroupCheckBox.Text = "Filter by Assigned Group";
+            this.isAssignedGroupCheckBox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.isAssignedGroupCheckBox.UseVisualStyleBackColor = true;
+            this.isAssignedGroupCheckBox.CheckedChanged += new System.EventHandler(this.isAssigned_CheckedChanged);
             // 
             // sEARCH_TUTORTableAdapter
             // 

@@ -27,6 +27,8 @@ namespace SSS.Forms.Coordinator
             this.AutoScroll = true;
             this.Hide();
 
+            checkBox1.Checked = false;
+
             _coordinatorId = coordintaorId;
             _isUpdateStudent = isUpdateStudent;
             _group = groupTableAdapter1.GetData();
@@ -48,20 +50,20 @@ namespace SSS.Forms.Coordinator
                 groupComboBox.Items.Add(item);
             }
             groupComboBox.SelectedIndex = 0;
-            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
         }
 
         private void SearchStudentModal_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.STUDENT' table. You can move, or remove it, as needed.
-            this.sEARCH_STUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
+            this.sEARCH_STUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId);
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var studentId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student = sEARCH_STUDENTTableAdapter.GetData(_coordinatorId, _groupId).FindBystudent_id(studentId);
+            IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student = sEARCH_STUDENTTableAdapter.GetData(_coordinatorId).FindBystudent_id(studentId);
 
             if (!_isUpdateStudent)
             {
@@ -79,8 +81,8 @@ namespace SSS.Forms.Coordinator
 
         private void groupComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
-            this.sEARCH_STUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
+            _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
+            this.sEARCH_STUDENTTableAdapter.FillGroupSearch(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
         }
 
         private void displayStudentInformation(IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student)
@@ -107,6 +109,30 @@ namespace SSS.Forms.Coordinator
                                                                  student.student_status,
                                                                  student.student_points);
             MessageBox.Show(message, Resources.SearchStudentMessageBoxHeading);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            //if true by group disable rest
+            if (checkBox1.Checked)
+            {
+                groupComboBox.Enabled = true;
+                groupBox2.Enabled = false;
+                _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
+                this.sEARCH_STUDENTTableAdapter.FillGroupSearch(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
+
+            }
+            else
+            {
+                groupBox2.Enabled = true;
+                this.sEARCH_STUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId);
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            var studentId = Convert.ToInt32(studentIDtextBox1.Text);
+            this.sEARCH_STUDENTTableAdapter.FillById(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, studentId);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace SSS.Forms.Coordinator
                 groupComboBox.Items.Add(item);
             }
             groupComboBox.SelectedIndex = 0;
-            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+            return Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
         }
 
         private void SearchTutorModal_Load(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace SSS.Forms.Coordinator
         {
             if (isAssignedGroupCheckBox.Checked)
             {
-                _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem)?.Value.ToString());
+                _groupId = Convert.ToInt32((groupComboBox.SelectedItem as ComboBoxHandler.ComboboxItem).Value.ToString());
                 this.sEARCH_TUTORTableAdapter.Fill(iS2G10_DBSSSDataSet.SEARCH_TUTOR, _groupId);
                 dataGridView1.DataSource = sEARCH_TUTORTableAdapter.GetData(_groupId);
             }

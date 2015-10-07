@@ -53,12 +53,24 @@ namespace SSS
             }
         }
 
+        private void createAttendance(int studentId , int studentActivityId, int? tutorRating, int? activityRating, bool studentArrived)
+        {
+            var newAttendance = attendanceTableAdapter1.Insert(studentId, studentActivityId, tutorRating, activityRating, studentArrived);
+        }
+
         private void RegisterForGroup(int userId, int groupId)
         {
             var studentData = studentTableAdapter1.GetData().FindBystudent_id(userId);
             studentData.group_id = groupId;
             int result = studentTableAdapter1.Update(studentData);
-            //TODO check result
+
+            //Loop through and create Attendances per activity
+            var activitiesTable = studenT_ACTIVITYTableAdapter1.GetData();
+            foreach (var activity in activitiesTable)
+            {
+                createAttendance(_userId, activity.student_activity_id, null, null, false);
+            }
+            
             MessageBox.Show(Resources.UpdateGroupSuccess, Resources.UpdateGroupSuccess);
 
         }

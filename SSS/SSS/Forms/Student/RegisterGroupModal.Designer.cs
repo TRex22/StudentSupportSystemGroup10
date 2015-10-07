@@ -40,6 +40,8 @@
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.gROUP_AGGREGATETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUP_AGGREGATETableAdapter();
             this.studentTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.attendanceTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.studenT_ACTIVITYTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPAGGREGATEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
@@ -126,6 +128,14 @@
             // 
             this.studentTableAdapter1.ClearBeforeFill = true;
             // 
+            // attendanceTableAdapter1
+            // 
+            this.attendanceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // studenT_ACTIVITYTableAdapter1
+            // 
+            this.studenT_ACTIVITYTableAdapter1.ClearBeforeFill = true;
+            // 
             // RegisterGroupModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,5 +168,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn groupCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn JoinGroupButtonColumn;
         private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter attendanceTableAdapter1;
+        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
     }
 }
