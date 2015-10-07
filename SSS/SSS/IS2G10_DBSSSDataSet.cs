@@ -12,3 +12,4 @@ namespace SSS {
     public partial class IS2G10_DBSSSDataSet {
     }
 }
+

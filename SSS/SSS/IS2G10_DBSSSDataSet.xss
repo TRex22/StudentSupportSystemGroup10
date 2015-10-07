@@ -25,8 +25,8 @@
     <Shape ID="DesignTable:UPDATE_STUDENT_ATTENDANCE" ZOrder="15" X="939" Y="102" Height="134" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:AVERAGE_TUTOR_RATING" ZOrder="13" X="1161" Y="387" Height="115" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:AVERAGE_RATINGS" ZOrder="11" X="1335" Y="122" Height="153" Width="258" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:SEARCH_STUDENT" ZOrder="1" X="394" Y="-29" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:SEARCH_TUTOR" ZOrder="3" X="664" Y="9" Height="229" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:SEARCH_STUDENT" ZOrder="2" X="394" Y="-29" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:SEARCH_TUTOR" ZOrder="1" X="681" Y="-15" Height="248" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK__ATTENDANC__stude__21B6055D" ZOrder="41" LineWidth="11">
@@ -469,14 +469,14 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__SESSION__tutor_i__295727251" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK__SESSION__tutor_i__295727251" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>728</X>
-          <Y>238</Y>
+          <X>745</X>
+          <Y>233</Y>
         </Point>
         <Point>
-          <X>728</X>
+          <X>745</X>
           <Y>1114</Y>
         </Point>
       </RoutePoints>

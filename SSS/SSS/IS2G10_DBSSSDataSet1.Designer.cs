@@ -20088,16 +20088,24 @@ WHERE        (coordinator_id = @coordinatorId) AND (group_id = @groupId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        TUTOR.tutor_id, TUTOR.tutor_firstname, TUTOR.tutor_lastname, TUTOR.tutor_id_passport, TUTOR.tutor_dateofbirth, TUTOR.tutor_emailaddress, 
                          TUTOR.tutor_cellnumber, TUTOR.tutor_trainingstatus
 FROM            TUTOR INNER JOIN
                          SESSION ON TUTOR.tutor_id = SESSION.tutor_id
-WHERE        (SESSION.group_id = @groupId)";
+WHERE        (SESSION.group_id = @groupId) OR
+                         (SESSION.group_id IS NULL)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@groupId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        TUTOR.tutor_id, TUTOR.tutor_firstname, TUTOR.tutor_lastname, TUTOR." +
+                "tutor_id_passport, TUTOR.tutor_dateofbirth, TUTOR.tutor_emailaddress, \r\n        " +
+                "                 TUTOR.tutor_cellnumber, TUTOR.tutor_trainingstatus\r\nFROM       " +
+                "     TUTOR ";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20121,6 +20129,30 @@ WHERE        (SESSION.group_id = @groupId)";
         public virtual IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable GetData(int groupId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(groupId));
+            IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable dataTable = new IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillAll(IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable GetDataAll() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable dataTable = new IS2G10_DBSSSDataSet.SEARCH_TUTORDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

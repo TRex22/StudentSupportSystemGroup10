@@ -32,7 +32,8 @@ namespace SSS
         private readonly ViewDisengagedStudentsModal _viewDisengagedStudentsModal = new ViewDisengagedStudentsModal();
         private readonly SearchStudentModal _searchStudentModal;
         private readonly SearchStudentModal _updateStudentModal;
-        private UpdateStudentProfileModal _updateStudentProfileModal;
+        private readonly SearchTutorModal _searchTutorModal;
+        private readonly SearchTutorModal _updateTutorModal;
 
         public Coordinator(String sUsrId, String sPsswrd)
         {
@@ -41,10 +42,12 @@ namespace SSS
             var userId = Convert.ToInt32(sUsrId);
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
             _registerStudentModal = new RegisterStudentModal(userId);
-            _searchStudentModal = new SearchStudentModal(userId, false);
 
-            _updateStudentModal = new SearchStudentModal(userId, true);
-            _updateStudentModal.Parent = this;
+            _searchStudentModal = new SearchStudentModal(userId, false);
+            _updateStudentModal = new SearchStudentModal(userId, true) {Parent = this};
+
+            _searchTutorModal = new SearchTutorModal(userId, false);
+            _updateTutorModal = new SearchTutorModal(userId, true) { Parent = this };
 
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
@@ -69,7 +72,8 @@ namespace SSS
             this.panel7.Controls.Add(_viewDisengagedStudentsModal);
             this.panel7.Controls.Add(_searchStudentModal);
             this.panel7.Controls.Add(_updateStudentModal);
-            this.panel7.Controls.Add(_updateStudentProfileModal);
+            this.panel7.Controls.Add(_searchTutorModal);
+            this.panel7.Controls.Add(_updateTutorModal);
         }
 
         public void SetModal(Control vaule)
@@ -113,6 +117,7 @@ namespace SSS
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _updateTutorModal.Show();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,7 +190,7 @@ namespace SSS
         private void searchTutorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            
+            _searchTutorModal.Show();
         }
     }
 }

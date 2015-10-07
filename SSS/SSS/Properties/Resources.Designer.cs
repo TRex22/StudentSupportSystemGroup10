@@ -107,6 +107,24 @@ namespace SSS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tutor Information.
+        /// </summary>
+        public static string SearchTutorInformationHeading {
+            get {
+                return ResourceManager.GetString("SearchTutorInformationHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tutor Information.
+        /// </summary>
+        public static string SearchTutorModal_displayStudentInformation_Tutor_Information {
+            get {
+                return ResourceManager.GetString("SearchTutorModal_displayStudentInformation_Tutor_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email Sent To New Student..
         /// </summary>
         public static string SendEmailSuccessfulMessage {

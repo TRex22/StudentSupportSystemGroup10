@@ -30,21 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentidpassportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentInformation = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupComboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.sEARCHSTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             this.sEARCH_STUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter();
-            this.groupComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentInformation = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sEARCHSTUDENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
@@ -61,72 +60,14 @@
             this.studentidDataGridViewTextBoxColumn,
             this.studentfirstnameDataGridViewTextBoxColumn,
             this.studentlastnameDataGridViewTextBoxColumn,
-            this.studentidpassportDataGridViewTextBoxColumn,
             this.StudentInformation});
             this.dataGridView1.DataSource = this.sEARCHSTUDENTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 205);
+            this.dataGridView1.Location = new System.Drawing.Point(151, 215);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(445, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // studentidDataGridViewTextBoxColumn
-            // 
-            this.studentidDataGridViewTextBoxColumn.DataPropertyName = "student_id";
-            this.studentidDataGridViewTextBoxColumn.HeaderText = "Student Id";
-            this.studentidDataGridViewTextBoxColumn.Name = "studentidDataGridViewTextBoxColumn";
-            this.studentidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentfirstnameDataGridViewTextBoxColumn
-            // 
-            this.studentfirstnameDataGridViewTextBoxColumn.DataPropertyName = "student_firstname";
-            this.studentfirstnameDataGridViewTextBoxColumn.HeaderText = "First Name";
-            this.studentfirstnameDataGridViewTextBoxColumn.Name = "studentfirstnameDataGridViewTextBoxColumn";
-            this.studentfirstnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentlastnameDataGridViewTextBoxColumn
-            // 
-            this.studentlastnameDataGridViewTextBoxColumn.DataPropertyName = "student_lastname";
-            this.studentlastnameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.studentlastnameDataGridViewTextBoxColumn.Name = "studentlastnameDataGridViewTextBoxColumn";
-            this.studentlastnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentidpassportDataGridViewTextBoxColumn
-            // 
-            this.studentidpassportDataGridViewTextBoxColumn.DataPropertyName = "student_id_passport";
-            this.studentidpassportDataGridViewTextBoxColumn.HeaderText = "Id or Passport";
-            this.studentidpassportDataGridViewTextBoxColumn.Name = "studentidpassportDataGridViewTextBoxColumn";
-            this.studentidpassportDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // StudentInformation
-            // 
-            this.StudentInformation.HeaderText = "Student Information";
-            this.StudentInformation.Name = "StudentInformation";
-            this.StudentInformation.ReadOnly = true;
-            // 
-            // sEARCHSTUDENTBindingSource
-            // 
-            this.sEARCHSTUDENTBindingSource.DataMember = "SEARCH_STUDENT";
-            this.sEARCHSTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // iS2G10_DBSSSDataSet
-            // 
-            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
-            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sTUDENTBindingSource
-            // 
-            this.sTUDENTBindingSource.DataMember = "STUDENT";
-            this.sTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // sTUDENTTableAdapter
-            // 
-            this.sTUDENTTableAdapter.ClearBeforeFill = true;
-            // 
-            // sEARCH_STUDENTTableAdapter
-            // 
-            this.sEARCH_STUDENTTableAdapter.ClearBeforeFill = true;
             // 
             // groupComboBox
             // 
@@ -166,9 +107,59 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Search for Students";
             // 
+            // sEARCHSTUDENTBindingSource
+            // 
+            this.sEARCHSTUDENTBindingSource.DataMember = "SEARCH_STUDENT";
+            this.sEARCHSTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // iS2G10_DBSSSDataSet
+            // 
+            this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // sEARCH_STUDENTTableAdapter
+            // 
+            this.sEARCH_STUDENTTableAdapter.ClearBeforeFill = true;
+            // 
             // groupTableAdapter1
             // 
             this.groupTableAdapter1.ClearBeforeFill = true;
+            // 
+            // studentidDataGridViewTextBoxColumn
+            // 
+            this.studentidDataGridViewTextBoxColumn.DataPropertyName = "student_id";
+            this.studentidDataGridViewTextBoxColumn.HeaderText = "Student Id";
+            this.studentidDataGridViewTextBoxColumn.Name = "studentidDataGridViewTextBoxColumn";
+            this.studentidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentfirstnameDataGridViewTextBoxColumn
+            // 
+            this.studentfirstnameDataGridViewTextBoxColumn.DataPropertyName = "student_firstname";
+            this.studentfirstnameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.studentfirstnameDataGridViewTextBoxColumn.Name = "studentfirstnameDataGridViewTextBoxColumn";
+            this.studentfirstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentlastnameDataGridViewTextBoxColumn
+            // 
+            this.studentlastnameDataGridViewTextBoxColumn.DataPropertyName = "student_lastname";
+            this.studentlastnameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.studentlastnameDataGridViewTextBoxColumn.Name = "studentlastnameDataGridViewTextBoxColumn";
+            this.studentlastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // StudentInformation
+            // 
+            this.StudentInformation.HeaderText = "Student Information";
+            this.StudentInformation.Name = "StudentInformation";
+            this.StudentInformation.ReadOnly = true;
             // 
             // SearchStudentModal
             // 
@@ -200,11 +191,6 @@
         private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
         private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentfirstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentlastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentidpassportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn StudentInformation;
         private System.Windows.Forms.BindingSource sEARCHSTUDENTBindingSource;
         private IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter sEARCH_STUDENTTableAdapter;
         private System.Windows.Forms.ComboBox groupComboBox;
@@ -212,5 +198,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentfirstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentlastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn StudentInformation;
     }
 }

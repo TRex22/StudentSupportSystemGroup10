@@ -144,4 +144,10 @@
   <data name="SearchStudentMessageBoxHeading" xml:space="preserve">
     <value>Student Information</value>
   </data>
+  <data name="SearchTutorModal_displayStudentInformation_Tutor_Information" xml:space="preserve">
+    <value>Tutor Information</value>
+  </data>
+  <data name="SearchTutorInformationHeading" xml:space="preserve">
+    <value>Tutor Information</value>
+  </data>
 </root>
