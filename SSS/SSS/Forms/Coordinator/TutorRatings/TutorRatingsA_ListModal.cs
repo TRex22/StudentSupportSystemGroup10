@@ -27,8 +27,19 @@ namespace SSS.Forms.Coordinator
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_RATINGS' table. You can move, or remove it, as needed.
             this.aVERAGE_RATINGSTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_RATINGS);
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING' table. You can move, or remove it, as needed.
-            this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
-
+            try
+            {
+                this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(""+ex);
+            }
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.ATTENDANCE' table. You can move, or remove it, as needed.
+            this.aTTENDANCETableAdapter.Fill(this.iS2G10_DBSSSDataSet.ATTENDANCE);
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_RATINGS' table. You can move, or remove it, as needed.
+            this.aVERAGE_RATINGSTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_RATINGS);
+            
             this.reportViewer1.RefreshReport();
         }
     }

@@ -1,4 +1,4 @@
-SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS AverageTutorRating, TUTOR.tutor_id
+SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS 'TutorAverage', TUTOR.tutor_id
 FROM            ATTENDANCE INNER JOIN
                          STUDENT ON ATTENDANCE.student_id = STUDENT.student_id INNER JOIN
                          [GROUP] ON STUDENT.group_id = [GROUP].group_id INNER JOIN

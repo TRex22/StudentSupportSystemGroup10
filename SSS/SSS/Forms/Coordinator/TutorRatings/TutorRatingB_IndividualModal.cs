@@ -22,6 +22,16 @@ namespace SSS.Forms.Coordinator.LowTutorRatings
 
         private void LowTutorRatingB_IndividualModal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING' table. You can move, or remove it, as needed.
+            try { 
+                this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(""+ex);
+            }
+            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING' table. You can move, or remove it, as needed.
+            this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
 
             this.reportViewer1.RefreshReport();
         }

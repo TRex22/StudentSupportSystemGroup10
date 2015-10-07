@@ -1024,24 +1024,30 @@ WHERE        ([GROUP].group_id = @groupId) AND (ATTENDANCE.student_activity_id =
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AVERAGE_TUTOR_RATINGTableAdapter" GeneratorDataComponentClassName="AVERAGE_TUTOR_RATINGTableAdapter" Name="AVERAGE_TUTOR_RATING" UserDataComponentName="AVERAGE_TUTOR_RATINGTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="IS2G10_DBSSSConnectionString (Settings)" DbObjectName="IS2G10_DBSSS.dbo.TUTOR" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="IS2G10_DBSSSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS AverageTutorRating, TUTOR.tutor_id
+                    <CommandText>SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS 'TutorAverage', AVG(ATTENDANCE.student_activity_rating) AS 'ActivityAverage', TUTOR.tutor_id, 
+                         TUTOR.tutor_firstname, TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name
 FROM            ATTENDANCE INNER JOIN
                          STUDENT ON ATTENDANCE.student_id = STUDENT.student_id INNER JOIN
                          [GROUP] ON STUDENT.group_id = [GROUP].group_id INNER JOIN
                          SESSION ON [GROUP].group_id = SESSION.group_id INNER JOIN
-                         TUTOR ON SESSION.tutor_id = TUTOR.tutor_id
-GROUP BY TUTOR.tutor_id</CommandText>
+                         TUTOR ON SESSION.tutor_id = TUTOR.tutor_id INNER JOIN
+                         STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id
+GROUP BY TUTOR.tutor_id, TUTOR.tutor_firstname, TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="AverageTutorRating" DataSetColumn="AverageTutorRating" />
               <Mapping SourceColumn="tutor_id" DataSetColumn="tutor_id" />
+              <Mapping SourceColumn="TutorAverage" DataSetColumn="TutorAverage" />
+              <Mapping SourceColumn="tutor_firstname" DataSetColumn="tutor_firstname" />
+              <Mapping SourceColumn="tutor_lastname" DataSetColumn="tutor_lastname" />
+              <Mapping SourceColumn="ActivityAverage" DataSetColumn="ActivityAverage" />
+              <Mapping SourceColumn="student_activity_name" DataSetColumn="student_activity_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1652,8 +1658,30 @@ FROM            TUTOR </CommandText>
         <xs:element name="AVERAGE_TUTOR_RATING" msprop:Generator_TableClassName="AVERAGE_TUTOR_RATINGDataTable" msprop:Generator_TableVarName="tableAVERAGE_TUTOR_RATING" msprop:Generator_RowChangedName="AVERAGE_TUTOR_RATINGRowChanged" msprop:Generator_TablePropName="AVERAGE_TUTOR_RATING" msprop:Generator_RowDeletingName="AVERAGE_TUTOR_RATINGRowDeleting" msprop:Generator_RowChangingName="AVERAGE_TUTOR_RATINGRowChanging" msprop:Generator_RowEvHandlerName="AVERAGE_TUTOR_RATINGRowChangeEventHandler" msprop:Generator_RowDeletedName="AVERAGE_TUTOR_RATINGRowDeleted" msprop:Generator_RowClassName="AVERAGE_TUTOR_RATINGRow" msprop:Generator_UserTableName="AVERAGE_TUTOR_RATING" msprop:Generator_RowEvArgName="AVERAGE_TUTOR_RATINGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="AverageTutorRating" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAverageTutorRating" msprop:Generator_ColumnPropNameInRow="AverageTutorRating" msprop:Generator_ColumnPropNameInTable="AverageTutorRatingColumn" msprop:Generator_UserColumnName="AverageTutorRating" type="xs:int" minOccurs="0" />
               <xs:element name="tutor_id" msprop:Generator_ColumnVarNameInTable="columntutor_id" msprop:Generator_ColumnPropNameInRow="tutor_id" msprop:Generator_ColumnPropNameInTable="tutor_idColumn" msprop:Generator_UserColumnName="tutor_id" type="xs:int" />
+              <xs:element name="TutorAverage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTutorAverage" msprop:Generator_ColumnPropNameInRow="TutorAverage" msprop:Generator_ColumnPropNameInTable="TutorAverageColumn" msprop:Generator_UserColumnName="TutorAverage" type="xs:int" minOccurs="0" />
+              <xs:element name="tutor_firstname" msprop:Generator_ColumnVarNameInTable="columntutor_firstname" msprop:Generator_ColumnPropNameInRow="tutor_firstname" msprop:Generator_ColumnPropNameInTable="tutor_firstnameColumn" msprop:Generator_UserColumnName="tutor_firstname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tutor_lastname" msprop:Generator_ColumnVarNameInTable="columntutor_lastname" msprop:Generator_ColumnPropNameInRow="tutor_lastname" msprop:Generator_ColumnPropNameInTable="tutor_lastnameColumn" msprop:Generator_UserColumnName="tutor_lastname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActivityAverage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnActivityAverage" msprop:Generator_ColumnPropNameInRow="ActivityAverage" msprop:Generator_ColumnPropNameInTable="ActivityAverageColumn" msprop:Generator_UserColumnName="ActivityAverage" type="xs:int" minOccurs="0" />
+              <xs:element name="student_activity_name" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="student_activity_name" msprop:Generator_ColumnVarNameInTable="columnstudent_activity_name" msprop:Generator_ColumnPropNameInTable="student_activity_nameColumn" msprop:Generator_UserColumnName="student_activity_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
