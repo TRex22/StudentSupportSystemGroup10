@@ -13,14 +13,18 @@ namespace SSS
 {
     public partial class UpdateStudentProfileModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+        private IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+        private readonly int _studentId;
+
         public UpdateStudentProfileModal(int userid)
         {
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
-            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userid);
+
+            _studentId = userid;
+            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(_studentId);
             PopulateData();
 
             int eighteenYears = DateTime.Today.Year - 18;
@@ -43,6 +47,9 @@ namespace SSS
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            //fix the update problem
+            _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(_studentId);
+
             //mapping
             _studentData.student_id_passport = idPassportTextBox.Text;
             _studentData.student_firstname = studentFirstNameTextBox.Text;

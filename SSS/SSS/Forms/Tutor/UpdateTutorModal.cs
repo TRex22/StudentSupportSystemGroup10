@@ -13,7 +13,7 @@ namespace SSS.Forms.Tutor
 {
     public partial class UpdateTutorModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.TUTORRow _tutorData;
+        private IS2G10_DBSSSDataSet.TUTORRow _tutorData;
         private readonly int _tutorId;
 
         public UpdateTutorModal(int tutorId)
@@ -33,7 +33,7 @@ namespace SSS.Forms.Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            updateTutor();
+            UpdateTutor();
         }
 
         private void PopulateData()
@@ -51,8 +51,11 @@ namespace SSS.Forms.Tutor
             datOfBirthdateTimePicker.Value = _tutorData.tutor_dateofbirth;
         }
 
-        private void updateTutor()
+        private void UpdateTutor()
         {
+            //Update student data mapping
+            _tutorData = tutorTableAdapter1.GetData().FindBytutor_id(_tutorId);
+
             //mapping
             _tutorData.tutor_id_passport = tutorIDPassportTxtBox.Text;
             _tutorData.tutor_firstname = tutorFirstNameTxtBox.Text;
