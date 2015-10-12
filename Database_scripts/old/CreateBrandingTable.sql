@@ -2,11 +2,12 @@
 USE IS2G10_DBSSS;
 GO
 CREATE TABLE BRANDING (
-	student_activity_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	student_activity_name nvarchar(255),
-	student_activity_pointvalue int,
-	student_activity_week int,
-	student_activity_description nvarchar(255)
+	branding_id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	program_icon,
+	system_logo,
+	system_name nvarchar(255),
+	splash_colour nvarchar(255),
+	splash_time time
 );
 GO
-PRINT ('DATABASE CREATED');
+PRINT ('BRANDING CREATED');
