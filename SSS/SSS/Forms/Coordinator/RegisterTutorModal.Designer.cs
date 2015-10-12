@@ -157,9 +157,9 @@
             // 
             // dtpTutor
             // 
-            this.dtpTutor.Location = new System.Drawing.Point(358, 164);
+            this.dtpTutor.Location = new System.Drawing.Point(364, 164);
             this.dtpTutor.Name = "dtpTutor";
-            this.dtpTutor.Size = new System.Drawing.Size(209, 20);
+            this.dtpTutor.Size = new System.Drawing.Size(213, 20);
             this.dtpTutor.TabIndex = 54;
             // 
             // label1
@@ -236,7 +236,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(573, 159);
+            this.pictureBox1.Location = new System.Drawing.Point(583, 157);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

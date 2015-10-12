@@ -25,6 +25,10 @@ namespace SSS.Forms.Tutor
             _tutorId = tutorId;
             _tutorData = tutorTableAdapter1.GetData().FindBytutor_id(_tutorId);
             PopulateData();
+
+            int eighteenYears = DateTime.Today.Year - 18;
+            var eighteenYearsAgo = new DateTime(eighteenYears, 1, 1);
+            datOfBirthdateTimePicker.Value = eighteenYearsAgo;
         }
 
         private void button1_Click(object sender, EventArgs e)

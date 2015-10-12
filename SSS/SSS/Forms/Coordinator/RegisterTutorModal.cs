@@ -19,6 +19,10 @@ namespace SSS.Forms.Coordinator
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
+            
+            int eighteenYears = DateTime.Today.Year - 18;
+            var eighteenYearsAgo = new DateTime(eighteenYears, 1, 1);
+            dtpTutor.Value = eighteenYearsAgo;
         }
 
 

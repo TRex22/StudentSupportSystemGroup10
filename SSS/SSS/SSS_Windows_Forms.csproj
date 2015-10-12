@@ -173,10 +173,10 @@
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Forms\Splash_Screen.cs">
+    <Compile Include="obj\Splash_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Splash_Screen.Designer.cs">
+    <Compile Include="obj\Splash_Screen.Designer.cs">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Student\Student.cs">
@@ -268,7 +268,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\Splash_Screen.resx">
+    <EmbeddedResource Include="obj\Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\Student.resx">

@@ -26,6 +26,10 @@ namespace SSS
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
+
+            int eighteenYears = DateTime.Today.Year - 18;
+            var eighteenYearsAgo = new DateTime(eighteenYears, 1, 1);
+            dateOfBirthDateTimePicker1.Value = eighteenYearsAgo;
         }
 
         // Holds a value determining if this is the first time the box has been clicked

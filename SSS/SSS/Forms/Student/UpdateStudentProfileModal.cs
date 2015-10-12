@@ -22,6 +22,10 @@ namespace SSS
             this.Hide();
             _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userid);
             PopulateData();
+
+            int eighteenYears = DateTime.Today.Year - 18;
+            var eighteenYearsAgo = new DateTime(eighteenYears, 1, 1);
+            dateOfBirthdateTimePicker.Value = eighteenYearsAgo;
         }
 
         private void PopulateData()
