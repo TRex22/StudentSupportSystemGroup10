@@ -28,6 +28,9 @@ namespace SSS.Forms.Coordinator
             this.AutoScroll = true;
             this.Hide();
 
+            if (isUpdateTutor)
+                this.label1.Text = "Search for Tutor to Update";
+
             _coordinatorId = coordintaorId;
             _isUpdateTutor = isUpdateTutor;
             _group = groupTableAdapter1.GetData();
@@ -75,7 +78,7 @@ namespace SSS.Forms.Coordinator
             }
             else
             {
-                SSS.Coordinator coordinator = (SSS.Coordinator)Application.OpenForms["Coordinator"];
+                Coordinator coordinator = (Coordinator)Application.OpenForms["Coordinator"];
                 var updateTutorModal = new UpdateTutorModal(tutorId);
                 coordinator.SetModal(updateTutorModal);
                 this.Hide();

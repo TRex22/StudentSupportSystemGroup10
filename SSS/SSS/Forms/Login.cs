@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SSS.Forms;
+using SSS.Forms.Coordinator;
 using SSS.IS2G10_DBSSSDataSetTableAdapters;
 using SSS.Properties;
 using SSS_Library.PasswordHandler;
@@ -61,7 +62,7 @@ namespace SSS
                 {
                     if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
                     {
-                        Form CoordinatorShow = new Coordinator(sInput, sPassword);
+                        Form CoordinatorShow = new Coordinator(sInput);
                         CoordinatorShow.Owner = this;
                         CoordinatorShow.Show();
                         this.Hide();

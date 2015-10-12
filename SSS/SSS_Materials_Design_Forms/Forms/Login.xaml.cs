@@ -45,7 +45,7 @@ namespace SSS_Materials_Design_Forms
 
             if (sInput.Equals("76582"))
             {
-                Form CoordinatorShow = new SSS.Coordinator(sInput, sPassword);
+                Form CoordinatorShow = new SSS.Forms.Coordinator.Coordinator(sInput);
                 SetOwner(CoordinatorShow, this);
                 CoordinatorShow.Show();
                 this.Hide();

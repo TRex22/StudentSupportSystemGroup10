@@ -29,6 +29,9 @@ namespace SSS.Forms.Coordinator
 
             checkBox1.Checked = false;
 
+            if(isUpdateStudent)
+                this.label1.Text= "Find Student To Update";
+
             _coordinatorId = coordintaorId;
             _isUpdateStudent = isUpdateStudent;
             _group = groupTableAdapter1.GetData();
@@ -57,7 +60,6 @@ namespace SSS.Forms.Coordinator
         {
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.STUDENT' table. You can move, or remove it, as needed.
             this.sEARCH_STUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId);
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,7 +73,7 @@ namespace SSS.Forms.Coordinator
             }
             else
             {
-                SSS.Coordinator coordinator = (SSS.Coordinator)Application.OpenForms["Coordinator"];
+                Coordinator coordinator = (Coordinator)Application.OpenForms["Coordinator"];
                 var updateStudentProfileModalModal = new UpdateStudentProfileModal(studentId);
                 coordinator.SetModal(updateStudentProfileModalModal);
                 this.Hide();
