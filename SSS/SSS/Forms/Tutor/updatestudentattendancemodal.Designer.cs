@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.activityComboBox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,7 +52,6 @@
             this.aTTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aTTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
             this.uPDATE_STUDENT_ATTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,6 +84,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 486);
             this.panel2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(188, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(341, 36);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Update Student Attendance";
             // 
             // label8
             // 
@@ -223,21 +233,11 @@
             // 
             this.uPDATE_STUDENT_ATTENDANCETableAdapter.ClearBeforeFill = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 36);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Update Student Attendance";
-            // 
             // UpdateStudentAttendanceModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 539);
+            this.ClientSize = new System.Drawing.Size(753, 539);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateStudentAttendanceModal";
