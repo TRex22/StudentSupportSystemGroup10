@@ -14,15 +14,14 @@ namespace SSS.Forms
 {
     public partial class CreatePassword : Form
     {
-        public string password { get; set; }
-        public bool createdPassword { get; set; }
+        public string Password { get; set; }
+        public bool CreatedPassword { get; set; }
+
         public CreatePassword()
         {
             InitializeComponent();
-            this.createdPassword = false;
+            this.CreatedPassword = false;
         }
-
-        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -33,16 +32,16 @@ namespace SSS.Forms
             }
             else if (passwordTxtBox.Text.Equals(confirmPasswordTxtBox.Text))
             {
-                this.password = confirmPasswordTxtBox.Text;
-                this.createdPassword = true;
+                this.Password = confirmPasswordTxtBox.Text;
+                this.CreatedPassword = true;
                 this.Close();
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.password = null;
-            this.createdPassword = false;
+            this.Password = null;
+            this.CreatedPassword = false;
             this.Close();
         }
     }

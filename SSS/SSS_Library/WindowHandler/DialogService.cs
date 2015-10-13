@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-using SSS_Library;
 
-namespace VideoStoreExample
+namespace SSS_Materials_Design_Forms
 {
     public class DialogService
     {
@@ -18,7 +18,7 @@ namespace VideoStoreExample
         {
         }
 
-        public async Task<string> CallInputModal(object context, string title, string message)
+        public async Task<string> CallInputModal(MetroWindow metroWindow, string title, string message)
         {
             var metroDialogSettings = new MetroDialogSettings
             {
@@ -32,10 +32,10 @@ namespace VideoStoreExample
                 SuppressDefaultResources = true
             };
 
-            return await DialogCoordinator.Instance.ShowInputAsync(context, title, message, metroDialogSettings);
+            return await metroWindow.ShowInputAsync(title, message, metroDialogSettings);
         }
 
-        public async void CallMessageModal(object context, string title, string message)
+        public async void CallMessageModal(MetroWindow metroWindow, string title, string message)
         {
             var metroDialogSettings = new MetroDialogSettings
             {
@@ -49,11 +49,10 @@ namespace VideoStoreExample
                 NegativeButtonText = "CANCEL",
                 SuppressDefaultResources = true
             };
-
-            await DialogCoordinator.Instance.ShowMessageAsync(context, title, message, MessageDialogStyle.Affirmative, metroDialogSettings);
+            await metroWindow.ShowMessageAsync(title, message, MessageDialogStyle.Affirmative, metroDialogSettings);
         }
 
-        public async Task<bool> CallAcceptModal(object context, string title, string message)
+        public async Task<bool> CallAcceptModal(MetroWindow metroWindow, string title, string message)
         {
             var metroDialogSettings = new MetroDialogSettings
             {
@@ -67,8 +66,8 @@ namespace VideoStoreExample
                 NegativeButtonText = "CANCEL",
                 SuppressDefaultResources = true
             };
-
-            MessageDialogResult userChoice =  await DialogCoordinator.Instance.ShowMessageAsync(context, title, message, MessageDialogStyle.AffirmativeAndNegative, metroDialogSettings);
+            
+            MessageDialogResult userChoice =  await metroWindow.ShowMessageAsync(title, message, MessageDialogStyle.AffirmativeAndNegative, metroDialogSettings);
             var result = userChoice == MessageDialogResult.Affirmative;
             return result;
         }
@@ -84,5 +83,7 @@ namespace VideoStoreExample
 
             //DialogCoordinator.Instance.ShowLoginAsync(this, "Input Dialog", "Using Material Design Themes", metroDialogSettings);
         }
-    }    
+        //http://mahapps.com/controls/dialogs.html
+        //TODO progress dialogue
+    }
 }

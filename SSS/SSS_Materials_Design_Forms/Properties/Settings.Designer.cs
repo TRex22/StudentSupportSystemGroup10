@@ -33,17 +33,5 @@ namespace SSS_Materials_Design_Forms.Properties {
                 return ((string)(this["IS2G10_DBSSSConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("g")]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
-            }
-            set {
-                this["Setting"] = value;
-            }
-        }
     }
 }

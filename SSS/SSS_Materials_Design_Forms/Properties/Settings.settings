@@ -10,8 +10,5 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\V11.0;Initial Catalog=IS2G10_DBSSS;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)">g</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

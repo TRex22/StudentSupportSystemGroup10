@@ -85,7 +85,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(131, 28);
             this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "&CreatePassword";
+            this.btnLogin.Text = "&Create Password";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -150,7 +150,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(79, 19);
+            this.lblTitle.Location = new System.Drawing.Point(121, 17);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(223, 23);
             this.lblTitle.TabIndex = 0;

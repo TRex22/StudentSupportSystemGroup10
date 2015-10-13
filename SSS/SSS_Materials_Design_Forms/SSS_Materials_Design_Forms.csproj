@@ -88,10 +88,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Forms\CreatePassword.xaml.cs">
+      <DependentUpon>CreatePassword.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\Coordinator.xaml.cs">
       <DependentUpon>Coordinator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DialogService.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <DependentUpon>Settings.settings</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -103,6 +110,10 @@
     <Compile Include="Forms\Tutor\Tutor.xaml.cs">
       <DependentUpon>Tutor.xaml</DependentUpon>
     </Compile>
+    <Page Include="Forms\CreatePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Coordinator\Coordinator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,6 +200,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

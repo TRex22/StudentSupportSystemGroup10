@@ -22,11 +22,10 @@ namespace SSS.Forms.Coordinator
         private readonly SearchTutorModal _searchTutorModal;
         private readonly SearchTutorModal _updateTutorModal;
 
-        public Coordinator(String sUsrId)
+        public Coordinator(int userId)
         {
             InitializeComponent();
             
-            var userId = Convert.ToInt32(sUsrId);
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
             _registerStudentModal = new RegisterStudentModal(userId);
 
