@@ -10,8 +10,40 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Coordinator" Height="705" Width="1053">
-    <Grid>
-        
+        Title="Coordinator" Height="712" Width="1027" Closing="Coordinator1_Closing">
+    <Grid Margin="0,0,0,13">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="599*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="132" Margin="10,150,0,0" Grid.ColumnSpan="2" TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="1"
+			Background="{DynamicResource MaterialDesignPaper}" >
+            <MenuItem Header="Dashboard" Width="132"  Background="MediumPurple"/>
+        </Menu>
+
+        <Label x:Name="lblCoordinatorName" Content="" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"
+			Grid.Column="0" Width="563"/>
+        <Label x:Name="lblDate" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="163.462,638,0,0" VerticalAlignment="Top" Width="162"/>
+
+        <DockPanel x:Name="MainBodyDockPanel" Grid.Column="1" HorizontalAlignment="Left" Height="475" LastChildFill="False" Margin="56,150,0,0" VerticalAlignment="Top" Width="867" Grid.ColumnSpan="2">
+            <Border BorderBrush="Black" BorderThickness="1" Height="475" VerticalAlignment="Top" Width="867"/>
+        </DockPanel>
+        <Label x:Name="label2" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="32,47,0,0" VerticalAlignment="Top" Height="68" Width="792" FontSize="48" Grid.ColumnSpan="2" Background="#00000000" Foreground="#DD000000" RenderTransformOrigin="0.5,0.485" Grid.Column="1"/>
+
+        <DockPanel HorizontalAlignment="Left" Height="135" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="1025" Grid.ColumnSpan="3" 
+			Grid.Column="0" RenderTransformOrigin="1.1,0.525">
+            <Border BorderBrush="Black" BorderThickness="1" Height="135" VerticalAlignment="Top" Width="998"/>
+        </DockPanel>
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="475" Margin="10,150,0,0" VerticalAlignment="Top" Width="132"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="42" Margin="10,630,0,-10" VerticalAlignment="Top" Width="999"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="475" Margin="10,150,0,0" VerticalAlignment="Top" Width="132" CornerRadius="1">
+            <Grid>
+                <MenuItem Header="Logout" Margin="0,443,0,0" Click="MenuItem_Click" />
+            </Grid>
+        </Border>
+
     </Grid>
+
 </controls:MetroWindow>

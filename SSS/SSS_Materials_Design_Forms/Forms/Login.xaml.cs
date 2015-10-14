@@ -51,52 +51,65 @@ namespace SSS_Materials_Design_Forms
             var sInput = UsernameTextBox.Text;
             var sPassword = PasswordTextBox.Password;
 
-            if (sInput.Equals("HereBeDragons"))
+            if (sInput == null || sInput.Equals(""))
             {
-                //open secret window
-                //TODO secret window
+                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
+                UsernameTextBox.Clear();
+                PasswordTextBox.Clear();
+                UsernameTextBox.Focus();
             }
             else
             {
-                _userId = Convert.ToInt32(sInput);
-                var userProfile = _userProfileTableAdapter.GetData().FindByuser_id(_userId);
-
-                if (userProfile == null)
+                if (sInput.Equals("HereBeDragons"))
                 {
-                    _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
-                    UsernameTextBox.Clear();
-                    PasswordTextBox.Clear();
-                    UsernameTextBox.Focus();
+                    //open secret window
+                    //TODO secret window
                 }
                 else
                 {
-                    if (userProfile.resetPassword)
+                    _userId = Convert.ToInt32(sInput);
+                    var userProfile = _userProfileTableAdapter.GetData().FindByuser_id(_userId);
+
+                    if (userProfile == null)
                     {
-                        CreatePassword(userProfile);
+                        _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
+                        UsernameTextBox.Clear();
+                        PasswordTextBox.Clear();
+                        UsernameTextBox.Focus();
                     }
                     else
                     {
-                        var doILogin = CheckPassword(userProfile, sPassword);
-
-                        if (doILogin)
+                        if (userProfile.resetPassword)
                         {
-                            if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
-                            {
+                            CreatePassword(userProfile);
+                        }
+                        else
+                        {
+                            var doILogin = CheckPassword(userProfile, sPassword);
 
-                                this.Hide();
-
-                            }
-                            else if (userProfile.student_id != null && _userId == userProfile.student_id)
+                            if (doILogin)
                             {
-                                MetroWindow studentShow = new Student();
-                                studentShow.Owner = this;
-                                studentShow.Show();
-                                this.Hide();
-                            }
-                            else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
-                            {
-
-                                this.Hide();
+                                if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
+                                {
+                                    MetroWindow coordinatorShow = new Coordinator(_userId);
+                                    coordinatorShow.Owner = this;
+                                    coordinatorShow.Show();
+                                    this.Hide();
+                                }
+                                else if (userProfile.student_id != null && _userId == userProfile.student_id)
+                                {
+                                    MetroWindow studentShow = new Student(_userId);
+                                    studentShow.Owner = this;
+                                    studentShow.Show();
+                                    this.Hide();
+                                }
+                                else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
+                                {
+                                    MetroWindow tutorShow = new Tutor(_userId);
+                                    tutorShow.Owner = this;
+                                    tutorShow.Show();
+                                    this.Hide();
+                                }
                             }
                         }
                     }

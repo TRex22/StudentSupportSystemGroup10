@@ -26,11 +26,10 @@ namespace SSS
         public readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
         public readonly RegisterGroupModal _registerGroupModal;
 
-        public Student(String sUsrId, String sPsswrd)
+        public Student(int userId)
         {
             InitializeComponent();
-            sPassword = sPsswrd;
-            var userId = Convert.ToInt32(sUsrId);
+            
             _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userId);
             lblStudentName.Text = String.Format("{0} {1} {2}", _studentData.student_firstname, _studentData.student_lastname, userId);
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);

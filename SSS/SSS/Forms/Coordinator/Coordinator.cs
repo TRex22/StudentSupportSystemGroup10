@@ -26,7 +26,7 @@ namespace SSS.Forms.Coordinator
         {
             InitializeComponent();
             
-            var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(Convert.ToInt32(userId));
+            var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(userId);
             _registerStudentModal = new RegisterStudentModal(userId);
 
             _searchStudentModal = new SearchStudentModal(userId, false);
@@ -45,6 +45,7 @@ namespace SSS.Forms.Coordinator
             this.Owner.Show();
         }
 
+        //TODO cleanup
         private void InitModals()
         {
             //init internal window
@@ -102,6 +103,7 @@ namespace SSS.Forms.Coordinator
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //TODO CLOSE ALL MODALS
             _registerStudentModal.Close();
             this.Close(); 
         }

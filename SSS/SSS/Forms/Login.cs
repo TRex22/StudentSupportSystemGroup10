@@ -69,24 +69,24 @@ namespace SSS
                         {
                             if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
                             {
-                                Form CoordinatorShow = new Coordinator(_userId);
-                                CoordinatorShow.Owner = this;
-                                CoordinatorShow.Show();
+                                Form coordinatorShow = new Coordinator(_userId);
+                                coordinatorShow.Owner = this;
+                                coordinatorShow.Show();
                                 this.Hide();
 
                             }
                             else if (userProfile.student_id != null && _userId == userProfile.student_id)
                             {
-                                Form StudentShow = new Student(sInput, sPassword);
-                                StudentShow.Owner = this;
-                                StudentShow.Show();
+                                Form studentShow = new Student(_userId);
+                                studentShow.Owner = this;
+                                studentShow.Show();
                                 this.Hide();
                             }
                             else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
                             {
-                                Form TutorShow = new Tutor(sInput, sPassword);
-                                TutorShow.Owner = this;
-                                TutorShow.Show();
+                                Form tutorShow = new Tutor(sInput, sPassword);
+                                tutorShow.Owner = this;
+                                tutorShow.Show();
                                 this.Hide();
                             }
                         }
@@ -97,8 +97,6 @@ namespace SSS
 
         private bool CheckPassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile, string sPass)
         {
-            bool login = false;
-            
             var check = _passwordBuilder.CheckPassword(sPass, userProfile.password_hash, userProfile.password_salt);
             //check if password is right
             if (!check)
