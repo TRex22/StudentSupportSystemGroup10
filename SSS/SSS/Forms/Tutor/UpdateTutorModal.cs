@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 
-namespace SSS.Forms.Tutor
+namespace SSS_Windows_Forms.Forms.Tutor
 {
     public partial class UpdateTutorModal : Form
     {
-        private IS2G10_DBSSSDataSet.TUTORRow _tutorData;
+        private SSS_Library.IS2G10_DBSSSDataSet.TUTORRow _tutorData;
         private readonly int _tutorId;
 
         public UpdateTutorModal(int tutorId)

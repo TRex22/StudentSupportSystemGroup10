@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator
+﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
     partial class TutorRatingsA_ListModal
     {
@@ -33,19 +33,19 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.AVERAGE_TUTOR_RATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.AVERAGE_RATINGSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ATTENDANCE_AND_ACTIVITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVERAGETUTORRATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aVERAGERATINGSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aTTENDANCEANDACTIVITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aTTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
-            this.aVERAGE_RATINGSTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter();
-            this.aVERAGE_TUTOR_RATINGTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter();
-            this.aTTENDANCE_AND_ACTIVITYTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCE_AND_ACTIVITYTableAdapter();
+            this.aTTENDANCETableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.aVERAGE_RATINGSTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter();
+            this.aVERAGE_TUTOR_RATINGTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter();
+            this.aTTENDANCE_AND_ACTIVITYTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCE_AND_ACTIVITYTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.iS2G10_DBSSSDataSet1 = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet1 = new SSS_Library.IS2G10_DBSSSDataSet();
             this.aTTENDANCEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AVERAGE_TUTOR_RATINGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
@@ -168,20 +168,20 @@
 
         #endregion
 
-        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter aTTENDANCETableAdapter;
-        private IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter aVERAGE_RATINGSTableAdapter;
-        private IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter aVERAGE_TUTOR_RATINGTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter aTTENDANCETableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter aVERAGE_RATINGSTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter aVERAGE_TUTOR_RATINGTableAdapter;
         private System.Windows.Forms.BindingSource aVERAGERATINGSBindingSource;
         private System.Windows.Forms.BindingSource aTTENDANCEBindingSource;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource aVERAGETUTORRATINGBindingSource;
         private System.Windows.Forms.BindingSource aTTENDANCEANDACTIVITYBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCE_AND_ACTIVITYTableAdapter aTTENDANCE_AND_ACTIVITYTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCE_AND_ACTIVITYTableAdapter aTTENDANCE_AND_ACTIVITYTableAdapter;
         private System.Windows.Forms.BindingSource AVERAGE_TUTOR_RATINGBindingSource;
         private System.Windows.Forms.BindingSource AVERAGE_RATINGSBindingSource;
         private System.Windows.Forms.BindingSource ATTENDANCE_AND_ACTIVITYBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
         private System.Windows.Forms.BindingSource aTTENDANCEBindingSource1;
     }
 }

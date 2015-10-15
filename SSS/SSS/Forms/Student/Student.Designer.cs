@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class Student
     {
@@ -58,9 +58,9 @@
             this.lblStudentName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.sTUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -433,9 +433,9 @@
         private System.Windows.Forms.Label lblCoordinatorName;
         private System.Windows.Forms.MenuStrip menuStrip10;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private System.Windows.Forms.Label lblStudentName;
         private System.Windows.Forms.Timer tmrSecond;
     }

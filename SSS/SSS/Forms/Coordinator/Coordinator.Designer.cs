@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator
+﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
     partial class Coordinator
     {
@@ -55,9 +55,9 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sSS_COORDINATORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.sSS_COORDINATORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.coordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
@@ -330,7 +330,7 @@
             // sSSCOORDINATORBindingSource
             // 
             this.sSSCOORDINATORBindingSource.DataMember = "SSS_COORDINATOR";
-            this.sSSCOORDINATORBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            this.sSSCOORDINATORBindingSource.DataSource = iS2G10_DBSSSDataSet;
             // 
             // sSS_COORDINATORTableAdapter
             // 
@@ -559,9 +559,9 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip10;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sSSCOORDINATORBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter sSS_COORDINATORTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter sSS_COORDINATORTableAdapter;
         private System.Windows.Forms.MenuStrip tutorMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem tutorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerTutorToolStripMenuItem;

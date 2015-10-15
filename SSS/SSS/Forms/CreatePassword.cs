@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 using SSS_Library.PasswordHandler;
 
-namespace SSS.Forms
+namespace SSS_Windows_Forms.Forms
 {
     public partial class CreatePassword : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator
+﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
     partial class SearchTutorModal
     {
@@ -39,11 +39,11 @@
             this.tutorlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorInformation = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sEARCHTUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.isAssignedGroupCheckBox = new System.Windows.Forms.CheckBox();
-            this.sEARCH_TUTORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter();
-            this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
-            this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.sEARCH_TUTORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter();
+            this.groupTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.tutorTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sEARCHTUTORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
@@ -199,10 +199,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource sEARCHTUTORBindingSource;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
-        private IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter sEARCH_TUTORTableAdapter;
-        private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter sEARCH_TUTORTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tutoridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorfirstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorlastnameDataGridViewTextBoxColumn;

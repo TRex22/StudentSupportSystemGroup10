@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class Tutor
     {
@@ -56,10 +56,10 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTutorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.iS2G10DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tUTORTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.tUTORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
             this.tUTORBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -415,9 +415,9 @@
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.Timer tmrSecond;
         private System.Windows.Forms.BindingSource iS2G10DBSSSDataSetBindingSource;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource tUTORBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tUTORTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tUTORTableAdapter;
         private System.Windows.Forms.BindingSource tUTORBindingSource1;
     }
 }

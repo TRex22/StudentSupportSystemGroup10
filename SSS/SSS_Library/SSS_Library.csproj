@@ -38,6 +38,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -56,9 +57,27 @@
   <ItemGroup>
     <Compile Include="EmailBuilder\IMailSender.cs" />
     <Compile Include="EmailBuilder\MailBuilder.cs" />
+    <Compile Include="IS2G10_DBSSSDataSet.cs">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IS2G10_DBSSSDataSet1.Designer.cs">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="PasswordHandler\PasswordBuilder.cs" />
     <Compile Include="PasswordHandler\StringHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -68,8 +87,26 @@
     <Compile Include="WindowHandler\DialogService.cs" />
     <Compile Include="WindowHandler\Prompt.cs" />
     <Compile Include="WindowHandler\WpfFormsConverter.cs" />
+    <Compile Include="WindowHandler\WpfWindowCloseHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.Release.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="IS2G10_DBSSSDataSet.xsc">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IS2G10_DBSSSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>IS2G10_DBSSSDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IS2G10_DBSSSDataSet.xss">
+      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,10 +116,22 @@
   <ItemGroup>
     <Folder Include="DataServices\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PointBlankIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if "Debug"=="$(ConfigurationName)" goto :nocopy
+del "$(TargetPath).config"
+copy /Y "$(ProjectDir)\App.Release.config" "$(TargetPath).config"
+:nocopy</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

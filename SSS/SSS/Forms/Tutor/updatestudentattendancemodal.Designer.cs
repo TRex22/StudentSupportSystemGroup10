@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class UpdateStudentAttendanceModal
     {
@@ -40,18 +40,18 @@
             this.attendanceDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.student_activity_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uPDATESTUDENTATTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iS2G10_DBSSSDataSet2 = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet2 = new SSS_Library.IS2G10_DBSSSDataSet();
             this.groupComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tutoR_SESSION_GROUPTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter();
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.tutoR_SESSION_GROUPTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.tUTORSESSIONGROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studenT_ACTIVITYTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
-            this.iS2G10_DBSSSDataSet1 = new SSS.IS2G10_DBSSSDataSet();
+            this.studenT_ACTIVITYTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
+            this.iS2G10_DBSSSDataSet1 = new SSS_Library.IS2G10_DBSSSDataSet();
             this.aTTENDANCEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
-            this.uPDATE_STUDENT_ATTENDANCETableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter();
+            this.aTTENDANCETableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.uPDATE_STUDENT_ATTENDANCETableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -264,19 +264,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox groupComboBox;
         private System.Windows.Forms.Label label7;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter tutoR_SESSION_GROUPTableAdapter1;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter tutoR_SESSION_GROUPTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource tUTORSESSIONGROUPBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox activityComboBox;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
         private System.Windows.Forms.BindingSource aTTENDANCEBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter aTTENDANCETableAdapter;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet2;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter aTTENDANCETableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet2;
         private System.Windows.Forms.BindingSource uPDATESTUDENTATTENDANCEBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter uPDATE_STUDENT_ATTENDANCETableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter uPDATE_STUDENT_ATTENDANCETableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn attendanceDataGridViewCheckBoxColumn;

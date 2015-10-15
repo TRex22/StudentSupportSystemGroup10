@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Student
+﻿namespace SSS_Windows_Forms.Forms.Student
 {
     partial class StudentDashboardModal
     {

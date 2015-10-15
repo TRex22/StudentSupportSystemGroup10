@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator
+﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
     partial class RegisterTutorModal
     {
@@ -63,8 +63,8 @@
             this.lblErrLName = new System.Windows.Forms.Label();
             this.lblErrFName = new System.Windows.Forms.Label();
             this.lblErrStdID = new System.Windows.Forms.Label();
-            this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
-            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            this.tutorTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.userprofileTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -530,7 +530,7 @@
         private System.Windows.Forms.Label lblErrLName;
         private System.Windows.Forms.Label lblErrFName;
         private System.Windows.Forms.Label lblErrStdID;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
     }
 }

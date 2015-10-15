@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator
+﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
     partial class SearchStudentModal
     {
@@ -35,15 +35,15 @@
             this.studentlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentInformation = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sEARCHSTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.groupComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
-            this.sEARCH_STUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter();
-            this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.sTUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.sEARCH_STUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter();
+            this.groupTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             this.studentIDtextBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -262,16 +262,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private System.Windows.Forms.BindingSource sEARCHSTUDENTBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter sEARCH_STUDENTTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter sEARCH_STUDENTTableAdapter;
         private System.Windows.Forms.ComboBox groupComboBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentfirstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentlastnameDataGridViewTextBoxColumn;

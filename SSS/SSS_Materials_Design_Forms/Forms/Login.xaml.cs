@@ -1,28 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Forms;
-using System.Windows.Input;
 using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using SSS;
-using System.Windows.Forms.Integration;
-using SSS.IS2G10_DBSSSDataSetTableAdapters;
+using SSS_Library;
+using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
 using SSS_Library.PasswordHandler;
+using SSS_Library.WindowHandler;
 
 //Not so Given
 //TODO messageboxes to dialogues
-namespace SSS_Materials_Design_Forms
+namespace SSS_Materials_Design_Forms.Forms
 {
     /// <summary>
     /// Interaction logic for Login.xaml
@@ -32,6 +21,7 @@ namespace SSS_Materials_Design_Forms
         private readonly USERPROFILETableAdapter _userProfileTableAdapter;
         private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(new StringHandler());
         private readonly DialogService _dialogService = new DialogService();
+        private readonly WpfWindowCloseHandler _wpfWindowCloseHandler = new WpfWindowCloseHandler();
         private int _userId;
         private string _password;
 
@@ -53,7 +43,7 @@ namespace SSS_Materials_Design_Forms
 
             if (sInput == null || sInput.Equals(""))
             {
-                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
+                _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.IncorrectLoginDetailsMessage);
                 UsernameTextBox.Clear();
                 PasswordTextBox.Clear();
                 UsernameTextBox.Focus();
@@ -72,7 +62,7 @@ namespace SSS_Materials_Design_Forms
 
                     if (userProfile == null)
                     {
-                        _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
+                        _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.IncorrectLoginDetailsMessage);
                         UsernameTextBox.Clear();
                         PasswordTextBox.Clear();
                         UsernameTextBox.Focus();
@@ -123,7 +113,7 @@ namespace SSS_Materials_Design_Forms
             //check if password is right
             if (!check)
             {
-                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.IncorrectLoginDetailsMessage);
+                _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.IncorrectLoginDetailsMessage);
                 PasswordTextBox.Clear();
                 UsernameTextBox.Clear();
                 UsernameTextBox.Focus();
@@ -151,12 +141,12 @@ namespace SSS_Materials_Design_Forms
                 userProfile.password_salt = salt;
                 _userProfileTableAdapter.Update(userProfile);
 
-                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.Login_CheckPassword_Password_Created_Successfully);
+                _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.Login_CheckPassword_Password_Created_Successfully);
             }
 
             if (_password != null && _password.Equals("") || _password == null)
             {
-                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.Login_CheckPassword_Please_Enter_a_Password_);
+                _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.Login_CheckPassword_Please_Enter_a_Password_);
             }
         }
 
@@ -180,6 +170,13 @@ namespace SSS_Materials_Design_Forms
             PasswordTextBox.Clear();
             UsernameTextBox.Clear();
             UsernameTextBox.Focus();
+        }
+
+        [STAThread]
+        private void goToOldForms_Click(object sender, RoutedEventArgs e)
+        {
+            /*new Thread(() => new Login().ShowDialog()).Start();
+            _wpfWindowCloseHandler.CloseWindow(this.Name);*/
         }
     }
 }

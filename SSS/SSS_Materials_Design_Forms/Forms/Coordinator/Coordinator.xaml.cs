@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using SSS;
-using SSS.IS2G10_DBSSSDataSetTableAdapters;
+using SSS_Library;
+using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
 
 namespace SSS_Materials_Design_Forms
 {

@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Library
 {
 
 

@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 using SSS_Library.WindowHandler;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
 
     public partial class UpdateStudentAttendanceModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.TUTOR_SESSION_GROUPDataTable _tutorSessionGroup;
-        private readonly IS2G10_DBSSSDataSet.STUDENT_ACTIVITYDataTable _studentActivity;
-        private readonly int _tutorId;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.TUTOR_SESSION_GROUPDataTable _tutorSessionGroup;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ACTIVITYDataTable _studentActivity;
         private int _groupId;
         private int _studentActivityId;
 
@@ -27,9 +26,8 @@ namespace SSS
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
-            _tutorId = tutorId;
 
-            _tutorSessionGroup = tutoR_SESSION_GROUPTableAdapter1.GetData(_tutorId);
+            _tutorSessionGroup = tutoR_SESSION_GROUPTableAdapter1.GetData(tutorId);
             _studentActivity = studenT_ACTIVITYTableAdapter1.GetData();
 
             _groupId = PopulateGroupComboBox();
@@ -82,7 +80,7 @@ namespace SSS
         {
             var studentId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
 
-            IS2G10_DBSSSDataSet.ATTENDANCERow attendanceRow = aTTENDANCETableAdapter.GetData().FindBystudent_idstudent_activity_id(studentId, _studentActivityId);
+            SSS_Library.IS2G10_DBSSSDataSet.ATTENDANCERow attendanceRow = aTTENDANCETableAdapter.GetData().FindBystudent_idstudent_activity_id(studentId, _studentActivityId);
             attendanceRow.student_arrived = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[2].EditedFormattedValue);
             aTTENDANCETableAdapter.Update(attendanceRow);
             MessageBox.Show(Resources.UpdateStudentAttendanceSuccess, Resources.UpdateStudentAttendanceSuccess);

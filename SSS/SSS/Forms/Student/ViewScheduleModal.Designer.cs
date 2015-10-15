@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Student
+﻿namespace SSS_Windows_Forms.Forms.Student
 {
     partial class ViewScheduleModal
     {
@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
-            this.gROUPTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
+            this.gROUPTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouptimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gROUPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
+            this.groupTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUPBindingSource)).BeginInit();
@@ -139,14 +139,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
-        private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter gROUPTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter gROUPTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grouptimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource gROUPBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
     }
 }

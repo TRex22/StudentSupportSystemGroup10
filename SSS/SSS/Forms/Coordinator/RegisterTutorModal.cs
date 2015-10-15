@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class RegisterTutorModal : Form
     {

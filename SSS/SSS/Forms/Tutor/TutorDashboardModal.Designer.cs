@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Tutor
+﻿namespace SSS_Windows_Forms.Forms.Tutor
 {
     partial class TutorDashboardModal
     {

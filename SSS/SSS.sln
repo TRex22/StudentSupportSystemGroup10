@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSS_Materials_Design_Forms"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSS_Tests", "SSS_Tests\SSS_Tests.csproj", "{FD89B7A3-603A-45E7-919E-50B81196B3E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sushi", "WindowManger\Sushi.csproj", "{1F631055-17DA-4E4F-A057-38E44714B357}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FD89B7A3-603A-45E7-919E-50B81196B3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD89B7A3-603A-45E7-919E-50B81196B3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD89B7A3-603A-45E7-919E-50B81196B3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F631055-17DA-4E4F-A057-38E44714B357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F631055-17DA-4E4F-A057-38E44714B357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F631055-17DA-4E4F-A057-38E44714B357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F631055-17DA-4E4F-A057-38E44714B357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

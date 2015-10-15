@@ -10,7 +10,7 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Tutor" Height="712" Width="1027" Closing="MetroWindow_Closing">
+        Title="Tutor" Height="712" Width="1027" Closing="MetroWindow_Closing" WindowStartupLocation="CenterScreen">
     <Grid HorizontalAlignment="Left" Height="678" Margin="0,0,0,-3" VerticalAlignment="Top" Width="1017">
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="132" Margin="10,150,0,0" TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="1"
     		Background="{DynamicResource MaterialDesignPaper}" >

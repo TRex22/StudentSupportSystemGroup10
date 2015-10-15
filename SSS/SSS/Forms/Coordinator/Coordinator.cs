@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using SSS.Forms.Coordinator.LowTutorRatings;
-using SSS.Forms.Coordinator.TutorRatings;
+using SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings;
+using SSS_Windows_Forms.Forms.Coordinator.TutorRatings;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class Coordinator : Form
     {   //database stuff

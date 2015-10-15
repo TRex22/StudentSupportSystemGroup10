@@ -10,7 +10,7 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Coordinator" Height="712" Width="1027" Closing="Coordinator1_Closing">
+        Title="Coordinator" Height="712" Width="1027" Closing="Coordinator1_Closing" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,13">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="88*"/>

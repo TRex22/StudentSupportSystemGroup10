@@ -26,17 +26,8 @@ namespace SSS_Library.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=TomsDB_Video;Integrated Security=True")]
-        public string TomsDB_VideoConnectionString_Local {
-            get {
-                return ((string)(this["TomsDB_VideoConnectionString_Local"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=IS2G10_DBSSS;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\V11.0;Initial Catalog=IS2G10_DBSSS;Integrated Security=True" +
+            "")]
         public string IS2G10_DBSSSConnectionString {
             get {
                 return ((string)(this["IS2G10_DBSSSConnectionString"]));

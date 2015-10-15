@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Forms.Tutor;
+using SSS_Windows_Forms.Forms.Tutor;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
     public partial class Tutor : Form
     {
@@ -18,7 +18,7 @@ namespace SSS
         private readonly String sPassword = "";
 
         //database stuff
-        private readonly IS2G10_DBSSSDataSet.TUTORRow _tutorData;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.TUTORRow _tutorData;
 
         //Modals
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;

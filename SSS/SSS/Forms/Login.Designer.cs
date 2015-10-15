@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms.Forms
 {
     partial class Login
     {
@@ -40,12 +40,13 @@
             this.medUsername = new System.Windows.Forms.MaskedTextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
-            this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
-            this.studentTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
-            this.ssS_COORDINATORTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
-            this.studenT_ACTIVITYTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
-            this.attendanceTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.userprofileTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            this.tutorTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.studentTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.ssS_COORDINATORTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.studenT_ACTIVITYTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter();
+            this.attendanceTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter();
+            this.changeDesignBtn = new System.Windows.Forms.Button();
             this.pnlLoginTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,6 +85,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.changeDesignBtn);
             this.panel3.Controls.Add(this.btnExit);
             this.panel3.Controls.Add(this.btnLogin);
             this.panel3.Location = new System.Drawing.Point(3, 129);
@@ -95,7 +97,7 @@
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(291, 3);
+            this.btnExit.Location = new System.Drawing.Point(333, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 26);
             this.btnExit.TabIndex = 1;
@@ -106,7 +108,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(93, 3);
+            this.btnLogin.Location = new System.Drawing.Point(33, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 28);
             this.btnLogin.TabIndex = 0;
@@ -128,7 +130,7 @@
             // 
             // medPassword
             // 
-            this.medPassword.Location = new System.Drawing.Point(123, 81);
+            this.medPassword.Location = new System.Drawing.Point(128, 65);
             this.medPassword.Name = "medPassword";
             this.medPassword.PasswordChar = '*';
             this.medPassword.Size = new System.Drawing.Size(280, 20);
@@ -136,7 +138,7 @@
             // 
             // medUsername
             // 
-            this.medUsername.Location = new System.Drawing.Point(123, 37);
+            this.medUsername.Location = new System.Drawing.Point(128, 21);
             this.medUsername.Name = "medUsername";
             this.medUsername.Size = new System.Drawing.Size(280, 20);
             this.medUsername.TabIndex = 2;
@@ -145,7 +147,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(24, 82);
+            this.lblPassword.Location = new System.Drawing.Point(29, 66);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(75, 19);
             this.lblPassword.TabIndex = 1;
@@ -155,7 +157,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(24, 38);
+            this.lblUsername.Location = new System.Drawing.Point(29, 22);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(79, 19);
             this.lblUsername.TabIndex = 0;
@@ -184,6 +186,17 @@
             // attendanceTableAdapter1
             // 
             this.attendanceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // changeDesignBtn
+            // 
+            this.changeDesignBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeDesignBtn.Location = new System.Drawing.Point(146, 3);
+            this.changeDesignBtn.Name = "changeDesignBtn";
+            this.changeDesignBtn.Size = new System.Drawing.Size(140, 26);
+            this.changeDesignBtn.TabIndex = 4;
+            this.changeDesignBtn.Text = "Modern Windows";
+            this.changeDesignBtn.UseVisualStyleBackColor = true;
+            this.changeDesignBtn.Click += new System.EventHandler(this.changeDesignBtn_Click);
             // 
             // Login
             // 
@@ -224,11 +237,12 @@
         private System.Windows.Forms.MaskedTextBox medUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
-        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter ssS_COORDINATORTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
-        private IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter attendanceTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter ssS_COORDINATORTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter studenT_ACTIVITYTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter attendanceTableAdapter1;
+        private System.Windows.Forms.Button changeDesignBtn;
     }
 }

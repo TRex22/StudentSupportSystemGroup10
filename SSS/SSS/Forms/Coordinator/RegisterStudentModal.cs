@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
     public partial class RegisterStudentModal : Form
     {
         private int _coordinatorId;
 
         //database
-        private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+        //private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+
         //all the checks
         private bool StudentIdHasBeenClicked = false;
         private bool IdPasswordTxtBoxHasBeenClicked = false;
@@ -153,9 +154,9 @@ namespace SSS
 
 
             string DATEPICKER = dateOfBirthDateTimePicker1.Value.ToShortDateString();
-           string currDate =  DateTime.Today.ToShortDateString();
+            string currDate =  DateTime.Today.ToShortDateString();
             if (DATEPICKER.Equals(currDate))
-          //  if (dateOfBirthDateTimePicker1.Value)
+            //  if (dateOfBirthDateTimePicker1.Value)
             {
                 blnValid = false;
                 lblErrDoB.Text = "Please enter in Date of Birth";
@@ -197,7 +198,6 @@ namespace SSS
                 var programme = StudentProgrammeTxtBox.Text;
 
                 studentTableAdapter.Insert(studentId, _coordinatorId, null, student_fname, student_lname, passportNo, dateofbirth, email, mobileNumber, yearOfStudy, programme, "white", 0);
-
                 userprofileTableAdapter1.Insert(studentId, email, studentId, null, null, null, null, null, null, false, true);
 
                 ResetAllFields();

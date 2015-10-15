@@ -7,18 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Forms.Student;
+using SSS_Windows_Forms.Forms.Student;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
     public partial class Student : Form
     {
-
-        //global vars
-        private readonly String sPassword = "";
-
         //database stuff
-        private readonly IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
 
         //Modals
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;

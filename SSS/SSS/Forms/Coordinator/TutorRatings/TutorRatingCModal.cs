@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS.Forms.Coordinator.TutorRatings
+namespace SSS_Windows_Forms.Forms.Coordinator.TutorRatings
 {
     public partial class TutorRatingCModal : Form
     {

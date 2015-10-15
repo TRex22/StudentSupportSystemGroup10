@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class StudentEngagementModal : Form
     {
@@ -45,22 +45,22 @@ namespace SSS.Forms.Coordinator
         private void ReportDataConnect()
         {
             //student status
-            var studentEngagementStatusReportDataTable = new IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
+            var studentEngagementStatusReportDataTable = new SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
             reportTableAdapter.Fill(studentEngagementStatusReportDataTable);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentEngagementStatuses", (DataTable)studentEngagementStatusReportDataTable));
 
             //disengaged students
-            var disengagedStudentsReportDataTable = new IS2G10_DBSSSDataSet.DISENGAGED_STUDENTSDataTable();
+            var disengagedStudentsReportDataTable = new SSS_Library.IS2G10_DBSSSDataSet.DISENGAGED_STUDENTSDataTable();
             disengageD_STUDENTSTableAdapter1.Fill(disengagedStudentsReportDataTable);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudents", (DataTable)disengagedStudentsReportDataTable));
 
             //STUDENTS_AGGREGATE
-            var studentAggregateReportDataTable = new IS2G10_DBSSSDataSet.STUDENTS_AGGREGATEDataTable();
+            var studentAggregateReportDataTable = new SSS_Library.IS2G10_DBSSSDataSet.STUDENTS_AGGREGATEDataTable();
             studentS_AGGREGATETableAdapter1.Fill(studentAggregateReportDataTable);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentsAggregate", (DataTable)studentAggregateReportDataTable));
 
             //DISENGAGED_STUDENTS_AGGREGATE
-            var disengagedStudentsAggreagteDT = new IS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATEDataTable();
+            var disengagedStudentsAggreagteDT = new SSS_Library.IS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATEDataTable();
             disengageD_STUDENTS_AGGREGATETableAdapter1.Fill(disengagedStudentsAggreagteDT);
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudentsAggregate", (DataTable)disengagedStudentsAggreagteDT));
         }

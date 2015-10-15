@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class RegisterStudentModal
     {
@@ -57,7 +57,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.studentTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.studentTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             this.lblErrStdID = new System.Windows.Forms.Label();
             this.lblErrFName = new System.Windows.Forms.Label();
             this.lblErrLName = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.lblErrDoB = new System.Windows.Forms.Label();
             this.lblErrMobileNum = new System.Windows.Forms.Label();
             this.lblErrStdProg = new System.Windows.Forms.Label();
-            this.userprofileTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            this.userprofileTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -585,7 +585,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter;
         private System.Windows.Forms.Label lblErrStdID;
         private System.Windows.Forms.Label lblErrFName;
         private System.Windows.Forms.Label lblErrLName;
@@ -596,6 +596,6 @@
         private System.Windows.Forms.Label lblErrDoB;
         private System.Windows.Forms.Label lblErrMobileNum;
         private System.Windows.Forms.Label lblErrStdProg;
-        private IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
     }
 }

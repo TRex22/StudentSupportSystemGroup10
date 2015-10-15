@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using SSS_Library;
 
 namespace SSS_Materials_Design_Forms
 {
@@ -41,7 +42,7 @@ namespace SSS_Materials_Design_Forms
             //check they dont equal
             if (!PasswordTextBox.Password.Equals(ConfirmPasswordTextBox.Password))
             {
-                _dialogService.CallMessageModal(this, "", SSS.Properties.Resources.PassWordCreateDoNotMatchError);
+                _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.PassWordCreateDoNotMatchError);
             }
             else if (PasswordTextBox.Password.Equals(ConfirmPasswordTextBox.Password))
             {

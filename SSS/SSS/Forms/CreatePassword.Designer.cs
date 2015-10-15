@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms
+﻿namespace SSS_Windows_Forms.Forms
 {
     partial class CreatePassword
     {

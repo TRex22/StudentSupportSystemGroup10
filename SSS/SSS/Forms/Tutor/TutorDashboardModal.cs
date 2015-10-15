@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS.Forms.Tutor
+namespace SSS_Windows_Forms.Forms.Tutor
 {
     public partial class TutorDashboardModal : Form
     {

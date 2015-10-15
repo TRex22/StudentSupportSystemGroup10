@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class UpdateStudentProfileModal
     {
@@ -59,9 +59,9 @@
             this.studentFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.idPassportTextBox = new System.Windows.Forms.TextBox();
             this.studentIdTextBox = new System.Windows.Forms.TextBox();
-            this.iS2G10_DBSSSDataSet = new SSS.IS2G10_DBSSSDataSet();
+            this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTUDENTTableAdapter = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.sTUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -455,8 +455,8 @@
         private System.Windows.Forms.TextBox studentFirstNameTextBox;
         private System.Windows.Forms.TextBox idPassportTextBox;
         private System.Windows.Forms.TextBox studentIdTextBox;
-        private IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
-        private IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
     }
 }

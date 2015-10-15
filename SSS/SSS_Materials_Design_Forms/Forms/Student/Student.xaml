@@ -12,7 +12,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         GlowBrush="{DynamicResource AccentColorBrush}" 
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Student" Height="712" Width="1027" BorderBrush="Black" Closing="Student1_Closing">
+        Title="Student" Height="712" Width="1027" BorderBrush="Black" Closing="Student1_Closing" WindowStartupLocation="CenterScreen">
     <StackPanel x:Name="LayoutRoot">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -30,6 +30,7 @@
                 <MenuItem Header="Update Profile" Width="132" />
                 <MenuItem Header="Create Consultation" Width="132" />
                 <MenuItem Header="View Schedule" Width="132" />
+                <MenuItem Header="Settings" Width="132" />
             </Menu>
 
             <Label x:Name="lblStudentName" Content="" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"

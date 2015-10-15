@@ -21,11 +21,10 @@ namespace VideoStoreExample
 
         public AnotherCommandImplementation(Action<object> execute, Func<object, bool> canExecute)
         {
-            /*if (execute == null) throw new ArgumentNullException(nameof(execute));
+            if (execute == null) throw new ArgumentNullException(nameof(execute));
 
             _execute = execute;
-            _canExecute = canExecute ?? (x => true);*/
-            throw new NotImplementedException();
+            _canExecute = canExecute ?? (x => true);
         }
 
         public bool CanExecute(object parameter)

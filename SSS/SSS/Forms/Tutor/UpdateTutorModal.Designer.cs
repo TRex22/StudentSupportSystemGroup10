@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Tutor
+﻿namespace SSS_Windows_Forms.Forms.Tutor
 {
     partial class UpdateTutorModal
     {
@@ -54,7 +54,7 @@
             this.tutorFirstNameTxtBox = new System.Windows.Forms.TextBox();
             this.tutorIDPassportTxtBox = new System.Windows.Forms.TextBox();
             this.tutorIdTextBox = new System.Windows.Forms.TextBox();
-            this.tutorTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
+            this.tutorTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -394,7 +394,7 @@
         private System.Windows.Forms.TextBox tutorFirstNameTxtBox;
         private System.Windows.Forms.TextBox tutorIDPassportTxtBox;
         private System.Windows.Forms.TextBox tutorIdTextBox;
-        private IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter tutorTableAdapter1;
         private System.Windows.Forms.Label label1;
     }
 }

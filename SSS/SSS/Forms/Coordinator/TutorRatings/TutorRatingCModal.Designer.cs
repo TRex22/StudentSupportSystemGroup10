@@ -1,4 +1,4 @@
-﻿namespace SSS.Forms.Coordinator.TutorRatings
+﻿namespace SSS_Windows_Forms.Forms.Coordinator.TutorRatings
 {
     partial class TutorRatingCModal
     {

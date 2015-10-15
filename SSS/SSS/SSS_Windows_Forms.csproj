@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9FF18BB-5A86-4328-84F3-C9AFB93AF10D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SSS</RootNamespace>
-    <AssemblyName>SSS</AssemblyName>
+    <RootNamespace>SSS_Windows_Forms</RootNamespace>
+    <AssemblyName>SSS_Windows_Forms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,16 +35,31 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>PointBlankIcon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.1.3.196, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.3-ALPHA196\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.3-ALPHA196\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +68,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseHandler.cs" />
@@ -170,15 +186,6 @@
     <Compile Include="Forms\Tutor\UpdateTutorModal.Designer.cs">
       <DependentUpon>UpdateTutorModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="IS2G10_DBSSSDataSet.cs">
-      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IS2G10_DBSSSDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Forms\Student\Student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +209,11 @@
     </Compile>
     <Compile Include="Forms\Student\UpdateStudentProfileModal.Designer.cs">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Coordinator\Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
@@ -261,16 +273,6 @@
     <EmbeddedResource Include="Forms\Tutor\UpdateTutorModal.resx">
       <DependentUpon>UpdateTutorModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Forms\Student\Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +285,10 @@
     <EmbeddedResource Include="Forms\Student\UpdateStudentProfileModal.resx">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorA.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorRatingC_IndividualTutorRating.rdlc" />
@@ -291,34 +297,7 @@
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\ViewDisengagedStudentsReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
-    <None Include="App.Release.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="IS2G10_DBSSSDataSet.xsc">
-      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="IS2G10_DBSSSDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>IS2G10_DBSSSDataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="IS2G10_DBSSSDataSet.xss">
-      <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SSS_Library\SSS_Library.csproj">
@@ -326,18 +305,15 @@
       <Name>SSS_Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PointBlankIcon.png" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
+    <None Include="Resources\PointBlankIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if "Debug"=="$(ConfigurationName)" goto :nocopy
-del "$(TargetPath).config"
-copy /Y "$(ProjectDir)\App.Release.config" "$(TargetPath).config"
-:nocopy</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

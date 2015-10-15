@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS.Forms.Coordinator.LowTutorRatings
+namespace SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings
 {
     public partial class TutorRatingB_IndividualModal : Form
     {
@@ -29,6 +29,7 @@ namespace SSS.Forms.Coordinator.LowTutorRatings
             catch (Exception ex)
             {
                 //todo fix db
+                var msg = ""+ex;
                 //MessageBox.Show(""+ex);
             }
             

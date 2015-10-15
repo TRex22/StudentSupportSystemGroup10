@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class ViewDisengagedStudentsModal : Form
     {

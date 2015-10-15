@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
     public partial class UpdateStudentProfileModal : Form
     {
-        private IS2G10_DBSSSDataSet.STUDENTRow _studentData;
+        private SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
         private readonly int _studentId;
 
         public UpdateStudentProfileModal(int userid)

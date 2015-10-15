@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class CoordinatorDashboardModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable _engagementStatusReportDataTable;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable _engagementStatusReportDataTable;
         public CoordinatorDashboardModal()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace SSS.Forms.Coordinator
             this.AutoScroll = true;
             this.Hide();
 
-            _engagementStatusReportDataTable = new IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
+            _engagementStatusReportDataTable = new SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
             studenT_ENGAGEMENT_STATUS_TableAdapter1.Fill(_engagementStatusReportDataTable);
         }
 
@@ -29,7 +29,7 @@ namespace SSS.Forms.Coordinator
         {
             chart1.DataSource = _engagementStatusReportDataTable;
 
-            foreach (IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTRow dataRow in _engagementStatusReportDataTable.Rows)
+            foreach (SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTRow dataRow in _engagementStatusReportDataTable.Rows)
             {
                 chart1.Series.Add(dataRow.student_status);
                 DataPoint dp = new DataPoint();

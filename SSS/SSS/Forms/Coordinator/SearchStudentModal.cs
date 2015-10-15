@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Properties;
+using SSS_Library.Properties;
 using SSS_Library.WindowHandler;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class SearchStudentModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.GROUPDataTable _group;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.GROUPDataTable _group;
 
         private readonly int _coordinatorId;
         private readonly bool _isUpdateStudent;
@@ -65,7 +65,7 @@ namespace SSS.Forms.Coordinator
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var studentId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student = sEARCH_STUDENTTableAdapter.GetData(_coordinatorId).FindBystudent_id(studentId);
+            SSS_Library.IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student = sEARCH_STUDENTTableAdapter.GetData(_coordinatorId).FindBystudent_id(studentId);
 
             if (!_isUpdateStudent)
             {
@@ -87,7 +87,7 @@ namespace SSS.Forms.Coordinator
             this.sEARCH_STUDENTTableAdapter.FillGroupSearch(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
         }
 
-        private void displayStudentInformation(IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student)
+        private void displayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student)
         {
             var message = String.Format("Student Name: {0} {1}\n" +
                                                                  "Student Id: {2}\n" +

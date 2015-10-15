@@ -76,11 +76,7 @@ namespace SSS_Materials_Design_Forms
         {
             //TODO Fix this
             throw new NotImplementedException();
-            var metroDialogSettings = new MahApps.Metro.Controls.Dialogs.MetroDialogSettings();
-            {
-                
-            };
-
+            
             //DialogCoordinator.Instance.ShowLoginAsync(this, "Input Dialog", "Using Material Design Themes", metroDialogSettings);
         }
         //http://mahapps.com/controls/dialogs.html

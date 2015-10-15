@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Forms.Tutor;
-using SSS.Properties;
+using SSS_Library.Properties;
 using SSS_Library.WindowHandler;
+using SSS_Windows_Forms.Forms.Tutor;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class SearchTutorModal : Form
     {
-        private readonly IS2G10_DBSSSDataSet.GROUPDataTable _group;
+        private readonly SSS_Library.IS2G10_DBSSSDataSet.GROUPDataTable _group;
 
         private readonly int _coordinatorId;
         private readonly bool _isUpdateTutor;
@@ -63,7 +56,7 @@ namespace SSS.Forms.Coordinator
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var tutorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor;
+            SSS_Library.IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor;
             if (isAssignedGroupCheckBox.Checked)
             {
                 tutor = sEARCH_TUTORTableAdapter.GetData(_groupId).FindBytutor_id(tutorId);
@@ -121,7 +114,7 @@ namespace SSS.Forms.Coordinator
             }
         }
 
-        private void displayStudentInformation(IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor)
+        private void displayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor)
         {
             string trainingstatus;
             if (tutor.tutor_trainingstatus)

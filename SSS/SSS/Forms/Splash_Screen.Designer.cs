@@ -1,4 +1,4 @@
-﻿namespace SSS
+﻿namespace SSS_Windows_Forms
 {
     partial class SplashScreen
     {
@@ -38,7 +38,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SSS.Properties.Resources.PointBlankIcon;
+            this.pictureBox1.Image = global::SSS_Windows_Forms.Properties.Resources.PointBlankIcon;
             this.pictureBox1.Location = new System.Drawing.Point(86, 78);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(293, 280);

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSS.Forms.Coordinator
+namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class TutorRatingsA_ListModal : Form
     {
@@ -34,6 +34,7 @@ namespace SSS.Forms.Coordinator
             catch (Exception ex)
             {
                 //todo fix db
+                var message = "" + ex;
                 //MessageBox.Show(""+ex);
             }
 

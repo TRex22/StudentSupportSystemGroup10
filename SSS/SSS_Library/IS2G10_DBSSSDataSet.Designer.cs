@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace SSS {
+namespace SSS_Library {
     
     
     /// <summary>
@@ -132,17 +132,17 @@ namespace SSS {
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA29961;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__coord__38996AB5;
+        private global::System.Data.DataRelation relationFK__USERPROFI__coord__2E1BDC42;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__37A5467C;
+        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__37A5467C1;
+        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B1;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__37A5467C2;
+        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B2;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__398D8EEE;
+        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__300424B4;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__398D8EEE1;
+        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__300424B41;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -827,12 +827,12 @@ namespace SSS {
             this.relationFK__STUDENT__group_i__2B3F6F977 = this.Relations["FK__STUDENT__group_i__2B3F6F977"];
             this.relationFK__SESSION__tutor_i__295727251 = this.Relations["FK__SESSION__tutor_i__295727251"];
             this.relationFK__ATTENDANC__stude__22AA29961 = this.Relations["FK__ATTENDANC__stude__22AA29961"];
-            this.relationFK__USERPROFI__coord__38996AB5 = this.Relations["FK__USERPROFI__coord__38996AB5"];
-            this.relationFK__USERPROFI__stude__37A5467C = this.Relations["FK__USERPROFI__stude__37A5467C"];
-            this.relationFK__USERPROFI__stude__37A5467C1 = this.Relations["FK__USERPROFI__stude__37A5467C1"];
-            this.relationFK__USERPROFI__stude__37A5467C2 = this.Relations["FK__USERPROFI__stude__37A5467C2"];
-            this.relationFK__USERPROFI__tutor__398D8EEE = this.Relations["FK__USERPROFI__tutor__398D8EEE"];
-            this.relationFK__USERPROFI__tutor__398D8EEE1 = this.Relations["FK__USERPROFI__tutor__398D8EEE1"];
+            this.relationFK__USERPROFI__coord__2E1BDC42 = this.Relations["FK__USERPROFI__coord__2E1BDC42"];
+            this.relationFK__USERPROFI__stude__2F10007B = this.Relations["FK__USERPROFI__stude__2F10007B"];
+            this.relationFK__USERPROFI__stude__2F10007B1 = this.Relations["FK__USERPROFI__stude__2F10007B1"];
+            this.relationFK__USERPROFI__stude__2F10007B2 = this.Relations["FK__USERPROFI__stude__2F10007B2"];
+            this.relationFK__USERPROFI__tutor__300424B4 = this.Relations["FK__USERPROFI__tutor__300424B4"];
+            this.relationFK__USERPROFI__tutor__300424B41 = this.Relations["FK__USERPROFI__tutor__300424B41"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1013,30 +1013,30 @@ namespace SSS {
                         this.tableSTUDENT_ACTIVITY.student_activity_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableATTENDANCE_AND_ACTIVITY.student_activity_idColumn}, false);
             this.Relations.Add(this.relationFK__ATTENDANC__stude__22AA29961);
-            this.relationFK__USERPROFI__coord__38996AB5 = new global::System.Data.DataRelation("FK__USERPROFI__coord__38996AB5", new global::System.Data.DataColumn[] {
+            this.relationFK__USERPROFI__coord__2E1BDC42 = new global::System.Data.DataRelation("FK__USERPROFI__coord__2E1BDC42", new global::System.Data.DataColumn[] {
                         this.tableSSS_COORDINATOR.coordinator_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.coordinator_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__coord__38996AB5);
-            this.relationFK__USERPROFI__stude__37A5467C = new global::System.Data.DataRelation("FK__USERPROFI__stude__37A5467C", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__USERPROFI__coord__2E1BDC42);
+            this.relationFK__USERPROFI__stude__2F10007B = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B", new global::System.Data.DataColumn[] {
                         this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__37A5467C);
-            this.relationFK__USERPROFI__stude__37A5467C1 = new global::System.Data.DataRelation("FK__USERPROFI__stude__37A5467C1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B);
+            this.relationFK__USERPROFI__stude__2F10007B1 = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B1", new global::System.Data.DataColumn[] {
                         this.tableDISENGAGED_STUDENTS.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__37A5467C1);
-            this.relationFK__USERPROFI__stude__37A5467C2 = new global::System.Data.DataRelation("FK__USERPROFI__stude__37A5467C2", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B1);
+            this.relationFK__USERPROFI__stude__2F10007B2 = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B2", new global::System.Data.DataColumn[] {
                         this.tableSEARCH_STUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__37A5467C2);
-            this.relationFK__USERPROFI__tutor__398D8EEE = new global::System.Data.DataRelation("FK__USERPROFI__tutor__398D8EEE", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B2);
+            this.relationFK__USERPROFI__tutor__300424B4 = new global::System.Data.DataRelation("FK__USERPROFI__tutor__300424B4", new global::System.Data.DataColumn[] {
                         this.tableTUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.tutor_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__tutor__398D8EEE);
-            this.relationFK__USERPROFI__tutor__398D8EEE1 = new global::System.Data.DataRelation("FK__USERPROFI__tutor__398D8EEE1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__USERPROFI__tutor__300424B4);
+            this.relationFK__USERPROFI__tutor__300424B41 = new global::System.Data.DataRelation("FK__USERPROFI__tutor__300424B41", new global::System.Data.DataColumn[] {
                         this.tableSEARCH_TUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableUSERPROFILE.tutor_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__tutor__398D8EEE1);
+            this.Relations.Add(this.relationFK__USERPROFI__tutor__300424B41);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8629,7 +8629,7 @@ namespace SSS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, STUDENTRow parentSTUDENTRowByFK__USERPROFI__stude__37A5467C, SSS_COORDINATORRow parentSSS_COORDINATORRowByFK__USERPROFI__coord__38996AB5, TUTORRow parentTUTORRowByFK__USERPROFI__tutor__398D8EEE, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword) {
+            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, STUDENTRow parentSTUDENTRowByFK__USERPROFI__stude__2F10007B, SSS_COORDINATORRow parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42, TUTORRow parentTUTORRowByFK__USERPROFI__tutor__300424B4, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword) {
                 USERPROFILERow rowUSERPROFILERow = ((USERPROFILERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         user_id,
@@ -8643,14 +8643,14 @@ namespace SSS {
                         SecondaryAccent,
                         isDark,
                         resetPassword};
-                if ((parentSTUDENTRowByFK__USERPROFI__stude__37A5467C != null)) {
-                    columnValuesArray[2] = parentSTUDENTRowByFK__USERPROFI__stude__37A5467C[0];
+                if ((parentSTUDENTRowByFK__USERPROFI__stude__2F10007B != null)) {
+                    columnValuesArray[2] = parentSTUDENTRowByFK__USERPROFI__stude__2F10007B[0];
                 }
-                if ((parentSSS_COORDINATORRowByFK__USERPROFI__coord__38996AB5 != null)) {
-                    columnValuesArray[3] = parentSSS_COORDINATORRowByFK__USERPROFI__coord__38996AB5[0];
+                if ((parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42 != null)) {
+                    columnValuesArray[3] = parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42[0];
                 }
-                if ((parentTUTORRowByFK__USERPROFI__tutor__398D8EEE != null)) {
-                    columnValuesArray[4] = parentTUTORRowByFK__USERPROFI__tutor__398D8EEE[0];
+                if ((parentTUTORRowByFK__USERPROFI__tutor__300424B4 != null)) {
+                    columnValuesArray[4] = parentTUTORRowByFK__USERPROFI__tutor__300424B4[0];
                 }
                 rowUSERPROFILERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUSERPROFILERow);
@@ -9987,11 +9987,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__coord__38996AB5"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__coord__2E1BDC42"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__coord__38996AB5"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__coord__2E1BDC42"])));
                 }
             }
         }
@@ -10420,11 +10420,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B"])));
                 }
             }
         }
@@ -10828,11 +10828,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__398D8EEE"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__300424B4"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__398D8EEE"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__300424B4"])));
                 }
             }
         }
@@ -11342,11 +11342,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C1"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B1"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C1"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B1"])));
                 }
             }
         }
@@ -12535,11 +12535,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C2"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B2"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__37A5467C2"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B2"])));
                 }
             }
         }
@@ -12779,11 +12779,11 @@ namespace SSS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__398D8EEE1"] == null)) {
+                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__300424B41"] == null)) {
                     return new USERPROFILERow[0];
                 }
                 else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__398D8EEE1"])));
+                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__300424B41"])));
                 }
             }
         }
@@ -12957,9 +12957,10 @@ namespace SSS {
             public int? student_id {
                 get {
                     try {
-                        return ((int?)(this[this.tableUSERPROFILE.student_idColumn]));
+                        return ((int)(this[this.tableUSERPROFILE.student_idColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                    catch (global::System.InvalidCastException)
+                    {
                         return null;
                         //throw new global::System.Data.StrongTypingException("The value for column \'student_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
@@ -12974,9 +12975,10 @@ namespace SSS {
             public int? coordinator_id {
                 get {
                     try {
-                        return ((int?)(this[this.tableUSERPROFILE.coordinator_idColumn]));
+                        return ((int)(this[this.tableUSERPROFILE.coordinator_idColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                    catch (global::System.InvalidCastException)
+                    {
                         return null;
                         //throw new global::System.Data.StrongTypingException("The value for column \'coordinator_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
@@ -12991,10 +12993,9 @@ namespace SSS {
             public int? tutor_id {
                 get {
                     try {
-                        return ((int?)(this[this.tableUSERPROFILE.tutor_idColumn]));
+                        return ((int)(this[this.tableUSERPROFILE.tutor_idColumn]));
                     }
-                    catch (global::System.InvalidCastException e)
-                    {
+                    catch (global::System.InvalidCastException) {
                         return null;
                         //throw new global::System.Data.StrongTypingException("The value for column \'tutor_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
@@ -13094,10 +13095,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SSS_COORDINATORRow SSS_COORDINATORRow {
                 get {
-                    return ((SSS_COORDINATORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__coord__38996AB5"])));
+                    return ((SSS_COORDINATORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__coord__2E1BDC42"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__coord__38996AB5"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__coord__2E1BDC42"]);
                 }
             }
             
@@ -13105,10 +13106,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public STUDENTRow STUDENTRow {
                 get {
-                    return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C"])));
+                    return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B"]);
                 }
             }
             
@@ -13116,10 +13117,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DISENGAGED_STUDENTSRow DISENGAGED_STUDENTSRow {
                 get {
-                    return ((DISENGAGED_STUDENTSRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C1"])));
+                    return ((DISENGAGED_STUDENTSRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B1"]);
                 }
             }
             
@@ -13127,10 +13128,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_STUDENTRow SEARCH_STUDENTRow {
                 get {
-                    return ((SEARCH_STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C2"])));
+                    return ((SEARCH_STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B2"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__37A5467C2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B2"]);
                 }
             }
             
@@ -13138,10 +13139,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTORRow TUTORRow {
                 get {
-                    return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__398D8EEE"])));
+                    return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__300424B4"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__398D8EEE"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__300424B4"]);
                 }
             }
             
@@ -13149,10 +13150,10 @@ namespace SSS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_TUTORRow SEARCH_TUTORRow {
                 get {
-                    return ((SEARCH_TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__398D8EEE1"])));
+                    return ((SEARCH_TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__300424B41"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__398D8EEE1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__300424B41"]);
                 }
             }
             
@@ -14036,7 +14037,7 @@ namespace SSS {
         }
     }
 }
-namespace SSS.IS2G10_DBSSSDataSetTableAdapters {
+namespace SSS_Library.IS2G10_DBSSSDataSetTableAdapters {
     
     
     /// <summary>
@@ -14212,7 +14213,7 @@ SELECT student_id, student_activity_id, student_activity_tutorrating, student_ac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14629,7 +14630,7 @@ SELECT consultation_id, coordinator_id, student_id, consultation_details, consul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15050,8 +15051,8 @@ SELECT consultation_id, coordinator_id, student_id, consultation_details, consul
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_course_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "course_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[COURSE] ([course_name]) VALUES (@course_name);\r\nSELECT course_" +
-                "id, course_name FROM COURSE WHERE (course_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[COURSE] ([course_name]) VALUES (@course_name);\nSELECT course_i" +
+                "d, course_name FROM COURSE WHERE (course_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@course_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "course_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -15070,7 +15071,7 @@ SELECT course_id, course_name FROM COURSE WHERE (course_id = @course_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15412,7 +15413,7 @@ SELECT course_id, student_id, class_mark, exam_mark, year_mark FROM ENROLLMENT W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15783,8 +15784,8 @@ SELECT course_id, student_id, class_mark, exam_mark, year_mark FROM ENROLLMENT W
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [GROUP] ([group_name], [group_day], [group_time]) VALUES (@group_name" +
-                ", @group_day, @group_time);\r\nSELECT group_id, group_name, group_day, group_time " +
-                "FROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
+                ", @group_day, @group_time);\nSELECT group_id, group_name, group_day, group_time F" +
+                "ROM [GROUP] WHERE (group_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15811,7 +15812,7 @@ SELECT group_id, group_name, group_day, group_time FROM [GROUP] WHERE (group_id 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16173,9 +16174,9 @@ SELECT group_id, group_name, group_day, group_time FROM [GROUP] WHERE (group_id 
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[SESSION] ([tutor_id], [group_id], [updated_attendance]) VALUES" +
-                " (@tutor_id, @group_id, @updated_attendance);\r\nSELECT tutor_id, group_id, update" +
-                "d_attendance FROM SESSION WHERE (group_id = @group_id) AND (tutor_id = @tutor_id" +
-                ")";
+                " (@tutor_id, @group_id, @updated_attendance);\nSELECT tutor_id, group_id, updated" +
+                "_attendance FROM SESSION WHERE (group_id = @group_id) AND (tutor_id = @tutor_id)" +
+                "";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16197,7 +16198,7 @@ SELECT tutor_id, group_id, updated_attendance FROM SESSION WHERE (group_id = @gr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16523,10 +16524,10 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
                 "ailaddress = 1 AND [coordinator_emailaddress] IS NULL) OR ([coordinator_emailadd" +
                 "ress] = @Original_coordinator_emailaddress)) AND ((@IsNull_coordinator_cellnumbe" +
                 "r = 1 AND [coordinator_cellnumber] IS NULL) OR ([coordinator_cellnumber] = @Orig" +
-                "inal_coordinator_cellnumber)));\r\nSELECT coordinator_id, coordinator_firstname, c" +
-                "oordinator_lastname, coordinator_id_passport, coordinator_dateofbirth, coordinat" +
-                "or_emailaddress, coordinator_cellnumber FROM SSS_COORDINATOR WHERE (coordinator_" +
-                "id = @coordinator_id)";
+                "inal_coordinator_cellnumber)));\nSELECT coordinator_id, coordinator_firstname, co" +
+                "ordinator_lastname, coordinator_id_passport, coordinator_dateofbirth, coordinato" +
+                "r_emailaddress, coordinator_cellnumber FROM SSS_COORDINATOR WHERE (coordinator_i" +
+                "d = @coordinator_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16554,7 +16555,7 @@ SELECT coordinator_id, coordinator_firstname, coordinator_lastname, coordinator_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17074,11 +17075,10 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 "e] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 AND [s" +
                 "tudent_status] IS NULL) OR ([student_status] = @Original_student_status)) AND ((" +
                 "@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_points] = " +
-                "@Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id, stude" +
-                "nt_firstname, student_lastname, student_id_passport, student_dateofbirth, studen" +
-                "t_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogram" +
-                "me, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)" +
-                "";
+                "@Original_student_points)));\nSELECT student_id, coordinator_id, group_id, studen" +
+                "t_firstname, student_lastname, student_id_passport, student_dateofbirth, student" +
+                "_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogramm" +
+                "e, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17123,7 +17123,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17804,7 +17804,7 @@ SELECT student_activity_id, student_activity_name, student_activity_pointvalue, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18254,7 +18254,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18740,7 +18740,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18749,8 +18749,8 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT student_status, COUNT(student_status) AS \'student_statuses\'\r\nFROM STUDENT\r" +
-                "\nGROUP BY student_status";
+            this._commandCollection[0].CommandText = "SELECT student_status, COUNT(student_status) AS \'student_statuses\'\nFROM STUDENT\nG" +
+                "ROUP BY student_status";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19005,11 +19005,11 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 "ogramme] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 " +
                 "AND [student_status] IS NULL) OR ([student_status] = @Original_student_status)) " +
                 "AND ((@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_poin" +
-                "ts] = @Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id," +
-                " student_firstname, student_lastname, student_id_passport, student_dateofbirth, " +
-                "student_emailaddress, student_mobilenumber, student_yearofstudy, student_degreep" +
-                "rogramme, student_status, student_points FROM STUDENT WHERE (student_id = @stude" +
-                "nt_id) ORDER BY student_points";
+                "ts] = @Original_student_points)));\nSELECT student_id, coordinator_id, group_id, " +
+                "student_firstname, student_lastname, student_id_passport, student_dateofbirth, s" +
+                "tudent_emailaddress, student_mobilenumber, student_yearofstudy, student_degreepr" +
+                "ogramme, student_status, student_points FROM STUDENT WHERE (student_id = @studen" +
+                "t_id) ORDER BY student_points";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -19054,7 +19054,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19063,8 +19063,8 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT *\r\nFROM dbo.STUDENT\r\nWHERE dbo.STUDENT.student_points < 35\r\nORDER BY dbo.S" +
-                "TUDENT.student_points ASC;";
+            this._commandCollection[0].CommandText = "SELECT *\nFROM dbo.STUDENT\nWHERE dbo.STUDENT.student_points < 35\nORDER BY dbo.STUD" +
+                "ENT.student_points ASC;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19689,7 +19689,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19698,7 +19698,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT COUNT(student_id) AS \'NumberOfStudents\'\r\nFROM dbo.STUDENT;";
+            this._commandCollection[0].CommandText = "SELECT COUNT(student_id) AS \'NumberOfStudents\'\nFROM dbo.STUDENT;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19856,7 +19856,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19865,9 +19865,9 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT COUNT(student_id) AS \'NumberOfStudents\'\r\nFROM dbo.STUDENT\r\nGROUP BY studen" +
-                "t_points\r\nHAVING dbo.STUDENT.student_points < 35\r\nORDER BY dbo.STUDENT.student_p" +
-                "oints ASC;";
+            this._commandCollection[0].CommandText = "SELECT COUNT(student_id) AS \'NumberOfStudents\'\nFROM dbo.STUDENT\nGROUP BY student_" +
+                "points\nHAVING dbo.STUDENT.student_points < 35\nORDER BY dbo.STUDENT.student_point" +
+                "s ASC;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -20029,7 +20029,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20201,7 +20201,7 @@ ORDER BY [GROUP].group_id";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20210,9 +20210,9 @@ ORDER BY [GROUP].group_id";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        [GROUP].group_id, [GROUP].group_name\r\nFROM            SESSION INNER" +
-                " JOIN\r\n                         [GROUP] ON SESSION.group_id = [GROUP].group_id\r\n" +
-                "WHERE        (SESSION.tutor_id = @tutor_id)";
+            this._commandCollection[0].CommandText = "SELECT        [GROUP].group_id, [GROUP].group_name\nFROM            SESSION INNER " +
+                "JOIN\n                         [GROUP] ON SESSION.group_id = [GROUP].group_id\nWHE" +
+                "RE        (SESSION.tutor_id = @tutor_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -20375,7 +20375,7 @@ ORDER BY [GROUP].group_id";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20558,7 +20558,7 @@ WHERE        ([GROUP].group_id = @groupId) AND (ATTENDANCE.student_activity_id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20736,7 +20736,7 @@ GROUP BY TUTOR.tutor_id, TUTOR.tutor_firstname, TUTOR.tutor_lastname, STUDENT_AC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20989,11 +20989,10 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
                 "e] = @Original_student_degreeprogramme)) AND ((@IsNull_student_status = 1 AND [s" +
                 "tudent_status] IS NULL) OR ([student_status] = @Original_student_status)) AND ((" +
                 "@IsNull_student_points = 1 AND [student_points] IS NULL) OR ([student_points] = " +
-                "@Original_student_points)));\r\nSELECT student_id, coordinator_id, group_id, stude" +
-                "nt_firstname, student_lastname, student_id_passport, student_dateofbirth, studen" +
-                "t_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogram" +
-                "me, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)" +
-                "";
+                "@Original_student_points)));\nSELECT student_id, coordinator_id, group_id, studen" +
+                "t_firstname, student_lastname, student_id_passport, student_dateofbirth, student" +
+                "_emailaddress, student_mobilenumber, student_yearofstudy, student_degreeprogramm" +
+                "e, student_status, student_points FROM STUDENT WHERE (student_id = @student_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -21038,7 +21037,7 @@ SELECT student_id, coordinator_id, group_id, student_firstname, student_lastname
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21769,7 +21768,7 @@ WHERE        (coordinator_id = @coordinatorId) AND (student_id = @studentId) ";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21789,9 +21788,9 @@ WHERE        (SESSION.group_id = @groupId) OR
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT        TUTOR.tutor_id, TUTOR.tutor_firstname, TUTOR.tutor_lastname, TUTOR." +
-                "tutor_id_passport, TUTOR.tutor_dateofbirth, TUTOR.tutor_emailaddress, \r\n        " +
-                "                 TUTOR.tutor_cellnumber, TUTOR.tutor_trainingstatus\r\nFROM       " +
-                "     TUTOR ";
+                "tutor_id_passport, TUTOR.tutor_dateofbirth, TUTOR.tutor_emailaddress, \n         " +
+                "                TUTOR.tutor_cellnumber, TUTOR.tutor_trainingstatus\nFROM         " +
+                "   TUTOR ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -21978,7 +21977,7 @@ WHERE        (SESSION.group_id = @groupId) OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22248,7 +22247,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SSS.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22257,7 +22256,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        USERPROFILE.*\r\nFROM            USERPROFILE";
+            this._commandCollection[0].CommandText = "SELECT        USERPROFILE.*\nFROM            USERPROFILE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

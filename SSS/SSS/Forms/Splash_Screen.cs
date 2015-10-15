@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Threading.Timer;
 
-namespace SSS
+namespace SSS_Windows_Forms
 {
     public partial class SplashScreen : Form
     {

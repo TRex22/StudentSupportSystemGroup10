@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SSS.Forms;
-using SSS.Forms.Coordinator;
-using SSS.IS2G10_DBSSSDataSetTableAdapters;
-using SSS.Properties;
+using SSS_Library;
 using SSS_Library.PasswordHandler;
+using SSS_Library.Properties;
 
-namespace SSS
+namespace SSS_Windows_Forms.Forms
 {
     public partial class Login : Form
     {
@@ -29,7 +20,7 @@ namespace SSS
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             //clean kill
-            Environment.Exit(0);
+            //Environment.Exit(0);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -46,7 +37,7 @@ namespace SSS
             {
                 _userId = Convert.ToInt32(sInput);
 
-                var userProfile = userprofileTableAdapter1.GetData().FindByuser_id(_userId);
+                IS2G10_DBSSSDataSet.USERPROFILERow userProfile = userprofileTableAdapter1.GetData().FindByuser_id(_userId);
 
                 if (userProfile == null)
                 {
@@ -69,7 +60,7 @@ namespace SSS
                         {
                             if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
                             {
-                                Form coordinatorShow = new Coordinator(_userId);
+                                Form coordinatorShow = new Coordinator.Coordinator(_userId);
                                 coordinatorShow.Owner = this;
                                 coordinatorShow.Show();
                                 this.Hide();
@@ -77,14 +68,14 @@ namespace SSS
                             }
                             else if (userProfile.student_id != null && _userId == userProfile.student_id)
                             {
-                                Form studentShow = new Student(_userId);
+                                Form studentShow = new SSS_Windows_Forms.Student(_userId);
                                 studentShow.Owner = this;
                                 studentShow.Show();
                                 this.Hide();
                             }
                             else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
                             {
-                                Form tutorShow = new Tutor(sInput, sPassword);
+                                Form tutorShow = new SSS_Windows_Forms.Tutor(sInput, sPassword);
                                 tutorShow.Owner = this;
                                 tutorShow.Show();
                                 this.Hide();
@@ -95,7 +86,7 @@ namespace SSS
             }
         }
 
-        private bool CheckPassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile, string sPass)
+        private bool CheckPassword(SSS_Library.IS2G10_DBSSSDataSet.USERPROFILERow userProfile, string sPass)
         {
             var check = _passwordBuilder.CheckPassword(sPass, userProfile.password_hash, userProfile.password_salt);
             //check if password is right
@@ -109,7 +100,7 @@ namespace SSS
             return check;
         }
 
-        private void CreatePassword(IS2G10_DBSSSDataSet.USERPROFILERow userProfile)
+        private void CreatePassword(SSS_Library.IS2G10_DBSSSDataSet.USERPROFILERow userProfile)
         {
             _password = null;
             using (var form = new CreatePassword())
@@ -144,7 +135,7 @@ namespace SSS
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void Login_Shown(object sender, EventArgs e)
@@ -159,6 +150,14 @@ namespace SSS
             medPassword.Clear();
             medUsername.Clear();
             medUsername.Focus();
+        }
+
+        private void changeDesignBtn_Click(object sender, EventArgs e)
+        {
+            //close this and open metro
+            /*var metroWindow = new Login1();
+            metroLogin.Show();*/
+            this.Close();
         }
     }
 }
