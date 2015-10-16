@@ -89,10 +89,6 @@
       <Project>{c3ecbfe7-9966-42f7-8e24-2a89773d6d16}</Project>
       <Name>SSS_Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SSS_Materials_Design_Forms\SSS_Materials_Design_Forms.csproj">
-      <Project>{8dd545b8-117c-4088-a8ba-c4585223b504}</Project>
-      <Name>SSS_Materials_Design_Forms</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />

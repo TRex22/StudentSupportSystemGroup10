@@ -181,19 +181,8 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             _searchTutorModal.Show();
         }
 
-        private void averageTutorRatingsToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _tutorRatingsAModal.Show();
-        }
-
-        private void viewTutorRatingsToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _tutorRatingBIndividualModal.Show();
-        }
-
-        private void studentDisengagementToolStripMenuItem_Click_1(object sender, EventArgs e)
+        
+        private void studentDisengagementToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             HideAllModals();
 
@@ -201,7 +190,19 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             _studentDisengagementModal.Show();
         }
 
-        private void viewDisengagedStudentsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void averageTutorRatingsToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _tutorRatingsAModal.Show();
+        }
+
+        private void viewTutorRatingsToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _tutorRatingBIndividualModal.Show();
+        }
+
+        private void viewDisengagedStudentsToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             HideAllModals();
             _viewDisengagedStudentsModal.Show();

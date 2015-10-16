@@ -56,7 +56,7 @@
             reportDataSource1.Name = "AverageRating";
             reportDataSource1.Value = this.AVERAGE_TUTOR_RATINGBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS.Reports.Coordinator.LowTutorRating.TutorB_RatingReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS_Windows_Forms.Reports.Coordinator.LowTutorRating.TutorB_RatingReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(834, 546);

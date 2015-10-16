@@ -27,7 +27,7 @@ namespace WindowManger
             Application.SetCompatibleTextRenderingDefault(false);
             ShowSplashScreen();
             var login = new SSS_Windows_Forms.Forms.Login();
-            var metroLogin = new SSS_Materials_Design_Forms.Forms.Login();
+            /*var metroLogin = new SSS_Materials_Design_Forms.Forms.Login();*/
 
             Application.Run(login);
         }
