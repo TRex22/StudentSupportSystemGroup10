@@ -102,6 +102,12 @@
     <Compile Include="Forms\Coordinator\SearchTutorModal.Designer.cs">
       <DependentUpon>SearchTutorModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Coordinator\SystemSettingsModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\SystemSettingsModal.Designer.cs">
+      <DependentUpon>SystemSettingsModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     <Compile Include="Forms\Splash_Screen.Designer.cs">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Student\CreateConsultationModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\CreateConsultationModal.Designer.cs">
+      <DependentUpon>CreateConsultationModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student\RegisterGroupModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,12 +179,6 @@
     </Compile>
     <Compile Include="Forms\Student\StudentDashboardModal.Designer.cs">
       <DependentUpon>StudentDashboardModal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Student\ViewScheduleModal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Student\ViewScheduleModal.Designer.cs">
-      <DependentUpon>ViewScheduleModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tutor\TutorDashboardModal.cs">
       <SubType>Form</SubType>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="Forms\Coordinator\SearchTutorModal.resx">
       <DependentUpon>SearchTutorModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\SystemSettingsModal.resx">
+      <DependentUpon>SystemSettingsModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.resx">
       <DependentUpon>TutorRatingB_IndividualModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +266,9 @@
     <EmbeddedResource Include="Forms\Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\CreateConsultationModal.resx">
+      <DependentUpon>CreateConsultationModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\RegisterGroupModal.resx">
       <DependentUpon>RegisterGroupModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\StudentDashboardModal.resx">
       <DependentUpon>StudentDashboardModal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Student\ViewScheduleModal.resx">
-      <DependentUpon>ViewScheduleModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
@@ -318,7 +327,6 @@
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERow.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERowChangeEvent.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERowChangeEventHandler.datasource" />
-    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYDataTable.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRow.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRowChangeEvent.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRowChangeEventHandler.datasource" />
@@ -405,9 +413,36 @@
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILEDataTable.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERow.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERowChangeEvent.datasource" />
-    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERowChangeEventHandler.datasource" />
     <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_STUDENT_CONSULTATION_TOP5DataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ATTENDANCE_AND_ACTIVITYTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATIONTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.COURSETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ENROLLMENTTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUP_AGGREGATETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENT_CONSULTATION_TOP5TableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SESSIONTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ACTIVITYTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTORTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_AVAILABLE_TIMESTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_SESSION_GROUPTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.UPDATE_STUDENT_ATTENDANCETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

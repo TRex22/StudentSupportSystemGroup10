@@ -61,6 +61,15 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Consultation Successfully Created..
+        /// </summary>
+        public static string CreateConsultationSuccess {
+            get {
+                return ResourceManager.GetString("CreateConsultationSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Student Created Successfully..
         /// </summary>
         public static string CreateStudent_SuccessfulMessage {

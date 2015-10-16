@@ -41,7 +41,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.viewScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.assignTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
@@ -67,7 +66,6 @@
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip9.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.menuStrip6.SuspendLayout();
@@ -163,7 +161,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 213);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 210);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 24);
             this.menuStrip1.TabIndex = 0;
@@ -172,7 +170,7 @@
             // menuStrip3
             // 
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip3.Location = new System.Drawing.Point(0, 189);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 186);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(241, 24);
             this.menuStrip3.TabIndex = 2;
@@ -181,20 +179,11 @@
             // menuStrip2
             // 
             this.menuStrip2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewScheduleToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 162);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip2.Size = new System.Drawing.Size(241, 24);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // viewScheduleToolStripMenuItem
-            // 
-            this.viewScheduleToolStripMenuItem.Name = "viewScheduleToolStripMenuItem";
-            this.viewScheduleToolStripMenuItem.Size = new System.Drawing.Size(115, 23);
-            this.viewScheduleToolStripMenuItem.Text = "View Schedule";
-            this.viewScheduleToolStripMenuItem.Click += new System.EventHandler(this.viewScheduleToolStripMenuItem_Click);
             // 
             // menuStrip4
             // 
@@ -210,8 +199,8 @@
             // assignTutorToolStripMenuItem
             // 
             this.assignTutorToolStripMenuItem.Name = "assignTutorToolStripMenuItem";
-            this.assignTutorToolStripMenuItem.Size = new System.Drawing.Size(150, 23);
-            this.assignTutorToolStripMenuItem.Text = "Create Consultation";
+            this.assignTutorToolStripMenuItem.Size = new System.Drawing.Size(139, 23);
+            this.assignTutorToolStripMenuItem.Text = "Book Consultation";
             this.assignTutorToolStripMenuItem.Click += new System.EventHandler(this.assignTutorToolStripMenuItem_Click);
             // 
             // menuStrip5
@@ -382,8 +371,6 @@
             this.panel8.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
             this.menuStrip9.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
             this.menuStrip5.ResumeLayout(false);
@@ -417,7 +404,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem viewScheduleToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip4;
         private System.Windows.Forms.ToolStripMenuItem assignTutorToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip5;

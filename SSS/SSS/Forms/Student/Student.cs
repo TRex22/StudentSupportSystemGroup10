@@ -18,9 +18,9 @@ namespace SSS_Windows_Forms
 
         //Modals
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
-        private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
         public readonly StudentDashboardModal _studentDashboardModal;
         public readonly RegisterGroupModal _registerGroupModal;
+        public readonly CreateConsultationModal _createConsultationModal;
 
         public Student(int userId)
         {
@@ -31,6 +31,7 @@ namespace SSS_Windows_Forms
             _studentDashboardModal = new StudentDashboardModal(userId);
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
             _registerGroupModal = new RegisterGroupModal(userId, this);
+            _createConsultationModal = new CreateConsultationModal(userId, _studentData);
             InitModals();
 
             //check if user has a group
@@ -42,9 +43,9 @@ namespace SSS_Windows_Forms
         {
             //init internal window
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
-            this.panel7.Controls.Add(_viewScheduleModal);
             this.panel7.Controls.Add(_studentDashboardModal);
             this.panel7.Controls.Add(_registerGroupModal);
+            this.panel7.Controls.Add(_createConsultationModal);
         }
 
         private void HideAllModals()
@@ -93,14 +94,10 @@ namespace SSS_Windows_Forms
         private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _createConsultationModal.Show();
         }
 
-        private void viewScheduleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _viewScheduleModal.Show();
-        }
-
+        
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();

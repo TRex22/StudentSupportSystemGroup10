@@ -35,13 +35,9 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.studentS_AGGREGATETableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter();
-            this.disengageD_STUDENTS_AGGREGATETableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter();
-            this.studenT_ENGAGEMENT_STATUS_TableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
-            this.disengageD_STUDENTSTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
-            this.iS2G10_DBSSSDataSet1 = new SSS_Library.IS2G10_DBSSSDataSet();
-            this.IS2G10_DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).BeginInit();
+            this.disengageD_STUDENTS_AGGREGATETableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter();
+            this.studenT_ENGAGEMENT_STATUS_TableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
+            this.disengageD_STUDENTSTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -81,16 +77,6 @@
             // 
             this.disengageD_STUDENTSTableAdapter1.ClearBeforeFill = true;
             // 
-            // iS2G10_DBSSSDataSet1
-            // 
-            this.iS2G10_DBSSSDataSet1.DataSetName = "IS2G10_DBSSSDataSet";
-            this.iS2G10_DBSSSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // IS2G10_DBSSSDataSetBindingSource
-            // 
-            this.IS2G10_DBSSSDataSetBindingSource.DataMember = "STUDENT_ENGAGEMENT_STATUS_REPORT";
-            this.IS2G10_DBSSSDataSetBindingSource.DataSource = typeof(SSS.IS2G10_DBSSSDataSet);
-            // 
             // CoordinatorDashboardModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,8 +88,6 @@
             this.Name = "CoordinatorDashboardModal";
             this.Text = "CoordinatorDashboardModal";
             this.Load += new System.EventHandler(this.CoordinatorDashboardModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,10 +96,8 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter studentS_AGGREGATETableAdapter1;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter disengageD_STUDENTS_AGGREGATETableAdapter1;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter studenT_ENGAGEMENT_STATUS_TableAdapter1;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter disengageD_STUDENTSTableAdapter1;
-        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
-        private System.Windows.Forms.BindingSource IS2G10_DBSSSDataSetBindingSource;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter disengageD_STUDENTS_AGGREGATETableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter studenT_ENGAGEMENT_STATUS_TableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter disengageD_STUDENTSTableAdapter1;
     }
 }

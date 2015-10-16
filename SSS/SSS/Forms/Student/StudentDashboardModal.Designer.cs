@@ -36,18 +36,16 @@ namespace SSS_Windows_Forms.Forms.Student
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.IS2G10_DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SEARCH_STUDENT_CONSULTATION_TOP5DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
-            this.searcH_STUDENTTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter();
-            this.groupTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).BeginInit();
+            this.studentTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
+            this.searcH_STUDENTTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter();
+            this.groupTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SEARCH_STUDENT_CONSULTATION_TOP5DataTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            var studentDataTable = new SSS.IS2G10_DBSSSDataSet.STUDENTDataTable();
+            var studentDataTable = new SSS_Library.IS2G10_DBSSSDataSet.STUDENTDataTable();
             studentDataTable.ImportRow(this.studentTableAdapter1.GetData().FindBystudent_id(_userId));
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource5.Name = "Students";
@@ -70,8 +68,6 @@ namespace SSS_Windows_Forms.Forms.Student
             // 
             // IS2G10_DBSSSDataSetBindingSource
             // 
-            this.IS2G10_DBSSSDataSetBindingSource.DataMember = "STUDENT";
-            this.IS2G10_DBSSSDataSetBindingSource.DataSource = typeof(SSS.IS2G10_DBSSSDataSet);
             // 
             // SEARCH_STUDENT_CONSULTATION_TOP5DataTableBindingSource
             // 
@@ -100,7 +96,6 @@ namespace SSS_Windows_Forms.Forms.Student
             this.Name = "StudentDashboardModal";
             this.Text = "StudentDashboard";
             this.Load += new System.EventHandler(this.StudentDashboardModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEARCH_STUDENT_CONSULTATION_TOP5DataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -109,10 +104,9 @@ namespace SSS_Windows_Forms.Forms.Student
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource IS2G10_DBSSSDataSetBindingSource;
         private System.Windows.Forms.BindingSource SEARCH_STUDENT_CONSULTATION_TOP5DataTableBindingSource;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter searcH_STUDENTTableAdapter1;
-        private SSS.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter searcH_STUDENTTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter groupTableAdapter1;
     }
 }

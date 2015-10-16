@@ -158,6 +158,7 @@
             this.systemSettingsToolStripMenuItem.Name = "systemSettingsToolStripMenuItem";
             this.systemSettingsToolStripMenuItem.Size = new System.Drawing.Size(123, 23);
             this.systemSettingsToolStripMenuItem.Text = "System Settings";
+            this.systemSettingsToolStripMenuItem.Click += new System.EventHandler(this.systemSettingsToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 

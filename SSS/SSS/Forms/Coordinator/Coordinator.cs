@@ -21,6 +21,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly SearchStudentModal _updateStudentModal;
         private readonly SearchTutorModal _searchTutorModal;
         private readonly SearchTutorModal _updateTutorModal;
+        private readonly SystemSettingsModal _systemSettingsModal = new SystemSettingsModal();
 
         public Coordinator(int userId)
         {
@@ -61,6 +62,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_updateStudentModal);
             this.panel7.Controls.Add(_searchTutorModal);
             this.panel7.Controls.Add(_updateTutorModal);
+            this.panel7.Controls.Add(_systemSettingsModal);
         }
 
         public void SetModal(Control vaule)
@@ -89,11 +91,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
 
-        private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-        }
-
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //HideAllModals();
@@ -112,37 +109,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _coordinatorDashboardModal.Show();
-        }
-
-        private void studentDisengagementToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-           
-            _studentDisengagementModal.reportViewer1.RefreshReport();
-            _studentDisengagementModal.Show();
-        }
-
-        private void lowTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void averageTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _tutorRatingsAModal.Show();
-        }
-
-        private void viewTutorRatingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _tutorRatingBIndividualModal.Show();
-        }
-
-        private void viewDisengagedStudentsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _viewDisengagedStudentsModal.Show();
         }
 
         private void registerTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,6 +172,12 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _viewDisengagedStudentsModal.Show();
+        }
+
+        private void systemSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _systemSettingsModal.Show();
         }
     }
 }
