@@ -12,8 +12,10 @@ namespace SSS_Windows_Forms.Forms.Student
 {
     public partial class StudentDashboardModal : Form
     {
-        public StudentDashboardModal()
+        private readonly int _userId;
+        public StudentDashboardModal(int userId)
         {
+            _userId = userId;
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
@@ -22,6 +24,7 @@ namespace SSS_Windows_Forms.Forms.Student
 
         private void StudentDashboardModal_Load(object sender, EventArgs e)
         {
+            this.reportViewer1.RefreshReport();
         }
     }
 }

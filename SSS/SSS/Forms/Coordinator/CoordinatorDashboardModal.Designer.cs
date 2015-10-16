@@ -28,78 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.studenT_ENGAGEMENT_STATUS_TableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.studentS_AGGREGATETableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter();
+            this.disengageD_STUDENTS_AGGREGATETableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter();
+            this.studenT_ENGAGEMENT_STATUS_TableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter();
+            this.disengageD_STUDENTSTableAdapter1 = new SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter();
+            this.iS2G10_DBSSSDataSet1 = new SSS_Library.IS2G10_DBSSSDataSet();
+            this.IS2G10_DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // reportViewer1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Your Dashboard ";
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource5.Name = "StudentEngagementStatuses";
+            reportDataSource5.Value = this.studenT_ENGAGEMENT_STATUS_TableAdapter1.GetData();
+            reportDataSource6.Name = "DisengagedStudents";
+            reportDataSource6.Value = this.disengageD_STUDENTSTableAdapter1.GetData();
+            reportDataSource7.Name = "DisengagedStudentsAggregate";
+            reportDataSource7.Value = this.disengageD_STUDENTS_AGGREGATETableAdapter1.GetData();
+            reportDataSource8.Name = "StudentsAggregate";
+            reportDataSource8.Value = this.studentS_AGGREGATETableAdapter1.GetData();
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS_Windows_Forms.Reports.Coordinator.CoordinatorDashboardReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(762, 539);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // chart1
+            // studentS_AGGREGATETableAdapter1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(426, 110);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "chart1";
+            this.studentS_AGGREGATETableAdapter1.ClearBeforeFill = true;
+            // 
+            // disengageD_STUDENTS_AGGREGATETableAdapter1
+            // 
+            this.disengageD_STUDENTS_AGGREGATETableAdapter1.ClearBeforeFill = true;
             // 
             // studenT_ENGAGEMENT_STATUS_TableAdapter1
             // 
             this.studenT_ENGAGEMENT_STATUS_TableAdapter1.ClearBeforeFill = true;
             // 
-            // label2
+            // disengageD_STUDENTSTableAdapter1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Total Number of Students:";
+            this.disengageD_STUDENTSTableAdapter1.ClearBeforeFill = true;
             // 
-            // label3
+            // iS2G10_DBSSSDataSet1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Total Number of Tutors:";
+            this.iS2G10_DBSSSDataSet1.DataSetName = "IS2G10_DBSSSDataSet";
+            this.iS2G10_DBSSSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label4
+            // IS2G10_DBSSSDataSetBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(422, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 19);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Percentage of students per Status";
+            this.IS2G10_DBSSSDataSetBindingSource.DataMember = "STUDENT_ENGAGEMENT_STATUS_REPORT";
+            this.IS2G10_DBSSSDataSetBindingSource.DataSource = typeof(SSS.IS2G10_DBSSSDataSet);
             // 
             // CoordinatorDashboardModal
             // 
@@ -107,28 +97,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CoordinatorDashboardModal";
             this.Text = "CoordinatorDashboardModal";
             this.Load += new System.EventHandler(this.CoordinatorDashboardModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter studenT_ENGAGEMENT_STATUS_TableAdapter1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTS_AGGREGATETableAdapter studentS_AGGREGATETableAdapter1;
+        private SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter disengageD_STUDENTS_AGGREGATETableAdapter1;
+        private SSS.IS2G10_DBSSSDataSetTableAdapters.STUDENT_ENGAGEMENT_STATUS_TableAdapter studenT_ENGAGEMENT_STATUS_TableAdapter1;
+        private SSS.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter disengageD_STUDENTSTableAdapter1;
+        private SSS_Library.IS2G10_DBSSSDataSet iS2G10_DBSSSDataSet1;
+        private System.Windows.Forms.BindingSource IS2G10_DBSSSDataSetBindingSource;
     }
 }

@@ -19,7 +19,7 @@ namespace SSS_Windows_Forms
         //Modals
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
         private readonly ViewScheduleModal _viewScheduleModal = new ViewScheduleModal();
-        public readonly StudentDashboardModal _studentDashboardModal = new StudentDashboardModal();
+        public readonly StudentDashboardModal _studentDashboardModal;
         public readonly RegisterGroupModal _registerGroupModal;
 
         public Student(int userId)
@@ -28,6 +28,7 @@ namespace SSS_Windows_Forms
             
             _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userId);
             lblStudentName.Text = String.Format("{0} {1} {2}", _studentData.student_firstname, _studentData.student_lastname, userId);
+            _studentDashboardModal = new StudentDashboardModal(userId);
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
             _registerGroupModal = new RegisterGroupModal(userId, this);
             InitModals();

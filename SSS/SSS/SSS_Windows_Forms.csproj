@@ -215,6 +215,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Coordinator\Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -289,14 +294,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorA.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorRatingC_IndividualTutorRating.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorB_RatingReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\StudentEngagementStatuses.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\ViewDisengagedStudentsReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +314,104 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ATTENDANCE_AND_ACTIVITYRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_RATINGSDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_RATINGSRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_RATINGSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_RATINGSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+CONSULTATIONDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+CONSULTATIONRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+CONSULTATIONRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+CONSULTATIONRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+COURSEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+COURSERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+COURSERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+COURSERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTSDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTSRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTS_AGGREGATEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTS_AGGREGATERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTS_AGGREGATERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+DISENGAGED_STUDENTS_AGGREGATERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ENROLLMENTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ENROLLMENTRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ENROLLMENTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+ENROLLMENTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUPDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUPRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUPRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUPRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUP_AGGREGATEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUP_AGGREGATERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUP_AGGREGATERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+GROUP_AGGREGATERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_STUDENTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_STUDENTRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_STUDENTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_STUDENTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_TUTORDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_TUTORRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_TUTORRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SEARCH_TUTORRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SESSIONDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SESSIONRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SESSIONRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SESSIONRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SSS_COORDINATORDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SSS_COORDINATORRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SSS_COORDINATORRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+SSS_COORDINATORRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTS_AGGREGATEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTS_AGGREGATERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTS_AGGREGATERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENTS_AGGREGATERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ACTIVITYDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ACTIVITYRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ACTIVITYRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ACTIVITYRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ENGAGEMENT_STATUS_REPORTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ENGAGEMENT_STATUS_REPORTRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ENGAGEMENT_STATUS_REPORTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+STUDENT_ENGAGEMENT_STATUS_REPORTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTORDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTORRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTORRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTORRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTOR_SESSION_GROUPDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTOR_SESSION_GROUPRow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTOR_SESSION_GROUPRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+TUTOR_SESSION_GROUPRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+UPDATE_STUDENT_ATTENDANCEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+UPDATE_STUDENT_ATTENDANCERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+UPDATE_STUDENT_ATTENDANCERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+UPDATE_STUDENT_ATTENDANCERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILEDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERow.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet+USERPROFILERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS.IS2G10_DBSSSDataSet.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_STUDENT_CONSULTATION_TOP5DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\PointBlankIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

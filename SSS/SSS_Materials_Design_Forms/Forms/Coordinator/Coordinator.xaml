@@ -20,7 +20,36 @@
 
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="132" Margin="10,150,0,0" Grid.ColumnSpan="2" TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="1"
 			Background="{DynamicResource MaterialDesignPaper}" >
-            <MenuItem Header="Dashboard" Width="132"  Background="MediumPurple"/>
+            <MenuItem Header="Home" Width="132"  Background="MediumPurple"/>
+            <MenuItem Header="Student" Width="132">
+                <MenuItem Header="Register Student" Width="132"/>
+                <MenuItem Header="Update Student" Width="132"/>
+                <MenuItem Header="Search for Students" Width="132"/>
+            </MenuItem>
+            <MenuItem Header="Tutor" Width="132">
+                <MenuItem Header="Register Tutor" Width="132"/>
+                <MenuItem Header="Update Tutor" Width="132"/>
+                <MenuItem Header="Assign Tutor" Width="132"/>
+                <MenuItem Header="Search Tutors" Width="132"/>
+            </MenuItem>
+            <MenuItem Header="Coordinator" Width="132">
+                <MenuItem Header="Register Coordinator" Width="132"/>
+                <MenuItem Header="Update Coordinator" Width="132"/>
+                <MenuItem Header="Search Coordinator" Width="132"/>
+            </MenuItem>
+            <MenuItem Header="Generate Report" Width="132">
+                <MenuItem Header="Student Engagement" Width="132">
+                    <MenuItem Header="View Student Engagement" Width="132"/>
+                    <MenuItem Header="View Disengaged Students" Width="132"/>
+                </MenuItem>
+                <MenuItem Header="Tutor Ratings" Width="132">
+                    <MenuItem Header="Average Tutor Ratings" Width="132"/>
+                    <MenuItem Header="View Tutor Ratings" Width="132"/>
+                </MenuItem>
+                
+            </MenuItem>
+            <MenuItem Header="Update Profile" Width="132"/>
+            <MenuItem Header="System Settings" Width="132"/>
         </Menu>
 
         <Label x:Name="lblCoordinatorName" Content="" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"

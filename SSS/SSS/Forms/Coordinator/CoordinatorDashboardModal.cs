@@ -13,30 +13,34 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class CoordinatorDashboardModal : Form
     {
-        private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable _engagementStatusReportDataTable;
         public CoordinatorDashboardModal()
         {
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
             this.Hide();
-
-            _engagementStatusReportDataTable = new SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTDataTable();
-            studenT_ENGAGEMENT_STATUS_TableAdapter1.Fill(_engagementStatusReportDataTable);
         }
 
         private void CoordinatorDashboardModal_Load(object sender, EventArgs e)
         {
-            chart1.DataSource = _engagementStatusReportDataTable;
+            /*StudentEngagementStatuses
+                DisengagedStudents
+                DisengagedStudentsAggregate
+                StudentsAggregate*/
+            BindData();
+            this.reportViewer1.RefreshReport();
+        }
 
-            foreach (SSS_Library.IS2G10_DBSSSDataSet.STUDENT_ENGAGEMENT_STATUS_REPORTRow dataRow in _engagementStatusReportDataTable.Rows)
-            {
-                chart1.Series.Add(dataRow.student_status);
-                DataPoint dp = new DataPoint();
-                dp.SetValueY(dataRow.student_statuses);
-                chart1.Series[dataRow.student_status].Points.Add(dp);
-            }
+        private void BindData()
+        {
+            var studentEngagementStatus = studenT_ENGAGEMENT_STATUS_TableAdapter1.GetData();
+            var studentsAggregate = studentS_AGGREGATETableAdapter1.GetData();
+            var disengagedStudents = disengageD_STUDENTSTableAdapter1.GetData();
+            var disengagedStudentsAggregate = disengageD_STUDENTS_AGGREGATETableAdapter1.GetData();
+            //ReportDataSource rds = new ReportDataSource("extraMove", ret.ToArray());
             
+
+
 
         }
     }
