@@ -28,7 +28,7 @@
         <Label x:Name="lblDate" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="163.462,638,0,0" VerticalAlignment="Top" Width="162"/>
 
         <DockPanel x:Name="MainBodyDockPanel" Grid.Column="1" HorizontalAlignment="Left" Height="475" LastChildFill="False" Margin="56,150,0,0" VerticalAlignment="Top" Width="867" Grid.ColumnSpan="2">
-            <Border BorderBrush="Black" BorderThickness="1" Height="475" VerticalAlignment="Top" Width="867"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="475" VerticalAlignment="Top" Width="868"/>
         </DockPanel>
         <Label x:Name="label2" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="32,47,0,0" VerticalAlignment="Top" Height="68" Width="792" FontSize="48" Grid.ColumnSpan="2" Background="#00000000" Foreground="#DD000000" RenderTransformOrigin="0.5,0.485" Grid.Column="1"/>
 
