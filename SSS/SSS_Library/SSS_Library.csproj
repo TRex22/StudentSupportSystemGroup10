@@ -60,6 +60,7 @@
     <Compile Include="EmailBuilder\MailBuilder.cs" />
     <Compile Include="IS2G10_DBSSSDataSet.cs">
       <DependentUpon>IS2G10_DBSSSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IS2G10_DBSSSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

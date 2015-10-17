@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Your Dashboard</Value>
+                <Value>Home</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
                   <FontSize>14pt</FontSize>

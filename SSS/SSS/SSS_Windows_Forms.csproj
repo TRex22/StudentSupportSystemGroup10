@@ -304,12 +304,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coordinator\AverageActivityRatingsReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorA.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorRatingC_IndividualTutorRating.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorB_RatingReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\CoordinatorDashboardReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorTrainingStatusReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\StudentEngagementStatuses.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\ViewDisengagedStudentsReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorWithoutTrainingDrillDownReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorWithTrainingDrillDownReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
     <None Include="app.config" />

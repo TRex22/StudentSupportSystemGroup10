@@ -80,8 +80,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.57861in</Top>
-        <Left>0.13764in</Left>
+        <Top>3.40847in</Top>
+        <Left>4.80778in</Left>
         <Height>1.10715in</Height>
         <Width>3.06597in</Width>
         <Style>
@@ -113,8 +113,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.25917in</Top>
-        <Left>1.76264in</Left>
+        <Top>3.08903in</Top>
+        <Left>6.43278in</Left>
         <Height>0.25in</Height>
         <Width>1.44097in</Width>
         <ZIndex>1</ZIndex>
@@ -381,8 +381,8 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>StudentEngagementStatuses</DataSetName>
-        <Top>5.73828cm</Top>
-        <Left>8.243cm</Left>
+        <Top>2.18467cm</Top>
+        <Left>11.86779cm</Left>
         <Height>5cm</Height>
         <Width>8.53188cm</Width>
         <ZIndex>2</ZIndex>
@@ -414,8 +414,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>5.73828cm</Top>
-        <Left>0.3496cm</Left>
+        <Top>7.84612cm</Top>
+        <Left>12.21174cm</Left>
         <Height>0.67028cm</Height>
         <Width>3.9864cm</Width>
         <ZIndex>3</ZIndex>
@@ -447,8 +447,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.75189cm</Top>
-        <Left>0.49073cm</Left>
+        <Top>2.59884cm</Top>
+        <Left>1.31976cm</Left>
         <Height>0.6cm</Height>
         <Width>4.56375cm</Width>
         <ZIndex>4</ZIndex>
@@ -480,8 +480,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>2.52828cm</Top>
-        <Left>0.49073cm</Left>
+        <Top>3.37523cm</Top>
+        <Left>1.31976cm</Left>
         <Height>0.67056cm</Height>
         <Width>5.98368cm</Width>
         <ZIndex>5</ZIndex>
@@ -512,8 +512,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>3.33995cm</Top>
-        <Left>0.49073cm</Left>
+        <Top>4.1869cm</Top>
+        <Left>1.31976cm</Left>
         <Height>0.6cm</Height>
         <Width>6.81271cm</Width>
         <ZIndex>6</ZIndex>
@@ -544,8 +544,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>5.03245cm</Top>
-        <Left>10.81828cm</Left>
+        <Top>1.47884cm</Top>
+        <Left>14.44307cm</Left>
         <Height>0.6cm</Height>
         <Width>3.63771cm</Width>
         <ZIndex>7</ZIndex>
@@ -574,8 +574,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NumberOfStudents</rd:DefaultName>
-        <Top>2.52828cm</Top>
-        <Left>6.79662cm</Left>
+        <Top>3.37523cm</Top>
+        <Left>7.62565cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
@@ -604,8 +604,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NumberOfStudents1</rd:DefaultName>
-        <Top>1.75189cm</Top>
-        <Left>6.79662cm</Left>
+        <Top>2.59884cm</Top>
+        <Left>7.62565cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>9</ZIndex>
@@ -626,7 +626,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Your Dashboard</Value>
+                <Value>Home</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
                   <FontSize>14pt</FontSize>
@@ -645,6 +645,174 @@
         <ZIndex>10</ZIndex>
         <Style>
           <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total Number of Tutors:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>5.39461cm</Top>
+        <Left>1.31976cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.26391cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Quick Stats</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>1.82245cm</Top>
+        <Left>0.49073cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>2.45773cm</Top>
+        <Left>0.49073cm</Left>
+        <Height>0cm</Height>
+        <Width>10.06708cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>2.45773cm</Top>
+        <Left>10.55781cm</Left>
+        <Height>7.5318cm</Height>
+        <Width>0cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line3">
+        <Top>2.45773cm</Top>
+        <Left>0.49073cm</Left>
+        <Height>7.5318cm</Height>
+        <Width>0cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line4">
+        <Top>9.98953cm</Top>
+        <Left>0.49073cm</Left>
+        <Height>0cm</Height>
+        <Width>10.06708cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Number of Untrained Tutors:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>6.171cm</Top>
+        <Left>1.31976cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.87245cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Most disengaged course:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>7.84612cm</Top>
+        <Left>1.31976cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.87245cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>

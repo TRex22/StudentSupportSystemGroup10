@@ -9,7 +9,42 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Gold                              &gt;170 </Value>
+                <Value xml:space="preserve">                                                </Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Block 1</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                          </Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Block 2</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>High:                                         &gt;50                                &gt;100</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -21,7 +56,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Silver:                           150&lt;Points&lt;170</Value>
+                <Value>Medium:                                   35-50                             70-100</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -33,43 +68,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Bronze                          100&lt;Points&lt;149</Value>
-                <Style>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Blue:                             50&lt;points&lt;99</Value>
-                <Style>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>White:                           &lt;50</Value>
-                <Style>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
+                <Value>Low(Disengaged):                     &lt;35                               &lt;70                      </Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -82,8 +81,8 @@
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>2.57861in</Top>
         <Left>0.13764in</Left>
-        <Height>1.10715in</Height>
-        <Width>3.06597in</Width>
+        <Height>0.99257in</Height>
+        <Width>4.95139in</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -114,7 +113,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>2.25917in</Top>
-        <Left>1.76264in</Left>
+        <Left>2.5212in</Left>
         <Height>0.25in</Height>
         <Width>1.44097in</Width>
         <ZIndex>1</ZIndex>
@@ -414,7 +413,7 @@
         </ChartNoDataMessage>
         <DataSetName>StudentEngagementStatuses</DataSetName>
         <Top>5.73828cm</Top>
-        <Left>8.243cm</Left>
+        <Left>13.82571cm</Left>
         <Height>5cm</Height>
         <Width>8.53188cm</Width>
         <ZIndex>3</ZIndex>
@@ -597,7 +596,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>(Disengaged threshhold = below 35 points)</Value>
+                <Value>(Disengaged threshhold = below 35 points in Block 1 and below 70 points in Block 2)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                 </Style>
@@ -609,7 +608,7 @@
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>3.33995cm</Top>
         <Left>0.49073cm</Left>
-        <Height>0.6cm</Height>
+        <Height>0.89104cm</Height>
         <Width>6.81271cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
@@ -640,7 +639,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>5.03245cm</Top>
-        <Left>10.81828cm</Left>
+        <Left>16.40099cm</Left>
         <Height>0.6cm</Height>
         <Width>3.63771cm</Width>
         <ZIndex>10</ZIndex>
