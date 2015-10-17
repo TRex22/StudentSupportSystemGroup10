@@ -280,6 +280,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\StudentDashboardModal.resx">
       <DependentUpon>StudentDashboardModal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
@@ -323,6 +324,18 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_STUDENTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_STUDENTRow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_STUDENTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_STUDENTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_TUTORDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_TUTORRow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_TUTORRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_CONSULTATION_BY_TUTORRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_GROUP_BY_STUDENTDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_GROUP_BY_STUDENTRow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_GROUP_BY_STUDENTRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_GROUP_BY_STUDENTRowChangeEventHandler.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+SEARCH_STUDENT_CONSULTATION_TOP5DataTable.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+TUTOR_AVAILABLE_TIMESDataTable.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+TUTOR_AVAILABLE_TIMESRow.datasource" />
@@ -344,6 +357,9 @@
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.ENROLLMENTTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUPTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.GROUP_AGGREGATETableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_CONSULTATION_BY_STUDENTTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_CONSULTATION_BY_TUTORTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_GROUP_BY_STUDENTTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENTTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_STUDENT_CONSULTATION_TOP5TableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SEARCH_TUTORTableAdapter.datasource" />
