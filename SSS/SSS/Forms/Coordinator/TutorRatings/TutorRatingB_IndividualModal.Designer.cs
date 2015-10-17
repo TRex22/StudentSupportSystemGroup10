@@ -1,6 +1,6 @@
 ﻿namespace SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings
 {
-    partial class TutorRatingB_IndividualModal
+    partial class TutorRatingBIndividualModal
     {
         /// <summary>
         /// Required designer variable.
@@ -79,7 +79,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TutorRatingB_IndividualModal";
+            this.Name = "TutorRatingBIndividualModal";
             this.Text = "LowTutorRatingB_IndividualModal";
             this.Load += new System.EventHandler(this.LowTutorRatingB_IndividualModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.aVERAGETUTORRATINGBindingSource)).EndInit();

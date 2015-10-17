@@ -15,7 +15,7 @@ namespace SSS_Windows_Forms
     {
 
         //global vars
-        private readonly String sPassword = "";
+        private readonly String _sPassword = "";
 
         //database stuff
         private readonly SSS_Library.IS2G10_DBSSSDataSet.TUTORRow _tutorData;
@@ -33,7 +33,7 @@ namespace SSS_Windows_Forms
             lblTutorName.Text = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
             _updateTutorModal = new UpdateTutorModal(userId);
             _updateStudentAttendanceModal = new UpdateStudentAttendanceModal(userId);
-            sPassword = sPsswrd;
+            _sPassword = sPsswrd;
             InitModals();
         }
 

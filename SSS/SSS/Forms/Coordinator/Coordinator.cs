@@ -12,8 +12,8 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly RegisterStudentModal _registerStudentModal;
         private readonly CoordinatorDashboardModal _coordinatorDashboardModal = new CoordinatorDashboardModal();
         private readonly StudentEngagementModal _studentDisengagementModal = new StudentEngagementModal();
-        private readonly TutorRatingsA_ListModal _tutorRatingsAModal = new TutorRatingsA_ListModal();
-        private readonly TutorRatingB_IndividualModal _tutorRatingBIndividualModal = new TutorRatingB_IndividualModal();
+        private readonly TutorRatingsAListModal _tutorRatingsAModal = new TutorRatingsAListModal();
+        private readonly TutorRatingBIndividualModal _tutorRatingBIndividualModal = new TutorRatingBIndividualModal();
         private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();
         private readonly RegisterTutorModal _registerTutorModal = new RegisterTutorModal();
         private readonly ViewDisengagedStudentsModal _viewDisengagedStudentsModal = new ViewDisengagedStudentsModal();

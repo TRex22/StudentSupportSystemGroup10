@@ -12,13 +12,13 @@ namespace SSS_Windows_Forms
         //private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
 
         //all the checks
-        private bool StudentIdHasBeenClicked = false;
-        private bool IdPasswordTxtBoxHasBeenClicked = false;
-        private bool FirstNameTxtBoxHasBeenClicked = false;
-        private bool LastNameTxtBoxHasBeenClicked = false;
-        private bool EmailTxtBoxHasBeenClicked = false;
-        private bool MobileTxtBoxHasBeenClicked = false;
-        private bool StudentProgrammeTxtBoxHasBeenClicked = false;
+        private bool _studentIdHasBeenClicked = false;
+        private bool _idPasswordTxtBoxHasBeenClicked = false;
+        private bool _firstNameTxtBoxHasBeenClicked = false;
+        private bool _lastNameTxtBoxHasBeenClicked = false;
+        private bool _emailTxtBoxHasBeenClicked = false;
+        private bool _mobileTxtBoxHasBeenClicked = false;
+        private bool _studentProgrammeTxtBoxHasBeenClicked = false;
 
         public RegisterStudentModal(int coordinatorId)
         {
@@ -39,70 +39,70 @@ namespace SSS_Windows_Forms
         private void studentIdTxtBox_Enter(object sender, EventArgs e)
         {
             TextBox box = sender as TextBox;
-            if (!StudentIdHasBeenClicked)
+            if (!_studentIdHasBeenClicked)
             {
                 box.Text = String.Empty;
-                StudentIdHasBeenClicked = true;
+                _studentIdHasBeenClicked = true;
             }
         }
 
         private void IdPasswordTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!IdPasswordTxtBoxHasBeenClicked)
+            if (!_idPasswordTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                IdPasswordTxtBoxHasBeenClicked = true;
+                _idPasswordTxtBoxHasBeenClicked = true;
             }
         }
 
         private void FirstNameTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!FirstNameTxtBoxHasBeenClicked)
+            if (!_firstNameTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                FirstNameTxtBoxHasBeenClicked = true;
+                _firstNameTxtBoxHasBeenClicked = true;
             }
         }
 
         private void LastNameTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!LastNameTxtBoxHasBeenClicked)
+            if (!_lastNameTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                LastNameTxtBoxHasBeenClicked = true;
+                _lastNameTxtBoxHasBeenClicked = true;
             }
         }
 
         private void EmailTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!EmailTxtBoxHasBeenClicked)
+            if (!_emailTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                EmailTxtBoxHasBeenClicked = true;
+                _emailTxtBoxHasBeenClicked = true;
             }
         }
 
         private void MobileTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!MobileTxtBoxHasBeenClicked)
+            if (!_mobileTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                MobileTxtBoxHasBeenClicked = true;
+                _mobileTxtBoxHasBeenClicked = true;
             }
         }
 
         private void StudentProgrammeTxtBox_Enter(object sender, EventArgs e)
         {
-            if (!StudentProgrammeTxtBoxHasBeenClicked)
+            if (!_studentProgrammeTxtBoxHasBeenClicked)
             {
                 TextBox box = sender as TextBox;
                 box.Text = String.Empty;
-                StudentProgrammeTxtBoxHasBeenClicked = true;
+                _studentProgrammeTxtBoxHasBeenClicked = true;
             }
         }
 
@@ -153,9 +153,9 @@ namespace SSS_Windows_Forms
             }
 
 
-            string DATEPICKER = dateOfBirthDateTimePicker1.Value.ToShortDateString();
+            string datepicker = dateOfBirthDateTimePicker1.Value.ToShortDateString();
             string currDate =  DateTime.Today.ToShortDateString();
-            if (DATEPICKER.Equals(currDate))
+            if (datepicker.Equals(currDate))
             //  if (dateOfBirthDateTimePicker1.Value)
             {
                 blnValid = false;
@@ -189,16 +189,16 @@ namespace SSS_Windows_Forms
             {
                 var studentId = Convert.ToInt32(studentIdTxtBox.Text);
                 var passportNo = IdPassportTxtBox.Text;
-                var student_lname = LastNameTxtBox.Text;
-                var student_fname = FirstNameTxtBox.Text;
+                var studentLname = LastNameTxtBox.Text;
+                var studentFname = FirstNameTxtBox.Text;
                 var dateofbirth = dateOfBirthDateTimePicker1.Value;
                 var email = EmailTxtBox.Text;
                 var mobileNumber = MobileTxtBox.Text;
                 var yearOfStudy = YearOfStudyComboBox1.SelectedIndex + 1;
                 var programme = StudentProgrammeTxtBox.Text;
 
-                studentTableAdapter.Insert(studentId, _coordinatorId, null, student_fname, student_lname, passportNo, dateofbirth, email, mobileNumber, yearOfStudy, programme, "white", 0);
-                userprofileTableAdapter1.Insert(studentId, email, studentId, null, null, null, null, null, null, false, true);
+                studentTableAdapter.Insert(studentId, _coordinatorId, null, studentFname, studentLname, passportNo, dateofbirth, email, mobileNumber, yearOfStudy, programme, "white", 0);
+                userprofileTableAdapter1.Insert(studentId, email, studentId, null, null, null, null, null, null, false, true, true);
 
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);

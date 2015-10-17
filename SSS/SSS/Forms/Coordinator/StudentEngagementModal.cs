@@ -60,9 +60,9 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("StudentsAggregate", (DataTable)studentAggregateReportDataTable));
 
             //DISENGAGED_STUDENTS_AGGREGATE
-            var disengagedStudentsAggreagteDT = new SSS_Library.IS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATEDataTable();
-            disengageD_STUDENTS_AGGREGATETableAdapter1.Fill(disengagedStudentsAggreagteDT);
-            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudentsAggregate", (DataTable)disengagedStudentsAggreagteDT));
+            var disengagedStudentsAggreagteDt = new SSS_Library.IS2G10_DBSSSDataSet.DISENGAGED_STUDENTS_AGGREGATEDataTable();
+            disengageD_STUDENTS_AGGREGATETableAdapter1.Fill(disengagedStudentsAggreagteDt);
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DisengagedStudentsAggregate", (DataTable)disengagedStudentsAggreagteDt));
         }
 
         private void reportViewer1_RenderingComplete(object sender, RenderingCompleteEventArgs e)

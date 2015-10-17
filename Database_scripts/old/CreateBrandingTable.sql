@@ -7,7 +7,10 @@ CREATE TABLE BRANDING (
 	system_logo VARBINARY(MAX),
 	system_name nvarchar(255),
 	splash_colour nvarchar(255),
-	splash_time time
+	splash_time time,
+	is_system_clean bit
 );
 GO
 PRINT ('BRANDING CREATED');
+
+DROP TABLE BRANDING;

@@ -79,7 +79,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>2.11349cm</Top>
-        <Left>13.1301cm</Left>
+        <Left>9.50531cm</Left>
         <Height>0.6cm</Height>
         <Width>5.11938cm</Width>
         <ZIndex>2</ZIndex>
@@ -139,7 +139,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>3.56291cm</Top>
-        <Left>13.1301cm</Left>
+        <Left>9.50531cm</Left>
         <Height>0.6cm</Height>
         <Width>5.11938cm</Width>
         <ZIndex>4</ZIndex>
@@ -169,7 +169,7 @@
         </Paragraphs>
         <rd:DefaultName>student_points1</rd:DefaultName>
         <Top>3.56291cm</Top>
-        <Left>18.67641cm</Left>
+        <Left>15.05162cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>5</ZIndex>
@@ -229,7 +229,7 @@
         </Paragraphs>
         <rd:DefaultName>student_points</rd:DefaultName>
         <Top>2.11349cm</Top>
-        <Left>18.67641cm</Left>
+        <Left>15.05162cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
@@ -259,7 +259,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>6.29391cm</Top>
-        <Left>13.1301cm</Left>
+        <Left>9.50531cm</Left>
         <Height>0.6cm</Height>
         <Width>5.11938cm</Width>
         <ZIndex>8</ZIndex>
@@ -319,7 +319,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>4.93875cm</Top>
-        <Left>13.1301cm</Left>
+        <Left>9.50531cm</Left>
         <Height>0.6cm</Height>
         <Width>6.48526cm</Width>
         <ZIndex>10</ZIndex>
@@ -793,7 +793,7 @@
         </TablixRowHierarchy>
         <DataSetName>SearchConsultation</DataSetName>
         <Top>7.0703cm</Top>
-        <Left>13.1301cm</Left>
+        <Left>9.50531cm</Left>
         <Height>1.2cm</Height>
         <Width>7.5cm</Width>
         <ZIndex>12</ZIndex>

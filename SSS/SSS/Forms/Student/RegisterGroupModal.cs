@@ -48,8 +48,8 @@ namespace SSS_Windows_Forms
                 int groupId = (int)groupRow.ItemArray[4]; //will be the int. group_id is 4th item
                 RegisterForGroup(_userId, groupId);
                 _studentParent.joinGroupToolStripMenuItem.Enabled = false;
-                _studentParent._registerGroupModal.Hide();
-                _studentParent._studentDashboardModal.Show();
+                _studentParent.RegisterGroupModal.Hide();
+                _studentParent.StudentDashboardModal.Show();
             }
         }
 

@@ -67,7 +67,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             }
             if (!_isUpdateTutor)
             {
-                displayStudentInformation(tutor);
+                DisplayStudentInformation(tutor);
             }
             else
             {
@@ -114,7 +114,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             }
         }
 
-        private void displayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor)
+        private void DisplayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_TUTORRow tutor)
         {
             string trainingstatus;
             if (tutor.tutor_trainingstatus)

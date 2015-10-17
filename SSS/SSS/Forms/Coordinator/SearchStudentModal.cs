@@ -69,7 +69,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 
             if (!_isUpdateStudent)
             {
-                displayStudentInformation(student);
+                DisplayStudentInformation(student);
             }
             else
             {
@@ -87,7 +87,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.sEARCH_STUDENTTableAdapter.FillGroupSearch(this.iS2G10_DBSSSDataSet.SEARCH_STUDENT, _coordinatorId, _groupId);
         }
 
-        private void displayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student)
+        private void DisplayStudentInformation(SSS_Library.IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student)
         {
             var message = String.Format("Student Name: {0} {1}\n" +
                                                                  "Student Id: {2}\n" +

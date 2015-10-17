@@ -34,7 +34,7 @@ namespace SSS_Materials_Design_Forms
             CreateTimer();
 
             _coordinatorData = _sssCoordinatorTableAdapter.GetData().FindBycoordinator_id(userId);
-            lblCoordinatorName.Content = String.Format("{0} {1} {2}", _coordinatorData.coordinator_firstname, _coordinatorData.coordinator_lastname, userId);
+            LblCoordinatorName.Content = String.Format("{0} {1} {2}", _coordinatorData.coordinator_firstname, _coordinatorData.coordinator_lastname, userId);
         }
 
         private void CreateTimer()
@@ -47,7 +47,7 @@ namespace SSS_Materials_Design_Forms
 
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
-            lblDate.Content = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
+            LblDate.Content = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

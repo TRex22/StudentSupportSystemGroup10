@@ -7,8 +7,8 @@ namespace SSS_Tests
     [TestClass]
     public class PasswordHandlerUnitTest
     {
-        private static readonly StringHandler _stringHandler = new StringHandler();
-        private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(_stringHandler);
+        private static readonly StringHandler StringHandler = new StringHandler();
+        private readonly PasswordBuilder _passwordBuilder = new PasswordBuilder(StringHandler);
 
         [TestMethod]
         public void TestPasswordHasing()
@@ -21,7 +21,7 @@ namespace SSS_Tests
 
             //get back 
 
-            var returnTest = _passwordBuilder.ComputeHash_ShaSalt(test, _stringHandler.GetBytes(salt));
+            var returnTest = _passwordBuilder.ComputeHash_ShaSalt(test, StringHandler.GetBytes(salt));
             var testString = Convert.ToBase64String(returnTest);
             Assert.AreEqual(testString, hash);
 

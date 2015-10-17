@@ -9,15 +9,15 @@
         dialogs:DialogParticipation.Register="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"
         Title="Login" Height="298" Width="502" Activated="Login1_Activated" WindowStartupLocation="CenterScreen">
     <UserControl>
-        <Grid x:Name="___No_Name_">
-            <Label x:Name="label" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="30,19,0,0" VerticalAlignment="Top" Width="446" FontSize="26.667"/>
-            <Label x:Name="label1" Content="Username:" HorizontalAlignment="Left" Margin="108,102,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label2" Content="Password:" HorizontalAlignment="Left" Margin="108,141,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="NoName">
+            <Label x:Name="Label" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="30,19,0,0" VerticalAlignment="Top" Width="446" FontSize="26.667"/>
+            <Label x:Name="Label1" Content="Username:" HorizontalAlignment="Left" Margin="108,102,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Label2" Content="Password:" HorizontalAlignment="Left" Margin="108,141,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Height="23" Margin="191,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
             <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="191,134,0,0" VerticalAlignment="Top" Width="177"/>
             <Button x:Name="LoginButton" Content="Login" Command="{Binding}" HorizontalAlignment="Left" Margin="44,215,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="LoginButton_Click"/>
             <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="401,215,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="button1_Click"/>
-            <Button x:Name="goToOldForms" Content="Return to Old Forms" HorizontalAlignment="Left" Margin="169,215,0,0" VerticalAlignment="Top" Width="173" Click="goToOldForms_Click"/>
+            <Button x:Name="GoToOldForms" Content="Return to Old Forms" HorizontalAlignment="Left" Margin="169,215,0,0" VerticalAlignment="Top" Width="173" Click="goToOldForms_Click"/>
         </Grid>
     </UserControl>
 </controls:MetroWindow>

@@ -76,6 +76,8 @@ namespace SSS_Library {
         
         private TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR;
         
+        private BRANDINGDataTable tableBRANDING;
+        
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__21B6055D;
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA2996;
@@ -279,6 +281,9 @@ namespace SSS_Library {
                 }
                 if ((ds.Tables["TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR"] != null)) {
                     base.Tables.Add(new TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable(ds.Tables["TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR"]));
+                }
+                if ((ds.Tables["BRANDING"] != null)) {
+                    base.Tables.Add(new BRANDINGDataTable(ds.Tables["BRANDING"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -560,6 +565,16 @@ namespace SSS_Library {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public BRANDINGDataTable BRANDING {
+            get {
+                return this.tableBRANDING;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -702,6 +717,9 @@ namespace SSS_Library {
                 }
                 if ((ds.Tables["TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR"] != null)) {
                     base.Tables.Add(new TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable(ds.Tables["TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR"]));
+                }
+                if ((ds.Tables["BRANDING"] != null)) {
+                    base.Tables.Add(new BRANDINGDataTable(ds.Tables["BRANDING"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -892,6 +910,12 @@ namespace SSS_Library {
                     this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.InitVars();
                 }
             }
+            this.tableBRANDING = ((BRANDINGDataTable)(base.Tables["BRANDING"]));
+            if ((initTable == true)) {
+                if ((this.tableBRANDING != null)) {
+                    this.tableBRANDING.InitVars();
+                }
+            }
             this.relationFK__ATTENDANC__stude__21B6055D = this.Relations["FK__ATTENDANC__stude__21B6055D"];
             this.relationFK__ATTENDANC__stude__22AA2996 = this.Relations["FK__ATTENDANC__stude__22AA2996"];
             this.relationFK__ENROLLMEN__cours__25869641 = this.Relations["FK__ENROLLMEN__cours__25869641"];
@@ -1003,6 +1027,8 @@ namespace SSS_Library {
             base.Tables.Add(this.tableTUTOR_AVAILABLE_TIMES);
             this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR = new TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable();
             base.Tables.Add(this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR);
+            this.tableBRANDING = new BRANDINGDataTable();
+            base.Tables.Add(this.tableBRANDING);
             this.relationFK__ATTENDANC__stude__21B6055D = new global::System.Data.DataRelation("FK__ATTENDANC__stude__21B6055D", new global::System.Data.DataColumn[] {
                         this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableATTENDANCE.student_idColumn}, false);
@@ -1359,6 +1385,12 @@ namespace SSS_Library {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeBRANDING() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1489,6 +1521,9 @@ namespace SSS_Library {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRowChangeEventHandler(object sender, TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void BRANDINGRowChangeEventHandler(object sender, BRANDINGRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -8306,6 +8341,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnresetPassword;
             
+            private global::System.Data.DataColumn columnuseOldForms;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USERPROFILEDataTable() {
@@ -8429,6 +8466,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn useOldFormsColumn {
+                get {
+                    return this.columnuseOldForms;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8464,7 +8509,7 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, STUDENTRow parentSTUDENTRowByFK__USERPROFI__stude__2F10007B, SSS_COORDINATORRow parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42, TUTORRow parentTUTORRowByFK__USERPROFI__tutor__300424B4, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword) {
+            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, STUDENTRow parentSTUDENTRowByFK__USERPROFI__stude__2F10007B, SSS_COORDINATORRow parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42, TUTORRow parentTUTORRowByFK__USERPROFI__tutor__300424B4, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, bool useOldForms) {
                 USERPROFILERow rowUSERPROFILERow = ((USERPROFILERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         user_id,
@@ -8477,7 +8522,8 @@ namespace SSS_Library {
                         PrimaryAccent,
                         SecondaryAccent,
                         isDark,
-                        resetPassword};
+                        resetPassword,
+                        useOldForms};
                 if ((parentSTUDENTRowByFK__USERPROFI__stude__2F10007B != null)) {
                     columnValuesArray[2] = parentSTUDENTRowByFK__USERPROFI__stude__2F10007B[0];
                 }
@@ -8527,6 +8573,7 @@ namespace SSS_Library {
                 this.columnSecondaryAccent = base.Columns["SecondaryAccent"];
                 this.columnisDark = base.Columns["isDark"];
                 this.columnresetPassword = base.Columns["resetPassword"];
+                this.columnuseOldForms = base.Columns["useOldForms"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8554,6 +8601,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnisDark);
                 this.columnresetPassword = new global::System.Data.DataColumn("resetPassword", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresetPassword);
+                this.columnuseOldForms = new global::System.Data.DataColumn("useOldForms", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnuseOldForms);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id}, true));
                 this.columnuser_id.AllowDBNull = false;
@@ -9450,6 +9499,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columntutor_id;
             
+            private global::System.Data.DataColumn columndate_free;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTOR_AVAILABLE_TIMESDataTable() {
@@ -9517,6 +9568,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn date_freeColumn {
+                get {
+                    return this.columndate_free;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9552,13 +9611,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TUTOR_AVAILABLE_TIMESRow AddTUTOR_AVAILABLE_TIMESRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C) {
+            public TUTOR_AVAILABLE_TIMESRow AddTUTOR_AVAILABLE_TIMESRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C, System.DateTime date_free) {
                 TUTOR_AVAILABLE_TIMESRow rowTUTOR_AVAILABLE_TIMESRow = ((TUTOR_AVAILABLE_TIMESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         available_day,
                         available_time,
-                        null};
+                        null,
+                        date_free};
                 if ((parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C != null)) {
                     columnValuesArray[3] = parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C[0];
                 }
@@ -9595,6 +9655,7 @@ namespace SSS_Library {
                 this.columnavailable_day = base.Columns["available_day"];
                 this.columnavailable_time = base.Columns["available_time"];
                 this.columntutor_id = base.Columns["tutor_id"];
+                this.columndate_free = base.Columns["date_free"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9608,6 +9669,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnavailable_time);
                 this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_id);
+                this.columndate_free = new global::System.Data.DataColumn("date_free", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_free);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_time_id}, true));
                 this.columntutor_time_id.AutoIncrement = true;
@@ -9759,6 +9822,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columntutor_id;
             
+            private global::System.Data.DataColumn columndate_free;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable() {
@@ -9826,6 +9891,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn date_freeColumn {
+                get {
+                    return this.columndate_free;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9861,13 +9934,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow AddTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C2) {
+            public TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow AddTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C2, System.DateTime date_free) {
                 TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow rowTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow = ((TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         available_day,
                         available_time,
-                        null};
+                        null,
+                        date_free};
                 if ((parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C2 != null)) {
                     columnValuesArray[3] = parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C2[0];
                 }
@@ -9904,6 +9978,7 @@ namespace SSS_Library {
                 this.columnavailable_day = base.Columns["available_day"];
                 this.columnavailable_time = base.Columns["available_time"];
                 this.columntutor_id = base.Columns["tutor_id"];
+                this.columndate_free = base.Columns["date_free"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9917,6 +9992,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnavailable_time);
                 this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_id);
+                this.columndate_free = new global::System.Data.DataColumn("date_free", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_free);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_time_id}, true));
                 this.columntutor_time_id.AutoIncrement = true;
@@ -10013,6 +10090,354 @@ namespace SSS_Library {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class BRANDINGDataTable : global::System.Data.TypedTableBase<BRANDINGRow> {
+            
+            private global::System.Data.DataColumn columnbranding_id;
+            
+            private global::System.Data.DataColumn columnprogram_icon;
+            
+            private global::System.Data.DataColumn columnsystem_logo;
+            
+            private global::System.Data.DataColumn columnsystem_name;
+            
+            private global::System.Data.DataColumn columnsplash_colour;
+            
+            private global::System.Data.DataColumn columnsplash_time;
+            
+            private global::System.Data.DataColumn columnis_system_clean;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGDataTable() {
+                this.TableName = "BRANDING";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal BRANDINGDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected BRANDINGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn branding_idColumn {
+                get {
+                    return this.columnbranding_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn program_iconColumn {
+                get {
+                    return this.columnprogram_icon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn system_logoColumn {
+                get {
+                    return this.columnsystem_logo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn system_nameColumn {
+                get {
+                    return this.columnsystem_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn splash_colourColumn {
+                get {
+                    return this.columnsplash_colour;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn splash_timeColumn {
+                get {
+                    return this.columnsplash_time;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn is_system_cleanColumn {
+                get {
+                    return this.columnis_system_clean;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRow this[int index] {
+                get {
+                    return ((BRANDINGRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BRANDINGRowChangeEventHandler BRANDINGRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BRANDINGRowChangeEventHandler BRANDINGRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BRANDINGRowChangeEventHandler BRANDINGRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BRANDINGRowChangeEventHandler BRANDINGRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddBRANDINGRow(BRANDINGRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRow AddBRANDINGRow(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, System.TimeSpan splash_time, bool is_system_clean) {
+                BRANDINGRow rowBRANDINGRow = ((BRANDINGRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        program_icon,
+                        system_logo,
+                        system_name,
+                        splash_colour,
+                        splash_time,
+                        is_system_clean};
+                rowBRANDINGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBRANDINGRow);
+                return rowBRANDINGRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRow FindBybranding_id(int branding_id) {
+                return ((BRANDINGRow)(this.Rows.Find(new object[] {
+                            branding_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                BRANDINGDataTable cln = ((BRANDINGDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new BRANDINGDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnbranding_id = base.Columns["branding_id"];
+                this.columnprogram_icon = base.Columns["program_icon"];
+                this.columnsystem_logo = base.Columns["system_logo"];
+                this.columnsystem_name = base.Columns["system_name"];
+                this.columnsplash_colour = base.Columns["splash_colour"];
+                this.columnsplash_time = base.Columns["splash_time"];
+                this.columnis_system_clean = base.Columns["is_system_clean"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnbranding_id = new global::System.Data.DataColumn("branding_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbranding_id);
+                this.columnprogram_icon = new global::System.Data.DataColumn("program_icon", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprogram_icon);
+                this.columnsystem_logo = new global::System.Data.DataColumn("system_logo", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsystem_logo);
+                this.columnsystem_name = new global::System.Data.DataColumn("system_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsystem_name);
+                this.columnsplash_colour = new global::System.Data.DataColumn("splash_colour", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsplash_colour);
+                this.columnsplash_time = new global::System.Data.DataColumn("splash_time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsplash_time);
+                this.columnis_system_clean = new global::System.Data.DataColumn("is_system_clean", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_system_clean);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnbranding_id}, true));
+                this.columnbranding_id.AutoIncrement = true;
+                this.columnbranding_id.AutoIncrementSeed = -1;
+                this.columnbranding_id.AutoIncrementStep = -1;
+                this.columnbranding_id.AllowDBNull = false;
+                this.columnbranding_id.ReadOnly = true;
+                this.columnbranding_id.Unique = true;
+                this.columnsystem_name.MaxLength = 255;
+                this.columnsplash_colour.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRow NewBRANDINGRow() {
+                return ((BRANDINGRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new BRANDINGRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(BRANDINGRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.BRANDINGRowChanged != null)) {
+                    this.BRANDINGRowChanged(this, new BRANDINGRowChangeEvent(((BRANDINGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.BRANDINGRowChanging != null)) {
+                    this.BRANDINGRowChanging(this, new BRANDINGRowChangeEvent(((BRANDINGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.BRANDINGRowDeleted != null)) {
+                    this.BRANDINGRowDeleted(this, new BRANDINGRowChangeEvent(((BRANDINGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.BRANDINGRowDeleting != null)) {
+                    this.BRANDINGRowDeleting(this, new BRANDINGRowChangeEvent(((BRANDINGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveBRANDINGRow(BRANDINGRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                IS2G10_DBSSSDataSet ds = new IS2G10_DBSSSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "BRANDINGDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -14067,7 +14492,8 @@ namespace SSS_Library {
                     try {
                         return ((int)(this[this.tableUSERPROFILE.student_idColumn]));
                     }
-                    catch (global::System.InvalidCastException) {
+                    catch (global::System.InvalidCastException)
+                    {
                         return null;
                         //throw new global::System.Data.StrongTypingException("The value for column \'student_id\' in table \'USERPROFILE\' is DBNull.", e);
                     }
@@ -14196,6 +14622,22 @@ namespace SSS_Library {
                 }
                 set {
                     this[this.tableUSERPROFILE.resetPasswordColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool useOldForms {
+                get {
+                    try {
+                        return ((bool)(this[this.tableUSERPROFILE.useOldFormsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'useOldForms\' in table \'USERPROFILE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSERPROFILE.useOldFormsColumn] = value;
                 }
             }
             
@@ -14359,6 +14801,18 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSecondaryAccentNull() {
                 this[this.tableUSERPROFILE.SecondaryAccentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsuseOldFormsNull() {
+                return this.IsNull(this.tableUSERPROFILE.useOldFormsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetuseOldFormsNull() {
+                this[this.tableUSERPROFILE.useOldFormsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -14946,6 +15400,22 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime date_free {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTUTOR_AVAILABLE_TIMES.date_freeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_free\' in table \'TUTOR_AVAILABLE_TIMES\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTUTOR_AVAILABLE_TIMES.date_freeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTORRow TUTORRow {
                 get {
                     return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__TUTOR_AVA__tutor__37A5467C"])));
@@ -14988,6 +15458,18 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setavailable_timeNull() {
                 this[this.tableTUTOR_AVAILABLE_TIMES.available_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdate_freeNull() {
+                return this.IsNull(this.tableTUTOR_AVAILABLE_TIMES.date_freeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdate_freeNull() {
+                this[this.tableTUTOR_AVAILABLE_TIMES.date_freeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15063,6 +15545,23 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime date_free {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.date_freeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_free\' in table \'TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.date_freeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTORRow TUTORRow {
                 get {
                     return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__TUTOR_AVA__tutor__37A5467C2"])));
@@ -15105,6 +15604,212 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setavailable_timeNull() {
                 this[this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.available_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdate_freeNull() {
+                return this.IsNull(this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.date_freeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdate_freeNull() {
+                this[this.tableTUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.date_freeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class BRANDINGRow : global::System.Data.DataRow {
+            
+            private BRANDINGDataTable tableBRANDING;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal BRANDINGRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBRANDING = ((BRANDINGDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int branding_id {
+                get {
+                    return ((int)(this[this.tableBRANDING.branding_idColumn]));
+                }
+                set {
+                    this[this.tableBRANDING.branding_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] program_icon {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableBRANDING.program_iconColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'program_icon\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.program_iconColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] system_logo {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableBRANDING.system_logoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'system_logo\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.system_logoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string system_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableBRANDING.system_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'system_name\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.system_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string splash_colour {
+                get {
+                    try {
+                        return ((string)(this[this.tableBRANDING.splash_colourColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'splash_colour\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.splash_colourColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.TimeSpan splash_time {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableBRANDING.splash_timeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'splash_time\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.splash_timeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool is_system_clean {
+                get {
+                    try {
+                        return ((bool)(this[this.tableBRANDING.is_system_cleanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_system_clean\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.is_system_cleanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isprogram_iconNull() {
+                return this.IsNull(this.tableBRANDING.program_iconColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setprogram_iconNull() {
+                this[this.tableBRANDING.program_iconColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issystem_logoNull() {
+                return this.IsNull(this.tableBRANDING.system_logoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsystem_logoNull() {
+                this[this.tableBRANDING.system_logoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issystem_nameNull() {
+                return this.IsNull(this.tableBRANDING.system_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsystem_nameNull() {
+                this[this.tableBRANDING.system_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issplash_colourNull() {
+                return this.IsNull(this.tableBRANDING.splash_colourColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsplash_colourNull() {
+                this[this.tableBRANDING.splash_colourColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issplash_timeNull() {
+                return this.IsNull(this.tableBRANDING.splash_timeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsplash_timeNull() {
+                this[this.tableBRANDING.splash_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isis_system_cleanNull() {
+                return this.IsNull(this.tableBRANDING.is_system_cleanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setis_system_cleanNull() {
+                this[this.tableBRANDING.is_system_cleanColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15978,6 +16683,40 @@ namespace SSS_Library {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class BRANDINGRowChangeEvent : global::System.EventArgs {
+            
+            private BRANDINGRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRowChangeEvent(BRANDINGRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BRANDINGRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -23635,10 +24374,11 @@ FROM            ATTENDANCE INNER JOIN
             tableMapping.ColumnMappings.Add("SecondaryAccent", "SecondaryAccent");
             tableMapping.ColumnMappings.Add("isDark", "isDark");
             tableMapping.ColumnMappings.Add("resetPassword", "resetPassword");
+            tableMapping.ColumnMappings.Add("useOldForms", "useOldForms");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [USERPROFILE] WHERE (([user_id] = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_name)) AND ((@IsNull_student_id = 1 AND [student_id] IS NULL) OR ([student_id] = @Original_student_id)) AND ((@IsNull_coordinator_id = 1 AND [coordinator_id] IS NULL) OR ([coordinator_id] = @Original_coordinator_id)) AND ((@IsNull_tutor_id = 1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Original_tutor_id)) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPassword] = @Original_resetPassword))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [USERPROFILE] WHERE (([user_id] = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_name)) AND ((@IsNull_student_id = 1 AND [student_id] IS NULL) OR ([student_id] = @Original_student_id)) AND ((@IsNull_coordinator_id = 1 AND [coordinator_id] IS NULL) OR ([coordinator_id] = @Original_coordinator_id)) AND ((@IsNull_tutor_id = 1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Original_tutor_id)) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOldForms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_user_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -23659,10 +24399,12 @@ FROM            ATTENDANCE INNER JOIN
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SecondaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondaryAccent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isDark", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDark", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_resetPassword", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "resetPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_useOldForms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [USERPROFILE] ([user_id], [user_name], [student_id], [coordinator_id], [tutor_id], [password_hash], [password_salt], [PrimaryAccent], [SecondaryAccent], [isDark], [resetPassword]) VALUES (@user_id, @user_name, @student_id, @coordinator_id, @tutor_id, @password_hash, @password_salt, @PrimaryAccent, @SecondaryAccent, @isDark, @resetPassword);
-SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword FROM USERPROFILE WHERE (user_id = @user_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [USERPROFILE] ([user_id], [user_name], [student_id], [coordinator_id], [tutor_id], [password_hash], [password_salt], [PrimaryAccent], [SecondaryAccent], [isDark], [resetPassword], [useOldForms]) VALUES (@user_id, @user_name, @student_id, @coordinator_id, @tutor_id, @password_hash, @password_salt, @PrimaryAccent, @SecondaryAccent, @isDark, @resetPassword, @useOldForms);
+SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms FROM USERPROFILE WHERE (user_id = @user_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -23675,27 +24417,30 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondaryAccent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDark", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@resetPassword", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "resetPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [USERPROFILE] SET [user_id] = @user_id, [user_name] = @user_name, [student" +
                 "_id] = @student_id, [coordinator_id] = @coordinator_id, [tutor_id] = @tutor_id, " +
                 "[password_hash] = @password_hash, [password_salt] = @password_salt, [PrimaryAcce" +
                 "nt] = @PrimaryAccent, [SecondaryAccent] = @SecondaryAccent, [isDark] = @isDark, " +
-                "[resetPassword] = @resetPassword WHERE (([user_id] = @Original_user_id) AND ((@I" +
-                "sNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_na" +
-                "me)) AND ((@IsNull_student_id = 1 AND [student_id] IS NULL) OR ([student_id] = @" +
-                "Original_student_id)) AND ((@IsNull_coordinator_id = 1 AND [coordinator_id] IS N" +
-                "ULL) OR ([coordinator_id] = @Original_coordinator_id)) AND ((@IsNull_tutor_id = " +
-                "1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Original_tutor_id)) AND ((@IsNull_pa" +
-                "ssword_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_pas" +
-                "sword_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([p" +
-                "assword_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [P" +
-                "rimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@Is" +
-                "Null_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = " +
-                "@Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPasswor" +
-                "d] = @Original_resetPassword));\r\nSELECT user_id, user_name, student_id, coordina" +
-                "tor_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, " +
-                "isDark, resetPassword FROM USERPROFILE WHERE (user_id = @user_id)";
+                "[resetPassword] = @resetPassword, [useOldForms] = @useOldForms WHERE (([user_id]" +
+                " = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([" +
+                "user_name] = @Original_user_name)) AND ((@IsNull_student_id = 1 AND [student_id]" +
+                " IS NULL) OR ([student_id] = @Original_student_id)) AND ((@IsNull_coordinator_id" +
+                " = 1 AND [coordinator_id] IS NULL) OR ([coordinator_id] = @Original_coordinator_" +
+                "id)) AND ((@IsNull_tutor_id = 1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Origin" +
+                "al_tutor_id)) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([" +
+                "password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [" +
+                "password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@I" +
+                "sNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Orig" +
+                "inal_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS " +
+                "NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Origi" +
+                "nal_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOld" +
+                "Forms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms))" +
+                ");\r\nSELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_ha" +
+                "sh, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOld" +
+                "Forms FROM USERPROFILE WHERE (user_id = @user_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -23708,6 +24453,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondaryAccent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDark", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@resetPassword", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "resetPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_user_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -23727,6 +24473,8 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SecondaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondaryAccent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isDark", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDark", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_resetPassword", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "resetPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_useOldForms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23742,7 +24490,9 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        USERPROFILE.*\r\nFROM            USERPROFILE";
+            this._commandCollection[0].CommandText = "SELECT        user_id, user_name, student_id, coordinator_id, tutor_id, password_" +
+                "hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, \r\n  " +
+                "                       useOldForms\r\nFROM            USERPROFILE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -23803,7 +24553,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_user_id, string Original_user_name, global::System.Nullable<int> Original_student_id, global::System.Nullable<int> Original_coordinator_id, global::System.Nullable<int> Original_tutor_id, string Original_password_hash, string Original_password_salt, string Original_PrimaryAccent, string Original_SecondaryAccent, bool Original_isDark, bool Original_resetPassword) {
+        public virtual int Delete(int Original_user_id, string Original_user_name, global::System.Nullable<int> Original_student_id, global::System.Nullable<int> Original_coordinator_id, global::System.Nullable<int> Original_tutor_id, string Original_password_hash, string Original_password_salt, string Original_PrimaryAccent, string Original_SecondaryAccent, bool Original_isDark, bool Original_resetPassword, global::System.Nullable<bool> Original_useOldForms) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_user_id));
             if ((Original_user_name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -23871,6 +24621,14 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             }
             this.Adapter.DeleteCommand.Parameters[17].Value = ((bool)(Original_isDark));
             this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_resetPassword));
+            if ((Original_useOldForms.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_useOldForms.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23891,7 +24649,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int user_id, string user_name, global::System.Nullable<int> student_id, global::System.Nullable<int> coordinator_id, global::System.Nullable<int> tutor_id, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword) {
+        public virtual int Insert(int user_id, string user_name, global::System.Nullable<int> student_id, global::System.Nullable<int> coordinator_id, global::System.Nullable<int> tutor_id, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, global::System.Nullable<bool> useOldForms) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(user_id));
             if ((user_name == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -23943,6 +24701,12 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             }
             this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(isDark));
             this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(resetPassword));
+            if ((useOldForms.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(useOldForms.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23975,6 +24739,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     string SecondaryAccent, 
                     bool isDark, 
                     bool resetPassword, 
+                    global::System.Nullable<bool> useOldForms, 
                     int Original_user_id, 
                     string Original_user_name, 
                     global::System.Nullable<int> Original_student_id, 
@@ -23985,7 +24750,8 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     string Original_PrimaryAccent, 
                     string Original_SecondaryAccent, 
                     bool Original_isDark, 
-                    bool Original_resetPassword) {
+                    bool Original_resetPassword, 
+                    global::System.Nullable<bool> Original_useOldForms) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(user_id));
             if ((user_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -24037,73 +24803,87 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(isDark));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(resetPassword));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_user_id));
-            if ((Original_user_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            if ((useOldForms.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(useOldForms.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_user_name));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_user_id));
+            if ((Original_user_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_user_name));
             }
             if ((Original_student_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_student_id.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_student_id.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_coordinator_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_coordinator_id.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_coordinator_id.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_tutor_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_tutor_id.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_tutor_id.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_password_hash == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_password_hash));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_password_hash));
             }
             if ((Original_password_salt == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_password_salt));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_password_salt));
             }
             if ((Original_PrimaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_PrimaryAccent));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_PrimaryAccent));
             }
             if ((Original_SecondaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_SecondaryAccent));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_SecondaryAccent));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((bool)(Original_isDark));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_resetPassword));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_isDark));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((bool)(Original_resetPassword));
+            if ((Original_useOldForms.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((bool)(Original_useOldForms.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -24135,6 +24915,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     string SecondaryAccent, 
                     bool isDark, 
                     bool resetPassword, 
+                    global::System.Nullable<bool> useOldForms, 
                     int Original_user_id, 
                     string Original_user_name, 
                     global::System.Nullable<int> Original_student_id, 
@@ -24145,8 +24926,9 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     string Original_PrimaryAccent, 
                     string Original_SecondaryAccent, 
                     bool Original_isDark, 
-                    bool Original_resetPassword) {
-            return this.Update(Original_user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, Original_user_id, Original_user_name, Original_student_id, Original_coordinator_id, Original_tutor_id, Original_password_hash, Original_password_salt, Original_PrimaryAccent, Original_SecondaryAccent, Original_isDark, Original_resetPassword);
+                    bool Original_resetPassword, 
+                    global::System.Nullable<bool> Original_useOldForms) {
+            return this.Update(Original_user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms, Original_user_id, Original_user_name, Original_student_id, Original_coordinator_id, Original_tutor_id, Original_password_hash, Original_password_salt, Original_PrimaryAccent, Original_SecondaryAccent, Original_isDark, Original_resetPassword, Original_useOldForms);
         }
     }
     
@@ -25285,10 +26067,11 @@ SELECT consultation_id, coordinator_id, tutor_id, student_id, consultation_detai
             tableMapping.ColumnMappings.Add("available_day", "available_day");
             tableMapping.ColumnMappings.Add("available_time", "available_time");
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
+            tableMapping.ColumnMappings.Add("date_free", "date_free");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -25296,28 +26079,34 @@ SELECT consultation_id, coordinator_id, tutor_id, student_id, consultation_detai
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id]) VALUES (@available_day, @available_time, @tutor_id);
-SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id], [date_free]) VALUES (@available_day, @available_time, @tutor_id, @date_free);
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id));
-SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id, [date_free] = @date_free WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)));
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_time_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -25334,8 +26123,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id\r\nFROM       " +
-                "     TUTOR_AVAILABLE_TIMES";
+            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id, date_free\r\n" +
+                "FROM            TUTOR_AVAILABLE_TIMES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -25396,7 +26185,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id) {
+        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tutor_time_id));
             if ((Original_available_day == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -25415,6 +26204,14 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_tutor_id));
+            if ((Original_date_free.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_date_free.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25435,7 +26232,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id) {
+        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free) {
             if ((available_day == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -25449,6 +26246,12 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(tutor_id));
+            if ((date_free.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(date_free.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25469,7 +26272,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, int tutor_time_id) {
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, int tutor_time_id) {
             if ((available_day == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -25483,25 +26286,39 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(tutor_id));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_tutor_time_id));
-            if ((Original_available_day == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((date_free.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(date_free.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_available_day));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_tutor_time_id));
+            if ((Original_available_day == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_available_day));
             }
             if ((Original_available_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(Original_available_time.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.TimeSpan)(Original_available_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tutor_id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(tutor_time_id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_tutor_id));
+            if ((Original_date_free.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_date_free.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(tutor_time_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25522,8 +26339,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id) {
-            return this.Update(available_day, available_time, tutor_id, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_tutor_time_id);
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
+            return this.Update(available_day, available_time, tutor_id, date_free, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_date_free, Original_tutor_time_id);
         }
     }
     
@@ -25652,10 +26469,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
             tableMapping.ColumnMappings.Add("available_day", "available_day");
             tableMapping.ColumnMappings.Add("available_time", "available_time");
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
+            tableMapping.ColumnMappings.Add("date_free", "date_free");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -25663,28 +26481,34 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id]) VALUES (@available_day, @available_time, @tutor_id);
-SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id], [date_free]) VALUES (@available_day, @available_time, @tutor_id, @date_free);
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id));
-SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id, [date_free] = @date_free WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)));
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_time_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -25701,8 +26525,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id\r\nFROM       " +
-                "     TUTOR_AVAILABLE_TIMES\r\nWHERE        (tutor_id = @tutorId)";
+            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id, date_free\r\n" +
+                "FROM            TUTOR_AVAILABLE_TIMES\r\nWHERE        (tutor_id = @tutorId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -25766,7 +26590,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id) {
+        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tutor_time_id));
             if ((Original_available_day == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -25785,6 +26609,14 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_tutor_id));
+            if ((Original_date_free.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_date_free.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25805,7 +26637,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id) {
+        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free) {
             if ((available_day == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -25819,6 +26651,12 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(tutor_id));
+            if ((date_free.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(date_free.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25839,7 +26677,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, int tutor_time_id) {
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, int tutor_time_id) {
             if ((available_day == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -25853,25 +26691,39 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(tutor_id));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_tutor_time_id));
-            if ((Original_available_day == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((date_free.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(date_free.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_available_day));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_tutor_time_id));
+            if ((Original_available_day == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_available_day));
             }
             if ((Original_available_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(Original_available_time.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.TimeSpan)(Original_available_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tutor_id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(tutor_time_id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_tutor_id));
+            if ((Original_date_free.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_date_free.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(tutor_time_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25892,8 +26744,465 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id) {
-            return this.Update(available_day, available_time, tutor_id, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_tutor_time_id);
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
+            return this.Update(available_day, available_time, tutor_id, date_free, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_date_free, Original_tutor_time_id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class BRANDINGTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public BRANDINGTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "BRANDING";
+            tableMapping.ColumnMappings.Add("branding_id", "branding_id");
+            tableMapping.ColumnMappings.Add("program_icon", "program_icon");
+            tableMapping.ColumnMappings.Add("system_logo", "system_logo");
+            tableMapping.ColumnMappings.Add("system_name", "system_name");
+            tableMapping.ColumnMappings.Add("splash_colour", "splash_colour");
+            tableMapping.ColumnMappings.Add("splash_time", "splash_time");
+            tableMapping.ColumnMappings.Add("is_system_clean", "is_system_clean");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [IS2G10_DBSSS].[dbo].[BRANDING] WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_branding_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_system_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_splash_colour", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_splash_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_system_clean", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [IS2G10_DBSSS].[dbo].[BRANDING] ([program_icon], [system_logo], [system_name], [splash_colour], [splash_time], [is_system_clean]) VALUES (@program_icon, @system_logo, @system_name, @splash_colour, @splash_time, @is_system_clean);
+SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean FROM BRANDING WHERE (branding_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_icon", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_icon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [IS2G10_DBSSS].[dbo].[BRANDING] SET [program_icon] = @program_icon, [system_logo] = @system_logo, [system_name] = @system_name, [splash_colour] = @splash_colour, [splash_time] = @splash_time, [is_system_clean] = @is_system_clean WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)));
+SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean FROM BRANDING WHERE (branding_id = @branding_id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_icon", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_icon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_branding_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_system_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_splash_colour", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_splash_time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_system_clean", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@branding_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT *\r\n  FROM [IS2G10_DBSSS].[dbo].[BRANDING]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(IS2G10_DBSSSDataSet.BRANDINGDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual IS2G10_DBSSSDataSet.BRANDINGDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            IS2G10_DBSSSDataSet.BRANDINGDataTable dataTable = new IS2G10_DBSSSDataSet.BRANDINGDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(IS2G10_DBSSSDataSet.BRANDINGDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(IS2G10_DBSSSDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "BRANDING");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_branding_id));
+            if ((Original_system_name == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_system_name));
+            }
+            if ((Original_splash_colour == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_splash_colour));
+            }
+            if ((Original_splash_time.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.TimeSpan)(Original_splash_time.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_system_clean.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_is_system_clean.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean) {
+            if ((program_icon == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((byte[])(program_icon));
+            }
+            if ((system_logo == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(system_logo));
+            }
+            if ((system_name == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(system_name));
+            }
+            if ((splash_colour == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(splash_colour));
+            }
+            if ((splash_time.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.TimeSpan)(splash_time.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((is_system_clean.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(is_system_clean.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean, int branding_id) {
+            if ((program_icon == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte[])(program_icon));
+            }
+            if ((system_logo == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(system_logo));
+            }
+            if ((system_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(system_name));
+            }
+            if ((splash_colour == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(splash_colour));
+            }
+            if ((splash_time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.TimeSpan)(splash_time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((is_system_clean.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(is_system_clean.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_branding_id));
+            if ((Original_system_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_system_name));
+            }
+            if ((Original_splash_colour == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_splash_colour));
+            }
+            if ((Original_splash_time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.TimeSpan)(Original_splash_time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_system_clean.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_is_system_clean.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(branding_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean) {
+            return this.Update(program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean, Original_branding_id, Original_system_name, Original_splash_colour, Original_splash_time, Original_is_system_clean, Original_branding_id);
         }
     }
     
@@ -25940,6 +27249,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         private TUTOR_AVAILABLE_TIMESTableAdapter _tUTOR_AVAILABLE_TIMESTableAdapter;
         
         private TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter _tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter;
+        
+        private BRANDINGTableAdapter _bRANDINGTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -26182,6 +27493,20 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public BRANDINGTableAdapter BRANDINGTableAdapter {
+            get {
+                return this._bRANDINGTableAdapter;
+            }
+            set {
+                this._bRANDINGTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -26263,6 +27588,10 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                             && (this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Connection != null))) {
                     return this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Connection;
                 }
+                if (((this._bRANDINGTableAdapter != null) 
+                            && (this._bRANDINGTableAdapter.Connection != null))) {
+                    return this._bRANDINGTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -26324,6 +27653,9 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._bRANDINGTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -26353,15 +27685,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tUTORTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -26377,6 +27700,15 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._sEARCH_STUDENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tUTORTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -26407,15 +27739,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._uSERPROFILETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._uSERPROFILETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._sEARCH_STUDENT_CONSULTATION_TOP5TableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.SEARCH_STUDENT_CONSULTATION_TOP5.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -26434,12 +27757,12 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._uSERPROFILETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
+                    result = (result + this._uSERPROFILETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -26449,6 +27772,24 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tUTOR_AVAILABLE_TIMESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -26470,12 +27811,12 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bRANDINGTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BRANDING.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(updatedRows));
+                    result = (result + this._bRANDINGTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -26505,14 +27846,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tUTORTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -26526,6 +27859,14 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._sEARCH_STUDENTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tUTORTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -26553,14 +27894,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._uSERPROFILETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._uSERPROFILETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._sEARCH_STUDENT_CONSULTATION_TOP5TableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.SEARCH_STUDENT_CONSULTATION_TOP5.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -26577,11 +27910,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._uSERPROFILETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
+                    result = (result + this._uSERPROFILETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -26590,6 +27923,22 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tUTOR_AVAILABLE_TIMESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -26609,11 +27958,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bRANDINGTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BRANDING.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(addedRows));
+                    result = (result + this._bRANDINGTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -26627,11 +27976,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(IS2G10_DBSSSDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bRANDINGTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BRANDING.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(deletedRows));
+                    result = (result + this._bRANDINGTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -26651,11 +28000,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tUTOR_AVAILABLE_TIMESTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR_AVAILABLE_TIMES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTOR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tUTOR_AVAILABLE_TIMESTableAdapter.Update(deletedRows));
+                    result = (result + this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -26664,6 +28013,22 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._aTTENDANCETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tUTOR_AVAILABLE_TIMESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR_AVAILABLE_TIMES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tUTOR_AVAILABLE_TIMESTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._uSERPROFILETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._uSERPROFILETableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -26680,14 +28045,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._sEARCH_STUDENT_CONSULTATION_TOP5TableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._uSERPROFILETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.USERPROFILE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._uSERPROFILETableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -26715,6 +28072,14 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._tUTORTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tUTORTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._sEARCH_STUDENTTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -26728,14 +28093,6 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tUTORTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TUTOR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tUTORTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -26871,6 +28228,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
             }
             if (((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._bRANDINGTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._bRANDINGTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -27050,6 +28412,15 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Adapter);
                     }
                 }
+                if ((this._bRANDINGTableAdapter != null)) {
+                    revertConnections.Add(this._bRANDINGTableAdapter, this._bRANDINGTableAdapter.Connection);
+                    this._bRANDINGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._bRANDINGTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._bRANDINGTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._bRANDINGTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._bRANDINGTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -27171,6 +28542,10 @@ SELECT tutor_time_id, available_day, available_time, tutor_id FROM TUTOR_AVAILAB
                 if ((this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter != null)) {
                     this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter]));
                     this._tUTOR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter.Transaction = null;
+                }
+                if ((this._bRANDINGTableAdapter != null)) {
+                    this._bRANDINGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bRANDINGTableAdapter]));
+                    this._bRANDINGTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

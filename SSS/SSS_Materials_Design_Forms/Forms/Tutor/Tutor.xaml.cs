@@ -34,7 +34,7 @@ namespace SSS_Materials_Design_Forms
             CreateTimer();
 
             _tutorData = _tutorTableAdapter.GetData().FindBytutor_id(userId);
-            lblTutorName.Content = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
+            LblTutorName.Content = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
         }
 
         private void CreateTimer()
@@ -47,7 +47,7 @@ namespace SSS_Materials_Design_Forms
 
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
-            lblDate.Content = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
+            LblDate.Content = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

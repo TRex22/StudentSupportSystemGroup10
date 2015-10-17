@@ -18,7 +18,7 @@
             <ColumnDefinition Width="359*"/>
         </Grid.ColumnDefinitions>
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="132" Margin="10,150,0,0" Grid.ColumnSpan="2" TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="1"
+        <Menu x:Name="Menu" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="132" Margin="10,150,0,0" Grid.ColumnSpan="2" TextElement.Foreground="{DynamicResource MaterialDesignBody}" BorderThickness="1"
 			Background="{DynamicResource MaterialDesignPaper}" >
             <MenuItem Header="Home" Width="132"  Background="MediumPurple"/>
             <MenuItem Header="Student" Width="132">
@@ -52,14 +52,14 @@
             <MenuItem Header="System Settings" Width="132"/>
         </Menu>
 
-        <Label x:Name="lblCoordinatorName" Content="" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"
+        <Label x:Name="LblCoordinatorName" Content="" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"
 			Grid.Column="0" Width="563"/>
-        <Label x:Name="lblDate" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="163.462,638,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label x:Name="LblDate" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="163.462,638,0,0" VerticalAlignment="Top" Width="162"/>
 
         <DockPanel x:Name="MainBodyDockPanel" Grid.Column="1" HorizontalAlignment="Left" Height="475" LastChildFill="False" Margin="56,150,0,0" VerticalAlignment="Top" Width="867" Grid.ColumnSpan="2">
             <Border BorderBrush="Black" BorderThickness="1" Height="475" VerticalAlignment="Top" Width="868"/>
         </DockPanel>
-        <Label x:Name="label2" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="32,47,0,0" VerticalAlignment="Top" Height="68" Width="792" FontSize="48" Grid.ColumnSpan="2" Background="#00000000" Foreground="#DD000000" RenderTransformOrigin="0.5,0.485" Grid.Column="1"/>
+        <Label x:Name="Label2" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="32,47,0,0" VerticalAlignment="Top" Height="68" Width="792" FontSize="48" Grid.ColumnSpan="2" Background="#00000000" Foreground="#DD000000" RenderTransformOrigin="0.5,0.485" Grid.Column="1"/>
 
         <DockPanel HorizontalAlignment="Left" Height="135" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="1025" Grid.ColumnSpan="3" 
 			Grid.Column="0" RenderTransformOrigin="1.1,0.525">

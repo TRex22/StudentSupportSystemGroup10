@@ -1,6 +1,6 @@
 ﻿namespace SSS_Windows_Forms.Forms.Coordinator
 {
-    partial class TutorRatingsA_ListModal
+    partial class TutorRatingsAListModal
     {
         /// <summary>
         /// Required designer variable.
@@ -149,7 +149,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TutorRatingsA_ListModal";
+            this.Name = "TutorRatingsAListModal";
             this.Text = "LowTutorRatingsModal";
             this.Load += new System.EventHandler(this.LowTutorRatingsModal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AVERAGE_TUTOR_RATINGBindingSource)).EndInit();

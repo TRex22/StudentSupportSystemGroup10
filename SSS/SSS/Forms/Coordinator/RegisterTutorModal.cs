@@ -84,9 +84,9 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             }
 
 
-            string DATEPICKER = dtpTutor.Value.ToShortDateString();
+            string datepicker = dtpTutor.Value.ToShortDateString();
             string currDate = DateTime.Today.ToShortDateString();
-            if (DATEPICKER.Equals(currDate))
+            if (datepicker.Equals(currDate))
             //  if (dateOfBirthDateTimePicker1.Value)
             {
                 blnValid = false;
@@ -114,18 +114,18 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             bool blnValid = ValidateInput();
             if (blnValid == true)
             {
-                var TutorId = Convert.ToInt32(txtTutorID.Text);
+                var tutorId = Convert.ToInt32(txtTutorID.Text);
                 var passportNo = txtIDPassport.Text;
-                var tutor_lname = txtTutorLName.Text;
-                var tutor_fname = txtTutorFName.Text;
+                var tutorLname = txtTutorLName.Text;
+                var tutorFname = txtTutorFName.Text;
                 var dateofbirth = dtpTutor.Value;
                 var email = txtTutorEmailAdd.Text;
                 var mobileNumber = txtMobileNumber.Text;
-                var TrainingStatus = cbxTrainingStatus.SelectedIndex ;
+                var trainingStatus = cbxTrainingStatus.SelectedIndex ;
          
 
-                tutorTableAdapter1.Insert(TutorId, tutor_fname, tutor_lname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(TrainingStatus));
-                userprofileTableAdapter1.Insert(TutorId, email, null, null, TutorId, null, null, null, null, false, true);
+                tutorTableAdapter1.Insert(tutorId, tutorFname, tutorLname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(trainingStatus));
+                userprofileTableAdapter1.Insert(tutorId, email, null, null, tutorId, null, null, null, null, false, true, true);
 
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);

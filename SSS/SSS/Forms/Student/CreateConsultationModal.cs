@@ -74,8 +74,8 @@ namespace SSS_Windows_Forms.Forms.Student
                 {
                     ComboBoxHandler.ComboboxItem item = new ComboBoxHandler.ComboboxItem
                     {
-                        Text = date.available_day,
-                        Value = date.available_day
+                        Text = date.date_free.ToLongDateString(),
+                        Value = date.date_free.ToLongDateString()
                     };
 
                     dateComboBox.Items.Add(item);

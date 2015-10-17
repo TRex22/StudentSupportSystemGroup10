@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings
 {
-    public partial class TutorRatingB_IndividualModal : Form
+    public partial class TutorRatingBIndividualModal : Form
     {
-        public TutorRatingB_IndividualModal()
+        public TutorRatingBIndividualModal()
         {
             InitializeComponent();
             this.TopLevel = false;

@@ -18,9 +18,9 @@ namespace SSS_Windows_Forms
 
         //Modals
         private readonly UpdateStudentProfileModal _updateStudentProfileModalModal;
-        public readonly StudentDashboardModal _studentDashboardModal;
-        public readonly RegisterGroupModal _registerGroupModal;
-        public readonly CreateConsultationModal _createConsultationModal;
+        public readonly StudentDashboardModal StudentDashboardModal;
+        public readonly RegisterGroupModal RegisterGroupModal;
+        public readonly CreateConsultationModal CreateConsultationModal;
 
         public Student(int userId)
         {
@@ -28,10 +28,10 @@ namespace SSS_Windows_Forms
             
             _studentData = sTUDENTTableAdapter.GetData().FindBystudent_id(userId);
             lblStudentName.Text = String.Format("{0} {1} {2}", _studentData.student_firstname, _studentData.student_lastname, userId);
-            _studentDashboardModal = new StudentDashboardModal(userId);
+            StudentDashboardModal = new StudentDashboardModal(userId);
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
-            _registerGroupModal = new RegisterGroupModal(userId, this);
-            _createConsultationModal = new CreateConsultationModal(userId, _studentData);
+            RegisterGroupModal = new RegisterGroupModal(userId, this);
+            CreateConsultationModal = new CreateConsultationModal(userId, _studentData);
             InitModals();
 
             //check if user has a group
@@ -43,9 +43,9 @@ namespace SSS_Windows_Forms
         {
             //init internal window
             this.panel7.Controls.Add(_updateStudentProfileModalModal);
-            this.panel7.Controls.Add(_studentDashboardModal);
-            this.panel7.Controls.Add(_registerGroupModal);
-            this.panel7.Controls.Add(_createConsultationModal);
+            this.panel7.Controls.Add(StudentDashboardModal);
+            this.panel7.Controls.Add(RegisterGroupModal);
+            this.panel7.Controls.Add(CreateConsultationModal);
         }
 
         private void HideAllModals()
@@ -66,13 +66,13 @@ namespace SSS_Windows_Forms
             // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.iS2G10_DBSSSDataSet.STUDENT);
             HideAllModals();
-            _studentDashboardModal.Show();
+            StudentDashboardModal.Show();
         }
 
         private void updateTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            _registerGroupModal.Show();
+            RegisterGroupModal.Show();
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,14 +94,14 @@ namespace SSS_Windows_Forms
         private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            _createConsultationModal.Show();
+            CreateConsultationModal.Show();
         }
 
         
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
-            _studentDashboardModal.Show();
+            StudentDashboardModal.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
