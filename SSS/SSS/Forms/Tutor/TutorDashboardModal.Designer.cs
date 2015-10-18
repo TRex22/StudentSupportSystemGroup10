@@ -28,7 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.IS2G10_DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "AverageRatings";
+            reportDataSource1.Value = _averageRatingsTableAdapter.GetData();
+            reportDataSource2.Name = "AverageTutorRating";
+            reportDataSource2.Value = _averageTutorRatingTableAdapter.GetData();
+            reportDataSource3.Name = "ConsultationForStudent";
+            reportDataSource3.Value = _consultationForStudentTableAdapter.GetData(_userId);
+            reportDataSource4.Name = "Consultation";
+            reportDataSource4.Value = _consultationTableAdapter.GetData();
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS_Windows_Forms.Reports.Tutor.TutorDashboardReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(753, 539);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // IS2G10_DBSSSDataSetBindingSource
+            // 
+            this.IS2G10_DBSSSDataSetBindingSource.DataMember = "AVERAGE_RATINGS";
+            this.IS2G10_DBSSSDataSetBindingSource.DataSource = typeof(SSS_Library.IS2G10_DBSSSDataSet);
             // 
             // TutorDashboardModal
             // 
@@ -36,15 +70,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 539);
             this.ControlBox = false;
+            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TutorDashboardModal";
             this.Text = "TutorDashboardModal";
             this.Load += new System.EventHandler(this.TutorDashboardModal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource IS2G10_DBSSSDataSetBindingSource;
     }
 }

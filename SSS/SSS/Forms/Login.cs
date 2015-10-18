@@ -75,7 +75,7 @@ namespace SSS_Windows_Forms.Forms
                             }
                             else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
                             {
-                                Form tutorShow = new SSS_Windows_Forms.Tutor(sInput, sPassword);
+                                Form tutorShow = new SSS_Windows_Forms.Tutor(_userId);
                                 tutorShow.Owner = this;
                                 tutorShow.Show();
                                 this.Hide();

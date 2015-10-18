@@ -7,33 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS_Library;
+using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
 using SSS_Windows_Forms.Forms.Tutor;
 
 namespace SSS_Windows_Forms
 {
     public partial class Tutor : Form
     {
-
-        //global vars
-        private readonly String _sPassword = "";
-
         //database stuff
-        private readonly SSS_Library.IS2G10_DBSSSDataSet.TUTORRow _tutorData;
 
         //Modals
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;
-        private readonly TutorDashboardModal _tutorDashboardModal = new TutorDashboardModal();
+        private readonly TutorDashboardModal _tutorDashboardModal;
         private readonly UpdateTutorModal _updateTutorModal;
-
-        public Tutor(String sUsrId, String sPsswrd)
+        private readonly TUTORTableAdapter _tUTORTableAdapter = new TUTORTableAdapter()
         {
-            InitializeComponent();
-            var userId = Convert.ToInt32(sUsrId);
-            _tutorData = tUTORTableAdapter.GetData().FindBytutor_id(userId);
-            lblTutorName.Text = String.Format("{0} {1} {2}", _tutorData.tutor_firstname, _tutorData.tutor_lastname, userId);
+            ClearBeforeFill = true
+        };
+        private readonly IS2G10_DBSSSDataSet _iS2G10DbsssDataSet = new IS2G10_DBSSSDataSet();
+
+        public Tutor(int userId)
+        {
+            this._tUTORTableAdapter.Fill(this._iS2G10DbsssDataSet.TUTOR);
+            IS2G10_DBSSSDataSet.TUTORRow tutorData = _tUTORTableAdapter.GetData().FindBytutor_id(userId);
             _updateTutorModal = new UpdateTutorModal(userId);
             _updateStudentAttendanceModal = new UpdateStudentAttendanceModal(userId);
-            _sPassword = sPsswrd;
+            _tutorDashboardModal = new TutorDashboardModal(userId);
+            InitializeComponent();
+            lblTutorName.Text = String.Format("{0} {1} {2}", tutorData.tutor_firstname, tutorData.tutor_lastname, userId);
             InitModals();
         }
 
@@ -60,8 +62,6 @@ namespace SSS_Windows_Forms
 
         private void Tutor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.TUTOR' table. You can move, or remove it, as needed.
-            this.tUTORTableAdapter.Fill(this.iS2G10_DBSSSDataSet.TUTOR);
             //TODO Select default modal
             HideAllModals();
             _tutorDashboardModal.Show();
@@ -90,11 +90,6 @@ namespace SSS_Windows_Forms
         }
 
         private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-        }
-
-        private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
         }

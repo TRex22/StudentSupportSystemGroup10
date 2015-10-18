@@ -20,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.63147cm</Top>
-        <Left>0.3378cm</Left>
+        <Top>1.54251cm</Top>
+        <Left>0.34955cm</Left>
         <Height>0.6cm</Height>
         <Width>4.03458cm</Width>
         <Style>
@@ -49,8 +49,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.63146cm</Top>
-        <Left>4.5135cm</Left>
+        <Top>1.5425cm</Top>
+        <Left>4.52525cm</Left>
         <Height>0.6cm</Height>
         <Width>4.30328cm</Width>
         <ZIndex>1</ZIndex>
@@ -71,7 +71,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Average Activity Ratings</Value>
+                <Value>Tutor Training Status</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>24pt</FontSize>
@@ -82,8 +82,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.41439cm</Top>
-        <Left>0.3378cm</Left>
+        <Top>0.32543cm</Top>
+        <Left>0.34955cm</Left>
         <Height>1.1818cm</Height>
         <Width>8.77062cm</Width>
         <ZIndex>2</ZIndex>
@@ -101,61 +101,28 @@
         <ChartCategoryHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Group Name="Chart1_CategoryGroup">
-                <GroupExpressions>
-                  <GroupExpression>=Fields!student_activity_name.Value</GroupExpression>
-                </GroupExpressions>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!student_activity_name.Value</Value>
-                </SortExpression>
-              </SortExpressions>
-              <Label>=Fields!student_activity_name.Value</Label>
+              <Group Name="ChartGroup" />
+              <Label />
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>student activity rating</Label>
+              <Label />
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="student_activity_rating">
+            <ChartSeries Name="EmptySeriesName">
               <ChartDataPoints>
                 <ChartDataPoint>
-                  <ChartDataPointValues>
-                    <Y>=Avg(Fields!student_activity_rating.Value)</Y>
-                  </ChartDataPointValues>
-                  <ChartDataLabel>
-                    <Style />
-                  </ChartDataLabel>
-                  <Style />
-                  <ChartMarker>
-                    <Style />
-                  </ChartMarker>
-                  <DataElementOutput>Output</DataElementOutput>
+                  <ChartDataPointValues />
                 </ChartDataPoint>
               </ChartDataPoints>
+              <Type>Line</Type>
               <Style />
-              <ChartEmptyPoints>
-                <Style />
-                <ChartMarker>
-                  <Style />
-                </ChartMarker>
-                <ChartDataLabel>
-                  <Style />
-                </ChartDataLabel>
-              </ChartEmptyPoints>
-              <ValueAxisName>Primary</ValueAxisName>
-              <CategoryAxisName>Primary</CategoryAxisName>
-              <ChartSmartLabel>
-                <CalloutLineColor>Black</CalloutLineColor>
-                <MinMovingDistance>0pt</MinMovingDistance>
-              </ChartSmartLabel>
             </ChartSeries>
           </ChartSeriesCollection>
         </ChartData>
@@ -167,7 +134,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Activity Names</Caption>
+                  <Caption>Avtivity</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -242,7 +209,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Average Activity Ratings</Caption>
+                  <Caption>Average Tutor Ratings</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -334,7 +301,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>Average Activity Ratings per Activity</Caption>
+            <Caption>Tutor Training Staus vs. Average Ratings</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
@@ -359,11 +326,11 @@
             <VerticalAlign>Top</VerticalAlign>
           </Style>
         </ChartNoDataMessage>
-        <DataSetName>AverageActivityRatings</DataSetName>
-        <Top>3.01584cm</Top>
-        <Left>1.19062cm</Left>
-        <Height>6.53458cm</Height>
-        <Width>15.78146cm</Width>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>2.31889cm</Top>
+        <Left>1.50812cm</Left>
+        <Height>7.91042cm</Height>
+        <Width>14.53792cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -381,7 +348,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total Number of Activities</Value>
+                <Value>Total Number of Tutors</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -389,10 +356,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>10.28678cm</Top>
-        <Left>1.19062cm</Left>
+        <Top>10.84633cm</Top>
+        <Left>1.87794cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.93417cm</Width>
+        <Width>6.95058cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -411,7 +378,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Most Popular Activity</Value>
+                <Value>Total Number of Tutors With Training</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -419,10 +386,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>11.06317cm</Top>
-        <Left>1.19062cm</Left>
+        <Top>11.99314cm</Top>
+        <Left>1.87794cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.93417cm</Width>
+        <Width>6.95058cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -441,7 +408,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Least Popular Activity</Value>
+                <Value>Total Number of Tutors Without Training</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -449,10 +416,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>11.83955cm</Top>
-        <Left>1.19062cm</Left>
+        <Top>12.76952cm</Top>
+        <Left>1.87794cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.93417cm</Width>
+        <Width>6.95058cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -464,25 +431,25 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="AverageTutorRating">
+      <Textbox Name="Textbox14">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>Overall Average Rating of Tutors With Training</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>AverageTutorRating</rd:DefaultName>
-        <Top>10.28678cm</Top>
-        <Left>6.12479cm</Left>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>11.99314cm</Top>
+        <Left>11.31313cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>8.17189cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -494,25 +461,25 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="AverageActivityRating">
+      <Textbox Name="Textbox15">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>Overall Average Rating of Tutors Without Training</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>AverageActivityRating</rd:DefaultName>
-        <Top>11.06669cm</Top>
-        <Left>6.12479cm</Left>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>12.76952cm</Top>
+        <Left>11.31313cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>8.17189cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -524,41 +491,11 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="TotalNumberTutors">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>TotalNumberTutors</rd:DefaultName>
-        <Top>11.83955cm</Top>
-        <Left>6.12479cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
-    <Height>5.20451in</Height>
+    <Height>5.71509in</Height>
     <Style />
   </Body>
-  <Width>8.51526in</Width>
+  <Width>7.78609in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -570,69 +507,14 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
-  <DataSources>
-    <DataSource Name="SSS_Library">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>ac708145-272f-484d-b6ee-1a51ccb5ca7f</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
   <DataSets>
-    <DataSet Name="AverageActivityRatings">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>SSS_Library</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
+        <DataSourceName />
+        <CommandText />
       </Query>
-      <Fields>
-        <Field Name="student_activity_rating">
-          <DataField>student_activity_rating</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="student_activity_name">
-          <DataField>student_activity_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SSS_Library</rd:DataSetName>
-        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>AVERAGE_ACTIVITY_RATINGS</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="ActivityRatingsTotals">
-      <Query>
-        <DataSourceName>SSS_Library</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="AverageTutorRating">
-          <DataField>AverageTutorRating</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="AverageActivityRating">
-          <DataField>AverageActivityRating</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TotalNumberTutors">
-          <DataField>TotalNumberTutors</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TotalNumberActivities">
-          <DataField>TotalNumberActivities</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SSS_Library</rd:DataSetName>
-        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>AVERAGE_RATINGS</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>99d8278e-ea1b-41a2-b9a8-e6e3be1645c9</rd:ReportID>
+  <rd:ReportID>ad14ac2a-be78-4f61-97e1-31dcb40d0673</rd:ReportID>
 </Report>

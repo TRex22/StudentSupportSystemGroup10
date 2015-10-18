@@ -224,7 +224,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!AverageTutorRating.Value, "AverageRatings")</Value>
+                <Value>=Avg(Fields!AverageTutorRating.Value, "AverageRatings")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -233,7 +233,7 @@
         </Paragraphs>
         <rd:DefaultName>AverageTutorRating</rd:DefaultName>
         <Top>10.84015cm</Top>
-        <Left>7.41808cm</Left>
+        <Left>7.45336cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
@@ -254,7 +254,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!AverageActivityRating.Value, "AverageRatings")</Value>
+                <Value>=Count(Fields!AverageActivityRating.Value, "AverageRatings")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -284,7 +284,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!TotalNumberTutors.Value, "AverageRatings")</Value>
+                <Value>=Avg(Fields!TotalNumberTutors.Value, "AverageRatings")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -314,7 +314,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!TotalNumberActivities.Value, "AverageRatings")</Value>
+                <Value>=Count(Fields!TotalNumberActivities.Value, "AverageRatings")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
