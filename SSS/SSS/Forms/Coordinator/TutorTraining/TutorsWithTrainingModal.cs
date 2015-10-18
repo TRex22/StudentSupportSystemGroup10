@@ -15,6 +15,10 @@ namespace SSS_Windows_Forms.Forms.Coordinator.TutorTraining
         public TutorsWithTrainingModal()
         {
             InitializeComponent();
+
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
         }
 
         private void TutorsWithTrainingModal_Load(object sender, EventArgs e)
