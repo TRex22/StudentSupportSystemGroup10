@@ -61,6 +61,8 @@
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
+            this.activityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -270,6 +272,9 @@
             // 
             // createTutorToolStripMenuItem
             // 
+            this.createTutorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activityToolStripMenuItem,
+            this.consultationToolStripMenuItem});
             this.createTutorToolStripMenuItem.Name = "createTutorToolStripMenuItem";
             this.createTutorToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
             this.createTutorToolStripMenuItem.Text = "Rate Tutor";
@@ -348,6 +353,18 @@
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
+            // activityToolStripMenuItem
+            // 
+            this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
+            this.activityToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.activityToolStripMenuItem.Text = "Activity";
+            // 
+            // consultationToolStripMenuItem
+            // 
+            this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.consultationToolStripMenuItem.Text = "Consultation";
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +441,7 @@
         private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private System.Windows.Forms.Label lblStudentName;
         private System.Windows.Forms.Timer tmrSecond;
+        private System.Windows.Forms.ToolStripMenuItem activityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
     }
 }

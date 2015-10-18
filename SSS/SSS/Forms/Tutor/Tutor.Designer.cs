@@ -45,9 +45,6 @@
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
-            this.createStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip9 = new System.Windows.Forms.MenuStrip();
@@ -59,6 +56,7 @@
             this.iS2G10DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tUTORBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,11 +65,9 @@
             this.menuStrip4.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.menuStrip6.SuspendLayout();
-            this.menuStrip7.SuspendLayout();
             this.menuStrip8.SuspendLayout();
             this.menuStrip9.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._iS2G10DbsssDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10DBSSSDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource1)).BeginInit();
@@ -123,7 +119,6 @@
             this.panel6.Controls.Add(this.menuStrip4);
             this.panel6.Controls.Add(this.menuStrip5);
             this.panel6.Controls.Add(this.menuStrip6);
-            this.panel6.Controls.Add(this.menuStrip7);
             this.panel6.Controls.Add(this.menuStrip8);
             this.panel6.Controls.Add(this.menuStrip9);
             this.panel6.Location = new System.Drawing.Point(3, 3);
@@ -160,7 +155,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 186);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 159);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 24);
             this.menuStrip1.TabIndex = 0;
@@ -169,7 +164,7 @@
             // menuStrip3
             // 
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip3.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 135);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(241, 24);
             this.menuStrip3.TabIndex = 2;
@@ -180,7 +175,7 @@
             this.menuStrip4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateStudentConsultationToolStripMenuItem});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 135);
+            this.menuStrip4.Location = new System.Drawing.Point(0, 108);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Size = new System.Drawing.Size(241, 27);
             this.menuStrip4.TabIndex = 4;
@@ -198,7 +193,7 @@
             this.menuStrip5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateStudentToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(0, 108);
+            this.menuStrip5.Location = new System.Drawing.Point(0, 81);
             this.menuStrip5.Name = "menuStrip5";
             this.menuStrip5.Size = new System.Drawing.Size(241, 27);
             this.menuStrip5.TabIndex = 5;
@@ -216,36 +211,11 @@
             this.menuStrip6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateTutorToolStripMenuItem});
-            this.menuStrip6.Location = new System.Drawing.Point(0, 81);
+            this.menuStrip6.Location = new System.Drawing.Point(0, 54);
             this.menuStrip6.Name = "menuStrip6";
             this.menuStrip6.Size = new System.Drawing.Size(241, 27);
             this.menuStrip6.TabIndex = 6;
             this.menuStrip6.Text = "menuStrip6";
-            // 
-            // updateTutorToolStripMenuItem
-            // 
-            this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
-            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
-            this.updateTutorToolStripMenuItem.Text = "Update Tutor";
-            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
-            // 
-            // menuStrip7
-            // 
-            this.menuStrip7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createStudentToolStripMenuItem});
-            this.menuStrip7.Location = new System.Drawing.Point(0, 54);
-            this.menuStrip7.Name = "menuStrip7";
-            this.menuStrip7.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip7.TabIndex = 7;
-            this.menuStrip7.Text = "menuStrip7";
-            // 
-            // createStudentToolStripMenuItem
-            // 
-            this.createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            this.createStudentToolStripMenuItem.Size = new System.Drawing.Size(154, 23);
-            this.createStudentToolStripMenuItem.Text = "Update Consultation";
-            this.createStudentToolStripMenuItem.Click += new System.EventHandler(this.createStudentToolStripMenuItem_Click);
             // 
             // menuStrip8
             // 
@@ -315,16 +285,6 @@
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
-            // iS2G10_DBSSSDataSet
-            // 
-            this._iS2G10DbsssDataSet.DataSetName = "IS2G10_DBSSSDataSet";
-            this._iS2G10DbsssDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // iS2G10DBSSSDataSetBindingSource
-            // 
-            this.iS2G10DBSSSDataSetBindingSource.DataSource = this._iS2G10DbsssDataSet;
-            this.iS2G10DBSSSDataSetBindingSource.Position = 0;
-            // 
             // tUTORBindingSource
             // 
             this.tUTORBindingSource.DataMember = "TUTOR";
@@ -333,7 +293,13 @@
             // tUTORBindingSource1
             // 
             this.tUTORBindingSource1.DataMember = "TUTOR";
-            this.tUTORBindingSource1.DataSource = this._iS2G10DbsssDataSet;
+            // 
+            // updateTutorToolStripMenuItem
+            // 
+            this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
+            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
+            this.updateTutorToolStripMenuItem.Text = "Update Tutor";
+            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // Tutor
             // 
@@ -364,8 +330,6 @@
             this.menuStrip5.PerformLayout();
             this.menuStrip6.ResumeLayout(false);
             this.menuStrip6.PerformLayout();
-            this.menuStrip7.ResumeLayout(false);
-            this.menuStrip7.PerformLayout();
             this.menuStrip8.ResumeLayout(false);
             this.menuStrip8.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
@@ -392,9 +356,6 @@
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip6;
-        private System.Windows.Forms.ToolStripMenuItem updateTutorToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip7;
-        private System.Windows.Forms.ToolStripMenuItem createStudentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip8;
         private System.Windows.Forms.ToolStripMenuItem createTutorToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
@@ -410,5 +371,6 @@
         private System.Windows.Forms.BindingSource iS2G10DBSSSDataSetBindingSource;
         private System.Windows.Forms.BindingSource tUTORBindingSource;
         private System.Windows.Forms.BindingSource tUTORBindingSource1;
+        private System.Windows.Forms.ToolStripMenuItem updateTutorToolStripMenuItem;
     }
 }

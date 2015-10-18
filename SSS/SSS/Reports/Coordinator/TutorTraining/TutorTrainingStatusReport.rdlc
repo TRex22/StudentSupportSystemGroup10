@@ -109,20 +109,45 @@
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label />
+              <Label>Tutor Average</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="EmptySeriesName">
+            <ChartSeries Name="TutorAverage">
               <ChartDataPoints>
                 <ChartDataPoint>
-                  <ChartDataPointValues />
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!TutorAverage.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
                 </ChartDataPoint>
               </ChartDataPoints>
               <Type>Line</Type>
               <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
             </ChartSeries>
           </ChartSeriesCollection>
         </ChartData>
@@ -326,7 +351,7 @@
             <VerticalAlign>Top</VerticalAlign>
           </Style>
         </ChartNoDataMessage>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>AverageTutorRatingWithTraining</DataSetName>
         <Top>2.31889cm</Top>
         <Left>1.50812cm</Left>
         <Height>7.91042cm</Height>
@@ -507,12 +532,91 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SSS_Library">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4e826305-9035-40d4-8419-4102569fe700</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="AverageTutorRatingWithTraining">
       <Query>
-        <DataSourceName />
-        <CommandText />
+        <DataSourceName>SSS_Library</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
+      <Fields>
+        <Field Name="tutor_firstname">
+          <DataField>tutor_firstname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tutor_lastname">
+          <DataField>tutor_lastname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_activity_name">
+          <DataField>student_activity_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TutorAverage">
+          <DataField>TutorAverage</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ActivityAverage">
+          <DataField>ActivityAverage</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="tutor_trainingstatus">
+          <DataField>tutor_trainingstatus</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>AVERAGE_TUTOR_RATING_WITH_TRAINING</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="AverageTutorRatingWithoutTraining">
+      <Query>
+        <DataSourceName>SSS_Library</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="tutor_firstname">
+          <DataField>tutor_firstname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tutor_lastname">
+          <DataField>tutor_lastname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="student_activity_name">
+          <DataField>student_activity_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TutorAverage">
+          <DataField>TutorAverage</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ActivityAverage">
+          <DataField>ActivityAverage</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="tutor_trainingstatus">
+          <DataField>tutor_trainingstatus</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>AVERAGE_TUTOR_RATING_WITHOUT_TRAINING</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
