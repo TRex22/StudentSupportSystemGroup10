@@ -340,6 +340,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coordinator\AverageActivityRatingsReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorA.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorRatingC_IndividualTutorRating.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\LowTutorRating\TutorB_RatingReport.rdlc" />
@@ -357,7 +358,9 @@
       <Name>SSS_Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reports\Coordinator\TutorTraining\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCEDataTable.datasource" />
