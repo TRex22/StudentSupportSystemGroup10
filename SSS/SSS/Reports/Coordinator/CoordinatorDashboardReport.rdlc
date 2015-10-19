@@ -856,7 +856,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Count(Fields!tutor_id.Value, "AverageTutorRatingWithoutTraining")</Value>
+                <Value>=CountDistinct(Fields!tutor_id.Value, "AverageTutorRatingWithoutTraining")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1099,10 +1099,6 @@
         <Field Name="student_activity_name">
           <DataField>student_activity_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tutor_trainingstatus">
-          <DataField>tutor_trainingstatus</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="tutor_id">
           <DataField>tutor_id</DataField>

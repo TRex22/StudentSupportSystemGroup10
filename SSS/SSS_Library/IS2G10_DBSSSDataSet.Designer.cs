@@ -13439,8 +13439,6 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnActivityAverage;
             
-            private global::System.Data.DataColumn columntutor_trainingstatus;
-            
             private global::System.Data.DataColumn columntutor_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13518,14 +13516,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tutor_trainingstatusColumn {
-                get {
-                    return this.columntutor_trainingstatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn tutor_idColumn {
                 get {
                     return this.columntutor_id;
@@ -13569,7 +13559,7 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow AddAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow(string tutor_firstname, string tutor_lastname, string student_activity_name, int TutorAverage, int ActivityAverage, bool tutor_trainingstatus, int tutor_id) {
+            public AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow AddAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow(string tutor_firstname, string tutor_lastname, string student_activity_name, int TutorAverage, int ActivityAverage, int tutor_id) {
                 AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow rowAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow = ((AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tutor_firstname,
@@ -13577,7 +13567,6 @@ namespace SSS_Library {
                         student_activity_name,
                         TutorAverage,
                         ActivityAverage,
-                        tutor_trainingstatus,
                         tutor_id};
                 rowAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow);
@@ -13613,7 +13602,6 @@ namespace SSS_Library {
                 this.columnstudent_activity_name = base.Columns["student_activity_name"];
                 this.columnTutorAverage = base.Columns["TutorAverage"];
                 this.columnActivityAverage = base.Columns["ActivityAverage"];
-                this.columntutor_trainingstatus = base.Columns["tutor_trainingstatus"];
                 this.columntutor_id = base.Columns["tutor_id"];
             }
             
@@ -13630,15 +13618,10 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnTutorAverage);
                 this.columnActivityAverage = new global::System.Data.DataColumn("ActivityAverage", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActivityAverage);
-                this.columntutor_trainingstatus = new global::System.Data.DataColumn("tutor_trainingstatus", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntutor_trainingstatus);
                 this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_id}, true));
-                this.columntutor_firstname.MaxLength = 255;
-                this.columntutor_lastname.MaxLength = 255;
-                this.columnstudent_activity_name.MaxLength = 255;
                 this.columnTutorAverage.ReadOnly = true;
                 this.columnActivityAverage.ReadOnly = true;
                 this.columntutor_id.AllowDBNull = false;
@@ -13786,8 +13769,6 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnstudent_activity_name;
             
-            private global::System.Data.DataColumn columntutor_trainingstatus;
-            
             private global::System.Data.DataColumn columntutor_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13865,14 +13846,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tutor_trainingstatusColumn {
-                get {
-                    return this.columntutor_trainingstatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn tutor_idColumn {
                 get {
                     return this.columntutor_id;
@@ -13916,7 +13889,7 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow AddAVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow(int TutorAverage, int ActivityAverage, string tutor_firstname, string tutor_lastname, string student_activity_name, bool tutor_trainingstatus, int tutor_id) {
+            public AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow AddAVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow(int TutorAverage, int ActivityAverage, string tutor_firstname, string tutor_lastname, string student_activity_name, int tutor_id) {
                 AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow rowAVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow = ((AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TutorAverage,
@@ -13924,7 +13897,6 @@ namespace SSS_Library {
                         tutor_firstname,
                         tutor_lastname,
                         student_activity_name,
-                        tutor_trainingstatus,
                         tutor_id};
                 rowAVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow);
@@ -13960,7 +13932,6 @@ namespace SSS_Library {
                 this.columntutor_firstname = base.Columns["tutor_firstname"];
                 this.columntutor_lastname = base.Columns["tutor_lastname"];
                 this.columnstudent_activity_name = base.Columns["student_activity_name"];
-                this.columntutor_trainingstatus = base.Columns["tutor_trainingstatus"];
                 this.columntutor_id = base.Columns["tutor_id"];
             }
             
@@ -13977,17 +13948,12 @@ namespace SSS_Library {
                 base.Columns.Add(this.columntutor_lastname);
                 this.columnstudent_activity_name = new global::System.Data.DataColumn("student_activity_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstudent_activity_name);
-                this.columntutor_trainingstatus = new global::System.Data.DataColumn("tutor_trainingstatus", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntutor_trainingstatus);
                 this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_id}, true));
                 this.columnTutorAverage.ReadOnly = true;
                 this.columnActivityAverage.ReadOnly = true;
-                this.columntutor_firstname.MaxLength = 255;
-                this.columntutor_lastname.MaxLength = 255;
-                this.columnstudent_activity_name.MaxLength = 255;
                 this.columntutor_id.AllowDBNull = false;
                 this.columntutor_id.Unique = true;
             }
@@ -21856,12 +21822,11 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string tutor_firstname {
                 get {
-                    try {
-                        return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_firstnameColumn]));
+                    if (this.Istutor_firstnameNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_firstname\' in table \'AVERAGE_TUTOR_RATING_WITH_TRAINI" +
-                                "NGTableAdapter\' is DBNull.", e);
+                    else {
+                        return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_firstnameColumn]));
                     }
                 }
                 set {
@@ -21873,12 +21838,11 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string tutor_lastname {
                 get {
-                    try {
-                        return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_lastnameColumn]));
+                    if (this.Istutor_lastnameNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_lastname\' in table \'AVERAGE_TUTOR_RATING_WITH_TRAININ" +
-                                "GTableAdapter\' is DBNull.", e);
+                    else {
+                        return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_lastnameColumn]));
                     }
                 }
                 set {
@@ -21933,23 +21897,6 @@ namespace SSS_Library {
                 }
                 set {
                     this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.ActivityAverageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool tutor_trainingstatus {
-                get {
-                    try {
-                        return ((bool)(this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_trainingstatusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_trainingstatus\' in table \'AVERAGE_TUTOR_RATING_WITH_T" +
-                                "RAININGTableAdapter\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_trainingstatusColumn] = value;
                 }
             }
             
@@ -22023,18 +21970,6 @@ namespace SSS_Library {
             public void SetActivityAverageNull() {
                 this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.ActivityAverageColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istutor_trainingstatusNull() {
-                return this.IsNull(this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_trainingstatusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settutor_trainingstatusNull() {
-                this[this.tableAVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.tutor_trainingstatusColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -22090,7 +22025,7 @@ namespace SSS_Library {
             public string tutor_firstname {
                 get {
                     if (this.Istutor_firstnameNull()) {
-                        return string.Empty;
+                        return null;
                     }
                     else {
                         return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_firstnameColumn]));
@@ -22106,7 +22041,7 @@ namespace SSS_Library {
             public string tutor_lastname {
                 get {
                     if (this.Istutor_lastnameNull()) {
-                        return string.Empty;
+                        return null;
                     }
                     else {
                         return ((string)(this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_lastnameColumn]));
@@ -22130,23 +22065,6 @@ namespace SSS_Library {
                 }
                 set {
                     this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.student_activity_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool tutor_trainingstatus {
-                get {
-                    try {
-                        return ((bool)(this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_trainingstatusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_trainingstatus\' in table \'AVERAGE_TUTOR_RATING_WITHOU" +
-                                "T_TRAINING\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_trainingstatusColumn] = value;
                 }
             }
             
@@ -22219,18 +22137,6 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setstudent_activity_nameNull() {
                 this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.student_activity_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istutor_trainingstatusNull() {
-                return this.IsNull(this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_trainingstatusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settutor_trainingstatusNull() {
-                this[this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING.tutor_trainingstatusColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -35043,7 +34949,6 @@ WHERE        (CONSULTATION.tutor_id = @tutorId)";
             tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
             tableMapping.ColumnMappings.Add("TutorAverage", "TutorAverage");
             tableMapping.ColumnMappings.Add("ActivityAverage", "ActivityAverage");
-            tableMapping.ColumnMappings.Add("tutor_trainingstatus", "tutor_trainingstatus");
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -35062,12 +34967,12 @@ WHERE        (CONSULTATION.tutor_id = @tutorId)";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS 'TutorAverage', AVG(ATTENDANCE.student_activity_rating) AS 'ActivityAverage', TUTOR.tutor_firstname, 
-                         TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_trainingstatus, TUTOR.tutor_id
-FROM            ATTENDANCE INNER JOIN
-                         STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id CROSS JOIN
+                         TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_id
+FROM            STUDENT_ACTIVITY CROSS JOIN
+                         ATTENDANCE CROSS JOIN
                          TUTOR
 GROUP BY TUTOR.tutor_firstname, TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_trainingstatus, TUTOR.tutor_id
-HAVING TUTOR.tutor_trainingstatus = 1";
+HAVING        (TUTOR.tutor_trainingstatus = 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -35222,7 +35127,6 @@ HAVING TUTOR.tutor_trainingstatus = 1";
             tableMapping.ColumnMappings.Add("tutor_firstname", "tutor_firstname");
             tableMapping.ColumnMappings.Add("tutor_lastname", "tutor_lastname");
             tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
-            tableMapping.ColumnMappings.Add("tutor_trainingstatus", "tutor_trainingstatus");
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -35241,9 +35145,9 @@ HAVING TUTOR.tutor_trainingstatus = 1";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        AVG(ATTENDANCE.student_activity_tutorrating) AS 'TutorAverage', AVG(ATTENDANCE.student_activity_rating) AS 'ActivityAverage', TUTOR.tutor_firstname, 
-                         TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_trainingstatus, TUTOR.tutor_id
-FROM            ATTENDANCE INNER JOIN
-                         STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id CROSS JOIN
+                         TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_id
+FROM            STUDENT_ACTIVITY CROSS JOIN
+                         ATTENDANCE CROSS JOIN
                          TUTOR
 GROUP BY TUTOR.tutor_firstname, TUTOR.tutor_lastname, STUDENT_ACTIVITY.student_activity_name, TUTOR.tutor_trainingstatus, TUTOR.tutor_id
 HAVING        (TUTOR.tutor_trainingstatus = 0)";
@@ -35256,7 +35160,7 @@ HAVING        (TUTOR.tutor_trainingstatus = 0)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
+            if ((this.ClearBeforeFill == true)){
                 dataTable.Clear();
             }
             int returnValue = this.Adapter.Fill(dataTable);

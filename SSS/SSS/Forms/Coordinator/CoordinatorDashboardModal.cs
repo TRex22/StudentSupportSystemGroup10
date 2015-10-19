@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly DISENGAGED_STUDENTSTableAdapter _disengageDStudentsTableAdapter1 = new DISENGAGED_STUDENTSTableAdapter() { ClearBeforeFill = true };
         private readonly AVERAGE_RATINGSTableAdapter _averageRatingsTableAdapter = new AVERAGE_RATINGSTableAdapter() { ClearBeforeFill = true };
         private readonly AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter _averageTutorRatingWithoutTrainingTableAdapter = new AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter() { ClearBeforeFill = true };
-
+        
         public CoordinatorDashboardModal()
         {
             InitializeComponent();
@@ -45,8 +46,10 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
 
-            IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable avgTutorRatingUntrained = new IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable();
-            //_averageTutorRatingWithoutTrainingTableAdapter.Fill(avgTutorRatingUntrained);
+            IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable avgTutorRatingNoTraining = new IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable();
+            avgTutorRatingNoTraining.Constraints.Clear();
+            _averageTutorRatingWithoutTrainingTableAdapter.Fill(avgTutorRatingNoTraining);
+            avgTutorRatingNoTraining.TableName = "AverageTutorRatingWithoutTraining";
 
             reportDataSource1.Name = "StudentEngagementStatuses";
             reportDataSource1.Value = _studenTEngagementStatusTableAdapter1.GetData();
@@ -59,12 +62,13 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             reportDataSource5.Name = "AverageRatings";
             reportDataSource5.Value = _averageRatingsTableAdapter.GetData();
             reportDataSource6.Name = "AverageTutorRatingWithoutTraining";
-            reportDataSource6.Value = avgTutorRatingUntrained;
+            reportDataSource6.Value = avgTutorRatingNoTraining;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
         }
     }
 }
