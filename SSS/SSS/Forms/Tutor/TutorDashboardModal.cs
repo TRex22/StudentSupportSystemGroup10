@@ -54,5 +54,10 @@ namespace SSS_Windows_Forms.Forms.Tutor
             BindData();
             this.reportViewer1.RefreshReport();
         }
+
+        private void TutorDashboardModal_VisibleChanged(object sender, EventArgs e)
+        {
+            reportViewer1.Refresh();
+        }
     }
 }

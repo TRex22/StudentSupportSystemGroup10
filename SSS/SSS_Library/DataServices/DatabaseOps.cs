@@ -16,7 +16,7 @@ namespace SSS_Library.DataServices
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter _userprofileTableAdapter1 = new USERPROFILETableAdapter();
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter _studentTableAdapter1 = new STUDENTTableAdapter();
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter _ssSCoordinatorTableAdapter1 = new SSS_COORDINATORTableAdapter();
-        private static SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_AVAILABLE_TIMESTableAdapter _tutoRAvailableTimesTableAdapter1 = new TUTOR_AVAILABLE_TIMESTableAdapter();
+        private static readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_AVAILABLE_TIMESTableAdapter _tutorAvailableTimesTableAdapter1 = new TUTOR_AVAILABLE_TIMESTableAdapter();
 
         public static void CleanDatabase()
         {
@@ -97,7 +97,7 @@ namespace SSS_Library.DataServices
                 var availableDates = CalculateAvailableDateTime(rndDay, time, 38);
                 foreach (var date in availableDates)
                 {
-                    _tutoRAvailableTimesTableAdapter1.Insert(rndDay, time, tutor.tutor_id, date);
+                    _tutorAvailableTimesTableAdapter1.Insert(rndDay, time, tutor.tutor_id, date, false);
                 }
             }
 
@@ -110,7 +110,7 @@ namespace SSS_Library.DataServices
                 var availableDates = CalculateAvailableDateTime(rndDay, time, 38);
                 foreach (var date in availableDates)
                 {
-                    _tutoRAvailableTimesTableAdapter1.Insert(rndDay, time, tutor.tutor_id, date);
+                    _tutorAvailableTimesTableAdapter1.Insert(rndDay, time, tutor.tutor_id, date, false);
                 }
             }
         }

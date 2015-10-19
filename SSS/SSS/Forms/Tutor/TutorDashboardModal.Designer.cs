@@ -59,6 +59,7 @@
             this.Name = "TutorDashboardModal";
             this.Text = "TutorDashboardModal";
             this.Load += new System.EventHandler(this.TutorDashboardModal_Load);
+            this.VisibleChanged += new System.EventHandler(this.TutorDashboardModal_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.IS2G10_DBSSSDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 

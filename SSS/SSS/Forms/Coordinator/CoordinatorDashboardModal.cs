@@ -70,5 +70,10 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
         }
+
+        private void CoordinatorDashboardModal_VisibleChanged(object sender, EventArgs e)
+        {
+            reportViewer1.Refresh();
+        }
     }
 }

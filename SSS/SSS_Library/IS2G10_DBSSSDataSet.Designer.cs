@@ -9843,6 +9843,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columndate_free;
             
+            private global::System.Data.DataColumn columnbooked;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTOR_AVAILABLE_TIMESDataTable() {
@@ -9918,6 +9920,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bookedColumn {
+                get {
+                    return this.columnbooked;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9953,14 +9963,15 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TUTOR_AVAILABLE_TIMESRow AddTUTOR_AVAILABLE_TIMESRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C, System.DateTime date_free) {
+            public TUTOR_AVAILABLE_TIMESRow AddTUTOR_AVAILABLE_TIMESRow(string available_day, System.TimeSpan available_time, TUTORRow parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C, System.DateTime date_free, bool booked) {
                 TUTOR_AVAILABLE_TIMESRow rowTUTOR_AVAILABLE_TIMESRow = ((TUTOR_AVAILABLE_TIMESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         available_day,
                         available_time,
                         null,
-                        date_free};
+                        date_free,
+                        booked};
                 if ((parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C != null)) {
                     columnValuesArray[3] = parentTUTORRowByFK__TUTOR_AVA__tutor__37A5467C[0];
                 }
@@ -9998,6 +10009,7 @@ namespace SSS_Library {
                 this.columnavailable_time = base.Columns["available_time"];
                 this.columntutor_id = base.Columns["tutor_id"];
                 this.columndate_free = base.Columns["date_free"];
+                this.columnbooked = base.Columns["booked"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10013,6 +10025,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columntutor_id);
                 this.columndate_free = new global::System.Data.DataColumn("date_free", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_free);
+                this.columnbooked = new global::System.Data.DataColumn("booked", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbooked);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_time_id}, true));
                 this.columntutor_time_id.AutoIncrement = true;
@@ -19053,6 +19067,22 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool booked {
+                get {
+                    try {
+                        return ((bool)(this[this.tableTUTOR_AVAILABLE_TIMES.bookedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'booked\' in table \'TUTOR_AVAILABLE_TIMES\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTUTOR_AVAILABLE_TIMES.bookedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTORRow TUTORRow {
                 get {
                     return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__TUTOR_AVA__tutor__37A5467C"])));
@@ -19107,6 +19137,18 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdate_freeNull() {
                 this[this.tableTUTOR_AVAILABLE_TIMES.date_freeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsbookedNull() {
+                return this.IsNull(this.tableTUTOR_AVAILABLE_TIMES.bookedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetbookedNull() {
+                this[this.tableTUTOR_AVAILABLE_TIMES.bookedColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -32552,10 +32594,11 @@ SELECT consultation_id, coordinator_id, tutor_id, student_id, consultation_detai
             tableMapping.ColumnMappings.Add("available_time", "available_time");
             tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
             tableMapping.ColumnMappings.Add("date_free", "date_free");
+            tableMapping.ColumnMappings.Add("booked", "booked");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TUTOR_AVAILABLE_TIMES] WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)) AND ((@IsNull_booked = 1 AND [booked] IS NULL) OR ([booked] = @Original_booked)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -32565,24 +32608,28 @@ SELECT consultation_id, coordinator_id, tutor_id, student_id, consultation_detai
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_booked", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_booked", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id], [date_free]) VALUES (@available_day, @available_time, @tutor_id, @date_free);
-SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TUTOR_AVAILABLE_TIMES] ([available_day], [available_time], [tutor_id], [date_free], [booked]) VALUES (@available_day, @available_time, @tutor_id, @date_free, @booked);
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free, booked FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@booked", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id, [date_free] = @date_free WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)));
-SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TUTOR_AVAILABLE_TIMES] SET [available_day] = @available_day, [available_time] = @available_time, [tutor_id] = @tutor_id, [date_free] = @date_free, [booked] = @booked WHERE (([tutor_time_id] = @Original_tutor_time_id) AND ((@IsNull_available_day = 1 AND [available_day] IS NULL) OR ([available_day] = @Original_available_day)) AND ((@IsNull_available_time = 1 AND [available_time] IS NULL) OR ([available_time] = @Original_available_time)) AND ([tutor_id] = @Original_tutor_id) AND ((@IsNull_date_free = 1 AND [date_free] IS NULL) OR ([date_free] = @Original_date_free)) AND ((@IsNull_booked = 1 AND [booked] IS NULL) OR ([booked] = @Original_booked)));
+SELECT tutor_time_id, available_day, available_time, tutor_id, date_free, booked FROM TUTOR_AVAILABLE_TIMES WHERE (tutor_time_id = @tutor_time_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@available_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@booked", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_time_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_available_day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_available_day", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "available_day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -32591,6 +32638,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_free", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_free", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_free", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_booked", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_booked", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "booked", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_time_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_time_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -32607,8 +32656,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id, date_free\r\n" +
-                "FROM            TUTOR_AVAILABLE_TIMES";
+            this._commandCollection[0].CommandText = "SELECT        tutor_time_id, available_day, available_time, tutor_id, date_free, " +
+                "booked\r\nFROM            TUTOR_AVAILABLE_TIMES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -32669,7 +32718,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
+        public virtual int Delete(int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, global::System.Nullable<bool> Original_booked) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tutor_time_id));
             if ((Original_available_day == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -32696,6 +32745,14 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            if ((Original_booked.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_booked.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -32716,7 +32773,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free) {
+        public virtual int Insert(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, global::System.Nullable<bool> booked) {
             if ((available_day == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -32735,6 +32792,12 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((booked.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(booked.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -32756,7 +32819,7 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, int tutor_time_id) {
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, global::System.Nullable<bool> booked, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, global::System.Nullable<bool> Original_booked, int tutor_time_id) {
             if ((available_day == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -32776,33 +32839,47 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_tutor_time_id));
-            if ((Original_available_day == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((booked.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(booked.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_available_day));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_tutor_time_id));
+            if ((Original_available_day == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_available_day));
             }
             if ((Original_available_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.TimeSpan)(Original_available_time.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.TimeSpan)(Original_available_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_tutor_id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_tutor_id));
             if ((Original_date_free.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_date_free.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_date_free.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(tutor_time_id));
+            if ((Original_booked.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_booked.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(tutor_time_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -32823,8 +32900,8 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free) {
-            return this.Update(available_day, available_time, tutor_id, date_free, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_date_free, Original_tutor_time_id);
+        public virtual int Update(string available_day, global::System.Nullable<global::System.TimeSpan> available_time, int tutor_id, global::System.Nullable<global::System.DateTime> date_free, global::System.Nullable<bool> booked, int Original_tutor_time_id, string Original_available_day, global::System.Nullable<global::System.TimeSpan> Original_available_time, int Original_tutor_id, global::System.Nullable<global::System.DateTime> Original_date_free, global::System.Nullable<bool> Original_booked) {
+            return this.Update(available_day, available_time, tutor_id, date_free, booked, Original_tutor_time_id, Original_available_day, Original_available_time, Original_tutor_id, Original_date_free, Original_booked, Original_tutor_time_id);
         }
     }
     
@@ -35160,7 +35237,7 @@ HAVING        (TUTOR.tutor_trainingstatus = 0)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(IS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)){
+            if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
             int returnValue = this.Adapter.Fill(dataTable);

@@ -31,12 +31,11 @@ namespace SSS_Windows_Forms.Forms.Student
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS_Windows_Forms.Reports.Student.StudentDashboardReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -56,7 +55,9 @@ namespace SSS_Windows_Forms.Forms.Student
             this.Name = "StudentDashboardModal";
             this.Text = "StudentDashboard";
             this.Load += new System.EventHandler(this.StudentDashboardModal_Load);
+            this.VisibleChanged += new System.EventHandler(this.StudentDashboardModal_VisibleChanged);
             this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -162,4 +162,7 @@
   <data name="CreateConsultationFail" xml:space="preserve">
     <value>Creating Consultation Failed.</value>
   </data>
+  <data name="ConsultationFullyBookedMessage" xml:space="preserve">
+    <value>Sorry the date selected is fully booked. Please select another day.</value>
+  </data>
 </root>

@@ -66,5 +66,10 @@ namespace SSS_Windows_Forms.Forms.Student
             BindData();
             this.reportViewer1.RefreshReport();
         }
+
+        private void StudentDashboardModal_VisibleChanged(object sender, EventArgs e)
+        {
+            reportViewer1.Refresh();
+        }
     }
 }

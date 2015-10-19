@@ -66,6 +66,7 @@
             this.Name = "CoordinatorDashboardModal";
             this.Text = "CoordinatorDashboardModal";
             this.Load += new System.EventHandler(this.CoordinatorDashboardModal_Load);
+            this.VisibleChanged += new System.EventHandler(this.CoordinatorDashboardModal_VisibleChanged);
             this.ResumeLayout(false);
 
         }

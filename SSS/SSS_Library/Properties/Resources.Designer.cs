@@ -61,6 +61,15 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry the date selected is fully booked. Please select another day..
+        /// </summary>
+        public static string ConsultationFullyBookedMessage {
+            get {
+                return ResourceManager.GetString("ConsultationFullyBookedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating Consultation Failed..
         /// </summary>
         public static string CreateConsultationFail {

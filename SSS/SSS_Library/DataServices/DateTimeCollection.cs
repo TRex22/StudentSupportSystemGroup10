@@ -41,12 +41,24 @@ namespace SSS_Library.DataServices
     public class DateTimes
     {
         public DateTime Date { get; set; }
-        public List<TimeSpan> Times { get; set; }
+        public List<Times> Times { get; set; }
 
         public DateTimes()
         {
             Date = new DateTime();
-            Times = new List<TimeSpan>();
+            Times = new List<Times>();
+        }
+    }
+
+    public class Times
+    {
+        public TimeSpan Time { get; set; }
+        public int TutorTimesId { get; set; }
+
+        public Times()
+        {
+            Time = new TimeSpan();
+            TutorTimesId = 0;
         }
     }
 }
