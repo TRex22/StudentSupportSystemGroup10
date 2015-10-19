@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
 
 namespace SSS_Windows_Forms.Forms.Coordinator.TutorTraining
 {
     public partial class TutorsWithoutTrainingModal : Form
     {
+        private readonly AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter _averageTutorRatingWithoutTrainingTableAdapter = new AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter();
         public TutorsWithoutTrainingModal()
         {
             InitializeComponent();
@@ -21,9 +23,17 @@ namespace SSS_Windows_Forms.Forms.Coordinator.TutorTraining
             this.Hide();
         }
 
+        private void BindData()
+        {
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            reportDataSource1.Name = "AverageTutorRatingWithoutTraining";
+            reportDataSource1.Value = _averageTutorRatingWithoutTrainingTableAdapter.GetData();
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+        }
+
         private void TutorsWithoutTrainingModal_Load(object sender, EventArgs e)
         {
-
+            BindData();
             this.reportViewer1.RefreshReport();
         }
     }

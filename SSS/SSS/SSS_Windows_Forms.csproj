@@ -348,6 +348,8 @@
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\StudentEngagementStatuses.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\StudentEngagement\ViewDisengagedStudentsReport.rdlc" />
     <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorTrainingStatusReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorWithoutTrainingDrillDownReport.rdlc" />
+    <EmbeddedResource Include="Reports\Coordinator\TutorTraining\TutorWithTrainingDrillDownReport.rdlc" />
     <EmbeddedResource Include="Reports\Student\StudentDashboardReport.rdlc" />
     <EmbeddedResource Include="Reports\Tutor\TutorDashboardReport.rdlc" />
     <None Include="app.config" />
@@ -386,10 +388,14 @@
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRowChangeEvent.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATINGRowChangeEventHandler.datasource" />
-    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGDataTable.datasource" />
-    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGRow.datasource" />
-    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGRowChangeEvent.datasource" />
-    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITHOUT_TRAININGDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITHOUT_TRAININGRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterDataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapterRowChangeEventHandler.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+BRANDINGDataTable.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+BRANDINGRow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+BRANDINGRowChangeEvent.datasource" />
@@ -505,6 +511,7 @@
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_CONSULTATION_RATINGTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_RATINGSTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATING_WITH_TRAININGTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.BRANDINGTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATIONTableAdapter.datasource" />

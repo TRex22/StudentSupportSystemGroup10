@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Date Generated:c</Value>
+                <Value>Date Generated:</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -207,126 +207,6 @@
         <Height>0.6cm</Height>
         <Width>4.93417cm</Width>
         <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="AverageTutorRating">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Avg(Fields!AverageTutorRating.Value, "AverageRatings")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>AverageTutorRating</rd:DefaultName>
-        <Top>10.84015cm</Top>
-        <Left>7.45336cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>7</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="AverageActivityRating">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Count(Fields!AverageActivityRating.Value, "AverageRatings")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>AverageActivityRating</rd:DefaultName>
-        <Top>11.62006cm</Top>
-        <Left>7.41808cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="TotalNumberTutors">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Avg(Fields!TotalNumberTutors.Value, "AverageRatings")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>TotalNumberTutors</rd:DefaultName>
-        <Top>12.39292cm</Top>
-        <Left>7.41808cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="TotalNumberActivities">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Count(Fields!TotalNumberActivities.Value, "AverageRatings")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>TotalNumberActivities</rd:DefaultName>
-        <Top>13.16931cm</Top>
-        <Left>7.41808cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -646,7 +526,7 @@
         <Left>2.6162cm</Left>
         <Height>7.83104cm</Height>
         <Width>20.01479cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -656,6 +536,126 @@
           <BackgroundGradientType>None</BackgroundGradientType>
         </Style>
       </Chart>
+      <Textbox Name="AverageTutorRating">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!AverageTutorRating.Value, "AverageRatings")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>AverageTutorRating</rd:DefaultName>
+        <Top>10.84015cm</Top>
+        <Left>7.55919cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TotalNumberTutors">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!TotalNumberTutors.Value, "AverageRatings")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TotalNumberTutors</rd:DefaultName>
+        <Top>11.61654cm</Top>
+        <Left>7.55919cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="AverageActivityRating">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!AverageActivityRating.Value, "AverageRatings")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>AverageActivityRating</rd:DefaultName>
+        <Top>12.2871cm</Top>
+        <Left>7.59447cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TotalNumberActivities">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!TotalNumberActivities.Value, "AverageRatings")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TotalNumberActivities</rd:DefaultName>
+        <Top>13.16931cm</Top>
+        <Left>7.59447cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>6.11746in</Height>
     <Style />
@@ -704,14 +704,20 @@
           <DataField>TotalNumberActivities</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="MostPopularActivity">
+          <DataField>MostPopularActivity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LeastPopularActivity">
+          <DataField>LeastPopularActivity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>AVERAGE_RATINGS</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>AVERAGE_RATINGSTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>AVERAGE_RATINGS</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="AverageTutorRatings">
@@ -720,10 +726,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="tutor_id">
-          <DataField>tutor_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="tutor_firstname">
           <DataField>tutor_firstname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -746,12 +748,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>AVERAGE_TUTOR_RATING</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>AVERAGE_TUTOR_RATINGTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>AVERAGE_TUTOR_RATING</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="Attendance">
@@ -782,12 +782,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>ATTENDANCE</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ATTENDANCETableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>ATTENDANCE</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
 
 namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class TutorRatingsAListModal : Form
     {
+        private readonly AVERAGE_RATINGSTableAdapter _averageRatingsTableAdapter = new AVERAGE_RATINGSTableAdapter();
+        private readonly AVERAGE_TUTOR_RATINGTableAdapter _averageTutorRatingTableAdapter = new AVERAGE_TUTOR_RATINGTableAdapter();
+        private readonly ATTENDANCETableAdapter _attendanceTableAdapter = new ATTENDANCETableAdapter();
         public TutorRatingsAListModal()
         {
             InitializeComponent();
@@ -20,25 +24,26 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.Hide();
         }
 
+        private void BindData()
+        {
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+
+            reportDataSource1.Name = "AverageRatings";
+            reportDataSource1.Value = _averageRatingsTableAdapter.GetData();
+            reportDataSource2.Name = "AverageTutorRatings";
+            reportDataSource2.Value = _averageTutorRatingTableAdapter.GetData();
+            reportDataSource3.Name = "Attendance";
+            reportDataSource3.Value = _attendanceTableAdapter.GetData();
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+        }
+
         private void LowTutorRatingsModal_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet1.ATTENDANCE' table. You can move, or remove it, as needed.
-            this.aTTENDANCETableAdapter.Fill(this.iS2G10_DBSSSDataSet1.ATTENDANCE);
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_RATINGS' table. You can move, or remove it, as needed.
-            this.aVERAGE_RATINGSTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_RATINGS);
-            // TODO: This line of code loads data into the 'iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING' table. You can move, or remove it, as needed.
-            try
-            {
-                this.aVERAGE_TUTOR_RATINGTableAdapter.Fill(this.iS2G10_DBSSSDataSet.AVERAGE_TUTOR_RATING);
-            }
-            catch (Exception ex)
-            {
-                //todo fix db
-                var message = "" + ex;
-                //MessageBox.Show(""+ex);
-            }
-
-
+            BindData();
             this.reportViewer1.RefreshReport();
         }
     }

@@ -30,25 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.aVERAGETUTORRATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AVERAGE_TUTOR_RATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
+            this.aVERAGETUTORRATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.aVERAGE_TUTOR_RATINGTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATINGTableAdapter();
-            this.AVERAGE_TUTOR_RATINGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.aVERAGETUTORRATINGBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVERAGE_TUTOR_RATINGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aVERAGETUTORRATINGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // aVERAGETUTORRATINGBindingSource
+            // AVERAGE_TUTOR_RATINGBindingSource
             // 
-            this.aVERAGETUTORRATINGBindingSource.DataMember = "AVERAGE_TUTOR_RATING";
-            this.aVERAGETUTORRATINGBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
+            this.AVERAGE_TUTOR_RATINGBindingSource.DataMember = "AVERAGE_TUTOR_RATING";
+            this.AVERAGE_TUTOR_RATINGBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
             // iS2G10_DBSSSDataSet
             // 
             this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
             this.iS2G10_DBSSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aVERAGETUTORRATINGBindingSource
+            // 
+            this.aVERAGETUTORRATINGBindingSource.DataMember = "AVERAGE_TUTOR_RATING";
+            this.aVERAGETUTORRATINGBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
             // 
             // reportViewer1
             // 
@@ -59,32 +64,27 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SSS_Windows_Forms.Reports.Coordinator.LowTutorRating.TutorB_RatingReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(834, 546);
+            this.reportViewer1.Size = new System.Drawing.Size(762, 539);
             this.reportViewer1.TabIndex = 0;
             // 
             // aVERAGE_TUTOR_RATINGTableAdapter
             // 
             this.aVERAGE_TUTOR_RATINGTableAdapter.ClearBeforeFill = true;
             // 
-            // AVERAGE_TUTOR_RATINGBindingSource
-            // 
-            this.AVERAGE_TUTOR_RATINGBindingSource.DataMember = "AVERAGE_TUTOR_RATING";
-            this.AVERAGE_TUTOR_RATINGBindingSource.DataSource = this.iS2G10_DBSSSDataSet;
-            // 
-            // TutorRatingB_IndividualModal
+            // TutorRatingBIndividualModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 546);
+            this.ClientSize = new System.Drawing.Size(762, 539);
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TutorRatingBIndividualModal";
             this.Text = "LowTutorRatingB_IndividualModal";
             this.Load += new System.EventHandler(this.LowTutorRatingB_IndividualModal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.aVERAGETUTORRATINGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVERAGE_TUTOR_RATINGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aVERAGETUTORRATINGBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

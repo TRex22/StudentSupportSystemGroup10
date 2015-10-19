@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGRowChangeEvent" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>SSS_Library.IS2G10_DBSSSDataSet+AVERAGE_TUTOR_RATING_WITH_TRAININGRowChangeEvent, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>SSS_Library.IS2G10_DBSSSDataSetTableAdapters.AVERAGE_TUTOR_RATING_WITHOUT_TRAININGTableAdapter, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

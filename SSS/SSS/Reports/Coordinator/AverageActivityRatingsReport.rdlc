@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Date Generated:c</Value>
+                <Value>Date Generated:</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -464,29 +464,29 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="AverageTutorRating">
+      <Textbox Name="TotalNumberActivities">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!TotalNumberActivities.Value, "ActivityRatingsTotals")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>AverageTutorRating</rd:DefaultName>
-        <Top>10.28678cm</Top>
-        <Left>6.12479cm</Left>
+        <rd:DefaultName>TotalNumberActivities</rd:DefaultName>
+        <Top>10.2515cm</Top>
+        <Left>6.2659cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -494,29 +494,29 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="AverageActivityRating">
+      <Textbox Name="MostPopularActivity">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=First(Fields!MostPopularActivity.Value, "ActivityRatingsTotals")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>AverageActivityRating</rd:DefaultName>
-        <Top>11.06669cm</Top>
-        <Left>6.12479cm</Left>
+        <rd:DefaultName>MostPopularActivity</rd:DefaultName>
+        <Top>11.06317cm</Top>
+        <Left>6.23062cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -524,29 +524,29 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="TotalNumberTutors">
+      <Textbox Name="LeastPopularActivity">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=First(Fields!LeastPopularActivity.Value, "ActivityRatingsTotals")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>TotalNumberTutors</rd:DefaultName>
-        <Top>11.83955cm</Top>
-        <Left>6.12479cm</Left>
+        <rd:DefaultName>LeastPopularActivity</rd:DefaultName>
+        <Top>11.83956cm</Top>
+        <Left>6.23062cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -623,6 +623,14 @@
         <Field Name="TotalNumberActivities">
           <DataField>TotalNumberActivities</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MostPopularActivity">
+          <DataField>MostPopularActivity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LeastPopularActivity">
+          <DataField>LeastPopularActivity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

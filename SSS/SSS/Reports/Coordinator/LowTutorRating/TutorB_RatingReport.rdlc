@@ -49,8 +49,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.6318cm</Top>
-        <Left>10.94791cm</Left>
+        <Top>1.44322cm</Top>
+        <Left>1.16098cm</Left>
         <Height>0.6cm</Height>
         <Width>4.03458cm</Width>
         <ZIndex>1</ZIndex>
@@ -79,8 +79,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>0.63179cm</Top>
-        <Left>15.12361cm</Left>
+        <Top>1.44321cm</Top>
+        <Left>5.33668cm</Left>
         <Height>0.6cm</Height>
         <Width>4.30328cm</Width>
         <ZIndex>2</ZIndex>
@@ -97,9 +97,6 @@
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
-            <TablixColumn>
-              <Width>0.97222in</Width>
-            </TablixColumn>
             <TablixColumn>
               <Width>0.97222in</Width>
             </TablixColumn>
@@ -164,36 +161,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox4</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox6">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Tutor Id</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -334,36 +301,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tutor_id">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!tutor_id.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>tutor_id</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="TutorAverage">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -428,7 +365,6 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -535,7 +471,7 @@
         <Top>1.39458in</Top>
         <Left>0.98195in</Left>
         <Height>0.48958in</Height>
-        <Width>5.91666in</Width>
+        <Width>4.94444in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -572,10 +508,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="tutor_id">
-          <DataField>tutor_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="tutor_firstname">
           <DataField>tutor_firstname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -598,12 +530,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>IS2G10_DBSSSDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\StudentSupportSystemGroup10\SSS\SSS\IS2G10_DBSSSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>AVERAGE_TUTOR_RATING</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>AVERAGE_TUTOR_RATINGTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>SSS_Library</rd:DataSetName>
+        <rd:TableName>IS2G10_DBSSSDataSet</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>AVERAGE_TUTOR_RATING</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>SSS_Library.IS2G10_DBSSSDataSet, SSS_Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
