@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Forms;
+using SSS_Library.DataServices;
 using SSS_Library.WindowHandler;
 
 namespace SSS_Windows_Forms.Forms.Student
@@ -53,33 +56,72 @@ namespace SSS_Windows_Forms.Forms.Student
         private void BookButton_Click(object sender, EventArgs e)
         {
             var tutorComboboxItem = tutorComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
-            var selectedDateComboItem = dateComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
-            var selectedTimeComboItem = timeComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
+            var selectedDateComboItem = dateComboBox.SelectedItem;
+            var selectedTimeComboItem = timeComboBox.SelectedItem;
 
-            if (tutorComboboxItem != null)
-                this.consultationTableAdapter1.Insert(_studentData.coordinator_id, Convert.ToInt32(tutorComboboxItem.Value), _userId, detailsTextBox.Text, null, null, null);
-            MessageBox.Show(SSS_Library.Properties.Resources.CreateConsultationSuccess, SSS_Library.Properties.Resources.CreateConsultationSuccess);
+            if (tutorComboboxItem != null && selectedDateComboItem != null && selectedTimeComboItem != null)
+            {
+                //TODO mark as time taken by consultation
+                var t = selectedDateComboItem.ToString();//"27 October 2015"
+                DateTime selectedDate = DateTime.ParseExact(selectedDateComboItem.ToString(), "dd MMMM yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
-            ClearForm();
+                var consultationDate = selectedDate + (TimeSpan) selectedTimeComboItem;
+
+                this.consultationTableAdapter1.Insert(_studentData.coordinator_id, Convert.ToInt32(tutorComboboxItem.Value), _userId, detailsTextBox.Text, consultationDate, null, null);
+                MessageBox.Show(SSS_Library.Properties.Resources.CreateConsultationSuccess, SSS_Library.Properties.Resources.CreateConsultationSuccess);
+                ClearForm();
+            }
+            else
+            {
+                MessageBox.Show(SSS_Library.Properties.Resources.CreateConsultationFail,
+                    SSS_Library.Properties.Resources.CreateConsultationFail);
+                ClearForm();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var tutorComboboxItem = tutorComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
+            dateComboBox.Items.Clear();
+            dateComboBox.ResetText();
+            timeComboBox.Items.Clear();
+            timeComboBox.ResetText();
+            timeComboBox.SelectedIndex = -1;
+            dateComboBox.Enabled = false;
+            timeComboBox.Enabled = false;
 
+            var tutorComboboxItem = tutorComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
+            
             if (tutorComboboxItem != null)
             {
                 var dateDataTable = tutoR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter1.GetData(Convert.ToInt32(tutorComboboxItem.Value));
-                foreach (var date in dateDataTable)
+                
+                DateTimeCollection datesAndTimes = new DateTimeCollection(); 
+                //add all unique dates
+                foreach (var item in dateDataTable.OrderBy(i => i.date_free))
                 {
-                    ComboBoxHandler.ComboboxItem item = new ComboBoxHandler.ComboboxItem
+                    var oneDate = new DateTimes { Date = item.date_free };
+                    if (datesAndTimes.FindDateCollection(oneDate) != null)
                     {
-                        Text = date.date_free.ToLongDateString(),
-                        Value = date.date_free.ToLongDateString()
-                    };
-
-                    dateComboBox.Items.Add(item);
+                        var foundItem = datesAndTimes.FindDateCollection(oneDate);
+                        foundItem.Times.Add(item.available_time);
+                    }
+                    else
+                    {
+                        oneDate.Times.Add(item.available_time);
+                        datesAndTimes.CollectionOfDateTimes.Add(oneDate);
+                    }
                 }
+                
+                foreach (var date in datesAndTimes.CollectionOfDateTimes)
+                {
+                    var cmbItem = new ComboBoxHandler.ComboboxItem
+                    {
+                        Text = date.Date.ToLongDateString(),
+                        Value = date
+                    };
+                    dateComboBox.Items.Add(cmbItem);
+                }
+
                 dateComboBox.Enabled = true;
             }
             else
@@ -90,33 +132,36 @@ namespace SSS_Windows_Forms.Forms.Student
 
         private void ClearForm()
         {
+            dateComboBox.Items.Clear();
+            dateComboBox.SelectedItem = null;
+            dateComboBox.ResetText();
+            timeComboBox.Items.Clear();
+            timeComboBox.ResetText();
+            timeComboBox.SelectedItem = null;
             tutorComboBox.SelectedItem = -1;
-
             dateComboBox.Enabled = false;
+            dateComboBox.SelectedIndex = -1;
             timeComboBox.Enabled = false;
+            timeComboBox.SelectedIndex = -1;
             BookButton.Enabled = false;
             detailsTextBox.Text = "";
         }
 
         private void dateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            timeComboBox.Items.Clear();
+            timeComboBox.SelectedItem = null;
+            timeComboBox.ResetText();
+            timeComboBox.Enabled = false;
             var tutorComboboxItem = tutorComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
             var selectedDateComboItem = dateComboBox.SelectedItem as ComboBoxHandler.ComboboxItem;
 
-            if (tutorComboboxItem != null)
+            if (tutorComboboxItem != null && selectedDateComboItem != null)
             {
-                var dateDataTable = tutoR_AVAILABLE_TIMES_SEARCH_BY_TUTORTableAdapter1.GetData(Convert.ToInt32(tutorComboboxItem.Value));
-                foreach (var date in dateDataTable)
+                var times = (DateTimes)selectedDateComboItem.Value;
+                foreach (var time in times.Times)
                 {
-                    if (date.available_day.Equals(""+selectedDateComboItem))
-                    {
-                        ComboBoxHandler.ComboboxItem item = new ComboBoxHandler.ComboboxItem
-                        {
-                            Text = "" + date.available_time,
-                            Value = date.available_time
-                        };
-                        timeComboBox.Items.Add(item);
-                    }
+                    timeComboBox.Items.Add(time);
                 }
                 timeComboBox.Enabled = true;
             }

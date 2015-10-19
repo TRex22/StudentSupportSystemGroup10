@@ -61,6 +61,15 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating Consultation Failed..
+        /// </summary>
+        public static string CreateConsultationFail {
+            get {
+                return ResourceManager.GetString("CreateConsultationFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Consultation Successfully Created..
         /// </summary>
         public static string CreateConsultationSuccess {

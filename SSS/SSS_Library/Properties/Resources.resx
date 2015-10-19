@@ -159,4 +159,7 @@
   <data name="CreateConsultationSuccess" xml:space="preserve">
     <value>Consultation Successfully Created.</value>
   </data>
+  <data name="CreateConsultationFail" xml:space="preserve">
+    <value>Creating Consultation Failed.</value>
+  </data>
 </root>

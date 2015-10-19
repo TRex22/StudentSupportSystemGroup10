@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataServices\DatabaseOps.cs" />
+    <Compile Include="DataServices\DateTimeCollection.cs" />
     <Compile Include="EmailBuilder\IMailSender.cs" />
     <Compile Include="EmailBuilder\MailBuilder.cs" />
     <Compile Include="IS2G10_DBSSSDataSet.cs">
