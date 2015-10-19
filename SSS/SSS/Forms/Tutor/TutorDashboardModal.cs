@@ -28,9 +28,30 @@ namespace SSS_Windows_Forms.Forms.Tutor
             this.Hide();
         }
 
+        private void BindData()
+        {
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+
+            reportDataSource1.Name = "AverageRatings";
+            reportDataSource1.Value = _averageRatingsTableAdapter.GetData();
+            reportDataSource2.Name = "AverageTutorRating";
+            reportDataSource2.Value = _averageTutorRatingTableAdapter.GetData();
+            reportDataSource3.Name = "ConsultationForStudent";
+            reportDataSource3.Value = _consultationForStudentTableAdapter.GetData(_userId);
+            reportDataSource4.Name = "Consultation";
+            reportDataSource4.Value = _consultationTableAdapter.GetData();
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+        }
+
         private void TutorDashboardModal_Load(object sender, EventArgs e)
         {
-
+            BindData();
             this.reportViewer1.RefreshReport();
         }
     }

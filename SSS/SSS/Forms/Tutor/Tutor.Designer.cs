@@ -1,4 +1,4 @@
-﻿namespace SSS_Windows_Forms
+﻿namespace SSS_Windows_Forms.Forms.Tutor
 {
     partial class Tutor
     {
@@ -53,9 +53,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTutorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.iS2G10DBSSSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tUTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tUTORBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -68,9 +65,6 @@
             this.menuStrip8.SuspendLayout();
             this.menuStrip9.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10DBSSSDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -285,15 +279,6 @@
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
             // 
-            // tUTORBindingSource
-            // 
-            this.tUTORBindingSource.DataMember = "TUTOR";
-            this.tUTORBindingSource.DataSource = this.iS2G10DBSSSDataSetBindingSource;
-            // 
-            // tUTORBindingSource1
-            // 
-            this.tUTORBindingSource1.DataMember = "TUTOR";
-            // 
             // updateTutorToolStripMenuItem
             // 
             this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
@@ -336,9 +321,6 @@
             this.menuStrip9.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iS2G10DBSSSDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tUTORBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,9 +350,6 @@
         private System.Windows.Forms.MenuStrip menuStrip9;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.Timer tmrSecond;
-        private System.Windows.Forms.BindingSource iS2G10DBSSSDataSetBindingSource;
-        private System.Windows.Forms.BindingSource tUTORBindingSource;
-        private System.Windows.Forms.BindingSource tUTORBindingSource1;
         private System.Windows.Forms.ToolStripMenuItem updateTutorToolStripMenuItem;
     }
 }

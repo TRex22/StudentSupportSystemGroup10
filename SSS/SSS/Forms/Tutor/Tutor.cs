@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SSS_Library;
 using SSS_Library.IS2G10_DBSSSDataSetTableAdapters;
-using SSS_Windows_Forms.Forms.Tutor;
 
-namespace SSS_Windows_Forms
+namespace SSS_Windows_Forms.Forms.Tutor
 {
     public partial class Tutor : Form
     {
@@ -68,11 +60,6 @@ namespace SSS_Windows_Forms
         }
 
         private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-        }
-
-        private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
         }

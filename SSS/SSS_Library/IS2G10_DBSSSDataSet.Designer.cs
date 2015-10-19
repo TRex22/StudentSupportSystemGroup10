@@ -144,18 +144,6 @@ namespace SSS_Library {
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA29961;
         
-        private global::System.Data.DataRelation relationFK__USERPROFI__coord__2E1BDC42;
-        
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B;
-        
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B1;
-        
-        private global::System.Data.DataRelation relationFK__USERPROFI__stude__2F10007B2;
-        
-        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__300424B4;
-        
-        private global::System.Data.DataRelation relationFK__USERPROFI__tutor__300424B41;
-        
         private global::System.Data.DataRelation relationFK__CONSULTAT__coord__25869641;
         
         private global::System.Data.DataRelation relationFK__CONSULTAT__stude__267ABA7A;
@@ -1148,12 +1136,6 @@ namespace SSS_Library {
             this.relationFK__STUDENT__group_i__2B3F6F977 = this.Relations["FK__STUDENT__group_i__2B3F6F977"];
             this.relationFK__SESSION__tutor_i__295727251 = this.Relations["FK__SESSION__tutor_i__295727251"];
             this.relationFK__ATTENDANC__stude__22AA29961 = this.Relations["FK__ATTENDANC__stude__22AA29961"];
-            this.relationFK__USERPROFI__coord__2E1BDC42 = this.Relations["FK__USERPROFI__coord__2E1BDC42"];
-            this.relationFK__USERPROFI__stude__2F10007B = this.Relations["FK__USERPROFI__stude__2F10007B"];
-            this.relationFK__USERPROFI__stude__2F10007B1 = this.Relations["FK__USERPROFI__stude__2F10007B1"];
-            this.relationFK__USERPROFI__stude__2F10007B2 = this.Relations["FK__USERPROFI__stude__2F10007B2"];
-            this.relationFK__USERPROFI__tutor__300424B4 = this.Relations["FK__USERPROFI__tutor__300424B4"];
-            this.relationFK__USERPROFI__tutor__300424B41 = this.Relations["FK__USERPROFI__tutor__300424B41"];
             this.relationFK__CONSULTAT__coord__25869641 = this.Relations["FK__CONSULTAT__coord__25869641"];
             this.relationFK__CONSULTAT__stude__267ABA7A = this.Relations["FK__CONSULTAT__stude__267ABA7A"];
             this.relationFK__CONSULTAT__stude__267ABA7A1 = this.Relations["FK__CONSULTAT__stude__267ABA7A1"];
@@ -1372,30 +1354,6 @@ namespace SSS_Library {
                         this.tableSTUDENT_ACTIVITY.student_activity_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableATTENDANCE_AND_ACTIVITY.student_activity_idColumn}, false);
             this.Relations.Add(this.relationFK__ATTENDANC__stude__22AA29961);
-            this.relationFK__USERPROFI__coord__2E1BDC42 = new global::System.Data.DataRelation("FK__USERPROFI__coord__2E1BDC42", new global::System.Data.DataColumn[] {
-                        this.tableSSS_COORDINATOR.coordinator_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.coordinator_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__coord__2E1BDC42);
-            this.relationFK__USERPROFI__stude__2F10007B = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B", new global::System.Data.DataColumn[] {
-                        this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B);
-            this.relationFK__USERPROFI__stude__2F10007B1 = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B1", new global::System.Data.DataColumn[] {
-                        this.tableDISENGAGED_STUDENTS.student_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B1);
-            this.relationFK__USERPROFI__stude__2F10007B2 = new global::System.Data.DataRelation("FK__USERPROFI__stude__2F10007B2", new global::System.Data.DataColumn[] {
-                        this.tableSEARCH_STUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.student_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__stude__2F10007B2);
-            this.relationFK__USERPROFI__tutor__300424B4 = new global::System.Data.DataRelation("FK__USERPROFI__tutor__300424B4", new global::System.Data.DataColumn[] {
-                        this.tableTUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.tutor_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__tutor__300424B4);
-            this.relationFK__USERPROFI__tutor__300424B41 = new global::System.Data.DataRelation("FK__USERPROFI__tutor__300424B41", new global::System.Data.DataColumn[] {
-                        this.tableSEARCH_TUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUSERPROFILE.tutor_idColumn}, false);
-            this.Relations.Add(this.relationFK__USERPROFI__tutor__300424B41);
             this.relationFK__CONSULTAT__coord__25869641 = new global::System.Data.DataRelation("FK__CONSULTAT__coord__25869641", new global::System.Data.DataColumn[] {
                         this.tableSSS_COORDINATOR.coordinator_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableSEARCH_STUDENT_CONSULTATION_TOP5.coordinator_idColumn}, false);
@@ -8676,12 +8634,6 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnuser_name;
             
-            private global::System.Data.DataColumn columnstudent_id;
-            
-            private global::System.Data.DataColumn columncoordinator_id;
-            
-            private global::System.Data.DataColumn columntutor_id;
-            
             private global::System.Data.DataColumn columnpassword_hash;
             
             private global::System.Data.DataColumn columnpassword_salt;
@@ -8695,6 +8647,8 @@ namespace SSS_Library {
             private global::System.Data.DataColumn columnresetPassword;
             
             private global::System.Data.DataColumn columnuseOldForms;
+            
+            private global::System.Data.DataColumn columnuser_roles_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -8742,30 +8696,6 @@ namespace SSS_Library {
             public global::System.Data.DataColumn user_nameColumn {
                 get {
                     return this.columnuser_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn student_idColumn {
-                get {
-                    return this.columnstudent_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn coordinator_idColumn {
-                get {
-                    return this.columncoordinator_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tutor_idColumn {
-                get {
-                    return this.columntutor_id;
                 }
             }
             
@@ -8827,6 +8757,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn user_roles_idColumn {
+                get {
+                    return this.columnuser_roles_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8862,30 +8800,19 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, STUDENTRow parentSTUDENTRowByFK__USERPROFI__stude__2F10007B, SSS_COORDINATORRow parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42, TUTORRow parentTUTORRowByFK__USERPROFI__tutor__300424B4, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, bool useOldForms) {
+            public USERPROFILERow AddUSERPROFILERow(int user_id, string user_name, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, bool useOldForms, int user_roles_id) {
                 USERPROFILERow rowUSERPROFILERow = ((USERPROFILERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         user_id,
                         user_name,
-                        null,
-                        null,
-                        null,
                         password_hash,
                         password_salt,
                         PrimaryAccent,
                         SecondaryAccent,
                         isDark,
                         resetPassword,
-                        useOldForms};
-                if ((parentSTUDENTRowByFK__USERPROFI__stude__2F10007B != null)) {
-                    columnValuesArray[2] = parentSTUDENTRowByFK__USERPROFI__stude__2F10007B[0];
-                }
-                if ((parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42 != null)) {
-                    columnValuesArray[3] = parentSSS_COORDINATORRowByFK__USERPROFI__coord__2E1BDC42[0];
-                }
-                if ((parentTUTORRowByFK__USERPROFI__tutor__300424B4 != null)) {
-                    columnValuesArray[4] = parentTUTORRowByFK__USERPROFI__tutor__300424B4[0];
-                }
+                        useOldForms,
+                        user_roles_id};
                 rowUSERPROFILERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUSERPROFILERow);
                 return rowUSERPROFILERow;
@@ -8917,9 +8844,6 @@ namespace SSS_Library {
             internal void InitVars() {
                 this.columnuser_id = base.Columns["user_id"];
                 this.columnuser_name = base.Columns["user_name"];
-                this.columnstudent_id = base.Columns["student_id"];
-                this.columncoordinator_id = base.Columns["coordinator_id"];
-                this.columntutor_id = base.Columns["tutor_id"];
                 this.columnpassword_hash = base.Columns["password_hash"];
                 this.columnpassword_salt = base.Columns["password_salt"];
                 this.columnPrimaryAccent = base.Columns["PrimaryAccent"];
@@ -8927,6 +8851,7 @@ namespace SSS_Library {
                 this.columnisDark = base.Columns["isDark"];
                 this.columnresetPassword = base.Columns["resetPassword"];
                 this.columnuseOldForms = base.Columns["useOldForms"];
+                this.columnuser_roles_id = base.Columns["user_roles_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8936,12 +8861,6 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnuser_id);
                 this.columnuser_name = new global::System.Data.DataColumn("user_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuser_name);
-                this.columnstudent_id = new global::System.Data.DataColumn("student_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstudent_id);
-                this.columncoordinator_id = new global::System.Data.DataColumn("coordinator_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncoordinator_id);
-                this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntutor_id);
                 this.columnpassword_hash = new global::System.Data.DataColumn("password_hash", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpassword_hash);
                 this.columnpassword_salt = new global::System.Data.DataColumn("password_salt", typeof(string), null, global::System.Data.MappingType.Element);
@@ -8956,6 +8875,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnresetPassword);
                 this.columnuseOldForms = new global::System.Data.DataColumn("useOldForms", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuseOldForms);
+                this.columnuser_roles_id = new global::System.Data.DataColumn("user_roles_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnuser_roles_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id}, true));
                 this.columnuser_id.AllowDBNull = false;
@@ -8967,6 +8888,7 @@ namespace SSS_Library {
                 this.columnSecondaryAccent.MaxLength = 255;
                 this.columnisDark.AllowDBNull = false;
                 this.columnresetPassword.AllowDBNull = false;
+                this.columnuser_roles_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14653,17 +14575,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__coord__2E1BDC42"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__coord__2E1BDC42"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_STUDENT_CONSULTATION_TOP5Row[] GetSEARCH_STUDENT_CONSULTATION_TOP5Rows() {
                 if ((this.Table.ChildRelations["FK__CONSULTAT__coord__25869641"] == null)) {
                     return new SEARCH_STUDENT_CONSULTATION_TOP5Row[0];
@@ -15119,17 +15030,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_STUDENT_CONSULTATION_TOP5Row[] GetSEARCH_STUDENT_CONSULTATION_TOP5Rows() {
                 if ((this.Table.ChildRelations["FK__CONSULTAT__stude__267ABA7A"] == null)) {
                     return new SEARCH_STUDENT_CONSULTATION_TOP5Row[0];
@@ -15577,17 +15477,6 @@ namespace SSS_Library {
                 }
                 else {
                     return ((SESSIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK__SESSION__tutor_i__286302EC"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__300424B4"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__300424B4"])));
                 }
             }
             
@@ -16157,17 +16046,6 @@ namespace SSS_Library {
                 }
                 else {
                     return ((ENROLLMENTRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ENROLLMEN__stude__276EDEB3"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B1"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B1"])));
                 }
             }
             
@@ -17399,17 +17277,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B2"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__stude__2F10007B2"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_STUDENT_CONSULTATION_TOP5Row[] GetSEARCH_STUDENT_CONSULTATION_TOP5Rows() {
                 if ((this.Table.ChildRelations["FK__CONSULTAT__stude__267ABA7A2"] == null)) {
                     return new SEARCH_STUDENT_CONSULTATION_TOP5Row[0];
@@ -17698,17 +17565,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public USERPROFILERow[] GetUSERPROFILERows() {
-                if ((this.Table.ChildRelations["FK__USERPROFI__tutor__300424B41"] == null)) {
-                    return new USERPROFILERow[0];
-                }
-                else {
-                    return ((USERPROFILERow[])(base.GetChildRows(this.Table.ChildRelations["FK__USERPROFI__tutor__300424B41"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SEARCH_STUDENT_CONSULTATION_TOP5Row[] GetSEARCH_STUDENT_CONSULTATION_TOP5Rows() {
                 if ((this.Table.ChildRelations["FK__CONSULTAT__tutor__276EDEB31"] == null)) {
                     return new SEARCH_STUDENT_CONSULTATION_TOP5Row[0];
@@ -17951,54 +17807,6 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int student_id {
-                get {
-                    try {
-                        return ((int)(this[this.tableUSERPROFILE.student_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'student_id\' in table \'USERPROFILE\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSERPROFILE.student_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int coordinator_id {
-                get {
-                    try {
-                        return ((int)(this[this.tableUSERPROFILE.coordinator_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_id\' in table \'USERPROFILE\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSERPROFILE.coordinator_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tutor_id {
-                get {
-                    try {
-                        return ((int)(this[this.tableUSERPROFILE.tutor_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_id\' in table \'USERPROFILE\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSERPROFILE.tutor_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string password_hash {
                 get {
                     try {
@@ -18101,67 +17909,12 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SSS_COORDINATORRow SSS_COORDINATORRow {
+            public int user_roles_id {
                 get {
-                    return ((SSS_COORDINATORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__coord__2E1BDC42"])));
+                    return ((int)(this[this.tableUSERPROFILE.user_roles_idColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__coord__2E1BDC42"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public STUDENTRow STUDENTRow {
-                get {
-                    return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DISENGAGED_STUDENTSRow DISENGAGED_STUDENTSRow {
-                get {
-                    return ((DISENGAGED_STUDENTSRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SEARCH_STUDENTRow SEARCH_STUDENTRow {
-                get {
-                    return ((SEARCH_STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B2"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__stude__2F10007B2"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TUTORRow TUTORRow {
-                get {
-                    return ((TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__300424B4"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__300424B4"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SEARCH_TUTORRow SEARCH_TUTORRow {
-                get {
-                    return ((SEARCH_TUTORRow)(this.GetParentRow(this.Table.ParentRelations["FK__USERPROFI__tutor__300424B41"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__USERPROFI__tutor__300424B41"]);
+                    this[this.tableUSERPROFILE.user_roles_idColumn] = value;
                 }
             }
             
@@ -18175,42 +17928,6 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setuser_nameNull() {
                 this[this.tableUSERPROFILE.user_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isstudent_idNull() {
-                return this.IsNull(this.tableUSERPROFILE.student_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setstudent_idNull() {
-                this[this.tableUSERPROFILE.student_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscoordinator_idNull() {
-                return this.IsNull(this.tableUSERPROFILE.coordinator_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcoordinator_idNull() {
-                this[this.tableUSERPROFILE.coordinator_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istutor_idNull() {
-                return this.IsNull(this.tableUSERPROFILE.tutor_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settutor_idNull() {
-                this[this.tableUSERPROFILE.tutor_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30599,9 +30316,6 @@ FROM            ATTENDANCE INNER JOIN
             tableMapping.DataSetTable = "USERPROFILE";
             tableMapping.ColumnMappings.Add("user_id", "user_id");
             tableMapping.ColumnMappings.Add("user_name", "user_name");
-            tableMapping.ColumnMappings.Add("student_id", "student_id");
-            tableMapping.ColumnMappings.Add("coordinator_id", "coordinator_id");
-            tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
             tableMapping.ColumnMappings.Add("password_hash", "password_hash");
             tableMapping.ColumnMappings.Add("password_salt", "password_salt");
             tableMapping.ColumnMappings.Add("PrimaryAccent", "PrimaryAccent");
@@ -30609,20 +30323,16 @@ FROM            ATTENDANCE INNER JOIN
             tableMapping.ColumnMappings.Add("isDark", "isDark");
             tableMapping.ColumnMappings.Add("resetPassword", "resetPassword");
             tableMapping.ColumnMappings.Add("useOldForms", "useOldForms");
+            tableMapping.ColumnMappings.Add("user_roles_id", "user_roles_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [USERPROFILE] WHERE (([user_id] = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_name)) AND ((@IsNull_student_id = 1 AND [student_id] IS NULL) OR ([student_id] = @Original_student_id)) AND ((@IsNull_coordinator_id = 1 AND [coordinator_id] IS NULL) OR ([coordinator_id] = @Original_coordinator_id)) AND ((@IsNull_tutor_id = 1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Original_tutor_id)) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOldForms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [USERPROFILE] WHERE (([user_id] = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_name)) AND ([user_roles_id] = @Original_user_roles_id) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOldForms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_user_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_roles_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_roles_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_password_hash", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_password_salt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_salt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -30637,14 +30347,12 @@ FROM            ATTENDANCE INNER JOIN
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [USERPROFILE] ([user_id], [user_name], [student_id], [coordinator_id], [tutor_id], [password_hash], [password_salt], [PrimaryAccent], [SecondaryAccent], [isDark], [resetPassword], [useOldForms]) VALUES (@user_id, @user_name, @student_id, @coordinator_id, @tutor_id, @password_hash, @password_salt, @PrimaryAccent, @SecondaryAccent, @isDark, @resetPassword, @useOldForms);
-SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms FROM USERPROFILE WHERE (user_id = @user_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [USERPROFILE] ([user_id], [user_name], [user_roles_id], [password_hash], [password_salt], [PrimaryAccent], [SecondaryAccent], [isDark], [resetPassword], [useOldForms]) VALUES (@user_id, @user_name, @user_roles_id, @password_hash, @password_salt, @PrimaryAccent, @SecondaryAccent, @isDark, @resetPassword, @useOldForms);
+SELECT user_id, user_name, user_roles_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms FROM USERPROFILE WHERE (user_id = @user_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_roles_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_roles_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_salt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_salt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrimaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimaryAccent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -30654,33 +30362,12 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useOldForms", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "useOldForms", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [USERPROFILE] SET [user_id] = @user_id, [user_name] = @user_name, [student" +
-                "_id] = @student_id, [coordinator_id] = @coordinator_id, [tutor_id] = @tutor_id, " +
-                "[password_hash] = @password_hash, [password_salt] = @password_salt, [PrimaryAcce" +
-                "nt] = @PrimaryAccent, [SecondaryAccent] = @SecondaryAccent, [isDark] = @isDark, " +
-                "[resetPassword] = @resetPassword, [useOldForms] = @useOldForms WHERE (([user_id]" +
-                " = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([" +
-                "user_name] = @Original_user_name)) AND ((@IsNull_student_id = 1 AND [student_id]" +
-                " IS NULL) OR ([student_id] = @Original_student_id)) AND ((@IsNull_coordinator_id" +
-                " = 1 AND [coordinator_id] IS NULL) OR ([coordinator_id] = @Original_coordinator_" +
-                "id)) AND ((@IsNull_tutor_id = 1 AND [tutor_id] IS NULL) OR ([tutor_id] = @Origin" +
-                "al_tutor_id)) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([" +
-                "password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [" +
-                "password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@I" +
-                "sNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Orig" +
-                "inal_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS " +
-                "NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Origi" +
-                "nal_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOld" +
-                "Forms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms))" +
-                ");\r\nSELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_ha" +
-                "sh, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOld" +
-                "Forms FROM USERPROFILE WHERE (user_id = @user_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [USERPROFILE] SET [user_id] = @user_id, [user_name] = @user_name, [user_roles_id] = @user_roles_id, [password_hash] = @password_hash, [password_salt] = @password_salt, [PrimaryAccent] = @PrimaryAccent, [SecondaryAccent] = @SecondaryAccent, [isDark] = @isDark, [resetPassword] = @resetPassword, [useOldForms] = @useOldForms WHERE (([user_id] = @Original_user_id) AND ((@IsNull_user_name = 1 AND [user_name] IS NULL) OR ([user_name] = @Original_user_name)) AND ([user_roles_id] = @Original_user_roles_id) AND ((@IsNull_password_hash = 1 AND [password_hash] IS NULL) OR ([password_hash] = @Original_password_hash)) AND ((@IsNull_password_salt = 1 AND [password_salt] IS NULL) OR ([password_salt] = @Original_password_salt)) AND ((@IsNull_PrimaryAccent = 1 AND [PrimaryAccent] IS NULL) OR ([PrimaryAccent] = @Original_PrimaryAccent)) AND ((@IsNull_SecondaryAccent = 1 AND [SecondaryAccent] IS NULL) OR ([SecondaryAccent] = @Original_SecondaryAccent)) AND ([isDark] = @Original_isDark) AND ([resetPassword] = @Original_resetPassword) AND ((@IsNull_useOldForms = 1 AND [useOldForms] IS NULL) OR ([useOldForms] = @Original_useOldForms)));
+SELECT user_id, user_name, user_roles_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms FROM USERPROFILE WHERE (user_id = @user_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user_roles_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_roles_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_salt", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_salt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrimaryAccent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimaryAccent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -30691,12 +30378,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_user_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_user_roles_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user_roles_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_password_hash", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_password_salt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password_salt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -30724,9 +30406,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        user_id, user_name, student_id, coordinator_id, tutor_id, password_" +
-                "hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, \r\n  " +
-                "                       useOldForms\r\nFROM            USERPROFILE";
+            this._commandCollection[0].CommandText = "SELECT        *\r\nFROM            USERPROFILE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -30787,7 +30467,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_user_id, string Original_user_name, global::System.Nullable<int> Original_student_id, global::System.Nullable<int> Original_coordinator_id, global::System.Nullable<int> Original_tutor_id, string Original_password_hash, string Original_password_salt, string Original_PrimaryAccent, string Original_SecondaryAccent, bool Original_isDark, bool Original_resetPassword, global::System.Nullable<bool> Original_useOldForms) {
+        public virtual int Delete(int Original_user_id, string Original_user_name, int Original_user_roles_id, string Original_password_hash, string Original_password_salt, string Original_PrimaryAccent, string Original_SecondaryAccent, bool Original_isDark, bool Original_resetPassword, global::System.Nullable<bool> Original_useOldForms) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_user_id));
             if ((Original_user_name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -30797,71 +30477,48 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_user_name));
             }
-            if ((Original_student_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_student_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_coordinator_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_coordinator_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_tutor_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_tutor_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_user_roles_id));
             if ((Original_password_hash == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_password_hash));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_password_hash));
             }
             if ((Original_password_salt == null)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_password_salt));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_password_salt));
             }
             if ((Original_PrimaryAccent == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_PrimaryAccent));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_PrimaryAccent));
             }
             if ((Original_SecondaryAccent == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_SecondaryAccent));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_SecondaryAccent));
             }
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((bool)(Original_isDark));
-            this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_resetPassword));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_isDark));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((bool)(Original_resetPassword));
             if ((Original_useOldForms.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_useOldForms.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((bool)(Original_useOldForms.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -30883,7 +30540,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int user_id, string user_name, global::System.Nullable<int> student_id, global::System.Nullable<int> coordinator_id, global::System.Nullable<int> tutor_id, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, global::System.Nullable<bool> useOldForms) {
+        public virtual int Insert(int user_id, string user_name, int user_roles_id, string password_hash, string password_salt, string PrimaryAccent, string SecondaryAccent, bool isDark, bool resetPassword, global::System.Nullable<bool> useOldForms) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(user_id));
             if ((user_name == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -30891,55 +30548,38 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(user_name));
             }
-            if ((student_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(student_id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((coordinator_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(coordinator_id.Value));
-            }
-            else {
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(user_roles_id));
+            if ((password_hash == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((tutor_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(tutor_id.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(password_hash));
+            }
+            if ((password_salt == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((password_hash == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(password_salt));
+            }
+            if ((PrimaryAccent == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(password_hash));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PrimaryAccent));
             }
-            if ((password_salt == null)) {
+            if ((SecondaryAccent == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(password_salt));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(SecondaryAccent));
             }
-            if ((PrimaryAccent == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(PrimaryAccent));
-            }
-            if ((SecondaryAccent == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(SecondaryAccent));
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(isDark));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(resetPassword));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(isDark));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(resetPassword));
             if ((useOldForms.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(useOldForms.Value));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(useOldForms.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -30964,9 +30604,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         public virtual int Update(
                     int user_id, 
                     string user_name, 
-                    global::System.Nullable<int> student_id, 
-                    global::System.Nullable<int> coordinator_id, 
-                    global::System.Nullable<int> tutor_id, 
+                    int user_roles_id, 
                     string password_hash, 
                     string password_salt, 
                     string PrimaryAccent, 
@@ -30976,9 +30614,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     global::System.Nullable<bool> useOldForms, 
                     int Original_user_id, 
                     string Original_user_name, 
-                    global::System.Nullable<int> Original_student_id, 
-                    global::System.Nullable<int> Original_coordinator_id, 
-                    global::System.Nullable<int> Original_tutor_id, 
+                    int Original_user_roles_id, 
                     string Original_password_hash, 
                     string Original_password_salt, 
                     string Original_PrimaryAccent, 
@@ -30993,130 +30629,90 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(user_name));
             }
-            if ((student_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(student_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((coordinator_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(coordinator_id.Value));
-            }
-            else {
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(user_roles_id));
+            if ((password_hash == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((tutor_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(tutor_id.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(password_hash));
+            }
+            if ((password_salt == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((password_hash == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(password_salt));
+            }
+            if ((PrimaryAccent == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(password_hash));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PrimaryAccent));
             }
-            if ((password_salt == null)) {
+            if ((SecondaryAccent == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(password_salt));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(SecondaryAccent));
             }
-            if ((PrimaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(PrimaryAccent));
-            }
-            if ((SecondaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(SecondaryAccent));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(isDark));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(resetPassword));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(isDark));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(resetPassword));
             if ((useOldForms.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(useOldForms.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(useOldForms.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_user_id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_user_id));
             if ((Original_user_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_user_name));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_user_name));
             }
-            if ((Original_student_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_student_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_coordinator_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_coordinator_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((Original_tutor_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_tutor_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_user_roles_id));
             if ((Original_password_hash == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_password_hash));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_password_hash));
             }
             if ((Original_password_salt == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_password_salt));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_password_salt));
             }
             if ((Original_PrimaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_PrimaryAccent));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_PrimaryAccent));
             }
             if ((Original_SecondaryAccent == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_SecondaryAccent));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_SecondaryAccent));
             }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_isDark));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((bool)(Original_resetPassword));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(Original_isDark));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_resetPassword));
             if ((Original_useOldForms.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((bool)(Original_useOldForms.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(Original_useOldForms.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -31140,9 +30736,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string user_name, 
-                    global::System.Nullable<int> student_id, 
-                    global::System.Nullable<int> coordinator_id, 
-                    global::System.Nullable<int> tutor_id, 
+                    int user_roles_id, 
                     string password_hash, 
                     string password_salt, 
                     string PrimaryAccent, 
@@ -31152,9 +30746,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     global::System.Nullable<bool> useOldForms, 
                     int Original_user_id, 
                     string Original_user_name, 
-                    global::System.Nullable<int> Original_student_id, 
-                    global::System.Nullable<int> Original_coordinator_id, 
-                    global::System.Nullable<int> Original_tutor_id, 
+                    int Original_user_roles_id, 
                     string Original_password_hash, 
                     string Original_password_salt, 
                     string Original_PrimaryAccent, 
@@ -31162,7 +30754,7 @@ SELECT user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, 
                     bool Original_isDark, 
                     bool Original_resetPassword, 
                     global::System.Nullable<bool> Original_useOldForms) {
-            return this.Update(Original_user_id, user_name, student_id, coordinator_id, tutor_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms, Original_user_id, Original_user_name, Original_student_id, Original_coordinator_id, Original_tutor_id, Original_password_hash, Original_password_salt, Original_PrimaryAccent, Original_SecondaryAccent, Original_isDark, Original_resetPassword, Original_useOldForms);
+            return this.Update(Original_user_id, user_name, user_roles_id, password_hash, password_salt, PrimaryAccent, SecondaryAccent, isDark, resetPassword, useOldForms, Original_user_id, Original_user_name, Original_user_roles_id, Original_password_hash, Original_password_salt, Original_PrimaryAccent, Original_SecondaryAccent, Original_isDark, Original_resetPassword, Original_useOldForms);
         }
     }
     

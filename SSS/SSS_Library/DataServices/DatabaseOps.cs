@@ -68,19 +68,19 @@ namespace SSS_Library.DataServices
             var tutors = TutorTableAdapter1.GetData();
             foreach (var tutor in tutors)
             {
-                _userprofileTableAdapter1.Insert(tutor.tutor_id, tutor.tutor_emailaddress, null, null, tutor.tutor_id, null, null, null, null, false, true, null);
+                _userprofileTableAdapter1.Insert(tutor.tutor_id, tutor.tutor_emailaddress, 3, null, null, null, null, false, true, null);
             }
 
             var students = _studentTableAdapter1.GetData();
             foreach (var student in students)
             {
-                _userprofileTableAdapter1.Insert(student.student_id, student.student_emailaddress, student.student_id, null, null, null, null, null, null, false, true, null);
+                _userprofileTableAdapter1.Insert(student.student_id, student.student_emailaddress, 4, null, null, null, null, false, true, null);
             }
 
             var coordinators = _ssSCoordinatorTableAdapter1.GetData();
             foreach (var coordinator in coordinators)
             {
-                _userprofileTableAdapter1.Insert(coordinator.coordinator_id, coordinator.coordinator_emailaddress, null, coordinator.coordinator_id, null, null, null, null, null, false, true, null);
+                _userprofileTableAdapter1.Insert(coordinator.coordinator_id, coordinator.coordinator_emailaddress, 2, null, null, null, null, false, true, null);
             }
         }
 

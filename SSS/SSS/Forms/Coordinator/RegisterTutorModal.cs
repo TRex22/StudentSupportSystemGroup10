@@ -125,7 +125,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
          
 
                 tutorTableAdapter1.Insert(tutorId, tutorFname, tutorLname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(trainingStatus));
-                userprofileTableAdapter1.Insert(tutorId, email, null, null, tutorId, null, null, null, null, false, true, true);
+                userprofileTableAdapter1.Insert(tutorId, email, 3, null, null, null, null, false, true, true);
 
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);

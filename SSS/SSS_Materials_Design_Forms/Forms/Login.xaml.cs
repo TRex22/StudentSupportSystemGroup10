@@ -79,21 +79,24 @@ namespace SSS_Materials_Design_Forms.Forms
 
                             if (doILogin)
                             {
-                                if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
+                                //coordinator role = 2
+                                if (userProfile.user_roles_id == 2)
                                 {
                                     MetroWindow coordinatorShow = new Coordinator(_userId);
                                     coordinatorShow.Owner = this;
                                     coordinatorShow.Show();
                                     this.Hide();
                                 }
-                                else if (userProfile.student_id != null && _userId == userProfile.student_id)
+                                //student role = 4
+                                else if (userProfile.user_roles_id == 4)
                                 {
                                     MetroWindow studentShow = new Student(_userId);
                                     studentShow.Owner = this;
                                     studentShow.Show();
                                     this.Hide();
                                 }
-                                else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
+                                //tutor role = 3
+                                else if (userProfile.user_roles_id == 3)
                                 {
                                     MetroWindow tutorShow = new Tutor(_userId);
                                     tutorShow.Owner = this;

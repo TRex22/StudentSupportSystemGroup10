@@ -58,7 +58,8 @@ namespace SSS_Windows_Forms.Forms
 
                         if (doILogin)
                         {
-                            if (userProfile.coordinator_id != null && _userId == userProfile.coordinator_id)
+                            //coordinator role = 2
+                            if (userProfile.user_roles_id == 2)
                             {
                                 Form coordinatorShow = new Coordinator.Coordinator(_userId);
                                 coordinatorShow.Owner = this;
@@ -66,16 +67,18 @@ namespace SSS_Windows_Forms.Forms
                                 this.Hide();
 
                             }
-                            else if (userProfile.student_id != null && _userId == userProfile.student_id)
+                            //student role = 4
+                            else if (userProfile.user_roles_id == 4)
                             {
                                 Form studentShow = new SSS_Windows_Forms.Student(_userId);
                                 studentShow.Owner = this;
                                 studentShow.Show();
                                 this.Hide();
                             }
-                            else if (userProfile.tutor_id != null && _userId == userProfile.tutor_id)
+                            //tutor role = 3
+                            else if (userProfile.user_roles_id == 3)
                             {
-                                Form tutorShow = new SSS_Windows_Forms.Tutor(_userId);
+                                Form tutorShow = new Tutor.Tutor(_userId);
                                 tutorShow.Owner = this;
                                 tutorShow.Show();
                                 this.Hide();
@@ -124,9 +127,18 @@ namespace SSS_Windows_Forms.Forms
 
                 MessageBox.Show(Resources.Login_CheckPassword_Password_Created_Successfully,
                     Resources.Login_CheckPassword_Password_Created_Successfully);
+                medPassword.Clear();
+                medUsername.Clear();
+                medUsername.Focus();
             }
 
             if (_password != null && _password.Equals(""))
+            {
+                MessageBox.Show(Resources.Login_CheckPassword_Please_Enter_a_Password_,
+                    Resources.Login_CheckPassword_Please_Enter_a_Password_);
+            }
+
+            if (_password == null)
             {
                 MessageBox.Show(Resources.Login_CheckPassword_Please_Enter_a_Password_,
                     Resources.Login_CheckPassword_Please_Enter_a_Password_);

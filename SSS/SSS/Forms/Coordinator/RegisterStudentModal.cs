@@ -198,7 +198,7 @@ namespace SSS_Windows_Forms
                 var programme = StudentProgrammeTxtBox.Text;
 
                 studentTableAdapter.Insert(studentId, _coordinatorId, null, studentFname, studentLname, passportNo, dateofbirth, email, mobileNumber, yearOfStudy, programme, "white", 0);
-                userprofileTableAdapter1.Insert(studentId, email, studentId, null, null, null, null, null, null, false, true, true);
+                userprofileTableAdapter1.Insert(studentId, email, 4, null, null, null, null, false, true, true);
 
                 ResetAllFields();
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);
