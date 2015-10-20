@@ -49,6 +49,17 @@ namespace SSS_Library.DataServices
             UpdateActivitiesPerStudent(10013);
         }
 
+        public static void MatchTutorTimesAndDates()
+        {
+            var tutorTimes = _tutorAvailableTimesTableAdapter1.GetData();
+            foreach (var tutorTime in tutorTimes)
+            {
+                tutorTime.date_free -= tutorTime.date_free.TimeOfDay;
+                tutorTime.date_free += tutorTime.available_time;
+                _tutorAvailableTimesTableAdapter1.Update(tutorTime);
+            }
+        }
+
         public void UpdateActivitiesPerStudent(int studentId)
         {
             Random rnd = new Random();

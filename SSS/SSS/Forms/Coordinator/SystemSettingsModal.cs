@@ -29,7 +29,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private void doDbOpButton_Click(object sender, EventArgs e)
         {
             //TODO implement full settings
-            SSS_Library.DataServices.DatabaseOps.GenerateTutorAvailableDates();
+            SSS_Library.DataServices.DatabaseOps.MatchTutorTimesAndDates();
             MessageBox.Show("All Done.");
         }
     }

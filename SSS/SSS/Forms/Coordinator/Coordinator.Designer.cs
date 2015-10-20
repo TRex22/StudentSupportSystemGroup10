@@ -81,6 +81,7 @@
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.updateStudentConsultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -388,6 +389,7 @@
             this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerStudentToolStripMenuItem,
             this.updateStudentToolStripMenuItem1,
+            this.updateStudentConsultationToolStripMenuItem,
             this.searchStudentsToolStripMenuItem});
             this.studentToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F);
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
@@ -397,21 +399,21 @@
             // registerStudentToolStripMenuItem
             // 
             this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
-            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(264, 24);
             this.registerStudentToolStripMenuItem.Text = "Register Student";
             this.registerStudentToolStripMenuItem.Click += new System.EventHandler(this.registerStudentToolStripMenuItem_Click);
             // 
             // updateStudentToolStripMenuItem1
             // 
             this.updateStudentToolStripMenuItem1.Name = "updateStudentToolStripMenuItem1";
-            this.updateStudentToolStripMenuItem1.Size = new System.Drawing.Size(185, 24);
+            this.updateStudentToolStripMenuItem1.Size = new System.Drawing.Size(264, 24);
             this.updateStudentToolStripMenuItem1.Text = "Update Student";
             this.updateStudentToolStripMenuItem1.Click += new System.EventHandler(this.updateStudentToolStripMenuItem1_Click);
             // 
             // searchStudentsToolStripMenuItem
             // 
             this.searchStudentsToolStripMenuItem.Name = "searchStudentsToolStripMenuItem";
-            this.searchStudentsToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.searchStudentsToolStripMenuItem.Size = new System.Drawing.Size(264, 24);
             this.searchStudentsToolStripMenuItem.Text = "Search Students";
             this.searchStudentsToolStripMenuItem.Click += new System.EventHandler(this.searchStudentsToolStripMenuItem_Click);
             // 
@@ -524,6 +526,13 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
+            // updateStudentConsultationToolStripMenuItem
+            // 
+            this.updateStudentConsultationToolStripMenuItem.Name = "updateStudentConsultationToolStripMenuItem";
+            this.updateStudentConsultationToolStripMenuItem.Size = new System.Drawing.Size(264, 24);
+            this.updateStudentConsultationToolStripMenuItem.Text = "Update Student Consultation";
+            this.updateStudentConsultationToolStripMenuItem.Click += new System.EventHandler(this.updateStudentConsultationToolStripMenuItem_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,5 +630,6 @@
         private System.Windows.Forms.ToolStripMenuItem tutorTrainingStatusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tutorsWithoutTrainingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tutorsWithTrainingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateStudentConsultationToolStripMenuItem;
     }
 }

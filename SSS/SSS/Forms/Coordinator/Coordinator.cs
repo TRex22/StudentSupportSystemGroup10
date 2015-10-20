@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings;
 using SSS_Windows_Forms.Forms.Coordinator.TutorRatings;
 using SSS_Windows_Forms.Forms.Coordinator.TutorTraining;
+using SSS_Windows_Forms.Forms.Tutor;
 
 namespace SSS_Windows_Forms.Forms.Coordinator
 {
@@ -27,6 +28,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly TutorTrainingStatusModal _tutorTrainingStatusModal = new TutorTrainingStatusModal();
         private readonly TutorsWithTrainingModal _tutorsWithTrainingModal = new TutorsWithTrainingModal();
         private readonly TutorsWithoutTrainingModal _tutorsWithoutTrainingModal = new TutorsWithoutTrainingModal();
+        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal = new UpdateStudentConsultationModal();
 
         public Coordinator(int userId)
         {
@@ -72,6 +74,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_tutorTrainingStatusModal);
             this.panel7.Controls.Add(_tutorsWithTrainingModal);
             this.panel7.Controls.Add(_tutorsWithoutTrainingModal);
+            this.panel7.Controls.Add(_updateStudentConsultationModal);
         }
 
         public void SetModal(Control vaule)
@@ -204,6 +207,12 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _tutorsWithTrainingModal.Show();
+        }
+
+        private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _updateStudentConsultationModal.Show();
         }
     }
 }

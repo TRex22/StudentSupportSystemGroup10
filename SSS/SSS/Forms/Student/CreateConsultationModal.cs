@@ -20,7 +20,7 @@ namespace SSS_Windows_Forms.Forms.Student
         private readonly int _userId;
         private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
         private readonly SSS_Library.IS2G10_DBSSSDataSet.TUTORDataTable _tutorDataTable;
-        private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.TUTOR_AVAILABLE_TIMESTableAdapter _availableTimesTableAdapter = new TUTOR_AVAILABLE_TIMESTableAdapter();
+        private readonly TUTOR_AVAILABLE_TIMESTableAdapter _availableTimesTableAdapter = new TUTOR_AVAILABLE_TIMESTableAdapter();
         
         public CreateConsultationModal(int userId, SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow studentData)
         {
@@ -111,7 +111,7 @@ namespace SSS_Windows_Forms.Forms.Student
                         var foundItem = datesAndTimes.FindDateCollection(oneDate);
                         var times = new Times
                         {
-                            Time = item.available_time,
+                            Time = item.date_free.TimeOfDay,
                             TutorTimesId = item.tutor_time_id
                         };
                         foundItem.Times.Add(times);
@@ -120,7 +120,7 @@ namespace SSS_Windows_Forms.Forms.Student
                     {
                         var times = new Times
                         {
-                            Time = item.available_time,
+                            Time = item.date_free.TimeOfDay,
                             TutorTimesId = item.tutor_time_id
                         };
                         oneDate.Times.Add(times);

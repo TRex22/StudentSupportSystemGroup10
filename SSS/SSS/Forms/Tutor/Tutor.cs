@@ -13,6 +13,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;
         private readonly TutorDashboardModal _tutorDashboardModal;
         private readonly UpdateTutorModal _updateTutorModal;
+        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal = new UpdateStudentConsultationModal();
         private readonly TUTORTableAdapter _tUTORTableAdapter = new TUTORTableAdapter()
         {
             ClearBeforeFill = true
@@ -37,6 +38,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
             this.panel7.Controls.Add(_tutorDashboardModal);
             this.panel7.Controls.Add(_updateTutorModal);
+            this.panel7.Controls.Add(_updateStudentConsultationModal);
         }
 
         private void HideAllModals()
@@ -79,6 +81,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _updateStudentConsultationModal.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

@@ -204,11 +204,23 @@
     <Compile Include="Forms\Student\StudentDashboardModal.Designer.cs">
       <DependentUpon>StudentDashboardModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tutor\SearchConsultationModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tutor\SearchConsultationModal.Designer.cs">
+      <DependentUpon>SearchConsultationModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tutor\TutorDashboardModal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tutor\TutorDashboardModal.Designer.cs">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tutor\UpdateStudentConsultationModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tutor\UpdateStudentConsultationModal.Designer.cs">
+      <DependentUpon>UpdateStudentConsultationModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tutor\UpdateTutorModal.cs">
       <SubType>Form</SubType>
@@ -321,6 +333,9 @@
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tutor\UpdateStudentConsultationModal.resx">
+      <DependentUpon>UpdateStudentConsultationModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\UpdateTutorModal.resx">
       <DependentUpon>UpdateTutorModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,7 +376,9 @@
       <Name>SSS_Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Forms\Administrator\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCEDataTable.datasource" />

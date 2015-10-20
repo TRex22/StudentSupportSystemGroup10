@@ -14,14 +14,25 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class SearchStudentModal : Form
     {
+        private enum searches
+        {
+            None = 0,
+            UpdateStudent = 1,
+            UpdateConsultation = 2
+        };
+
         private readonly SSS_Library.IS2G10_DBSSSDataSet.GROUPDataTable _group;
 
         private readonly int _coordinatorId;
-        private readonly bool _isUpdateStudent;
+        private readonly bool _isUpdateStudent = false;
+        private readonly bool _isUpdateStudentConsultation = false;
         private int _groupId;
 
-        public SearchStudentModal(int coordintaorId, bool isUpdateStudent)
+        public SearchStudentModal(int coordinatorId, string typeOfSearch)
         {
+            int search;
+            searches.TryParse(typeOfSearch, out search);
+
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
@@ -29,11 +40,18 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 
             checkBox1.Checked = false;
 
-            if(isUpdateStudent)
-                this.label1.Text= "Find Student To Update";
+            if (search == 1)
+            {
+                this.label1.Text = "Find Student To Update";
+                _isUpdateStudent = true;
+            }
+            else if (search == 2)
+            {
+                this.label1.Text = "Find Student To Update Consultation";
+                _isUpdateStudentConsultation = true;
+            }
 
-            _coordinatorId = coordintaorId;
-            _isUpdateStudent = isUpdateStudent;
+            _coordinatorId = coordinatorId;
             _group = groupTableAdapter1.GetData();
             _groupId = PopulateGroupComboBox();
 
@@ -67,17 +85,22 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             var studentId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             SSS_Library.IS2G10_DBSSSDataSet.SEARCH_STUDENTRow student = sEARCH_STUDENTTableAdapter.GetData(_coordinatorId).FindBystudent_id(studentId);
 
-            if (!_isUpdateStudent)
+            if (!_isUpdateStudent || !_isUpdateStudentConsultation)
             {
                 DisplayStudentInformation(student);
             }
-            else
+            else if (_isUpdateStudent)
             {
                 Coordinator coordinator = (Coordinator)Application.OpenForms["Coordinator"];
                 var updateStudentProfileModalModal = new UpdateStudentProfileModal(studentId);
                 coordinator.SetModal(updateStudentProfileModalModal);
                 this.Hide();
                 updateStudentProfileModalModal.Show();
+            }
+            else if (_isUpdateStudentConsultation)
+            {
+                //todo
+                throw new NotImplementedException();
             }
         }
 
