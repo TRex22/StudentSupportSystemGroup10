@@ -12,9 +12,19 @@ namespace SSS_Windows_Forms.Forms.Tutor
 {
     public partial class SearchConsultationModal : Form
     {
-        public SearchConsultationModal()
+        private readonly int _coordinatorId;
+        public SearchConsultationModal(int coordinatorId)
         {
+            _coordinatorId = coordinatorId;
             InitializeComponent();
+            this.TopLevel = false;
+            this.AutoScroll = true;
+            this.Hide();
+        }
+
+        private void SearchConsultationModal_Load(object sender, EventArgs e)
+        {
+            cONSULTATIONFULLDATARowBindingSource = consultationFullDataTableAdapter.GetData(_coordinatorId);
         }
     }
 }

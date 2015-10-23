@@ -28,7 +28,8 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly TutorTrainingStatusModal _tutorTrainingStatusModal = new TutorTrainingStatusModal();
         private readonly TutorsWithTrainingModal _tutorsWithTrainingModal = new TutorsWithTrainingModal();
         private readonly TutorsWithoutTrainingModal _tutorsWithoutTrainingModal = new TutorsWithoutTrainingModal();
-        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal = new UpdateStudentConsultationModal();
+        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal;
+        private readonly UpdateStudentConsultationModal _searchStudentConsultationModal;
 
         public Coordinator(int userId)
         {
@@ -37,11 +38,14 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(userId);
             _registerStudentModal = new RegisterStudentModal(userId);
 
-            _searchStudentModal = new SearchStudentModal(userId, false);
-            _updateStudentModal = new SearchStudentModal(userId, true) {Parent = this};
+            _searchStudentModal = new SearchStudentModal(userId, "None");
+            _updateStudentModal = new SearchStudentModal(userId, "UpdateStudent") {Parent = this};
 
             _searchTutorModal = new SearchTutorModal(userId, false);
             _updateTutorModal = new SearchTutorModal(userId, true) { Parent = this };
+
+            _updateStudentConsultationModal = new UpdateStudentConsultationModal(userId);
+            _searchStudentConsultationModal = new UpdateStudentConsultationModal(userId);
 
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
@@ -75,6 +79,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_tutorsWithTrainingModal);
             this.panel7.Controls.Add(_tutorsWithoutTrainingModal);
             this.panel7.Controls.Add(_updateStudentConsultationModal);
+            this.panel7.Controls.Add(_searchStudentConsultationModal);
         }
 
         public void SetModal(Control vaule)
@@ -213,6 +218,12 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _updateStudentConsultationModal.Show();
+        }
+
+        private void searchConsultationsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _searchStudentConsultationModal.Show();
         }
     }
 }

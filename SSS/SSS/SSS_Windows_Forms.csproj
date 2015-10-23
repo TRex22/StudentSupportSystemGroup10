@@ -330,6 +330,9 @@
       <DependentUpon>StudentDashboardModal.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tutor\SearchConsultationModal.resx">
+      <DependentUpon>SearchConsultationModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +428,10 @@
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FOR_STUDENTRow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FOR_STUDENTRowChangeEvent.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FOR_STUDENTRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FULL_DATADataTable.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FULL_DATARow.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FULL_DATARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+CONSULTATION_FULL_DATARowChangeEventHandler.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+COURSEDataTable.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+COURSERow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+COURSERowChangeEvent.datasource" />
@@ -533,6 +540,7 @@
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.BRANDINGTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATIONTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FOR_STUDENTTableAdapter.datasource" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FULL_DATATableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.COURSETableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTSTableAdapter.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSetTableAdapters.DISENGAGED_STUDENTS_AGGREGATETableAdapter.datasource" />
