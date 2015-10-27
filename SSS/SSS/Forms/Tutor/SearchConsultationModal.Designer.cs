@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.consultationFullDataTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FULL_DATATableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cONSULTATIONFULLDATARowBindingSource = new SSS_Library.IS2G10_DBSSSDataSet.CONSULTATION_FULL_DATADataTable();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.DiasplayButton = new System.Windows.Forms.Button();
+            this.consultation_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consultationdetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consultationdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentarrivedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -43,12 +46,11 @@
             this.tutorfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tutorlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tutortrainingstatusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cONSULTATIONFULLDATARowBindingSource = new SSS_Library.IS2G10_DBSSSDataSet.CONSULTATION_FULL_DATADataTable();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cONSULTATIONFULLDATARowBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // consultationTableAdapter1
+            // consultationFullDataTableAdapter
             // 
             this.consultationFullDataTableAdapter.ClearBeforeFill = true;
             // 
@@ -59,6 +61,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.consultation_id,
             this.consultationdetailsDataGridViewTextBoxColumn,
             this.consultationdateDataGridViewTextBoxColumn,
             this.studentarrivedDataGridViewCheckBoxColumn,
@@ -72,11 +75,43 @@
             this.tutorlastnameDataGridViewTextBoxColumn,
             this.tutortrainingstatusDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.cONSULTATIONFULLDATARowBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(65, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(625, 313);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cONSULTATIONFULLDATARowBindingSource
+            // 
+            this.cONSULTATIONFULLDATARowBindingSource.TableName = "CONSULTATION_FULL_DATA";
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(121, 418);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(133, 22);
+            this.UpdateButton.TabIndex = 1;
+            this.UpdateButton.Text = "Update Consultation";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // DiasplayButton
+            // 
+            this.DiasplayButton.Location = new System.Drawing.Point(414, 418);
+            this.DiasplayButton.Name = "DiasplayButton";
+            this.DiasplayButton.Size = new System.Drawing.Size(184, 23);
+            this.DiasplayButton.TabIndex = 2;
+            this.DiasplayButton.Text = "Display Consultation Information";
+            this.DiasplayButton.UseVisualStyleBackColor = true;
+            this.DiasplayButton.Click += new System.EventHandler(this.DiasplayButton_Click);
+            // 
+            // consultation_id
+            // 
+            this.consultation_id.DataPropertyName = "consultation_id";
+            this.consultation_id.HeaderText = "Id";
+            this.consultation_id.Name = "consultation_id";
+            this.consultation_id.ReadOnly = true;
             // 
             // consultationdetailsDataGridViewTextBoxColumn
             // 
@@ -168,6 +203,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 539);
             this.ControlBox = false;
+            this.Controls.Add(this.DiasplayButton);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SearchConsultationModal";
@@ -183,6 +220,10 @@
 
         private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FULL_DATATableAdapter consultationFullDataTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private SSS_Library.IS2G10_DBSSSDataSet.CONSULTATION_FULL_DATADataTable cONSULTATIONFULLDATARowBindingSource;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button DiasplayButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn consultation_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn consultationdetailsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn consultationdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn studentarrivedDataGridViewCheckBoxColumn;
@@ -195,6 +236,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorfirstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorlastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn tutortrainingstatusDataGridViewCheckBoxColumn;
-        private SSS_Library.IS2G10_DBSSSDataSet.CONSULTATION_FULL_DATADataTable cONSULTATIONFULLDATARowBindingSource;
     }
 }

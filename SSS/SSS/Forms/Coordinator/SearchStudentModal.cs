@@ -30,8 +30,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 
         public SearchStudentModal(int coordinatorId, string typeOfSearch)
         {
-            int search;
-            searches.TryParse(typeOfSearch, out search);
+            searches search = (searches)System.Enum.Parse(typeof(searches), typeOfSearch);
 
             InitializeComponent();
             this.TopLevel = false;
@@ -40,12 +39,12 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 
             checkBox1.Checked = false;
 
-            if (search == 1)
+            if ((int)search == 1)
             {
                 this.label1.Text = "Find Student To Update";
                 _isUpdateStudent = true;
             }
-            else if (search == 2)
+            else if ((int)search == 2)
             {
                 this.label1.Text = "Find Student To Update Consultation";
                 _isUpdateStudentConsultation = true;

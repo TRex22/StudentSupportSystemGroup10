@@ -4618,6 +4618,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columntutor_trainingstatus;
             
+            private global::System.Data.DataColumn columncoordinator_id;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TUTORDataTable() {
@@ -4717,6 +4719,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_idColumn {
+                get {
+                    return this.columncoordinator_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4752,7 +4762,7 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TUTORRow AddTUTORRow(int tutor_id, string tutor_firstname, string tutor_lastname, string tutor_id_passport, System.DateTime tutor_dateofbirth, string tutor_emailaddress, string tutor_cellnumber, bool tutor_trainingstatus) {
+            public TUTORRow AddTUTORRow(int tutor_id, string tutor_firstname, string tutor_lastname, string tutor_id_passport, System.DateTime tutor_dateofbirth, string tutor_emailaddress, string tutor_cellnumber, bool tutor_trainingstatus, int coordinator_id) {
                 TUTORRow rowTUTORRow = ((TUTORRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tutor_id,
@@ -4762,7 +4772,8 @@ namespace SSS_Library {
                         tutor_dateofbirth,
                         tutor_emailaddress,
                         tutor_cellnumber,
-                        tutor_trainingstatus};
+                        tutor_trainingstatus,
+                        coordinator_id};
                 rowTUTORRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTUTORRow);
                 return rowTUTORRow;
@@ -4800,6 +4811,7 @@ namespace SSS_Library {
                 this.columntutor_emailaddress = base.Columns["tutor_emailaddress"];
                 this.columntutor_cellnumber = base.Columns["tutor_cellnumber"];
                 this.columntutor_trainingstatus = base.Columns["tutor_trainingstatus"];
+                this.columncoordinator_id = base.Columns["coordinator_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4821,6 +4833,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columntutor_cellnumber);
                 this.columntutor_trainingstatus = new global::System.Data.DataColumn("tutor_trainingstatus", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntutor_trainingstatus);
+                this.columncoordinator_id = new global::System.Data.DataColumn("coordinator_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntutor_id}, true));
                 this.columntutor_id.AllowDBNull = false;
@@ -4830,6 +4844,7 @@ namespace SSS_Library {
                 this.columntutor_id_passport.MaxLength = 255;
                 this.columntutor_emailaddress.MaxLength = 255;
                 this.columntutor_cellnumber.MaxLength = 14;
+                this.columncoordinator_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16452,6 +16467,17 @@ namespace SSS_Library {
                 }
                 set {
                     this[this.tableTUTOR.tutor_trainingstatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int coordinator_id {
+                get {
+                    return ((int)(this[this.tableTUTOR.coordinator_idColumn]));
+                }
+                set {
+                    this[this.tableTUTOR.coordinator_idColumn] = value;
                 }
             }
             
@@ -28405,10 +28431,11 @@ SELECT student_activity_id, student_activity_name, student_activity_pointvalue, 
             tableMapping.ColumnMappings.Add("tutor_emailaddress", "tutor_emailaddress");
             tableMapping.ColumnMappings.Add("tutor_cellnumber", "tutor_cellnumber");
             tableMapping.ColumnMappings.Add("tutor_trainingstatus", "tutor_trainingstatus");
+            tableMapping.ColumnMappings.Add("coordinator_id", "coordinator_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TUTOR] WHERE (([tutor_id] = @Original_tutor_id) AND ((@IsNull_tutor_firstname = 1 AND [tutor_firstname] IS NULL) OR ([tutor_firstname] = @Original_tutor_firstname)) AND ((@IsNull_tutor_lastname = 1 AND [tutor_lastname] IS NULL) OR ([tutor_lastname] = @Original_tutor_lastname)) AND ((@IsNull_tutor_id_passport = 1 AND [tutor_id_passport] IS NULL) OR ([tutor_id_passport] = @Original_tutor_id_passport)) AND ((@IsNull_tutor_dateofbirth = 1 AND [tutor_dateofbirth] IS NULL) OR ([tutor_dateofbirth] = @Original_tutor_dateofbirth)) AND ((@IsNull_tutor_emailaddress = 1 AND [tutor_emailaddress] IS NULL) OR ([tutor_emailaddress] = @Original_tutor_emailaddress)) AND ((@IsNull_tutor_cellnumber = 1 AND [tutor_cellnumber] IS NULL) OR ([tutor_cellnumber] = @Original_tutor_cellnumber)) AND ((@IsNull_tutor_trainingstatus = 1 AND [tutor_trainingstatus] IS NULL) OR ([tutor_trainingstatus] = @Original_tutor_trainingstatus)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TUTOR] WHERE (([tutor_id] = @Original_tutor_id) AND ((@IsNull_tutor_firstname = 1 AND [tutor_firstname] IS NULL) OR ([tutor_firstname] = @Original_tutor_firstname)) AND ((@IsNull_tutor_lastname = 1 AND [tutor_lastname] IS NULL) OR ([tutor_lastname] = @Original_tutor_lastname)) AND ((@IsNull_tutor_id_passport = 1 AND [tutor_id_passport] IS NULL) OR ([tutor_id_passport] = @Original_tutor_id_passport)) AND ((@IsNull_tutor_dateofbirth = 1 AND [tutor_dateofbirth] IS NULL) OR ([tutor_dateofbirth] = @Original_tutor_dateofbirth)) AND ((@IsNull_tutor_emailaddress = 1 AND [tutor_emailaddress] IS NULL) OR ([tutor_emailaddress] = @Original_tutor_emailaddress)) AND ((@IsNull_tutor_cellnumber = 1 AND [tutor_cellnumber] IS NULL) OR ([tutor_cellnumber] = @Original_tutor_cellnumber)) AND ((@IsNull_tutor_trainingstatus = 1 AND [tutor_trainingstatus] IS NULL) OR ([tutor_trainingstatus] = @Original_tutor_trainingstatus)) AND ([coordinator_id] = @Original_coordinator_id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_firstname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_firstname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -28425,10 +28452,11 @@ SELECT student_activity_id, student_activity_name, student_activity_pointvalue, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_cellnumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_cellnumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_trainingstatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_trainingstatus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TUTOR] ([tutor_id], [tutor_firstname], [tutor_lastname], [tutor_id_passport], [tutor_dateofbirth], [tutor_emailaddress], [tutor_cellnumber], [tutor_trainingstatus]) VALUES (@tutor_id, @tutor_firstname, @tutor_lastname, @tutor_id_passport, @tutor_dateofbirth, @tutor_emailaddress, @tutor_cellnumber, @tutor_trainingstatus);
-SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus FROM TUTOR WHERE (tutor_id = @tutor_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TUTOR] ([tutor_id], [tutor_firstname], [tutor_lastname], [tutor_id_passport], [tutor_dateofbirth], [tutor_emailaddress], [tutor_cellnumber], [tutor_trainingstatus], [coordinator_id]) VALUES (@tutor_id, @tutor_firstname, @tutor_lastname, @tutor_id_passport, @tutor_dateofbirth, @tutor_emailaddress, @tutor_cellnumber, @tutor_trainingstatus, @coordinator_id);
+SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus, coordinator_id FROM TUTOR WHERE (tutor_id = @tutor_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -28438,10 +28466,29 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_emailaddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_emailaddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_cellnumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_cellnumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_trainingstatus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TUTOR] SET [tutor_id] = @tutor_id, [tutor_firstname] = @tutor_firstname, [tutor_lastname] = @tutor_lastname, [tutor_id_passport] = @tutor_id_passport, [tutor_dateofbirth] = @tutor_dateofbirth, [tutor_emailaddress] = @tutor_emailaddress, [tutor_cellnumber] = @tutor_cellnumber, [tutor_trainingstatus] = @tutor_trainingstatus WHERE (([tutor_id] = @Original_tutor_id) AND ((@IsNull_tutor_firstname = 1 AND [tutor_firstname] IS NULL) OR ([tutor_firstname] = @Original_tutor_firstname)) AND ((@IsNull_tutor_lastname = 1 AND [tutor_lastname] IS NULL) OR ([tutor_lastname] = @Original_tutor_lastname)) AND ((@IsNull_tutor_id_passport = 1 AND [tutor_id_passport] IS NULL) OR ([tutor_id_passport] = @Original_tutor_id_passport)) AND ((@IsNull_tutor_dateofbirth = 1 AND [tutor_dateofbirth] IS NULL) OR ([tutor_dateofbirth] = @Original_tutor_dateofbirth)) AND ((@IsNull_tutor_emailaddress = 1 AND [tutor_emailaddress] IS NULL) OR ([tutor_emailaddress] = @Original_tutor_emailaddress)) AND ((@IsNull_tutor_cellnumber = 1 AND [tutor_cellnumber] IS NULL) OR ([tutor_cellnumber] = @Original_tutor_cellnumber)) AND ((@IsNull_tutor_trainingstatus = 1 AND [tutor_trainingstatus] IS NULL) OR ([tutor_trainingstatus] = @Original_tutor_trainingstatus)));
-SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus FROM TUTOR WHERE (tutor_id = @tutor_id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TUTOR] SET [tutor_id] = @tutor_id, [tutor_firstname] = @tutor_first" +
+                "name, [tutor_lastname] = @tutor_lastname, [tutor_id_passport] = @tutor_id_passpo" +
+                "rt, [tutor_dateofbirth] = @tutor_dateofbirth, [tutor_emailaddress] = @tutor_emai" +
+                "laddress, [tutor_cellnumber] = @tutor_cellnumber, [tutor_trainingstatus] = @tuto" +
+                "r_trainingstatus, [coordinator_id] = @coordinator_id WHERE (([tutor_id] = @Origi" +
+                "nal_tutor_id) AND ((@IsNull_tutor_firstname = 1 AND [tutor_firstname] IS NULL) O" +
+                "R ([tutor_firstname] = @Original_tutor_firstname)) AND ((@IsNull_tutor_lastname " +
+                "= 1 AND [tutor_lastname] IS NULL) OR ([tutor_lastname] = @Original_tutor_lastnam" +
+                "e)) AND ((@IsNull_tutor_id_passport = 1 AND [tutor_id_passport] IS NULL) OR ([tu" +
+                "tor_id_passport] = @Original_tutor_id_passport)) AND ((@IsNull_tutor_dateofbirth" +
+                " = 1 AND [tutor_dateofbirth] IS NULL) OR ([tutor_dateofbirth] = @Original_tutor_" +
+                "dateofbirth)) AND ((@IsNull_tutor_emailaddress = 1 AND [tutor_emailaddress] IS N" +
+                "ULL) OR ([tutor_emailaddress] = @Original_tutor_emailaddress)) AND ((@IsNull_tut" +
+                "or_cellnumber = 1 AND [tutor_cellnumber] IS NULL) OR ([tutor_cellnumber] = @Orig" +
+                "inal_tutor_cellnumber)) AND ((@IsNull_tutor_trainingstatus = 1 AND [tutor_traini" +
+                "ngstatus] IS NULL) OR ([tutor_trainingstatus] = @Original_tutor_trainingstatus))" +
+                " AND ([coordinator_id] = @Original_coordinator_id));\r\nSELECT tutor_id, tutor_fir" +
+                "stname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress" +
+                ", tutor_cellnumber, tutor_trainingstatus, coordinator_id FROM TUTOR WHERE (tutor" +
+                "_id = @tutor_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -28451,6 +28498,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_emailaddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_emailaddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_cellnumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_cellnumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tutor_trainingstatus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_firstname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_firstname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_firstname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -28466,6 +28514,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_cellnumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_cellnumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tutor_trainingstatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tutor_trainingstatus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tutor_trainingstatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_coordinator_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28481,9 +28530,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateof" +
-                "birth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus FROM dbo.TUTOR" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT * FROM dbo.TUTOR";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -28544,7 +28591,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tutor_id, string Original_tutor_firstname, string Original_tutor_lastname, string Original_tutor_id_passport, global::System.Nullable<global::System.DateTime> Original_tutor_dateofbirth, string Original_tutor_emailaddress, string Original_tutor_cellnumber, global::System.Nullable<bool> Original_tutor_trainingstatus) {
+        public virtual int Delete(int Original_tutor_id, string Original_tutor_firstname, string Original_tutor_lastname, string Original_tutor_id_passport, global::System.Nullable<global::System.DateTime> Original_tutor_dateofbirth, string Original_tutor_emailaddress, string Original_tutor_cellnumber, global::System.Nullable<bool> Original_tutor_trainingstatus, int Original_coordinator_id) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tutor_id));
             if ((Original_tutor_firstname == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -28602,6 +28649,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_coordinator_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -28622,7 +28670,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int tutor_id, string tutor_firstname, string tutor_lastname, string tutor_id_passport, global::System.Nullable<global::System.DateTime> tutor_dateofbirth, string tutor_emailaddress, string tutor_cellnumber, global::System.Nullable<bool> tutor_trainingstatus) {
+        public virtual int Insert(int tutor_id, string tutor_firstname, string tutor_lastname, string tutor_id_passport, global::System.Nullable<global::System.DateTime> tutor_dateofbirth, string tutor_emailaddress, string tutor_cellnumber, global::System.Nullable<bool> tutor_trainingstatus, int coordinator_id) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(tutor_id));
             if ((tutor_firstname == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -28666,6 +28714,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(coordinator_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -28695,6 +28744,7 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
                     string tutor_emailaddress, 
                     string tutor_cellnumber, 
                     global::System.Nullable<bool> tutor_trainingstatus, 
+                    int coordinator_id, 
                     int Original_tutor_id, 
                     string Original_tutor_firstname, 
                     string Original_tutor_lastname, 
@@ -28702,7 +28752,8 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
                     global::System.Nullable<global::System.DateTime> Original_tutor_dateofbirth, 
                     string Original_tutor_emailaddress, 
                     string Original_tutor_cellnumber, 
-                    global::System.Nullable<bool> Original_tutor_trainingstatus) {
+                    global::System.Nullable<bool> Original_tutor_trainingstatus, 
+                    int Original_coordinator_id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(tutor_id));
             if ((tutor_firstname == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -28746,63 +28797,65 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tutor_id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(coordinator_id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_tutor_id));
             if ((Original_tutor_firstname == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_tutor_firstname));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_tutor_firstname));
             }
             if ((Original_tutor_lastname == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_tutor_lastname));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_tutor_lastname));
             }
             if ((Original_tutor_id_passport == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_tutor_id_passport));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_tutor_id_passport));
             }
             if ((Original_tutor_dateofbirth.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_tutor_dateofbirth.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_tutor_dateofbirth.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_tutor_emailaddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_tutor_emailaddress));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_tutor_emailaddress));
             }
             if ((Original_tutor_cellnumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_tutor_cellnumber));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_tutor_cellnumber));
             }
             if ((Original_tutor_trainingstatus.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(Original_tutor_trainingstatus.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_tutor_trainingstatus.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_coordinator_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -28823,8 +28876,25 @@ SELECT tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string tutor_firstname, string tutor_lastname, string tutor_id_passport, global::System.Nullable<global::System.DateTime> tutor_dateofbirth, string tutor_emailaddress, string tutor_cellnumber, global::System.Nullable<bool> tutor_trainingstatus, int Original_tutor_id, string Original_tutor_firstname, string Original_tutor_lastname, string Original_tutor_id_passport, global::System.Nullable<global::System.DateTime> Original_tutor_dateofbirth, string Original_tutor_emailaddress, string Original_tutor_cellnumber, global::System.Nullable<bool> Original_tutor_trainingstatus) {
-            return this.Update(Original_tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus, Original_tutor_id, Original_tutor_firstname, Original_tutor_lastname, Original_tutor_id_passport, Original_tutor_dateofbirth, Original_tutor_emailaddress, Original_tutor_cellnumber, Original_tutor_trainingstatus);
+        public virtual int Update(
+                    string tutor_firstname, 
+                    string tutor_lastname, 
+                    string tutor_id_passport, 
+                    global::System.Nullable<global::System.DateTime> tutor_dateofbirth, 
+                    string tutor_emailaddress, 
+                    string tutor_cellnumber, 
+                    global::System.Nullable<bool> tutor_trainingstatus, 
+                    int coordinator_id, 
+                    int Original_tutor_id, 
+                    string Original_tutor_firstname, 
+                    string Original_tutor_lastname, 
+                    string Original_tutor_id_passport, 
+                    global::System.Nullable<global::System.DateTime> Original_tutor_dateofbirth, 
+                    string Original_tutor_emailaddress, 
+                    string Original_tutor_cellnumber, 
+                    global::System.Nullable<bool> Original_tutor_trainingstatus, 
+                    int Original_coordinator_id) {
+            return this.Update(Original_tutor_id, tutor_firstname, tutor_lastname, tutor_id_passport, tutor_dateofbirth, tutor_emailaddress, tutor_cellnumber, tutor_trainingstatus, coordinator_id, Original_tutor_id, Original_tutor_firstname, Original_tutor_lastname, Original_tutor_id_passport, Original_tutor_dateofbirth, Original_tutor_emailaddress, Original_tutor_cellnumber, Original_tutor_trainingstatus, Original_coordinator_id);
         }
     }
     

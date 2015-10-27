@@ -97,6 +97,15 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Canceled Consultation Successfully..
+        /// </summary>
+        public static string DeleteConsultationSuccess {
+            get {
+                return ResourceManager.GetString("DeleteConsultationSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect Login Details. Please try again..
         /// </summary>
         public static string IncorrectLoginDetailsMessage {
@@ -174,6 +183,15 @@ namespace SSS_Library.Properties {
         public static string SendEmailSuccessfulMessage {
             get {
                 return ResourceManager.GetString("SendEmailSuccessfulMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated Consultation Successfully..
+        /// </summary>
+        public static string UpdateConsultationSuccess {
+            get {
+                return ResourceManager.GetString("UpdateConsultationSuccess", resourceCulture);
             }
         }
         

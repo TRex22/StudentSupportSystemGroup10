@@ -34,6 +34,30 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.systemSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentEngagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDisengagedStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lowTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.averageTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationFrequencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorTrainingStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorsWithoutTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorsWithTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.coordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorMenuStrip = new System.Windows.Forms.MenuStrip();
             this.tutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,35 +84,14 @@
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
-            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.coordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchCoordinatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentEngagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDisengagedStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lowTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.averageTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewTutorRatingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.courseDisengagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultationFrequencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorTrainingStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorsWithoutTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorsWithTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.systemSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchConsultationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchConsultationsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.menuStrip3.SuspendLayout();
+            this.menuStrip5.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
             this.tutorMenuStrip.SuspendLayout();
             this.studentMenuStrip.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -98,11 +101,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).BeginInit();
-            this.menuStrip4.SuspendLayout();
-            this.menuStrip5.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -150,6 +148,204 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 539);
             this.panel6.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.systemSettingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 189);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip1.TabIndex = 30;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // systemSettingsToolStripMenuItem
+            // 
+            this.systemSettingsToolStripMenuItem.Name = "systemSettingsToolStripMenuItem";
+            this.systemSettingsToolStripMenuItem.Size = new System.Drawing.Size(123, 23);
+            this.systemSettingsToolStripMenuItem.Text = "System Settings";
+            this.systemSettingsToolStripMenuItem.Click += new System.EventHandler(this.systemSettingsToolStripMenuItem_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateProfileToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip2.TabIndex = 29;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F);
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(113, 23);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generateReportToolStripMenuItem});
+            this.menuStrip3.Location = new System.Drawing.Point(0, 135);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip3.TabIndex = 28;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // generateReportToolStripMenuItem
+            // 
+            this.generateReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentDisengagementToolStripMenuItem,
+            this.lowTutorRatingsToolStripMenuItem,
+            this.courseDisengagementToolStripMenuItem,
+            this.consultationFrequencyToolStripMenuItem});
+            this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
+            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
+            this.generateReportToolStripMenuItem.Text = "Generate Report";
+            // 
+            // studentDisengagementToolStripMenuItem
+            // 
+            this.studentDisengagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentEngagementToolStripMenuItem,
+            this.viewDisengagedStudentsToolStripMenuItem});
+            this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
+            this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.studentDisengagementToolStripMenuItem.Text = "Student Engagement";
+            // 
+            // studentEngagementToolStripMenuItem
+            // 
+            this.studentEngagementToolStripMenuItem.Name = "studentEngagementToolStripMenuItem";
+            this.studentEngagementToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
+            this.studentEngagementToolStripMenuItem.Text = "Student Engagement";
+            this.studentEngagementToolStripMenuItem.Click += new System.EventHandler(this.studentEngagementToolStripMenuItem_Click);
+            // 
+            // viewDisengagedStudentsToolStripMenuItem
+            // 
+            this.viewDisengagedStudentsToolStripMenuItem.Name = "viewDisengagedStudentsToolStripMenuItem";
+            this.viewDisengagedStudentsToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
+            this.viewDisengagedStudentsToolStripMenuItem.Text = "View Disengaged Students";
+            this.viewDisengagedStudentsToolStripMenuItem.Click += new System.EventHandler(this.viewDisengagedStudentsToolStripMenuItem_Click_2);
+            // 
+            // lowTutorRatingsToolStripMenuItem
+            // 
+            this.lowTutorRatingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.averageTutorRatingsToolStripMenuItem,
+            this.viewTutorRatingsToolStripMenuItem});
+            this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
+            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.lowTutorRatingsToolStripMenuItem.Text = "Tutor Ratings";
+            // 
+            // averageTutorRatingsToolStripMenuItem
+            // 
+            this.averageTutorRatingsToolStripMenuItem.Name = "averageTutorRatingsToolStripMenuItem";
+            this.averageTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.averageTutorRatingsToolStripMenuItem.Text = "Average Tutor Ratings";
+            this.averageTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.averageTutorRatingsToolStripMenuItem_Click_2);
+            // 
+            // viewTutorRatingsToolStripMenuItem
+            // 
+            this.viewTutorRatingsToolStripMenuItem.Name = "viewTutorRatingsToolStripMenuItem";
+            this.viewTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.viewTutorRatingsToolStripMenuItem.Text = "View Tutor Ratings";
+            this.viewTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.viewTutorRatingsToolStripMenuItem_Click_2);
+            // 
+            // courseDisengagementToolStripMenuItem
+            // 
+            this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
+            this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.courseDisengagementToolStripMenuItem.Text = "Activity Ratings";
+            this.courseDisengagementToolStripMenuItem.Click += new System.EventHandler(this.courseDisengagementToolStripMenuItem_Click);
+            // 
+            // consultationFrequencyToolStripMenuItem
+            // 
+            this.consultationFrequencyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tutorTrainingStatusToolStripMenuItem,
+            this.tutorsWithoutTrainingToolStripMenuItem,
+            this.tutorsWithTrainingToolStripMenuItem});
+            this.consultationFrequencyToolStripMenuItem.Name = "consultationFrequencyToolStripMenuItem";
+            this.consultationFrequencyToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.consultationFrequencyToolStripMenuItem.Text = "Tutor Training";
+            // 
+            // tutorTrainingStatusToolStripMenuItem
+            // 
+            this.tutorTrainingStatusToolStripMenuItem.Name = "tutorTrainingStatusToolStripMenuItem";
+            this.tutorTrainingStatusToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
+            this.tutorTrainingStatusToolStripMenuItem.Text = "Tutor Training Status";
+            this.tutorTrainingStatusToolStripMenuItem.Click += new System.EventHandler(this.tutorTrainingStatusToolStripMenuItem_Click);
+            // 
+            // tutorsWithoutTrainingToolStripMenuItem
+            // 
+            this.tutorsWithoutTrainingToolStripMenuItem.Name = "tutorsWithoutTrainingToolStripMenuItem";
+            this.tutorsWithoutTrainingToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
+            this.tutorsWithoutTrainingToolStripMenuItem.Text = "Tutors Without Training";
+            this.tutorsWithoutTrainingToolStripMenuItem.Click += new System.EventHandler(this.tutorsWithoutTrainingToolStripMenuItem_Click);
+            // 
+            // tutorsWithTrainingToolStripMenuItem
+            // 
+            this.tutorsWithTrainingToolStripMenuItem.Name = "tutorsWithTrainingToolStripMenuItem";
+            this.tutorsWithTrainingToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
+            this.tutorsWithTrainingToolStripMenuItem.Text = "Tutors With Training";
+            this.tutorsWithTrainingToolStripMenuItem.Click += new System.EventHandler(this.tutorsWithTrainingToolStripMenuItem_Click);
+            // 
+            // menuStrip5
+            // 
+            this.menuStrip5.Font = new System.Drawing.Font("Calibri", 12F);
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coordinatorToolStripMenuItem});
+            this.menuStrip5.Location = new System.Drawing.Point(0, 108);
+            this.menuStrip5.Name = "menuStrip5";
+            this.menuStrip5.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip5.TabIndex = 27;
+            this.menuStrip5.Text = "menuStrip5";
+            // 
+            // coordinatorToolStripMenuItem
+            // 
+            this.coordinatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerCoordinatorToolStripMenuItem,
+            this.updateCoordinatorToolStripMenuItem,
+            this.searchCoordinatorToolStripMenuItem});
+            this.coordinatorToolStripMenuItem.Name = "coordinatorToolStripMenuItem";
+            this.coordinatorToolStripMenuItem.Size = new System.Drawing.Size(97, 23);
+            this.coordinatorToolStripMenuItem.Text = "Coordinator";
+            // 
+            // registerCoordinatorToolStripMenuItem
+            // 
+            this.registerCoordinatorToolStripMenuItem.Name = "registerCoordinatorToolStripMenuItem";
+            this.registerCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.registerCoordinatorToolStripMenuItem.Text = "Register Coordinator";
+            // 
+            // updateCoordinatorToolStripMenuItem
+            // 
+            this.updateCoordinatorToolStripMenuItem.Name = "updateCoordinatorToolStripMenuItem";
+            this.updateCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.updateCoordinatorToolStripMenuItem.Text = "Update Coordinator";
+            // 
+            // searchCoordinatorToolStripMenuItem
+            // 
+            this.searchCoordinatorToolStripMenuItem.Name = "searchCoordinatorToolStripMenuItem";
+            this.searchCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.searchCoordinatorToolStripMenuItem.Text = "Search Coordinator";
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.Font = new System.Drawing.Font("Calibri", 12F);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip4.Location = new System.Drawing.Point(0, 81);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip4.TabIndex = 26;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 23);
+            this.toolStripMenuItem1.Text = "Search Consultations";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // tutorMenuStrip
             // 
@@ -241,7 +437,6 @@
             this.updateStudentConsultationToolStripMenuItem.Name = "updateStudentConsultationToolStripMenuItem";
             this.updateStudentConsultationToolStripMenuItem.Size = new System.Drawing.Size(264, 24);
             this.updateStudentConsultationToolStripMenuItem.Text = "Update Student Consultation";
-            this.updateStudentConsultationToolStripMenuItem.Click += new System.EventHandler(this.updateStudentConsultationToolStripMenuItem_Click);
             // 
             // searchStudentsToolStripMenuItem
             // 
@@ -359,219 +554,6 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
-            // menuStrip4
-            // 
-            this.menuStrip4.Font = new System.Drawing.Font("Calibri", 12F);
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 81);
-            this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip4.TabIndex = 26;
-            this.menuStrip4.Text = "menuStrip4";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchConsultationsToolStripMenuItem,
-            this.searchConsultationsToolStripMenuItem1});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 23);
-            this.toolStripMenuItem1.Text = "Consultations";
-            // 
-            // menuStrip5
-            // 
-            this.menuStrip5.Font = new System.Drawing.Font("Calibri", 12F);
-            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coordinatorToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(0, 108);
-            this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip5.TabIndex = 27;
-            this.menuStrip5.Text = "menuStrip5";
-            // 
-            // coordinatorToolStripMenuItem
-            // 
-            this.coordinatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registerCoordinatorToolStripMenuItem,
-            this.updateCoordinatorToolStripMenuItem,
-            this.searchCoordinatorToolStripMenuItem});
-            this.coordinatorToolStripMenuItem.Name = "coordinatorToolStripMenuItem";
-            this.coordinatorToolStripMenuItem.Size = new System.Drawing.Size(97, 23);
-            this.coordinatorToolStripMenuItem.Text = "Coordinator";
-            // 
-            // registerCoordinatorToolStripMenuItem
-            // 
-            this.registerCoordinatorToolStripMenuItem.Name = "registerCoordinatorToolStripMenuItem";
-            this.registerCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.registerCoordinatorToolStripMenuItem.Text = "Register Coordinator";
-            // 
-            // updateCoordinatorToolStripMenuItem
-            // 
-            this.updateCoordinatorToolStripMenuItem.Name = "updateCoordinatorToolStripMenuItem";
-            this.updateCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.updateCoordinatorToolStripMenuItem.Text = "Update Coordinator";
-            // 
-            // searchCoordinatorToolStripMenuItem
-            // 
-            this.searchCoordinatorToolStripMenuItem.Name = "searchCoordinatorToolStripMenuItem";
-            this.searchCoordinatorToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.searchCoordinatorToolStripMenuItem.Text = "Search Coordinator";
-            // 
-            // menuStrip3
-            // 
-            this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generateReportToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 135);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip3.TabIndex = 28;
-            this.menuStrip3.Text = "menuStrip3";
-            // 
-            // generateReportToolStripMenuItem
-            // 
-            this.generateReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentDisengagementToolStripMenuItem,
-            this.lowTutorRatingsToolStripMenuItem,
-            this.courseDisengagementToolStripMenuItem,
-            this.consultationFrequencyToolStripMenuItem});
-            this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(128, 23);
-            this.generateReportToolStripMenuItem.Text = "Generate Report";
-            // 
-            // studentDisengagementToolStripMenuItem
-            // 
-            this.studentDisengagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentEngagementToolStripMenuItem,
-            this.viewDisengagedStudentsToolStripMenuItem});
-            this.studentDisengagementToolStripMenuItem.Name = "studentDisengagementToolStripMenuItem";
-            this.studentDisengagementToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.studentDisengagementToolStripMenuItem.Text = "Student Engagement";
-            // 
-            // studentEngagementToolStripMenuItem
-            // 
-            this.studentEngagementToolStripMenuItem.Name = "studentEngagementToolStripMenuItem";
-            this.studentEngagementToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
-            this.studentEngagementToolStripMenuItem.Text = "Student Engagement";
-            this.studentEngagementToolStripMenuItem.Click += new System.EventHandler(this.studentEngagementToolStripMenuItem_Click);
-            // 
-            // viewDisengagedStudentsToolStripMenuItem
-            // 
-            this.viewDisengagedStudentsToolStripMenuItem.Name = "viewDisengagedStudentsToolStripMenuItem";
-            this.viewDisengagedStudentsToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
-            this.viewDisengagedStudentsToolStripMenuItem.Text = "View Disengaged Students";
-            this.viewDisengagedStudentsToolStripMenuItem.Click += new System.EventHandler(this.viewDisengagedStudentsToolStripMenuItem_Click_2);
-            // 
-            // lowTutorRatingsToolStripMenuItem
-            // 
-            this.lowTutorRatingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.averageTutorRatingsToolStripMenuItem,
-            this.viewTutorRatingsToolStripMenuItem});
-            this.lowTutorRatingsToolStripMenuItem.Name = "lowTutorRatingsToolStripMenuItem";
-            this.lowTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.lowTutorRatingsToolStripMenuItem.Text = "Tutor Ratings";
-            // 
-            // averageTutorRatingsToolStripMenuItem
-            // 
-            this.averageTutorRatingsToolStripMenuItem.Name = "averageTutorRatingsToolStripMenuItem";
-            this.averageTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.averageTutorRatingsToolStripMenuItem.Text = "Average Tutor Ratings";
-            this.averageTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.averageTutorRatingsToolStripMenuItem_Click_2);
-            // 
-            // viewTutorRatingsToolStripMenuItem
-            // 
-            this.viewTutorRatingsToolStripMenuItem.Name = "viewTutorRatingsToolStripMenuItem";
-            this.viewTutorRatingsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.viewTutorRatingsToolStripMenuItem.Text = "View Tutor Ratings";
-            this.viewTutorRatingsToolStripMenuItem.Click += new System.EventHandler(this.viewTutorRatingsToolStripMenuItem_Click_2);
-            // 
-            // courseDisengagementToolStripMenuItem
-            // 
-            this.courseDisengagementToolStripMenuItem.Name = "courseDisengagementToolStripMenuItem";
-            this.courseDisengagementToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.courseDisengagementToolStripMenuItem.Text = "Activity Ratings";
-            this.courseDisengagementToolStripMenuItem.Click += new System.EventHandler(this.courseDisengagementToolStripMenuItem_Click);
-            // 
-            // consultationFrequencyToolStripMenuItem
-            // 
-            this.consultationFrequencyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tutorTrainingStatusToolStripMenuItem,
-            this.tutorsWithoutTrainingToolStripMenuItem,
-            this.tutorsWithTrainingToolStripMenuItem});
-            this.consultationFrequencyToolStripMenuItem.Name = "consultationFrequencyToolStripMenuItem";
-            this.consultationFrequencyToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
-            this.consultationFrequencyToolStripMenuItem.Text = "Tutor Training";
-            // 
-            // tutorTrainingStatusToolStripMenuItem
-            // 
-            this.tutorTrainingStatusToolStripMenuItem.Name = "tutorTrainingStatusToolStripMenuItem";
-            this.tutorTrainingStatusToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
-            this.tutorTrainingStatusToolStripMenuItem.Text = "Tutor Training Status";
-            this.tutorTrainingStatusToolStripMenuItem.Click += new System.EventHandler(this.tutorTrainingStatusToolStripMenuItem_Click);
-            // 
-            // tutorsWithoutTrainingToolStripMenuItem
-            // 
-            this.tutorsWithoutTrainingToolStripMenuItem.Name = "tutorsWithoutTrainingToolStripMenuItem";
-            this.tutorsWithoutTrainingToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
-            this.tutorsWithoutTrainingToolStripMenuItem.Text = "Tutors Without Training";
-            this.tutorsWithoutTrainingToolStripMenuItem.Click += new System.EventHandler(this.tutorsWithoutTrainingToolStripMenuItem_Click);
-            // 
-            // tutorsWithTrainingToolStripMenuItem
-            // 
-            this.tutorsWithTrainingToolStripMenuItem.Name = "tutorsWithTrainingToolStripMenuItem";
-            this.tutorsWithTrainingToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
-            this.tutorsWithTrainingToolStripMenuItem.Text = "Tutors With Training";
-            this.tutorsWithTrainingToolStripMenuItem.Click += new System.EventHandler(this.tutorsWithTrainingToolStripMenuItem_Click);
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateProfileToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 162);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip2.TabIndex = 29;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // updateProfileToolStripMenuItem
-            // 
-            this.updateProfileToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F);
-            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(113, 23);
-            this.updateProfileToolStripMenuItem.Text = "Update Profile";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.systemSettingsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 189);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip1.TabIndex = 30;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // systemSettingsToolStripMenuItem
-            // 
-            this.systemSettingsToolStripMenuItem.Name = "systemSettingsToolStripMenuItem";
-            this.systemSettingsToolStripMenuItem.Size = new System.Drawing.Size(123, 23);
-            this.systemSettingsToolStripMenuItem.Text = "System Settings";
-            this.systemSettingsToolStripMenuItem.Click += new System.EventHandler(this.systemSettingsToolStripMenuItem_Click);
-            // 
-            // searchConsultationsToolStripMenuItem
-            // 
-            this.searchConsultationsToolStripMenuItem.Name = "searchConsultationsToolStripMenuItem";
-            this.searchConsultationsToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
-            this.searchConsultationsToolStripMenuItem.Text = "Update Consultations";
-            // 
-            // searchConsultationsToolStripMenuItem1
-            // 
-            this.searchConsultationsToolStripMenuItem1.Name = "searchConsultationsToolStripMenuItem1";
-            this.searchConsultationsToolStripMenuItem1.Size = new System.Drawing.Size(218, 24);
-            this.searchConsultationsToolStripMenuItem1.Text = "Search Consultations";
-            this.searchConsultationsToolStripMenuItem1.Click += new System.EventHandler(this.searchConsultationsToolStripMenuItem1_Click);
-            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +570,16 @@
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
+            this.menuStrip5.ResumeLayout(false);
+            this.menuStrip5.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             this.tutorMenuStrip.ResumeLayout(false);
             this.tutorMenuStrip.PerformLayout();
             this.studentMenuStrip.ResumeLayout(false);
@@ -604,16 +596,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).EndInit();
-            this.menuStrip4.ResumeLayout(false);
-            this.menuStrip4.PerformLayout();
-            this.menuStrip5.ResumeLayout(false);
-            this.menuStrip5.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -674,7 +656,5 @@
         private System.Windows.Forms.ToolStripMenuItem searchCoordinatorToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem searchConsultationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchConsultationsToolStripMenuItem1;
     }
 }

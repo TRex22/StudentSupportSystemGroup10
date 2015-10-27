@@ -13,7 +13,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;
         private readonly TutorDashboardModal _tutorDashboardModal;
         private readonly UpdateTutorModal _updateTutorModal;
-        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal;
+        private readonly SearchConsultationModal _searchConsultationModal;
         private readonly TUTORTableAdapter _tUTORTableAdapter = new TUTORTableAdapter()
         {
             ClearBeforeFill = true
@@ -27,7 +27,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
             _updateTutorModal = new UpdateTutorModal(userId);
             _updateStudentAttendanceModal = new UpdateStudentAttendanceModal(userId);
             _tutorDashboardModal = new TutorDashboardModal(userId);
-            _updateStudentConsultationModal = new UpdateStudentConsultationModal(userId);//TODO FIX
+            _searchConsultationModal = new SearchConsultationModal(tutorData.coordinator_id, userId);//TODO FIX
             InitializeComponent();
             lblTutorName.Text = String.Format("{0} {1} {2}", tutorData.tutor_firstname, tutorData.tutor_lastname, userId);
             InitModals();
@@ -39,7 +39,6 @@ namespace SSS_Windows_Forms.Forms.Tutor
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
             this.panel7.Controls.Add(_tutorDashboardModal);
             this.panel7.Controls.Add(_updateTutorModal);
-            this.panel7.Controls.Add(_updateStudentConsultationModal);
         }
 
         private void HideAllModals()
@@ -77,12 +76,6 @@ namespace SSS_Windows_Forms.Forms.Tutor
         {
             HideAllModals();
             _updateTutorModal.Show();
-        }
-
-        private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _updateStudentConsultationModal.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

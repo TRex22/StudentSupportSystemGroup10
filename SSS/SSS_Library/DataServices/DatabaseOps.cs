@@ -37,6 +37,19 @@ namespace SSS_Library.DataServices
             //kill all attendance and stuff like that.
         }
 
+        public static void ResetAllPasswords()
+        {
+            //make database newish
+            //reset passwords
+            var userProfileTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            var userProfiles = userProfileTableAdapter.GetData();
+            foreach (var userProfile in userProfiles)
+            {
+                userProfile.resetPassword = true;
+                userProfileTableAdapter.Update(userProfile);
+            }
+        }
+
         public void GenerateActivities()
         {
             //10004

@@ -45,6 +45,7 @@
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip6 = new System.Windows.Forms.MenuStrip();
+            this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip9 = new System.Windows.Forms.MenuStrip();
@@ -53,7 +54,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTutorName = new System.Windows.Forms.Label();
             this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.updateTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -178,10 +178,8 @@
             // updateStudentConsultationToolStripMenuItem
             // 
             this.updateStudentConsultationToolStripMenuItem.Name = "updateStudentConsultationToolStripMenuItem";
-            this.updateStudentConsultationToolStripMenuItem.Size = new System.Drawing.Size(207, 23);
-            this.updateStudentConsultationToolStripMenuItem.Text = "Update Student Consultation";
-            this.updateStudentConsultationToolStripMenuItem.Click += new System.EventHandler(this.updateStudentConsultationToolStripMenuItem_Click);
-            // 
+            this.updateStudentConsultationToolStripMenuItem.Size = new System.Drawing.Size(203, 23);
+            this.updateStudentConsultationToolStripMenuItem.Text = "Search Student Consultation";// 
             // menuStrip5
             // 
             this.menuStrip5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,6 +208,13 @@
             this.menuStrip6.Size = new System.Drawing.Size(241, 27);
             this.menuStrip6.TabIndex = 6;
             this.menuStrip6.Text = "menuStrip6";
+            // 
+            // updateTutorToolStripMenuItem
+            // 
+            this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
+            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
+            this.updateTutorToolStripMenuItem.Text = "Update Tutor";
+            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // menuStrip8
             // 
@@ -278,13 +283,6 @@
             this.tmrSecond.Enabled = true;
             this.tmrSecond.Interval = 1000;
             this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
-            // 
-            // updateTutorToolStripMenuItem
-            // 
-            this.updateTutorToolStripMenuItem.Name = "updateTutorToolStripMenuItem";
-            this.updateTutorToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
-            this.updateTutorToolStripMenuItem.Text = "Update Tutor";
-            this.updateTutorToolStripMenuItem.Click += new System.EventHandler(this.updateTutorToolStripMenuItem_Click);
             // 
             // Tutor
             // 

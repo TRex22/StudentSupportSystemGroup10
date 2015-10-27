@@ -165,4 +165,10 @@
   <data name="ConsultationFullyBookedMessage" xml:space="preserve">
     <value>Sorry the date selected is fully booked. Please select another day.</value>
   </data>
+  <data name="DeleteConsultationSuccess" xml:space="preserve">
+    <value>Canceled Consultation Successfully.</value>
+  </data>
+  <data name="UpdateConsultationSuccess" xml:space="preserve">
+    <value>Updated Consultation Successfully.</value>
+  </data>
 </root>

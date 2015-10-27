@@ -8,7 +8,7 @@ using SSS_Windows_Forms.Forms.Tutor;
 namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class Coordinator : Form
-    {   //database stuff
+    {   //database stuff 
 
         //modals
         private readonly RegisterStudentModal _registerStudentModal;
@@ -17,7 +17,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly TutorRatingsAListModal _tutorRatingsAModal = new TutorRatingsAListModal();
         private readonly TutorRatingBIndividualModal _tutorRatingBIndividualModal = new TutorRatingBIndividualModal();
         private readonly TutorRatingCModal _tutorRatingCModal = new TutorRatingCModal();
-        private readonly RegisterTutorModal _registerTutorModal = new RegisterTutorModal();
+        private readonly RegisterTutorModal _registerTutorModal;
         private readonly ViewDisengagedStudentsModal _viewDisengagedStudentsModal = new ViewDisengagedStudentsModal();
         private readonly SearchStudentModal _searchStudentModal;
         private readonly SearchStudentModal _updateStudentModal;
@@ -28,8 +28,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly TutorTrainingStatusModal _tutorTrainingStatusModal = new TutorTrainingStatusModal();
         private readonly TutorsWithTrainingModal _tutorsWithTrainingModal = new TutorsWithTrainingModal();
         private readonly TutorsWithoutTrainingModal _tutorsWithoutTrainingModal = new TutorsWithoutTrainingModal();
-        private readonly UpdateStudentConsultationModal _updateStudentConsultationModal;
-        private readonly UpdateStudentConsultationModal _searchStudentConsultationModal;
+        public readonly SearchConsultationModal _searchStudentConsultationModal;
 
         public Coordinator(int userId)
         {
@@ -37,6 +36,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             
             var coordinatorData = sSS_COORDINATORTableAdapter.GetData().FindBycoordinator_id(userId);
             _registerStudentModal = new RegisterStudentModal(userId);
+            _registerTutorModal = new RegisterTutorModal(userId);
 
             _searchStudentModal = new SearchStudentModal(userId, "None");
             _updateStudentModal = new SearchStudentModal(userId, "UpdateStudent") {Parent = this};
@@ -44,8 +44,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             _searchTutorModal = new SearchTutorModal(userId, false);
             _updateTutorModal = new SearchTutorModal(userId, true) { Parent = this };
 
-            _updateStudentConsultationModal = new UpdateStudentConsultationModal(userId);
-            _searchStudentConsultationModal = new UpdateStudentConsultationModal(userId);
+            _searchStudentConsultationModal = new SearchConsultationModal(userId, null);
 
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
@@ -78,7 +77,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_tutorTrainingStatusModal);
             this.panel7.Controls.Add(_tutorsWithTrainingModal);
             this.panel7.Controls.Add(_tutorsWithoutTrainingModal);
-            this.panel7.Controls.Add(_updateStudentConsultationModal);
             this.panel7.Controls.Add(_searchStudentConsultationModal);
         }
 
@@ -214,13 +212,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             _tutorsWithTrainingModal.Show();
         }
 
-        private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _updateStudentConsultationModal.Show();
-        }
-
-        private void searchConsultationsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             HideAllModals();
             _searchStudentConsultationModal.Show();

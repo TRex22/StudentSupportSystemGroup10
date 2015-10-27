@@ -38,11 +38,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timeComboBox = new System.Windows.Forms.ComboBox();
             this.dateComboBox = new System.Windows.Forms.ComboBox();
-            this.tutorComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tutorComboBox = new System.Windows.Forms.ComboBox();
+            this.ArrivedCheckBox = new System.Windows.Forms.CheckBox();
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,15 +76,17 @@
             this.updateButton.TabIndex = 91;
             this.updateButton.Text = "Update Consultation";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // cancelConsultationButton
             // 
-            this.cancelConsultationButton.Location = new System.Drawing.Point(499, 474);
+            this.cancelConsultationButton.Location = new System.Drawing.Point(365, 474);
             this.cancelConsultationButton.Name = "cancelConsultationButton";
             this.cancelConsultationButton.Size = new System.Drawing.Size(131, 23);
             this.cancelConsultationButton.TabIndex = 92;
-            this.cancelConsultationButton.Text = "Cancel Consultation";
+            this.cancelConsultationButton.Text = "Remove Consultation";
             this.cancelConsultationButton.UseVisualStyleBackColor = true;
+            this.cancelConsultationButton.Click += new System.EventHandler(this.cancelConsultationButton_Click);
             // 
             // pictureBox2
             // 
@@ -130,14 +134,6 @@
             this.dateComboBox.Size = new System.Drawing.Size(140, 21);
             this.dateComboBox.TabIndex = 97;
             // 
-            // tutorComboBox
-            // 
-            this.tutorComboBox.FormattingEnabled = true;
-            this.tutorComboBox.Location = new System.Drawing.Point(307, 125);
-            this.tutorComboBox.Name = "tutorComboBox";
-            this.tutorComboBox.Size = new System.Drawing.Size(140, 21);
-            this.tutorComboBox.TabIndex = 96;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -178,11 +174,41 @@
             this.label2.TabIndex = 93;
             this.label2.Text = "Tutor";
             // 
+            // tutorComboBox
+            // 
+            this.tutorComboBox.FormattingEnabled = true;
+            this.tutorComboBox.Location = new System.Drawing.Point(307, 125);
+            this.tutorComboBox.Name = "tutorComboBox";
+            this.tutorComboBox.Size = new System.Drawing.Size(140, 21);
+            this.tutorComboBox.TabIndex = 96;
+            // 
+            // ArrivedCheckBox
+            // 
+            this.ArrivedCheckBox.AutoSize = true;
+            this.ArrivedCheckBox.Location = new System.Drawing.Point(307, 260);
+            this.ArrivedCheckBox.Name = "ArrivedCheckBox";
+            this.ArrivedCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.ArrivedCheckBox.TabIndex = 103;
+            this.ArrivedCheckBox.Text = "Student Arrived";
+            this.ArrivedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(573, 474);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 104;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // UpdateStudentConsultationModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 539);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.ArrivedCheckBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox8);
@@ -219,10 +245,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox timeComboBox;
         private System.Windows.Forms.ComboBox dateComboBox;
-        private System.Windows.Forms.ComboBox tutorComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox tutorComboBox;
+        private System.Windows.Forms.CheckBox ArrivedCheckBox;
+        private System.Windows.Forms.Button backButton;
     }
 }

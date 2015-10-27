@@ -13,8 +13,10 @@ namespace SSS_Windows_Forms.Forms.Coordinator
 {
     public partial class RegisterTutorModal : Form
     {
-        public RegisterTutorModal()
+        private readonly int _coordinatorId;
+        public RegisterTutorModal(int coordinatorId)
         {
+            _coordinatorId = coordinatorId;
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
@@ -124,7 +126,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
                 var trainingStatus = cbxTrainingStatus.SelectedIndex ;
          
 
-                tutorTableAdapter1.Insert(tutorId, tutorFname, tutorLname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(trainingStatus));
+                tutorTableAdapter1.Insert(tutorId, tutorFname, tutorLname, passportNo, dateofbirth, email, mobileNumber, Convert.ToBoolean(trainingStatus), _coordinatorId);
                 userprofileTableAdapter1.Insert(tutorId, email, 3, null, null, null, null, false, true, true);
 
                 ResetAllFields();
