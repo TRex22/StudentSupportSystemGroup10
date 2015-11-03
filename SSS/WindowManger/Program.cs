@@ -7,6 +7,8 @@ using System.Windows.Interop;
 using SSS_Windows_Forms;
 using SSS_Windows_Forms.Forms;
 using SSS_Materials_Design_Forms;
+using System.Diagnostics;
+using SSS_Library.ProcessHandler;
 
 namespace WindowManger
 {
@@ -25,11 +27,7 @@ namespace WindowManger
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //ShowSplashScreen();
-            var login = new SSS_Windows_Forms.Forms.Login();
-            /*var metroLogin = new SSS_Materials_Design_Forms.Forms.Login();*/
-
-            Application.Run(login);
+            HandleTypeOfWindowSystem();
         }
 
         private static void ShowSplashScreen()
@@ -40,14 +38,36 @@ namespace WindowManger
             splashScreen.ShowDialog();
         }
 
-        /*private void OpenWpf()
+        /// <summary>
+        /// 4 exit codes:
+        /// 
+        /// 0 is clean exit
+        /// 1 is move to metro
+        /// 2 is move to forms
+        /// 3 is failed process upstart
+        /// null is unspecified error
+        /// </summary>
+        private static void HandleTypeOfWindowSystem()
         {
-            var metroLogin = new SSS_Materials_Design_Forms.Forms.Login();
-            WindowInteropHelper wih = new WindowInteropHelper(this);
-            wih.Owner = metroLogin.Handle;
-            metroLogin.ShowDialog();
-        }*/
+            //ProcessHandler.StartProcess();
+            ShowSplashScreen();
+            int? result = null;
 
-
+            while (result != 0 || result == 3)
+            {
+                if (result == null)
+                {
+                    result = ProcessHandler.StartProcess("SSS_Windows_Forms.exe");
+                }
+                else if (result == 1)
+                {
+                    result = ProcessHandler.StartProcess("SSS_Materials_Design_Forms.exe");
+                }
+                else if (result == 2)
+                {
+                    result = ProcessHandler.StartProcess("SSS_Windows_Forms.exe");
+                }
+            }
+        }
     }
 }

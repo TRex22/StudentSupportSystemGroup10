@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9FF18BB-5A86-4328-84F3-C9AFB93AF10D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SSS_Windows_Forms</RootNamespace>
     <AssemblyName>SSS_Windows_Forms</AssemblyName>
@@ -72,6 +72,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Forms\Administrator\Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\BrandingModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\BrandingModal.Designer.cs">
+      <DependentUpon>BrandingModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\AverageActivityRatingsModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,10 +120,10 @@
     <Compile Include="Forms\Coordinator\SearchTutorModal.Designer.cs">
       <DependentUpon>SearchTutorModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Coordinator\SystemSettingsModal.cs">
+    <Compile Include="Forms\Administrator\SystemSettingsModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Coordinator\SystemSettingsModal.Designer.cs">
+    <Compile Include="Forms\Administrator\SystemSettingsModal.Designer.cs">
       <DependentUpon>SystemSettingsModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.cs">
@@ -252,6 +264,8 @@
     <Compile Include="Forms\Student\UpdateStudentProfileModal.Designer.cs">
       <DependentUpon>UpdateStudentProfileModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,6 +276,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Administrator\Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\BrandingModal.resx">
+      <DependentUpon>BrandingModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\AverageActivityRatingsModal.resx">
       <DependentUpon>AverageActivityRatingsModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,7 +301,7 @@
     <EmbeddedResource Include="Forms\Coordinator\SearchTutorModal.resx">
       <DependentUpon>SearchTutorModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Coordinator\SystemSettingsModal.resx">
+    <EmbeddedResource Include="Forms\Administrator\SystemSettingsModal.resx">
       <DependentUpon>SystemSettingsModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\TutorRatings\TutorRatingB_IndividualModal.resx">
@@ -379,9 +399,7 @@
       <Name>SSS_Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Administrator\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCEDataTable.datasource" />

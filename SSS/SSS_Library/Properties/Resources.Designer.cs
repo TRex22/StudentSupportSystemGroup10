@@ -61,6 +61,24 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Fill in All Required Fields..
+        /// </summary>
+        public static string BrandingErrorMessage {
+            get {
+                return ResourceManager.GetString("BrandingErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branding Updated Succesfully..
+        /// </summary>
+        public static string BrandingUpdateSuccess {
+            get {
+                return ResourceManager.GetString("BrandingUpdateSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry the date selected is fully booked. Please select another day..
         /// </summary>
         public static string ConsultationFullyBookedMessage {
@@ -102,6 +120,24 @@ namespace SSS_Library.Properties {
         public static string DeleteConsultationSuccess {
             get {
                 return ResourceManager.GetString("DeleteConsultationSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ICON (.ico)|*.ico|All Files (*.*)|*.*.
+        /// </summary>
+        public static string IconFileTypesRegexOpenDialog {
+            get {
+                return ResourceManager.GetString("IconFileTypesRegexOpenDialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JPEG (.jpg)|*.jpg|BITMAP (.bmp)|*.bmp|PNG (.png)|*.png|All Files (*.*)|*.*.
+        /// </summary>
+        public static string ImageFileTypesRegexOpenDialog {
+            get {
+                return ResourceManager.GetString("ImageFileTypesRegexOpenDialog", resourceCulture);
             }
         }
         

@@ -178,8 +178,7 @@ namespace SSS_Materials_Design_Forms.Forms
         [STAThread]
         private void goToOldForms_Click(object sender, RoutedEventArgs e)
         {
-            /*new Thread(() => new Login().ShowDialog()).Start();
-            _wpfWindowCloseHandler.CloseWindow(this.Name);*/
+            Environment.Exit(2);
         }
     }
 }

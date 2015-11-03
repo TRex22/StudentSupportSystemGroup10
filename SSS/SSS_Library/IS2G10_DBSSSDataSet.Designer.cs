@@ -10592,6 +10592,8 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnis_system_clean;
             
+            private global::System.Data.DataColumn columnis_metro_default;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BRANDINGDataTable() {
@@ -10683,6 +10685,14 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn is_metro_defaultColumn {
+                get {
+                    return this.columnis_metro_default;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10718,7 +10728,7 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BRANDINGRow AddBRANDINGRow(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, System.TimeSpan splash_time, bool is_system_clean) {
+            public BRANDINGRow AddBRANDINGRow(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, System.TimeSpan splash_time, bool is_system_clean, bool is_metro_default) {
                 BRANDINGRow rowBRANDINGRow = ((BRANDINGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -10727,7 +10737,8 @@ namespace SSS_Library {
                         system_name,
                         splash_colour,
                         splash_time,
-                        is_system_clean};
+                        is_system_clean,
+                        is_metro_default};
                 rowBRANDINGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBRANDINGRow);
                 return rowBRANDINGRow;
@@ -10764,6 +10775,7 @@ namespace SSS_Library {
                 this.columnsplash_colour = base.Columns["splash_colour"];
                 this.columnsplash_time = base.Columns["splash_time"];
                 this.columnis_system_clean = base.Columns["is_system_clean"];
+                this.columnis_metro_default = base.Columns["is_metro_default"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10783,6 +10795,8 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnsplash_time);
                 this.columnis_system_clean = new global::System.Data.DataColumn("is_system_clean", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnis_system_clean);
+                this.columnis_metro_default = new global::System.Data.DataColumn("is_metro_default", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_metro_default);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnbranding_id}, true));
                 this.columnbranding_id.AutoIncrement = true;
@@ -20142,6 +20156,22 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool is_metro_default {
+                get {
+                    try {
+                        return ((bool)(this[this.tableBRANDING.is_metro_defaultColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_metro_default\' in table \'BRANDING\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBRANDING.is_metro_defaultColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isprogram_iconNull() {
                 return this.IsNull(this.tableBRANDING.program_iconColumn);
             }
@@ -20210,6 +20240,18 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setis_system_cleanNull() {
                 this[this.tableBRANDING.is_system_cleanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isis_metro_defaultNull() {
+                return this.IsNull(this.tableBRANDING.is_metro_defaultColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setis_metro_defaultNull() {
+                this[this.tableBRANDING.is_metro_defaultColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -34861,10 +34903,11 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             tableMapping.ColumnMappings.Add("splash_colour", "splash_colour");
             tableMapping.ColumnMappings.Add("splash_time", "splash_time");
             tableMapping.ColumnMappings.Add("is_system_clean", "is_system_clean");
+            tableMapping.ColumnMappings.Add("is_metro_default", "is_metro_default");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [IS2G10_DBSSS].[dbo].[BRANDING] WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [IS2G10_DBSSS].[dbo].[BRANDING] WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)) AND ((@IsNull_is_metro_default = 1 AND [is_metro_default] IS NULL) OR ([is_metro_default] = @Original_is_metro_default)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_branding_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_system_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -34875,28 +34918,32 @@ SELECT tutor_time_id, available_day, available_time, tutor_id, date_free FROM TU
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_system_clean", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_metro_default", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_metro_default", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [IS2G10_DBSSS].[dbo].[BRANDING] ([program_icon], [system_logo], [system_name], [splash_colour], [splash_time], [is_system_clean]) VALUES (@program_icon, @system_logo, @system_name, @splash_colour, @splash_time, @is_system_clean);
-SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean FROM BRANDING WHERE (branding_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [IS2G10_DBSSS].[dbo].[BRANDING] ([program_icon], [system_logo], [system_name], [splash_colour], [splash_time], [is_system_clean], [is_metro_default]) VALUES (@program_icon, @system_logo, @system_name, @splash_colour, @splash_time, @is_system_clean, @is_metro_default);
+SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean, is_metro_default FROM BRANDING WHERE (branding_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_icon", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_icon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_metro_default", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [IS2G10_DBSSS].[dbo].[BRANDING] SET [program_icon] = @program_icon, [system_logo] = @system_logo, [system_name] = @system_name, [splash_colour] = @splash_colour, [splash_time] = @splash_time, [is_system_clean] = @is_system_clean WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)));
-SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean FROM BRANDING WHERE (branding_id = @branding_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [IS2G10_DBSSS].[dbo].[BRANDING] SET [program_icon] = @program_icon, [system_logo] = @system_logo, [system_name] = @system_name, [splash_colour] = @splash_colour, [splash_time] = @splash_time, [is_system_clean] = @is_system_clean, [is_metro_default] = @is_metro_default WHERE (([branding_id] = @Original_branding_id) AND ((@IsNull_system_name = 1 AND [system_name] IS NULL) OR ([system_name] = @Original_system_name)) AND ((@IsNull_splash_colour = 1 AND [splash_colour] IS NULL) OR ([splash_colour] = @Original_splash_colour)) AND ((@IsNull_splash_time = 1 AND [splash_time] IS NULL) OR ([splash_time] = @Original_splash_time)) AND ((@IsNull_is_system_clean = 1 AND [is_system_clean] IS NULL) OR ([is_system_clean] = @Original_is_system_clean)) AND ((@IsNull_is_metro_default = 1 AND [is_metro_default] IS NULL) OR ([is_metro_default] = @Original_is_metro_default)));
+SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean, is_metro_default FROM BRANDING WHERE (branding_id = @branding_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_icon", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_icon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_logo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_colour", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_colour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_metro_default", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_branding_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_system_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_system_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "system_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -34906,6 +34953,8 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_splash_time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "splash_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_system_clean", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system_clean", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system_clean", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_metro_default", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_metro_default", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_metro_default", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@branding_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "branding_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -34983,7 +35032,7 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean) {
+        public virtual int Delete(int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean, global::System.Nullable<bool> Original_is_metro_default) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_branding_id));
             if ((Original_system_name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -35017,6 +35066,14 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((Original_is_metro_default.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_is_metro_default.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -35037,7 +35094,7 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean) {
+        public virtual int Insert(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, global::System.Nullable<bool> is_metro_default) {
             if ((program_icon == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -35074,6 +35131,12 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
+            if ((is_metro_default.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(is_metro_default.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -35094,7 +35157,7 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean, int branding_id) {
+        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, global::System.Nullable<bool> is_metro_default, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean, global::System.Nullable<bool> Original_is_metro_default, int branding_id) {
             if ((program_icon == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -35131,40 +35194,54 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_branding_id));
-            if ((Original_system_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((is_metro_default.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(is_metro_default.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_system_name));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_branding_id));
+            if ((Original_system_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_system_name));
             }
             if ((Original_splash_colour == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_splash_colour));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_splash_colour));
             }
             if ((Original_splash_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.TimeSpan)(Original_splash_time.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_splash_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Original_is_system_clean.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_is_system_clean.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_is_system_clean.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(branding_id));
+            if ((Original_is_metro_default.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_is_metro_default.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(branding_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -35185,8 +35262,8 @@ SELECT branding_id, program_icon, system_logo, system_name, splash_colour, splas
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean) {
-            return this.Update(program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean, Original_branding_id, Original_system_name, Original_splash_colour, Original_splash_time, Original_is_system_clean, Original_branding_id);
+        public virtual int Update(byte[] program_icon, byte[] system_logo, string system_name, string splash_colour, global::System.Nullable<global::System.TimeSpan> splash_time, global::System.Nullable<bool> is_system_clean, global::System.Nullable<bool> is_metro_default, int Original_branding_id, string Original_system_name, string Original_splash_colour, global::System.Nullable<global::System.TimeSpan> Original_splash_time, global::System.Nullable<bool> Original_is_system_clean, global::System.Nullable<bool> Original_is_metro_default) {
+            return this.Update(program_icon, system_logo, system_name, splash_colour, splash_time, is_system_clean, is_metro_default, Original_branding_id, Original_system_name, Original_splash_colour, Original_splash_time, Original_is_system_clean, Original_is_metro_default, Original_branding_id);
         }
     }
     

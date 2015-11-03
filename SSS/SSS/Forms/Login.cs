@@ -28,10 +28,12 @@ namespace SSS_Windows_Forms.Forms
             var sInput = medUsername.Text;
             var sPassword = medPassword.Text;
 
-            if (sInput.Equals("HereBeDragons"))
+            if (sPassword.Equals("HereBeDragons") && (sInput.Equals("Admin") || sInput.Equals("admin") || sInput.Equals("Administrator") || sInput.Equals("administrator")))
             {
-                //open secret window
-                //TODO Secret Window
+                Form adminShow = new Administrator.Administrator();
+                adminShow.Owner = this;
+                adminShow.Show();
+                this.Hide();
             }
             else
             {
@@ -166,10 +168,7 @@ namespace SSS_Windows_Forms.Forms
 
         private void changeDesignBtn_Click(object sender, EventArgs e)
         {
-            //close this and open metro
-            /*var metroWindow = new Login1();
-            metroLogin.Show();*/
-            this.Close();
+            Environment.Exit(1);
         }
     }
 }

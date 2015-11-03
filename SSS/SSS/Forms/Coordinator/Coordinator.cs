@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SSS_Windows_Forms.Forms.Administrator;
 using SSS_Windows_Forms.Forms.Coordinator.LowTutorRatings;
 using SSS_Windows_Forms.Forms.Coordinator.TutorRatings;
 using SSS_Windows_Forms.Forms.Coordinator.TutorTraining;
@@ -23,7 +24,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly SearchStudentModal _updateStudentModal;
         private readonly SearchTutorModal _searchTutorModal;
         private readonly SearchTutorModal _updateTutorModal;
-        private readonly SystemSettingsModal _systemSettingsModal = new SystemSettingsModal();
         private readonly AverageActivityRatingsModal _averageActivityRatingsModal = new AverageActivityRatingsModal();
         private readonly TutorTrainingStatusModal _tutorTrainingStatusModal = new TutorTrainingStatusModal();
         private readonly TutorsWithTrainingModal _tutorsWithTrainingModal = new TutorsWithTrainingModal();
@@ -72,7 +72,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_updateStudentModal);
             this.panel7.Controls.Add(_searchTutorModal);
             this.panel7.Controls.Add(_updateTutorModal);
-            this.panel7.Controls.Add(_systemSettingsModal);
             this.panel7.Controls.Add(_averageActivityRatingsModal);
             this.panel7.Controls.Add(_tutorTrainingStatusModal);
             this.panel7.Controls.Add(_tutorsWithTrainingModal);
@@ -172,12 +171,6 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _viewDisengagedStudentsModal.Show();
-        }
-
-        private void systemSettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _systemSettingsModal.Show();
         }
 
         private void studentEngagementToolStripMenuItem_Click(object sender, EventArgs e)

@@ -40,7 +40,7 @@
     </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>SSS_Materials_Design_Forms.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dragablz, Version=0.0.2.127, Culture=neutral, processorArchitecture=MSIL">

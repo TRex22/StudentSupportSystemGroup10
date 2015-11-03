@@ -117,70 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CreateStudent_SuccessfulMessage" xml:space="preserve">
-    <value>Student Created Successfully.</value>
-  </data>
-  <data name="IncorrectLoginDetailsMessage" xml:space="preserve">
-    <value>Incorrect Login Details. Please try again.</value>
-  </data>
-  <data name="Profile_Update_Successful" xml:space="preserve">
-    <value>Profile Update Successful.</value>
-    <comment>update student</comment>
-  </data>
-  <data name="SendEmailSuccessfulMessage" xml:space="preserve">
-    <value>Email Sent To New Student.</value>
-  </data>
-  <data name="UpdateGroupSuccess" xml:space="preserve">
-    <value>Added to Group Successfully.</value>
-  </data>
-  <data name="UpdateStudentAttendanceSuccess" xml:space="preserve">
-    <value>Attendance Updated Successfully.</value>
-  </data>
-  <data name="SearchStudentMessageBoxHeading" xml:space="preserve">
-    <value>Student Information</value>
-  </data>
-  <data name="SearchTutorModal_displayStudentInformation_Tutor_Information" xml:space="preserve">
-    <value>Tutor Information</value>
-  </data>
-  <data name="SearchTutorInformationHeading" xml:space="preserve">
-    <value>Tutor Information</value>
-  </data>
-  <data name="PassWordCreateDoNotMatchError" xml:space="preserve">
-    <value>Please Insert Correct Password</value>
-    <comment>dd</comment>
-  </data>
-  <data name="Login_CheckPassword_Password_Created_Successfully" xml:space="preserve">
-    <value>Password Created Successfully. Please Login With Your New Password.</value>
-    <comment>dsdd</comment>
-  </data>
-  <data name="Login_CheckPassword_Please_Enter_a_Password_" xml:space="preserve">
-    <value>Please Enter a Password.</value>
-  </data>
-  <data name="CreateConsultationSuccess" xml:space="preserve">
-    <value>Consultation Successfully Created.</value>
-  </data>
-  <data name="CreateConsultationFail" xml:space="preserve">
-    <value>Creating Consultation Failed.</value>
-  </data>
-  <data name="ConsultationFullyBookedMessage" xml:space="preserve">
-    <value>Sorry the date selected is fully booked. Please select another day.</value>
-  </data>
-  <data name="DeleteConsultationSuccess" xml:space="preserve">
-    <value>Canceled Consultation Successfully.</value>
-  </data>
-  <data name="UpdateConsultationSuccess" xml:space="preserve">
-    <value>Updated Consultation Successfully.</value>
-  </data>
-  <data name="BrandingErrorMessage" xml:space="preserve">
-    <value>Please Fill in All Required Fields.</value>
-  </data>
-  <data name="BrandingUpdateSuccess" xml:space="preserve">
-    <value>Branding Updated Succesfully.</value>
-  </data>
-  <data name="ImageFileTypesRegexOpenDialog" xml:space="preserve">
-    <value>JPEG (.jpg)|*.jpg|BITMAP (.bmp)|*.bmp|PNG (.png)|*.png|All Files (*.*)|*.*</value>
-  </data>
-  <data name="IconFileTypesRegexOpenDialog" xml:space="preserve">
-    <value>ICON (.ico)|*.ico|All Files (*.*)|*.*</value>
-  </data>
+  <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 17</value>
+  </metadata>
 </root>
