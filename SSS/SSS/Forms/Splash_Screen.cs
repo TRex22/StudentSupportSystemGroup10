@@ -59,7 +59,7 @@ namespace SSS_Windows_Forms
                 _timeSpec = 5000;
                 _splashImage = null;
                 _programIcon = null;
-                _splashProgramName = "Student Support Program";
+                _splashProgramName = "Student Support Program Default";
                 _splashColour = SystemColors.Control;
             }
         }

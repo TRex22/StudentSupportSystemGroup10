@@ -35,6 +35,13 @@ namespace SSS_Windows_Forms.Forms
                 adminShow.Show();
                 this.Hide();
             }
+            else if (!SSS_Library.DataServices.StringHandler.CheckIfStringANumber(sInput) || !sPassword.Equals("HereBeDragons") && (sInput.Equals("Admin") || sInput.Equals("admin") || sInput.Equals("Administrator") || sInput.Equals("administrator")))
+            {
+                MessageBox.Show(String.Format("{0}", Resources.IncorrectLoginDetailsMessage));
+                medPassword.Clear();
+                medUsername.Clear();
+                medUsername.Focus();
+            }
             else
             {
                 _userId = Convert.ToInt32(sInput);

@@ -10,14 +10,18 @@
         Title="Login" Height="298" Width="502" Activated="Login1_Activated" WindowStartupLocation="CenterScreen">
     <UserControl>
         <Grid x:Name="NoName">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="123*"/>
+                <RowDefinition Height="145*"/>
+            </Grid.RowDefinitions>
             <Label x:Name="Label" Content="Welcome to Student Support System" HorizontalAlignment="Left" Margin="30,19,0,0" VerticalAlignment="Top" Width="446" FontSize="26.667"/>
-            <Label x:Name="Label1" Content="Username:" HorizontalAlignment="Left" Margin="108,102,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="Label2" Content="Password:" HorizontalAlignment="Left" Margin="108,141,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Height="23" Margin="191,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
-            <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="191,134,0,0" VerticalAlignment="Top" Width="177"/>
-            <Button x:Name="LoginButton" Content="Login" Command="{Binding}" HorizontalAlignment="Left" Margin="44,215,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="LoginButton_Click"/>
-            <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="401,215,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="button1_Click"/>
-            <Button x:Name="GoToOldForms" Content="Return to Old Forms" HorizontalAlignment="Left" Margin="169,215,0,0" VerticalAlignment="Top" Width="173" Click="goToOldForms_Click"/>
+            <Label x:Name="Label1" Content="Username:" HorizontalAlignment="Left" Margin="108,102,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            <Label x:Name="Label2" Content="Password:" HorizontalAlignment="Left" Margin="108,17.578,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Height="24" Margin="191,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+            <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="24" Margin="191,10.578,0,0" VerticalAlignment="Top" Width="177" Grid.Row="1"/>
+            <Button x:Name="LoginButton" Content="Login" Command="{Binding}" HorizontalAlignment="Left" Margin="44,91.578,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="LoginButton_Click" Grid.Row="1"/>
+            <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="401,91.578,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="button1_Click" Grid.Row="1"/>
+            <Button x:Name="GoToOldForms" Content="Return to Old Forms" HorizontalAlignment="Left" Margin="169,91.578,0,0" VerticalAlignment="Top" Width="173" Click="goToOldForms_Click" Grid.Row="1"/>
         </Grid>
     </UserControl>
 </controls:MetroWindow>

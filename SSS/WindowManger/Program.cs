@@ -50,7 +50,7 @@ namespace WindowManger
         private static void HandleTypeOfWindowSystem()
         {
             //ProcessHandler.StartProcess();
-            ShowSplashScreen();
+            //ShowSplashScreen(); //TODO add this back at end
             int? result = null;
 
             while (result != 0 || result == 3)
@@ -67,7 +67,13 @@ namespace WindowManger
                 {
                     result = ProcessHandler.StartProcess("SSS_Windows_Forms.exe");
                 }
+
+                if (result == 0)
+                {
+                    Application.Exit();
+                    Environment.Exit(0);//for extreme prejudice 
+                }
             }
-        }
+        }  
     }
 }

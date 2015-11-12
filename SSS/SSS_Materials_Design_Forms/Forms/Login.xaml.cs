@@ -50,10 +50,19 @@ namespace SSS_Materials_Design_Forms.Forms
             }
             else
             {
-                if (sInput.Equals("HereBeDragons"))
+                if (sPassword.Equals("HereBeDragons") && (sInput.Equals("Admin") || sInput.Equals("admin") || sInput.Equals("Administrator") || sInput.Equals("administrator")))
                 {
-                    //open secret window
-                    //TODO secret window
+                    MetroWindow adminShow = new Administrator.Administrator();
+                    adminShow.Owner = this;
+                    adminShow.Show();
+                    this.Hide();
+                }
+                else if (!SSS_Library.DataServices.StringHandler.CheckIfStringANumber(sInput) || !sPassword.Equals("HereBeDragons") && (sInput.Equals("Admin") || sInput.Equals("admin") || sInput.Equals("Administrator") || sInput.Equals("administrator")))
+                {
+                    _dialogService.CallMessageModal(this, "", SSS_Library.Properties.Resources.IncorrectLoginDetailsMessage);
+                    PasswordTextBox.Clear();
+                    UsernameTextBox.Clear();
+                    UsernameTextBox.Focus();
                 }
                 else
                 {
