@@ -240,6 +240,12 @@
     <Compile Include="Forms\Tutor\TutorDashboardModal.Designer.cs">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tutor\UpdateActivityModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tutor\UpdateActivityModal.Designer.cs">
+      <DependentUpon>UpdateActivityModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tutor\UpdateStudentConsultationModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     <EmbeddedResource Include="Forms\Tutor\TutorDashboardModal.resx">
       <DependentUpon>TutorDashboardModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tutor\UpdateActivityModal.resx">
+      <DependentUpon>UpdateActivityModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tutor\UpdateStudentConsultationModal.resx">
       <DependentUpon>UpdateStudentConsultationModal.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,6 +423,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PointBlankIcon.ico" />
+    <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ACTIVITY_FULL_DATARow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCEDataTable.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCERow.datasource" />
     <None Include="Properties\DataSources\SSS_Library.IS2G10_DBSSSDataSet+ATTENDANCERowChangeEvent.datasource" />

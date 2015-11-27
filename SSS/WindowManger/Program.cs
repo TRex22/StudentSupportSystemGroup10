@@ -49,7 +49,6 @@ namespace WindowManger
         /// </summary>
         private static void HandleTypeOfWindowSystem()
         {
-            //ProcessHandler.StartProcess();
             //ShowSplashScreen(); //TODO add this back at end
             int? result = null;
 

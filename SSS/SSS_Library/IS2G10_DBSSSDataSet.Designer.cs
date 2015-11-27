@@ -96,6 +96,8 @@ namespace SSS_Library {
         
         private CONSULTATION_FULL_DATADataTable tableCONSULTATION_FULL_DATA;
         
+        private ACTIVITY_FULL_DATADataTable tableACTIVITY_FULL_DATA;
+        
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__21B6055D;
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__22AA2996;
@@ -229,6 +231,14 @@ namespace SSS_Library {
         private global::System.Data.DataRelation relationFK__CONSULTAT__tutor__2E1BDC42;
         
         private global::System.Data.DataRelation relationFK__CONSULTAT__tutor__2E1BDC421;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E1;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E2;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2B3F6F97;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -365,6 +375,9 @@ namespace SSS_Library {
                 }
                 if ((ds.Tables["CONSULTATION_FULL_DATA"] != null)) {
                     base.Tables.Add(new CONSULTATION_FULL_DATADataTable(ds.Tables["CONSULTATION_FULL_DATA"]));
+                }
+                if ((ds.Tables["ACTIVITY_FULL_DATA"] != null)) {
+                    base.Tables.Add(new ACTIVITY_FULL_DATADataTable(ds.Tables["ACTIVITY_FULL_DATA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -746,6 +759,16 @@ namespace SSS_Library {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ACTIVITY_FULL_DATADataTable ACTIVITY_FULL_DATA {
+            get {
+                return this.tableACTIVITY_FULL_DATA;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -918,6 +941,9 @@ namespace SSS_Library {
                 }
                 if ((ds.Tables["CONSULTATION_FULL_DATA"] != null)) {
                     base.Tables.Add(new CONSULTATION_FULL_DATADataTable(ds.Tables["CONSULTATION_FULL_DATA"]));
+                }
+                if ((ds.Tables["ACTIVITY_FULL_DATA"] != null)) {
+                    base.Tables.Add(new ACTIVITY_FULL_DATADataTable(ds.Tables["ACTIVITY_FULL_DATA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1168,6 +1194,12 @@ namespace SSS_Library {
                     this.tableCONSULTATION_FULL_DATA.InitVars();
                 }
             }
+            this.tableACTIVITY_FULL_DATA = ((ACTIVITY_FULL_DATADataTable)(base.Tables["ACTIVITY_FULL_DATA"]));
+            if ((initTable == true)) {
+                if ((this.tableACTIVITY_FULL_DATA != null)) {
+                    this.tableACTIVITY_FULL_DATA.InitVars();
+                }
+            }
             this.relationFK__ATTENDANC__stude__21B6055D = this.Relations["FK__ATTENDANC__stude__21B6055D"];
             this.relationFK__ATTENDANC__stude__22AA2996 = this.Relations["FK__ATTENDANC__stude__22AA2996"];
             this.relationFK__ENROLLMEN__cours__25869641 = this.Relations["FK__ENROLLMEN__cours__25869641"];
@@ -1235,6 +1267,10 @@ namespace SSS_Library {
             this.relationFK__CONSULTAT__stude__2D27B8092 = this.Relations["FK__CONSULTAT__stude__2D27B8092"];
             this.relationFK__CONSULTAT__tutor__2E1BDC42 = this.Relations["FK__CONSULTAT__tutor__2E1BDC42"];
             this.relationFK__CONSULTAT__tutor__2E1BDC421 = this.Relations["FK__CONSULTAT__tutor__2E1BDC421"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E = this.Relations["FK__ATTENDANC__stude__2A4B4B5E"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E1 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E1"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E2 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E2"];
+            this.relationFK__ATTENDANC__stude__2B3F6F97 = this.Relations["FK__ATTENDANC__stude__2B3F6F97"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1317,6 +1353,8 @@ namespace SSS_Library {
             base.Tables.Add(this.tableAVERAGE_TUTOR_RATING_WITHOUT_TRAINING);
             this.tableCONSULTATION_FULL_DATA = new CONSULTATION_FULL_DATADataTable();
             base.Tables.Add(this.tableCONSULTATION_FULL_DATA);
+            this.tableACTIVITY_FULL_DATA = new ACTIVITY_FULL_DATADataTable();
+            base.Tables.Add(this.tableACTIVITY_FULL_DATA);
             this.relationFK__ATTENDANC__stude__21B6055D = new global::System.Data.DataRelation("FK__ATTENDANC__stude__21B6055D", new global::System.Data.DataColumn[] {
                         this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableATTENDANCE.student_idColumn}, false);
@@ -1585,6 +1623,22 @@ namespace SSS_Library {
                         this.tableSEARCH_TUTOR.tutor_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableCONSULTATION_FULL_DATA.tutor_idColumn}, false);
             this.Relations.Add(this.relationFK__CONSULTAT__tutor__2E1BDC421);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E", new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableACTIVITY_FULL_DATA.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E1 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E1", new global::System.Data.DataColumn[] {
+                        this.tableDISENGAGED_STUDENTS.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableACTIVITY_FULL_DATA.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E1);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E2 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E2", new global::System.Data.DataColumn[] {
+                        this.tableSEARCH_STUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableACTIVITY_FULL_DATA.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E2);
+            this.relationFK__ATTENDANC__stude__2B3F6F97 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2B3F6F97", new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT_ACTIVITY.student_activity_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableACTIVITY_FULL_DATA.student_activity_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2B3F6F97);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1805,6 +1859,12 @@ namespace SSS_Library {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeACTIVITY_FULL_DATA() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1965,6 +2025,9 @@ namespace SSS_Library {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void CONSULTATION_FULL_DATARowChangeEventHandler(object sender, CONSULTATION_FULL_DATARowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ACTIVITY_FULL_DATARowChangeEventHandler(object sender, ACTIVITY_FULL_DATARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -14766,6 +14829,860 @@ namespace SSS_Library {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ACTIVITY_FULL_DATADataTable : global::System.Data.TypedTableBase<ACTIVITY_FULL_DATARow> {
+            
+            private global::System.Data.DataColumn columnstudent_activity_id;
+            
+            private global::System.Data.DataColumn columnstudent_activity_name;
+            
+            private global::System.Data.DataColumn columnstudent_activity_pointvalue;
+            
+            private global::System.Data.DataColumn columnstudent_activity_week;
+            
+            private global::System.Data.DataColumn columnstudent_activity_description;
+            
+            private global::System.Data.DataColumn columnstudent_id;
+            
+            private global::System.Data.DataColumn columnExpr1;
+            
+            private global::System.Data.DataColumn columnstudent_activity_tutorrating;
+            
+            private global::System.Data.DataColumn columnstudent_activity_rating;
+            
+            private global::System.Data.DataColumn columnstudent_arrived;
+            
+            private global::System.Data.DataColumn columnExpr2;
+            
+            private global::System.Data.DataColumn columncoordinator_id;
+            
+            private global::System.Data.DataColumn columngroup_id;
+            
+            private global::System.Data.DataColumn columnstudent_firstname;
+            
+            private global::System.Data.DataColumn columnstudent_lastname;
+            
+            private global::System.Data.DataColumn columnstudent_id_passport;
+            
+            private global::System.Data.DataColumn columnstudent_dateofbirth;
+            
+            private global::System.Data.DataColumn columnstudent_emailaddress;
+            
+            private global::System.Data.DataColumn columnstudent_mobilenumber;
+            
+            private global::System.Data.DataColumn columnstudent_yearofstudy;
+            
+            private global::System.Data.DataColumn columnstudent_degreeprogramme;
+            
+            private global::System.Data.DataColumn columnstudent_status;
+            
+            private global::System.Data.DataColumn columnstudent_points;
+            
+            private global::System.Data.DataColumn columnExpr3;
+            
+            private global::System.Data.DataColumn columncoordinator_firstname;
+            
+            private global::System.Data.DataColumn columncoordinator_lastname;
+            
+            private global::System.Data.DataColumn columncoordinator_id_passport;
+            
+            private global::System.Data.DataColumn columncoordinator_dateofbirth;
+            
+            private global::System.Data.DataColumn columncoordinator_emailaddress;
+            
+            private global::System.Data.DataColumn columncoordinator_cellnumber;
+            
+            private global::System.Data.DataColumn columntutor_id;
+            
+            private global::System.Data.DataColumn columntutor_firstname;
+            
+            private global::System.Data.DataColumn columntutor_lastname;
+            
+            private global::System.Data.DataColumn columntutor_id_passport;
+            
+            private global::System.Data.DataColumn columntutor_dateofbirth;
+            
+            private global::System.Data.DataColumn columntutor_emailaddress;
+            
+            private global::System.Data.DataColumn columntutor_cellnumber;
+            
+            private global::System.Data.DataColumn columntutor_trainingstatus;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATADataTable() {
+                this.TableName = "ACTIVITY_FULL_DATA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ACTIVITY_FULL_DATADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ACTIVITY_FULL_DATADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_idColumn {
+                get {
+                    return this.columnstudent_activity_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_nameColumn {
+                get {
+                    return this.columnstudent_activity_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_pointvalueColumn {
+                get {
+                    return this.columnstudent_activity_pointvalue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_weekColumn {
+                get {
+                    return this.columnstudent_activity_week;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_descriptionColumn {
+                get {
+                    return this.columnstudent_activity_description;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_idColumn {
+                get {
+                    return this.columnstudent_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_tutorratingColumn {
+                get {
+                    return this.columnstudent_activity_tutorrating;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_ratingColumn {
+                get {
+                    return this.columnstudent_activity_rating;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_arrivedColumn {
+                get {
+                    return this.columnstudent_arrived;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr2Column {
+                get {
+                    return this.columnExpr2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_idColumn {
+                get {
+                    return this.columncoordinator_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn group_idColumn {
+                get {
+                    return this.columngroup_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_firstnameColumn {
+                get {
+                    return this.columnstudent_firstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_lastnameColumn {
+                get {
+                    return this.columnstudent_lastname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_id_passportColumn {
+                get {
+                    return this.columnstudent_id_passport;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_dateofbirthColumn {
+                get {
+                    return this.columnstudent_dateofbirth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_emailaddressColumn {
+                get {
+                    return this.columnstudent_emailaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_mobilenumberColumn {
+                get {
+                    return this.columnstudent_mobilenumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_yearofstudyColumn {
+                get {
+                    return this.columnstudent_yearofstudy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_degreeprogrammeColumn {
+                get {
+                    return this.columnstudent_degreeprogramme;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_statusColumn {
+                get {
+                    return this.columnstudent_status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_pointsColumn {
+                get {
+                    return this.columnstudent_points;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr3Column {
+                get {
+                    return this.columnExpr3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_firstnameColumn {
+                get {
+                    return this.columncoordinator_firstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_lastnameColumn {
+                get {
+                    return this.columncoordinator_lastname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_id_passportColumn {
+                get {
+                    return this.columncoordinator_id_passport;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_dateofbirthColumn {
+                get {
+                    return this.columncoordinator_dateofbirth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_emailaddressColumn {
+                get {
+                    return this.columncoordinator_emailaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn coordinator_cellnumberColumn {
+                get {
+                    return this.columncoordinator_cellnumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_idColumn {
+                get {
+                    return this.columntutor_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_firstnameColumn {
+                get {
+                    return this.columntutor_firstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_lastnameColumn {
+                get {
+                    return this.columntutor_lastname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_id_passportColumn {
+                get {
+                    return this.columntutor_id_passport;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_dateofbirthColumn {
+                get {
+                    return this.columntutor_dateofbirth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_emailaddressColumn {
+                get {
+                    return this.columntutor_emailaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_cellnumberColumn {
+                get {
+                    return this.columntutor_cellnumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tutor_trainingstatusColumn {
+                get {
+                    return this.columntutor_trainingstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow this[int index] {
+                get {
+                    return ((ACTIVITY_FULL_DATARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ACTIVITY_FULL_DATARowChangeEventHandler ACTIVITY_FULL_DATARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ACTIVITY_FULL_DATARowChangeEventHandler ACTIVITY_FULL_DATARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ACTIVITY_FULL_DATARowChangeEventHandler ACTIVITY_FULL_DATARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ACTIVITY_FULL_DATARowChangeEventHandler ACTIVITY_FULL_DATARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddACTIVITY_FULL_DATARow(ACTIVITY_FULL_DATARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow AddACTIVITY_FULL_DATARow(
+                        string student_activity_name, 
+                        int student_activity_pointvalue, 
+                        int student_activity_week, 
+                        string student_activity_description, 
+                        STUDENTRow parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E, 
+                        int Expr1, 
+                        int student_activity_tutorrating, 
+                        int student_activity_rating, 
+                        bool student_arrived, 
+                        int Expr2, 
+                        int coordinator_id, 
+                        int group_id, 
+                        string student_firstname, 
+                        string student_lastname, 
+                        string student_id_passport, 
+                        System.DateTime student_dateofbirth, 
+                        string student_emailaddress, 
+                        string student_mobilenumber, 
+                        int student_yearofstudy, 
+                        string student_degreeprogramme, 
+                        string student_status, 
+                        int student_points, 
+                        int Expr3, 
+                        string coordinator_firstname, 
+                        string coordinator_lastname, 
+                        string coordinator_id_passport, 
+                        System.DateTime coordinator_dateofbirth, 
+                        string coordinator_emailaddress, 
+                        string coordinator_cellnumber, 
+                        int tutor_id, 
+                        string tutor_firstname, 
+                        string tutor_lastname, 
+                        string tutor_id_passport, 
+                        System.DateTime tutor_dateofbirth, 
+                        string tutor_emailaddress, 
+                        string tutor_cellnumber, 
+                        bool tutor_trainingstatus) {
+                ACTIVITY_FULL_DATARow rowACTIVITY_FULL_DATARow = ((ACTIVITY_FULL_DATARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        student_activity_name,
+                        student_activity_pointvalue,
+                        student_activity_week,
+                        student_activity_description,
+                        null,
+                        Expr1,
+                        student_activity_tutorrating,
+                        student_activity_rating,
+                        student_arrived,
+                        Expr2,
+                        coordinator_id,
+                        group_id,
+                        student_firstname,
+                        student_lastname,
+                        student_id_passport,
+                        student_dateofbirth,
+                        student_emailaddress,
+                        student_mobilenumber,
+                        student_yearofstudy,
+                        student_degreeprogramme,
+                        student_status,
+                        student_points,
+                        Expr3,
+                        coordinator_firstname,
+                        coordinator_lastname,
+                        coordinator_id_passport,
+                        coordinator_dateofbirth,
+                        coordinator_emailaddress,
+                        coordinator_cellnumber,
+                        tutor_id,
+                        tutor_firstname,
+                        tutor_lastname,
+                        tutor_id_passport,
+                        tutor_dateofbirth,
+                        tutor_emailaddress,
+                        tutor_cellnumber,
+                        tutor_trainingstatus};
+                if ((parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E != null)) {
+                    columnValuesArray[5] = parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E[0];
+                }
+                rowACTIVITY_FULL_DATARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowACTIVITY_FULL_DATARow);
+                return rowACTIVITY_FULL_DATARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow FindBystudent_activity_idstudent_idExpr1Expr2Expr3tutor_id(int student_activity_id, int student_id, int Expr1, int Expr2, int Expr3, int tutor_id) {
+                return ((ACTIVITY_FULL_DATARow)(this.Rows.Find(new object[] {
+                            student_activity_id,
+                            student_id,
+                            Expr1,
+                            Expr2,
+                            Expr3,
+                            tutor_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ACTIVITY_FULL_DATADataTable cln = ((ACTIVITY_FULL_DATADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ACTIVITY_FULL_DATADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnstudent_activity_id = base.Columns["student_activity_id"];
+                this.columnstudent_activity_name = base.Columns["student_activity_name"];
+                this.columnstudent_activity_pointvalue = base.Columns["student_activity_pointvalue"];
+                this.columnstudent_activity_week = base.Columns["student_activity_week"];
+                this.columnstudent_activity_description = base.Columns["student_activity_description"];
+                this.columnstudent_id = base.Columns["student_id"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnstudent_activity_tutorrating = base.Columns["student_activity_tutorrating"];
+                this.columnstudent_activity_rating = base.Columns["student_activity_rating"];
+                this.columnstudent_arrived = base.Columns["student_arrived"];
+                this.columnExpr2 = base.Columns["Expr2"];
+                this.columncoordinator_id = base.Columns["coordinator_id"];
+                this.columngroup_id = base.Columns["group_id"];
+                this.columnstudent_firstname = base.Columns["student_firstname"];
+                this.columnstudent_lastname = base.Columns["student_lastname"];
+                this.columnstudent_id_passport = base.Columns["student_id_passport"];
+                this.columnstudent_dateofbirth = base.Columns["student_dateofbirth"];
+                this.columnstudent_emailaddress = base.Columns["student_emailaddress"];
+                this.columnstudent_mobilenumber = base.Columns["student_mobilenumber"];
+                this.columnstudent_yearofstudy = base.Columns["student_yearofstudy"];
+                this.columnstudent_degreeprogramme = base.Columns["student_degreeprogramme"];
+                this.columnstudent_status = base.Columns["student_status"];
+                this.columnstudent_points = base.Columns["student_points"];
+                this.columnExpr3 = base.Columns["Expr3"];
+                this.columncoordinator_firstname = base.Columns["coordinator_firstname"];
+                this.columncoordinator_lastname = base.Columns["coordinator_lastname"];
+                this.columncoordinator_id_passport = base.Columns["coordinator_id_passport"];
+                this.columncoordinator_dateofbirth = base.Columns["coordinator_dateofbirth"];
+                this.columncoordinator_emailaddress = base.Columns["coordinator_emailaddress"];
+                this.columncoordinator_cellnumber = base.Columns["coordinator_cellnumber"];
+                this.columntutor_id = base.Columns["tutor_id"];
+                this.columntutor_firstname = base.Columns["tutor_firstname"];
+                this.columntutor_lastname = base.Columns["tutor_lastname"];
+                this.columntutor_id_passport = base.Columns["tutor_id_passport"];
+                this.columntutor_dateofbirth = base.Columns["tutor_dateofbirth"];
+                this.columntutor_emailaddress = base.Columns["tutor_emailaddress"];
+                this.columntutor_cellnumber = base.Columns["tutor_cellnumber"];
+                this.columntutor_trainingstatus = base.Columns["tutor_trainingstatus"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnstudent_activity_id = new global::System.Data.DataColumn("student_activity_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_id);
+                this.columnstudent_activity_name = new global::System.Data.DataColumn("student_activity_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_name);
+                this.columnstudent_activity_pointvalue = new global::System.Data.DataColumn("student_activity_pointvalue", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_pointvalue);
+                this.columnstudent_activity_week = new global::System.Data.DataColumn("student_activity_week", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_week);
+                this.columnstudent_activity_description = new global::System.Data.DataColumn("student_activity_description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_description);
+                this.columnstudent_id = new global::System.Data.DataColumn("student_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_id);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnstudent_activity_tutorrating = new global::System.Data.DataColumn("student_activity_tutorrating", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_tutorrating);
+                this.columnstudent_activity_rating = new global::System.Data.DataColumn("student_activity_rating", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_rating);
+                this.columnstudent_arrived = new global::System.Data.DataColumn("student_arrived", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_arrived);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr2);
+                this.columncoordinator_id = new global::System.Data.DataColumn("coordinator_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_id);
+                this.columngroup_id = new global::System.Data.DataColumn("group_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngroup_id);
+                this.columnstudent_firstname = new global::System.Data.DataColumn("student_firstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_firstname);
+                this.columnstudent_lastname = new global::System.Data.DataColumn("student_lastname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_lastname);
+                this.columnstudent_id_passport = new global::System.Data.DataColumn("student_id_passport", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_id_passport);
+                this.columnstudent_dateofbirth = new global::System.Data.DataColumn("student_dateofbirth", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_dateofbirth);
+                this.columnstudent_emailaddress = new global::System.Data.DataColumn("student_emailaddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_emailaddress);
+                this.columnstudent_mobilenumber = new global::System.Data.DataColumn("student_mobilenumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_mobilenumber);
+                this.columnstudent_yearofstudy = new global::System.Data.DataColumn("student_yearofstudy", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_yearofstudy);
+                this.columnstudent_degreeprogramme = new global::System.Data.DataColumn("student_degreeprogramme", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_degreeprogramme);
+                this.columnstudent_status = new global::System.Data.DataColumn("student_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_status);
+                this.columnstudent_points = new global::System.Data.DataColumn("student_points", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_points);
+                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr3);
+                this.columncoordinator_firstname = new global::System.Data.DataColumn("coordinator_firstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_firstname);
+                this.columncoordinator_lastname = new global::System.Data.DataColumn("coordinator_lastname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_lastname);
+                this.columncoordinator_id_passport = new global::System.Data.DataColumn("coordinator_id_passport", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_id_passport);
+                this.columncoordinator_dateofbirth = new global::System.Data.DataColumn("coordinator_dateofbirth", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_dateofbirth);
+                this.columncoordinator_emailaddress = new global::System.Data.DataColumn("coordinator_emailaddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_emailaddress);
+                this.columncoordinator_cellnumber = new global::System.Data.DataColumn("coordinator_cellnumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncoordinator_cellnumber);
+                this.columntutor_id = new global::System.Data.DataColumn("tutor_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_id);
+                this.columntutor_firstname = new global::System.Data.DataColumn("tutor_firstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_firstname);
+                this.columntutor_lastname = new global::System.Data.DataColumn("tutor_lastname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_lastname);
+                this.columntutor_id_passport = new global::System.Data.DataColumn("tutor_id_passport", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_id_passport);
+                this.columntutor_dateofbirth = new global::System.Data.DataColumn("tutor_dateofbirth", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_dateofbirth);
+                this.columntutor_emailaddress = new global::System.Data.DataColumn("tutor_emailaddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_emailaddress);
+                this.columntutor_cellnumber = new global::System.Data.DataColumn("tutor_cellnumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_cellnumber);
+                this.columntutor_trainingstatus = new global::System.Data.DataColumn("tutor_trainingstatus", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor_trainingstatus);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstudent_activity_id,
+                                this.columnstudent_id,
+                                this.columnExpr1,
+                                this.columnExpr2,
+                                this.columnExpr3,
+                                this.columntutor_id}, true));
+                this.columnstudent_activity_id.AutoIncrement = true;
+                this.columnstudent_activity_id.AutoIncrementSeed = -1;
+                this.columnstudent_activity_id.AutoIncrementStep = -1;
+                this.columnstudent_activity_id.AllowDBNull = false;
+                this.columnstudent_activity_id.ReadOnly = true;
+                this.columnstudent_activity_name.MaxLength = 255;
+                this.columnstudent_activity_description.MaxLength = 255;
+                this.columnstudent_id.AllowDBNull = false;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnExpr2.AllowDBNull = false;
+                this.columncoordinator_id.AllowDBNull = false;
+                this.columnstudent_firstname.MaxLength = 255;
+                this.columnstudent_lastname.MaxLength = 255;
+                this.columnstudent_id_passport.MaxLength = 255;
+                this.columnstudent_emailaddress.MaxLength = 255;
+                this.columnstudent_mobilenumber.MaxLength = 14;
+                this.columnstudent_degreeprogramme.MaxLength = 255;
+                this.columnstudent_status.MaxLength = 255;
+                this.columnExpr3.AllowDBNull = false;
+                this.columncoordinator_firstname.MaxLength = 255;
+                this.columncoordinator_lastname.MaxLength = 255;
+                this.columncoordinator_id_passport.MaxLength = 255;
+                this.columncoordinator_emailaddress.MaxLength = 255;
+                this.columncoordinator_cellnumber.MaxLength = 14;
+                this.columntutor_id.AllowDBNull = false;
+                this.columntutor_firstname.MaxLength = 255;
+                this.columntutor_lastname.MaxLength = 255;
+                this.columntutor_id_passport.MaxLength = 255;
+                this.columntutor_emailaddress.MaxLength = 255;
+                this.columntutor_cellnumber.MaxLength = 14;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow NewACTIVITY_FULL_DATARow() {
+                return ((ACTIVITY_FULL_DATARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ACTIVITY_FULL_DATARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ACTIVITY_FULL_DATARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ACTIVITY_FULL_DATARowChanged != null)) {
+                    this.ACTIVITY_FULL_DATARowChanged(this, new ACTIVITY_FULL_DATARowChangeEvent(((ACTIVITY_FULL_DATARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ACTIVITY_FULL_DATARowChanging != null)) {
+                    this.ACTIVITY_FULL_DATARowChanging(this, new ACTIVITY_FULL_DATARowChangeEvent(((ACTIVITY_FULL_DATARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ACTIVITY_FULL_DATARowDeleted != null)) {
+                    this.ACTIVITY_FULL_DATARowDeleted(this, new ACTIVITY_FULL_DATARowChangeEvent(((ACTIVITY_FULL_DATARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ACTIVITY_FULL_DATARowDeleting != null)) {
+                    this.ACTIVITY_FULL_DATARowDeleting(this, new ACTIVITY_FULL_DATARowChangeEvent(((ACTIVITY_FULL_DATARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveACTIVITY_FULL_DATARow(ACTIVITY_FULL_DATARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                IS2G10_DBSSSDataSet ds = new IS2G10_DBSSSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ACTIVITY_FULL_DATADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ATTENDANCERow : global::System.Data.DataRow {
@@ -16181,6 +17098,17 @@ namespace SSS_Library {
                     return ((CONSULTATION_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__CONSULTAT__stude__2D27B809"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow[] GetACTIVITY_FULL_DATARows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E"] == null)) {
+                    return new ACTIVITY_FULL_DATARow[0];
+                }
+                else {
+                    return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E"])));
+                }
+            }
         }
         
         /// <summary>
@@ -16343,6 +17271,17 @@ namespace SSS_Library {
                 }
                 else {
                     return ((ATTENDANCE_AND_ACTIVITYRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__22AA29961"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow[] GetACTIVITY_FULL_DATARows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2B3F6F97"] == null)) {
+                    return new ACTIVITY_FULL_DATARow[0];
+                }
+                else {
+                    return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2B3F6F97"])));
                 }
             }
         }
@@ -17233,6 +18172,17 @@ namespace SSS_Library {
                 }
                 else {
                     return ((CONSULTATION_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__CONSULTAT__stude__2D27B8091"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow[] GetACTIVITY_FULL_DATARows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E1"] == null)) {
+                    return new ACTIVITY_FULL_DATARow[0];
+                }
+                else {
+                    return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E1"])));
                 }
             }
         }
@@ -18527,6 +19477,17 @@ namespace SSS_Library {
                 }
                 else {
                     return ((CONSULTATION_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__CONSULTAT__stude__2D27B8092"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow[] GetACTIVITY_FULL_DATARows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E2"] == null)) {
+                    return new ACTIVITY_FULL_DATARow[0];
+                }
+                else {
+                    return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E2"])));
                 }
             }
         }
@@ -23570,6 +24531,1033 @@ namespace SSS_Library {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ACTIVITY_FULL_DATARow : global::System.Data.DataRow {
+            
+            private ACTIVITY_FULL_DATADataTable tableACTIVITY_FULL_DATA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ACTIVITY_FULL_DATARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableACTIVITY_FULL_DATA = ((ACTIVITY_FULL_DATADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_id {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.student_activity_idColumn]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_activity_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_activity_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_name\' in table \'ACTIVITY_FULL_DATA\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_pointvalue {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_activity_pointvalueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_pointvalue\' in table \'ACTIVITY_FULL_DATA\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_pointvalueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_week {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_activity_weekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_week\' in table \'ACTIVITY_FULL_DATA\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_weekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_activity_description {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_activity_descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_description\' in table \'ACTIVITY_FULL_DATA\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_id {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.student_idColumn]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr1 {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.Expr1Column]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_tutorrating {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_activity_tutorratingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_tutorrating\' in table \'ACTIVITY_FULL_DATA\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_tutorratingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_rating {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_activity_ratingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_rating\' in table \'ACTIVITY_FULL_DATA\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_activity_ratingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool student_arrived {
+                get {
+                    try {
+                        return ((bool)(this[this.tableACTIVITY_FULL_DATA.student_arrivedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_arrived\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_arrivedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr2 {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.Expr2Column]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.Expr2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int coordinator_id {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.coordinator_idColumn]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int group_id {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.group_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'group_id\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.group_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_firstname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_firstnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_firstname\' in table \'ACTIVITY_FULL_DATA\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_firstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_lastname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_lastnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_lastname\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_lastnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_id_passport {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_id_passportColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_id_passport\' in table \'ACTIVITY_FULL_DATA\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_id_passportColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime student_dateofbirth {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableACTIVITY_FULL_DATA.student_dateofbirthColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_dateofbirth\' in table \'ACTIVITY_FULL_DATA\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_dateofbirthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_emailaddress {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_emailaddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_emailaddress\' in table \'ACTIVITY_FULL_DATA\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_emailaddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_mobilenumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_mobilenumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_mobilenumber\' in table \'ACTIVITY_FULL_DATA\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_mobilenumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_yearofstudy {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_yearofstudyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_yearofstudy\' in table \'ACTIVITY_FULL_DATA\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_yearofstudyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_degreeprogramme {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_degreeprogrammeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_degreeprogramme\' in table \'ACTIVITY_FULL_DATA\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_degreeprogrammeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_status {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.student_statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_status\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_points {
+                get {
+                    try {
+                        return ((int)(this[this.tableACTIVITY_FULL_DATA.student_pointsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_points\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.student_pointsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr3 {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.Expr3Column]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.Expr3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string coordinator_firstname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.coordinator_firstnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_firstname\' in table \'ACTIVITY_FULL_DATA\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_firstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string coordinator_lastname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.coordinator_lastnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_lastname\' in table \'ACTIVITY_FULL_DATA\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_lastnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string coordinator_id_passport {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.coordinator_id_passportColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_id_passport\' in table \'ACTIVITY_FULL_DATA\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_id_passportColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime coordinator_dateofbirth {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableACTIVITY_FULL_DATA.coordinator_dateofbirthColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_dateofbirth\' in table \'ACTIVITY_FULL_DATA\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_dateofbirthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string coordinator_emailaddress {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.coordinator_emailaddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_emailaddress\' in table \'ACTIVITY_FULL_DATA\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_emailaddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string coordinator_cellnumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.coordinator_cellnumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'coordinator_cellnumber\' in table \'ACTIVITY_FULL_DATA\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.coordinator_cellnumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int tutor_id {
+                get {
+                    return ((int)(this[this.tableACTIVITY_FULL_DATA.tutor_idColumn]));
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tutor_firstname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.tutor_firstnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_firstname\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_firstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tutor_lastname {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.tutor_lastnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_lastname\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_lastnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tutor_id_passport {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.tutor_id_passportColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_id_passport\' in table \'ACTIVITY_FULL_DATA\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_id_passportColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime tutor_dateofbirth {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableACTIVITY_FULL_DATA.tutor_dateofbirthColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_dateofbirth\' in table \'ACTIVITY_FULL_DATA\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_dateofbirthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tutor_emailaddress {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.tutor_emailaddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_emailaddress\' in table \'ACTIVITY_FULL_DATA\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_emailaddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tutor_cellnumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableACTIVITY_FULL_DATA.tutor_cellnumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_cellnumber\' in table \'ACTIVITY_FULL_DATA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_cellnumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool tutor_trainingstatus {
+                get {
+                    try {
+                        return ((bool)(this[this.tableACTIVITY_FULL_DATA.tutor_trainingstatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tutor_trainingstatus\' in table \'ACTIVITY_FULL_DATA\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableACTIVITY_FULL_DATA.tutor_trainingstatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public STUDENTRow STUDENTRow {
+                get {
+                    return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DISENGAGED_STUDENTSRow DISENGAGED_STUDENTSRow {
+                get {
+                    return ((DISENGAGED_STUDENTSRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SEARCH_STUDENTRow SEARCH_STUDENTRow {
+                get {
+                    return ((SEARCH_STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E2"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E2"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public STUDENT_ACTIVITYRow STUDENT_ACTIVITYRow {
+                get {
+                    return ((STUDENT_ACTIVITYRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2B3F6F97"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2B3F6F97"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_nameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_nameNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_pointvalueNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_pointvalueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_pointvalueNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_pointvalueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_weekNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_weekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_weekNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_weekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_descriptionNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_descriptionNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_tutorratingNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_tutorratingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_tutorratingNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_tutorratingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_ratingNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_activity_ratingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_ratingNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_activity_ratingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_arrivedNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_arrivedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_arrivedNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_arrivedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isgroup_idNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.group_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setgroup_idNull() {
+                this[this.tableACTIVITY_FULL_DATA.group_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_firstnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_firstnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_firstnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_firstnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_lastnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_lastnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_lastnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_lastnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_id_passportNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_id_passportColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_id_passportNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_id_passportColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_dateofbirthNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_dateofbirthColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_dateofbirthNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_dateofbirthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_emailaddressNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_emailaddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_emailaddressNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_emailaddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_mobilenumberNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_mobilenumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_mobilenumberNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_mobilenumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_yearofstudyNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_yearofstudyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_yearofstudyNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_yearofstudyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_degreeprogrammeNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_degreeprogrammeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_degreeprogrammeNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_degreeprogrammeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_statusNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_statusNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_pointsNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.student_pointsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_pointsNull() {
+                this[this.tableACTIVITY_FULL_DATA.student_pointsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_firstnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_firstnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_firstnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_firstnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_lastnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_lastnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_lastnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_lastnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_id_passportNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_id_passportColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_id_passportNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_id_passportColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_dateofbirthNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_dateofbirthColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_dateofbirthNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_dateofbirthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_emailaddressNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_emailaddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_emailaddressNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_emailaddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscoordinator_cellnumberNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.coordinator_cellnumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcoordinator_cellnumberNull() {
+                this[this.tableACTIVITY_FULL_DATA.coordinator_cellnumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_firstnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_firstnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_firstnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_firstnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_lastnameNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_lastnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_lastnameNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_lastnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_id_passportNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_id_passportColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_id_passportNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_id_passportColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_dateofbirthNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_dateofbirthColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_dateofbirthNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_dateofbirthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_emailaddressNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_emailaddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_emailaddressNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_emailaddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_cellnumberNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_cellnumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_cellnumberNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_cellnumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istutor_trainingstatusNull() {
+                return this.IsNull(this.tableACTIVITY_FULL_DATA.tutor_trainingstatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settutor_trainingstatusNull() {
+                this[this.tableACTIVITY_FULL_DATA.tutor_trainingstatusColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -24779,6 +26767,40 @@ namespace SSS_Library {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CONSULTATION_FULL_DATARow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ACTIVITY_FULL_DATARowChangeEvent : global::System.EventArgs {
+            
+            private ACTIVITY_FULL_DATARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARowChangeEvent(ACTIVITY_FULL_DATARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ACTIVITY_FULL_DATARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -36955,6 +38977,238 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ACTIVITY_FULL_DATATableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ACTIVITY_FULL_DATATableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ACTIVITY_FULL_DATA";
+            tableMapping.ColumnMappings.Add("student_activity_id", "student_activity_id");
+            tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
+            tableMapping.ColumnMappings.Add("student_activity_pointvalue", "student_activity_pointvalue");
+            tableMapping.ColumnMappings.Add("student_activity_week", "student_activity_week");
+            tableMapping.ColumnMappings.Add("student_activity_description", "student_activity_description");
+            tableMapping.ColumnMappings.Add("student_id", "student_id");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("student_activity_tutorrating", "student_activity_tutorrating");
+            tableMapping.ColumnMappings.Add("student_activity_rating", "student_activity_rating");
+            tableMapping.ColumnMappings.Add("student_arrived", "student_arrived");
+            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
+            tableMapping.ColumnMappings.Add("coordinator_id", "coordinator_id");
+            tableMapping.ColumnMappings.Add("group_id", "group_id");
+            tableMapping.ColumnMappings.Add("student_firstname", "student_firstname");
+            tableMapping.ColumnMappings.Add("student_lastname", "student_lastname");
+            tableMapping.ColumnMappings.Add("student_id_passport", "student_id_passport");
+            tableMapping.ColumnMappings.Add("student_dateofbirth", "student_dateofbirth");
+            tableMapping.ColumnMappings.Add("student_emailaddress", "student_emailaddress");
+            tableMapping.ColumnMappings.Add("student_mobilenumber", "student_mobilenumber");
+            tableMapping.ColumnMappings.Add("student_yearofstudy", "student_yearofstudy");
+            tableMapping.ColumnMappings.Add("student_degreeprogramme", "student_degreeprogramme");
+            tableMapping.ColumnMappings.Add("student_status", "student_status");
+            tableMapping.ColumnMappings.Add("student_points", "student_points");
+            tableMapping.ColumnMappings.Add("Expr3", "Expr3");
+            tableMapping.ColumnMappings.Add("coordinator_firstname", "coordinator_firstname");
+            tableMapping.ColumnMappings.Add("coordinator_lastname", "coordinator_lastname");
+            tableMapping.ColumnMappings.Add("coordinator_id_passport", "coordinator_id_passport");
+            tableMapping.ColumnMappings.Add("coordinator_dateofbirth", "coordinator_dateofbirth");
+            tableMapping.ColumnMappings.Add("coordinator_emailaddress", "coordinator_emailaddress");
+            tableMapping.ColumnMappings.Add("coordinator_cellnumber", "coordinator_cellnumber");
+            tableMapping.ColumnMappings.Add("tutor_id", "tutor_id");
+            tableMapping.ColumnMappings.Add("tutor_firstname", "tutor_firstname");
+            tableMapping.ColumnMappings.Add("tutor_lastname", "tutor_lastname");
+            tableMapping.ColumnMappings.Add("tutor_id_passport", "tutor_id_passport");
+            tableMapping.ColumnMappings.Add("tutor_dateofbirth", "tutor_dateofbirth");
+            tableMapping.ColumnMappings.Add("tutor_emailaddress", "tutor_emailaddress");
+            tableMapping.ColumnMappings.Add("tutor_cellnumber", "tutor_cellnumber");
+            tableMapping.ColumnMappings.Add("tutor_trainingstatus", "tutor_trainingstatus");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SSS_Library.Properties.Settings.Default.IS2G10_DBSSSConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT DISTINCT \r\n                         STUDENT_ACTIVITY.student_activity_id, " +
+                "STUDENT_ACTIVITY.student_activity_name, STUDENT_ACTIVITY.student_activity_pointv" +
+                "alue, \r\n                         STUDENT_ACTIVITY.student_activity_week, STUDENT" +
+                "_ACTIVITY.student_activity_description, ATTENDANCE.student_id, ATTENDANCE.studen" +
+                "t_activity_id AS Expr1, \r\n                         ATTENDANCE.student_activity_t" +
+                "utorrating, ATTENDANCE.student_activity_rating, ATTENDANCE.student_arrived, STUD" +
+                "ENT.student_id AS Expr2, \r\n                         STUDENT.coordinator_id, STUD" +
+                "ENT.group_id, STUDENT.student_firstname, STUDENT.student_lastname, STUDENT.stude" +
+                "nt_id_passport, \r\n                         STUDENT.student_dateofbirth, STUDENT." +
+                "student_emailaddress, STUDENT.student_mobilenumber, STUDENT.student_yearofstudy," +
+                " \r\n                         STUDENT.student_degreeprogramme, STUDENT.student_sta" +
+                "tus, STUDENT.student_points, SSS_COORDINATOR.coordinator_id AS Expr3, \r\n        " +
+                "                 SSS_COORDINATOR.coordinator_firstname, SSS_COORDINATOR.coordina" +
+                "tor_lastname, SSS_COORDINATOR.coordinator_id_passport, \r\n                       " +
+                "  SSS_COORDINATOR.coordinator_dateofbirth, SSS_COORDINATOR.coordinator_emailaddr" +
+                "ess, SSS_COORDINATOR.coordinator_cellnumber, TUTOR.tutor_id, \r\n                 " +
+                "        TUTOR.tutor_firstname, TUTOR.tutor_lastname, TUTOR.tutor_id_passport, TU" +
+                "TOR.tutor_dateofbirth, TUTOR.tutor_emailaddress, TUTOR.tutor_cellnumber, \r\n     " +
+                "                    TUTOR.tutor_trainingstatus\r\nFROM            STUDENT_ACTIVITY" +
+                " INNER JOIN\r\n                         ATTENDANCE ON STUDENT_ACTIVITY.student_act" +
+                "ivity_id = ATTENDANCE.student_activity_id INNER JOIN\r\n                         S" +
+                "TUDENT ON ATTENDANCE.student_id = STUDENT.student_id INNER JOIN\r\n               " +
+                "          SSS_COORDINATOR ON STUDENT.coordinator_id = SSS_COORDINATOR.coordinato" +
+                "r_id INNER JOIN\r\n                         TUTOR ON SSS_COORDINATOR.coordinator_i" +
+                "d = TUTOR.coordinator_id\r\nWHERE        (STUDENT.coordinator_id = @coordinatorId)" +
+                "\r\nORDER BY STUDENT_ACTIVITY.student_activity_id";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coordinatorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "coordinator_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(IS2G10_DBSSSDataSet.ACTIVITY_FULL_DATADataTable dataTable, int coordinatorId) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual IS2G10_DBSSSDataSet.ACTIVITY_FULL_DATADataTable GetData(int coordinatorId) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(coordinatorId));
+            IS2G10_DBSSSDataSet.ACTIVITY_FULL_DATADataTable dataTable = new IS2G10_DBSSSDataSet.ACTIVITY_FULL_DATADataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37433,6 +39687,15 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._cOURSETableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.COURSE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -37469,30 +39732,12 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -37529,6 +39774,15 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._cONSULTATIONTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -37594,6 +39848,14 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._cOURSETableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.COURSE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -37626,27 +39888,11 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -37679,6 +39925,14 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._cONSULTATIONTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -37756,6 +40010,14 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._aTTENDANCETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._aTTENDANCETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._cONSULTATIONTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CONSULTATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -37788,27 +40050,11 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._aTTENDANCETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ATTENDANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._aTTENDANCETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._dISENGAGED_STUDENTSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DISENGAGED_STUDENTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._dISENGAGED_STUDENTSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._sEARCH_STUDENTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -37841,6 +40087,14 @@ WHERE        (STUDENT.coordinator_id = @coordinatorId)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cOURSETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._sEARCH_STUDENTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SEARCH_STUDENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._sEARCH_STUDENTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

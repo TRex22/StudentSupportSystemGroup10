@@ -69,6 +69,10 @@
             this.lblErrMobileNum = new System.Windows.Forms.Label();
             this.lblErrStdProg = new System.Windows.Forms.Label();
             this.userprofileTableAdapter1 = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // studentIdTxtBox
@@ -134,7 +139,7 @@
             // StudentProgrammeTxtBox
             // 
             this.StudentProgrammeTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentProgrammeTxtBox.Location = new System.Drawing.Point(399, 362);
+            this.StudentProgrammeTxtBox.Location = new System.Drawing.Point(393, 337);
             this.StudentProgrammeTxtBox.Name = "StudentProgrammeTxtBox";
             this.StudentProgrammeTxtBox.Size = new System.Drawing.Size(216, 27);
             this.StudentProgrammeTxtBox.TabIndex = 8;
@@ -199,7 +204,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(618, 273);
+            this.pictureBox4.Location = new System.Drawing.Point(618, 251);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,7 +244,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(621, 362);
+            this.pictureBox9.Location = new System.Drawing.Point(615, 337);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(29, 27);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -249,7 +254,7 @@
             // SubmitButton
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(565, 444);
+            this.SubmitButton.Location = new System.Drawing.Point(562, 488);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(85, 30);
             this.SubmitButton.TabIndex = 23;
@@ -328,7 +333,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(398, 340);
+            this.label7.Location = new System.Drawing.Point(392, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 34;
@@ -338,7 +343,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(392, 251);
+            this.label8.Location = new System.Drawing.Point(392, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 19);
             this.label8.TabIndex = 33;
@@ -433,7 +438,7 @@
             // 
             // MobileTxtBox
             // 
-            this.MobileTxtBox.Location = new System.Drawing.Point(396, 280);
+            this.MobileTxtBox.Location = new System.Drawing.Point(396, 258);
             this.MobileTxtBox.Mask = "(999)000 0000";
             this.MobileTxtBox.Name = "MobileTxtBox";
             this.MobileTxtBox.Size = new System.Drawing.Size(213, 20);
@@ -470,7 +475,7 @@
             this.lblErrMobileNum.AutoSize = true;
             this.lblErrMobileNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrMobileNum.ForeColor = System.Drawing.Color.Red;
-            this.lblErrMobileNum.Location = new System.Drawing.Point(399, 303);
+            this.lblErrMobileNum.Location = new System.Drawing.Point(399, 281);
             this.lblErrMobileNum.Name = "lblErrMobileNum";
             this.lblErrMobileNum.Size = new System.Drawing.Size(48, 13);
             this.lblErrMobileNum.TabIndex = 43;
@@ -483,7 +488,7 @@
             this.lblErrStdProg.AutoSize = true;
             this.lblErrStdProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrStdProg.ForeColor = System.Drawing.Color.Red;
-            this.lblErrStdProg.Location = new System.Drawing.Point(402, 396);
+            this.lblErrStdProg.Location = new System.Drawing.Point(396, 371);
             this.lblErrStdProg.Name = "lblErrStdProg";
             this.lblErrStdProg.Size = new System.Drawing.Size(48, 13);
             this.lblErrStdProg.TabIndex = 44;
@@ -495,11 +500,55 @@
             // 
             this.userprofileTableAdapter1.ClearBeforeFill = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(396, 458);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "label20";
+            this.label11.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(392, 402);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(132, 19);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Student Enrollment";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(615, 424);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 45;
+            this.pictureBox10.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(396, 424);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 21);
+            this.comboBox1.TabIndex = 48;
+            // 
             // RegisterStudentModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 539);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.lblErrStdProg);
             this.Controls.Add(this.lblErrMobileNum);
             this.Controls.Add(this.lblErrDoB);
@@ -550,6 +599,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,5 +647,9 @@
         private System.Windows.Forms.Label lblErrMobileNum;
         private System.Windows.Forms.Label lblErrStdProg;
         private SSS_Library.IS2G10_DBSSSDataSetTableAdapters.USERPROFILETableAdapter userprofileTableAdapter1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
