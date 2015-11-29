@@ -23,6 +23,7 @@ namespace SSS_Windows_Forms
         public readonly CreateConsultationModal CreateConsultationModal;
         private readonly RateConsultationModal _rateConsultationModal;
         private readonly RateActivityModal _rateActivityModal;
+        private readonly RateTutorActivityModal _rateTutorActivityModal;
 
         public Student(int userId)
         {
@@ -36,6 +37,7 @@ namespace SSS_Windows_Forms
             CreateConsultationModal = new CreateConsultationModal(userId, _studentData);
             _rateConsultationModal = new RateConsultationModal(userId);
             _rateActivityModal = new RateActivityModal(userId, _studentData.coordinator_id);
+            _rateTutorActivityModal = new RateTutorActivityModal(userId, _studentData.coordinator_id);
             InitModals();
 
             //check if user has a group
@@ -52,6 +54,7 @@ namespace SSS_Windows_Forms
             this.panel7.Controls.Add(CreateConsultationModal);
             this.panel7.Controls.Add(_rateConsultationModal);
             this.panel7.Controls.Add(_rateActivityModal);
+            this.panel7.Controls.Add(_rateTutorActivityModal);
         }
 
         private void HideAllModals()
@@ -130,6 +133,7 @@ namespace SSS_Windows_Forms
         private void activityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _rateTutorActivityModal.Show();
         }
     }
 }

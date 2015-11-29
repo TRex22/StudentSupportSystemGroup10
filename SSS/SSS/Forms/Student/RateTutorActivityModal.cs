@@ -11,7 +11,7 @@ using SSS_Library;
 
 namespace SSS_Windows_Forms.Forms.Student
 {
-    public partial class RateActivityModal : Form
+    public partial class RateTutorActivityModal : Form
     {
         private readonly int _studentId;
         private readonly int _coordinatorId;
@@ -19,7 +19,7 @@ namespace SSS_Windows_Forms.Forms.Student
         private IS2G10_DBSSSDataSet.STUDENT_ACTIVITYRow _activity;
         private IS2G10_DBSSSDataSet.ATTENDANCERow _attendance;
 
-        public RateActivityModal(int studentId, int coordId)
+        public RateTutorActivityModal(int studentId, int coordId)
         {
             _studentId = studentId;
             _coordinatorId = coordId;
@@ -30,6 +30,11 @@ namespace SSS_Windows_Forms.Forms.Student
             this.Hide();
 
             listView1.Select();
+        }
+
+        private void RateTutorActivityModal_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,7 +54,7 @@ namespace SSS_Windows_Forms.Forms.Student
                     _activity = studenT_ACTIVITYTableAdapter1.GetData().FindBystudent_activity_id(selectedId);
                     MessageBox.Show(String.Format("{0} has been selected", _activity.student_activity_name));
 
-                    switch (_attendance.student_activity_rating)
+                    switch (_attendance.student_activity_tutorrating)
                     {
                         case 1:
                             radioButton1.Select();
@@ -89,7 +94,7 @@ namespace SSS_Windows_Forms.Forms.Student
 
             if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked || radioButton5.Checked)
             {
-                _attendance.student_activity_rating = rating;
+                _attendance.student_activity_tutorrating = rating;
                 attendanceTableAdapter1.Update(_attendance);
                 MessageBox.Show(SSS_Library.Properties.Resources.ActivityRatingSuccess, SSS_Library.Properties.Resources.ActivityRatingSuccess);
             }
