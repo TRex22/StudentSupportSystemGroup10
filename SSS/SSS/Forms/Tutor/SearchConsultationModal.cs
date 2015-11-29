@@ -36,14 +36,12 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private void SearchConsultationModal_Load(object sender, EventArgs e)
         {
             dataGridView1.DataBindings.Clear();
-            List<IS2G10_DBSSSDataSet.CONSULTATION_FULL_DATARow> data;
             if (_isTutor)
-                data = consultationFullDataTableAdapter.GetData(_coordinatorId).Where(m => m.tutor_id == _tutorId).ToList();
+                dataGridView1.DataSource = consultationFullDataTableAdapter.GetData(_coordinatorId).Where(m => m.tutor_id == _tutorId).ToList();
             else
-                data = consultationFullDataTableAdapter.GetData(_coordinatorId).ToList();
+                dataGridView1.DataSource = consultationFullDataTableAdapter.GetData(_coordinatorId);
 
-            dataGridView1.DataSource = data;
-            _id = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value);
+             _id = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value);
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)

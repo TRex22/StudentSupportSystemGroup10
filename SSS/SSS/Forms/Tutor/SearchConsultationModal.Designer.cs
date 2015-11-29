@@ -38,7 +38,6 @@
             this.consultationdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentarrivedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.consultationratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentlastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +65,6 @@
             this.consultationdateDataGridViewTextBoxColumn,
             this.studentarrivedDataGridViewCheckBoxColumn,
             this.consultationratingDataGridViewTextBoxColumn,
-            this.groupidDataGridViewTextBoxColumn,
             this.studentidDataGridViewTextBoxColumn,
             this.studentfirstnameDataGridViewTextBoxColumn,
             this.studentlastnameDataGridViewTextBoxColumn,
@@ -140,13 +138,6 @@
             this.consultationratingDataGridViewTextBoxColumn.HeaderText = "consultation_rating";
             this.consultationratingDataGridViewTextBoxColumn.Name = "consultationratingDataGridViewTextBoxColumn";
             this.consultationratingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // groupidDataGridViewTextBoxColumn
-            // 
-            this.groupidDataGridViewTextBoxColumn.DataPropertyName = "group_id";
-            this.groupidDataGridViewTextBoxColumn.HeaderText = "group_id";
-            this.groupidDataGridViewTextBoxColumn.Name = "groupidDataGridViewTextBoxColumn";
-            this.groupidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // studentidDataGridViewTextBoxColumn
             // 
@@ -228,7 +219,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn consultationdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn studentarrivedDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn consultationratingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groupidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentfirstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentlastnameDataGridViewTextBoxColumn;
