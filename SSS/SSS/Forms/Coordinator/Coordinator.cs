@@ -29,6 +29,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         private readonly TutorsWithTrainingModal _tutorsWithTrainingModal = new TutorsWithTrainingModal();
         private readonly TutorsWithoutTrainingModal _tutorsWithoutTrainingModal = new TutorsWithoutTrainingModal();
         public readonly SearchConsultationModal _searchStudentConsultationModal;
+        private readonly UpdateActivityModal _updateActivityModal;
 
         public Coordinator(int userId)
         {
@@ -45,6 +46,8 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             _updateTutorModal = new SearchTutorModal(userId, true) { Parent = this };
 
             _searchStudentConsultationModal = new SearchConsultationModal(userId, null);
+
+            _updateActivityModal = new UpdateActivityModal(userId, null);
 
             lblCoordinatorName.Text = String.Format("{0} {1} {2}", coordinatorData.coordinator_firstname, coordinatorData.coordinator_lastname, userId);
             tmrSecond.Start();
@@ -77,6 +80,7 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             this.panel7.Controls.Add(_tutorsWithTrainingModal);
             this.panel7.Controls.Add(_tutorsWithoutTrainingModal);
             this.panel7.Controls.Add(_searchStudentConsultationModal);
+            this.panel7.Controls.Add(_updateActivityModal);
         }
 
         public void SetModal(Control vaule)
@@ -209,6 +213,12 @@ namespace SSS_Windows_Forms.Forms.Coordinator
         {
             HideAllModals();
             _searchStudentConsultationModal.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _updateActivityModal.Show();
         }
     }
 }

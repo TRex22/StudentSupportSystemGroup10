@@ -77,6 +77,8 @@
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -92,6 +94,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,6 +129,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.menuStrip1);
             this.panel6.Controls.Add(this.menuStrip2);
             this.panel6.Controls.Add(this.menuStrip3);
             this.panel6.Controls.Add(this.menuStrip4);
@@ -486,6 +490,24 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip1.TabIndex = 30;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Calibri", 12F);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(120, 23);
+            this.toolStripMenuItem2.Text = "Update Activity";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,6 +546,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -577,5 +601,7 @@
         private System.Windows.Forms.ToolStripMenuItem tutorsWithTrainingToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

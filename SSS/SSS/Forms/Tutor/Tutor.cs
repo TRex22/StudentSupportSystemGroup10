@@ -14,8 +14,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private readonly TutorDashboardModal _tutorDashboardModal;
         private readonly UpdateTutorModal _updateTutorModal;
         private readonly SearchConsultationModal _searchConsultationModal;
-        private readonly UpdateActivityModal _updateActivityModal;
-        private readonly TUTORTableAdapter _tUTORTableAdapter = new TUTORTableAdapter()
+        private readonly TUTORTableAdapter _tUtorTableAdapter = new TUTORTableAdapter()
         {
             ClearBeforeFill = true
         };
@@ -23,13 +22,12 @@ namespace SSS_Windows_Forms.Forms.Tutor
 
         public Tutor(int userId)
         {
-            this._tUTORTableAdapter.Fill(this._iS2G10DbsssDataSet.TUTOR);
-            IS2G10_DBSSSDataSet.TUTORRow tutorData = _tUTORTableAdapter.GetData().FindBytutor_id(userId);
+            this._tUtorTableAdapter.Fill(this._iS2G10DbsssDataSet.TUTOR);
+            IS2G10_DBSSSDataSet.TUTORRow tutorData = _tUtorTableAdapter.GetData().FindBytutor_id(userId);
             _updateTutorModal = new UpdateTutorModal(userId);
             _updateStudentAttendanceModal = new UpdateStudentAttendanceModal(userId);
             _tutorDashboardModal = new TutorDashboardModal(userId);
             _searchConsultationModal = new SearchConsultationModal(tutorData.coordinator_id, userId);//TODO FIX
-            _updateActivityModal = new UpdateActivityModal(tutorData.coordinator_id, userId);
             InitializeComponent();
             lblTutorName.Text = String.Format("{0} {1} {2}", tutorData.tutor_firstname, tutorData.tutor_lastname, userId);
             InitModals();
@@ -41,7 +39,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
             this.panel7.Controls.Add(_updateStudentAttendanceModal);
             this.panel7.Controls.Add(_tutorDashboardModal);
             this.panel7.Controls.Add(_updateTutorModal);
-            this.panel7.Controls.Add(_updateActivityModal);
+            this.panel7.Controls.Add(_searchConsultationModal);
         }
 
         private void HideAllModals()
@@ -62,12 +60,6 @@ namespace SSS_Windows_Forms.Forms.Tutor
             //TODO Select default modal
             HideAllModals();
             _tutorDashboardModal.Show();
-        }
-
-        private void createTutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HideAllModals();
-            _updateActivityModal.Show();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,6 +89,12 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
             lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
+        }
+
+        private void updateStudentConsultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _searchConsultationModal.Show();
         }
     }
 }
