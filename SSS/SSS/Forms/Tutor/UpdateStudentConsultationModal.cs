@@ -16,8 +16,17 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FULL_DATATableAdapter _consultationFullTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATION_FULL_DATATableAdapter();
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATIONTableAdapter _consultationTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.CONSULTATIONTableAdapter();
 
-        public UpdateStudentConsultationModal(int consultationId, int coordinatorId)
+        private readonly int _tutorId;
+        private readonly bool _isTutor = false;
+
+        public UpdateStudentConsultationModal(int consultationId, int coordinatorId, int? tutorId)
         {
+            if (tutorId != null)
+            {
+                _isTutor = true;
+                _tutorId = (int)tutorId;
+            }
+
             InitializeComponent();
             this.TopLevel = false;
             this.AutoScroll = true;
@@ -64,10 +73,20 @@ namespace SSS_Windows_Forms.Forms.Tutor
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            SSS_Windows_Forms.Forms.Coordinator.Coordinator coordinator = (SSS_Windows_Forms.Forms.Coordinator.Coordinator)Application.OpenForms["Coordinator"];
-            this.Hide();
-            coordinator._searchStudentConsultationModal.Show();
-            ClearForm();
+            if (_isTutor)
+            {
+                Tutor tutor = (Tutor)Application.OpenForms["Tutor"];
+                this.Hide();
+                tutor._searchConsultationModal.Show();
+                ClearForm();
+            }
+            else
+            {
+                SSS_Windows_Forms.Forms.Coordinator.Coordinator coordinator = (SSS_Windows_Forms.Forms.Coordinator.Coordinator)Application.OpenForms["Coordinator"];
+                this.Hide();
+                coordinator._searchStudentConsultationModal.Show();
+                ClearForm();
+            }
         }
 
         private void ClearForm()

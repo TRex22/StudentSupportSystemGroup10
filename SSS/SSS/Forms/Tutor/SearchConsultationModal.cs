@@ -46,9 +46,20 @@ namespace SSS_Windows_Forms.Forms.Tutor
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            Coordinator.Coordinator coordinator = (Coordinator.Coordinator)Application.OpenForms["Coordinator"];
-            var updateConsultationModal = new UpdateStudentConsultationModal(_id, _coordinatorId);
-            coordinator.SetModal(updateConsultationModal);
+            UpdateStudentConsultationModal updateConsultationModal = null;
+
+            if (_isTutor)
+            {
+                updateConsultationModal = new UpdateStudentConsultationModal(_id, _coordinatorId, _tutorId);
+                Tutor tutor = (Tutor)Application.OpenForms["Tutor"];
+                tutor.SetModal(updateConsultationModal);
+            }
+            else
+            {
+                updateConsultationModal = new UpdateStudentConsultationModal(_id, _coordinatorId, null);
+                Coordinator.Coordinator coordinator = (Coordinator.Coordinator)Application.OpenForms["Coordinator"];
+                coordinator.SetModal(updateConsultationModal);
+            }
             this.Hide();
             updateConsultationModal.Show();
         }

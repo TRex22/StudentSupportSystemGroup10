@@ -13,7 +13,7 @@ namespace SSS_Windows_Forms.Forms.Tutor
         private readonly UpdateStudentAttendanceModal _updateStudentAttendanceModal;
         private readonly TutorDashboardModal _tutorDashboardModal;
         private readonly UpdateTutorModal _updateTutorModal;
-        private readonly SearchConsultationModal _searchConsultationModal;
+        public readonly SearchConsultationModal _searchConsultationModal;
         private readonly TUTORTableAdapter _tUtorTableAdapter = new TUTORTableAdapter()
         {
             ClearBeforeFill = true
@@ -31,6 +31,11 @@ namespace SSS_Windows_Forms.Forms.Tutor
             InitializeComponent();
             lblTutorName.Text = String.Format("{0} {1} {2}", tutorData.tutor_firstname, tutorData.tutor_lastname, userId);
             InitModals();
+        }
+
+        public void SetModal(Control vaule)
+        {
+            this.panel7.Controls.Add(vaule);
         }
 
         private void InitModals()
