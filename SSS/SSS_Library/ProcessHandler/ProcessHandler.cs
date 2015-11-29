@@ -27,6 +27,7 @@ namespace SSS_Library.ProcessHandler
             catch (Exception e)
             {
                 //TODO: error message
+                var eerr = e;
                 //failed start
                 result = 3;
                 Environment.Exit(3);

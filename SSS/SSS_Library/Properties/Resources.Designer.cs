@@ -61,6 +61,24 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Rating has been selected, please select a rating.
+        /// </summary>
+        public static string ActivityRatingNotRatedError {
+            get {
+                return ResourceManager.GetString("ActivityRatingNotRatedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating submitted Successfully..
+        /// </summary>
+        public static string ActivityRatingSuccess {
+            get {
+                return ResourceManager.GetString("ActivityRatingSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Fill in All Required Fields..
         /// </summary>
         public static string BrandingErrorMessage {
@@ -84,6 +102,24 @@ namespace SSS_Library.Properties {
         public static string ConsultationFullyBookedMessage {
             get {
                 return ResourceManager.GetString("ConsultationFullyBookedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Rating has been selected, please select a rating.
+        /// </summary>
+        public static string ConsultationNotRatedError {
+            get {
+                return ResourceManager.GetString("ConsultationNotRatedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating submitted Successfully..
+        /// </summary>
+        public static string ConsultationRatingSuccess {
+            get {
+                return ResourceManager.GetString("ConsultationRatingSuccess", resourceCulture);
             }
         }
         
@@ -169,6 +205,24 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry you have not attended any activities. Please attend an activity before rating..
+        /// </summary>
+        public static string NoActivitiesAttendedError {
+            get {
+                return ResourceManager.GetString("NoActivitiesAttendedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry you have not attended any consultations, please attend a consultation before rating..
+        /// </summary>
+        public static string NoConsultationsAttendedError {
+            get {
+                return ResourceManager.GetString("NoConsultationsAttendedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Insert Correct Password.
         /// </summary>
         public static string PassWordCreateDoNotMatchError {
@@ -237,6 +291,15 @@ namespace SSS_Library.Properties {
         public static string UpdateGroupSuccess {
             get {
                 return ResourceManager.GetString("UpdateGroupSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student Activity Updated Successfully..
+        /// </summary>
+        public static string UpdateStudentActivitySuccess {
+            get {
+                return ResourceManager.GetString("UpdateStudentActivitySuccess", resourceCulture);
             }
         }
         

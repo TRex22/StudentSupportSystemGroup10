@@ -18,5 +18,17 @@ namespace SSS_Library.WindowHandler
                 return Text;
             }
         }
+
+        public class ComboboxBiItem
+        {
+            public string Text { get; set; }
+            public string Text2 { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
     }
 }

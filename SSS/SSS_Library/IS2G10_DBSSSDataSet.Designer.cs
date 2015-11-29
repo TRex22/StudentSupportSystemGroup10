@@ -240,6 +240,12 @@ namespace SSS_Library {
         
         private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2B3F6F97;
         
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E3;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E4;
+        
+        private global::System.Data.DataRelation relationFK__ATTENDANC__stude__2A4B4B5E5;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1271,6 +1277,9 @@ namespace SSS_Library {
             this.relationFK__ATTENDANC__stude__2A4B4B5E1 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E1"];
             this.relationFK__ATTENDANC__stude__2A4B4B5E2 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E2"];
             this.relationFK__ATTENDANC__stude__2B3F6F97 = this.Relations["FK__ATTENDANC__stude__2B3F6F97"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E3 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E3"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E4 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E4"];
+            this.relationFK__ATTENDANC__stude__2A4B4B5E5 = this.Relations["FK__ATTENDANC__stude__2A4B4B5E5"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1639,6 +1648,18 @@ namespace SSS_Library {
                         this.tableSTUDENT_ACTIVITY.student_activity_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableACTIVITY_FULL_DATA.student_activity_idColumn}, false);
             this.Relations.Add(this.relationFK__ATTENDANC__stude__2B3F6F97);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E3 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E3", new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableATTENDANCE_AND_ACTIVITY.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E3);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E4 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E4", new global::System.Data.DataColumn[] {
+                        this.tableDISENGAGED_STUDENTS.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableATTENDANCE_AND_ACTIVITY.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E4);
+            this.relationFK__ATTENDANC__stude__2A4B4B5E5 = new global::System.Data.DataRelation("FK__ATTENDANC__stude__2A4B4B5E5", new global::System.Data.DataColumn[] {
+                        this.tableSEARCH_STUDENT.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableATTENDANCE_AND_ACTIVITY.student_idColumn}, false);
+            this.Relations.Add(this.relationFK__ATTENDANC__stude__2A4B4B5E5);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8559,6 +8580,18 @@ namespace SSS_Library {
             
             private global::System.Data.DataColumn columnActivityRating;
             
+            private global::System.Data.DataColumn columnstudent_arrived;
+            
+            private global::System.Data.DataColumn columnstudent_activity_description;
+            
+            private global::System.Data.DataColumn columnstudent_activity_week;
+            
+            private global::System.Data.DataColumn columnstudent_activity_pointvalue;
+            
+            private global::System.Data.DataColumn columnExpr1;
+            
+            private global::System.Data.DataColumn columnstudent_id;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ATTENDANCE_AND_ACTIVITYDataTable() {
@@ -8626,6 +8659,54 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_arrivedColumn {
+                get {
+                    return this.columnstudent_arrived;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_descriptionColumn {
+                get {
+                    return this.columnstudent_activity_description;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_weekColumn {
+                get {
+                    return this.columnstudent_activity_week;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_activity_pointvalueColumn {
+                get {
+                    return this.columnstudent_activity_pointvalue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn student_idColumn {
+                get {
+                    return this.columnstudent_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8661,19 +8742,37 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ATTENDANCE_AND_ACTIVITYRow AddATTENDANCE_AND_ACTIVITYRow(STUDENT_ACTIVITYRow parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961, string student_activity_name, int TutorRating, int ActivityRating) {
+            public ATTENDANCE_AND_ACTIVITYRow AddATTENDANCE_AND_ACTIVITYRow(STUDENT_ACTIVITYRow parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961, string student_activity_name, int TutorRating, int ActivityRating, bool student_arrived, string student_activity_description, int student_activity_week, int student_activity_pointvalue, STUDENTRow parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E3) {
                 ATTENDANCE_AND_ACTIVITYRow rowATTENDANCE_AND_ACTIVITYRow = ((ATTENDANCE_AND_ACTIVITYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         student_activity_name,
                         TutorRating,
-                        ActivityRating};
+                        ActivityRating,
+                        student_arrived,
+                        student_activity_description,
+                        student_activity_week,
+                        student_activity_pointvalue,
+                        null,
+                        null};
                 if ((parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961 != null)) {
                     columnValuesArray[0] = parentSTUDENT_ACTIVITYRowByFK__ATTENDANC__stude__22AA29961[0];
+                }
+                if ((parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E3 != null)) {
+                    columnValuesArray[9] = parentSTUDENTRowByFK__ATTENDANC__stude__2A4B4B5E3[0];
                 }
                 rowATTENDANCE_AND_ACTIVITYRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowATTENDANCE_AND_ACTIVITYRow);
                 return rowATTENDANCE_AND_ACTIVITYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow FindBystudent_activity_idExpr1student_id(int student_activity_id, int Expr1, int student_id) {
+                return ((ATTENDANCE_AND_ACTIVITYRow)(this.Rows.Find(new object[] {
+                            student_activity_id,
+                            Expr1,
+                            student_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8697,6 +8796,12 @@ namespace SSS_Library {
                 this.columnstudent_activity_name = base.Columns["student_activity_name"];
                 this.columnTutorRating = base.Columns["TutorRating"];
                 this.columnActivityRating = base.Columns["ActivityRating"];
+                this.columnstudent_arrived = base.Columns["student_arrived"];
+                this.columnstudent_activity_description = base.Columns["student_activity_description"];
+                this.columnstudent_activity_week = base.Columns["student_activity_week"];
+                this.columnstudent_activity_pointvalue = base.Columns["student_activity_pointvalue"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnstudent_id = base.Columns["student_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8710,8 +8815,31 @@ namespace SSS_Library {
                 base.Columns.Add(this.columnTutorRating);
                 this.columnActivityRating = new global::System.Data.DataColumn("ActivityRating", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActivityRating);
+                this.columnstudent_arrived = new global::System.Data.DataColumn("student_arrived", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_arrived);
+                this.columnstudent_activity_description = new global::System.Data.DataColumn("student_activity_description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_description);
+                this.columnstudent_activity_week = new global::System.Data.DataColumn("student_activity_week", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_week);
+                this.columnstudent_activity_pointvalue = new global::System.Data.DataColumn("student_activity_pointvalue", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_activity_pointvalue);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnstudent_id = new global::System.Data.DataColumn("student_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_id);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstudent_activity_id,
+                                this.columnExpr1,
+                                this.columnstudent_id}, true));
                 this.columnstudent_activity_id.AllowDBNull = false;
                 this.columnstudent_activity_name.MaxLength = 255;
+                this.columnstudent_activity_description.MaxLength = 255;
+                this.columnExpr1.AutoIncrement = true;
+                this.columnExpr1.AutoIncrementSeed = -1;
+                this.columnExpr1.AutoIncrementStep = -1;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnExpr1.ReadOnly = true;
+                this.columnstudent_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17109,6 +17237,17 @@ namespace SSS_Library {
                     return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow[] GetATTENDANCE_AND_ACTIVITYRows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E3"] == null)) {
+                    return new ATTENDANCE_AND_ACTIVITYRow[0];
+                }
+                else {
+                    return ((ATTENDANCE_AND_ACTIVITYRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E3"])));
+                }
+            }
         }
         
         /// <summary>
@@ -18183,6 +18322,17 @@ namespace SSS_Library {
                 }
                 else {
                     return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow[] GetATTENDANCE_AND_ACTIVITYRows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E4"] == null)) {
+                    return new ATTENDANCE_AND_ACTIVITYRow[0];
+                }
+                else {
+                    return ((ATTENDANCE_AND_ACTIVITYRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E4"])));
                 }
             }
         }
@@ -19490,6 +19640,17 @@ namespace SSS_Library {
                     return ((ACTIVITY_FULL_DATARow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E2"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ATTENDANCE_AND_ACTIVITYRow[] GetATTENDANCE_AND_ACTIVITYRows() {
+                if ((this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E5"] == null)) {
+                    return new ATTENDANCE_AND_ACTIVITYRow[0];
+                }
+                else {
+                    return ((ATTENDANCE_AND_ACTIVITYRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATTENDANC__stude__2A4B4B5E5"])));
+                }
+            }
         }
         
         /// <summary>
@@ -19890,12 +20051,135 @@ namespace SSS_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool student_arrived {
+                get {
+                    try {
+                        return ((bool)(this[this.tableATTENDANCE_AND_ACTIVITY.student_arrivedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_arrived\' in table \'ATTENDANCE_AND_ACTIVITY\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_arrivedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string student_activity_description {
+                get {
+                    try {
+                        return ((string)(this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_description\' in table \'ATTENDANCE_AND_ACTI" +
+                                "VITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_week {
+                get {
+                    try {
+                        return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_weekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_week\' in table \'ATTENDANCE_AND_ACTIVITY\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_weekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_activity_pointvalue {
+                get {
+                    try {
+                        return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_pointvalueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_activity_pointvalue\' in table \'ATTENDANCE_AND_ACTIV" +
+                                "ITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_pointvalueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr1 {
+                get {
+                    return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.Expr1Column]));
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int student_id {
+                get {
+                    return ((int)(this[this.tableATTENDANCE_AND_ACTIVITY.student_idColumn]));
+                }
+                set {
+                    this[this.tableATTENDANCE_AND_ACTIVITY.student_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public STUDENT_ACTIVITYRow STUDENT_ACTIVITYRow {
                 get {
                     return ((STUDENT_ACTIVITYRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__22AA29961"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__22AA29961"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public STUDENTRow STUDENTRow {
+                get {
+                    return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E3"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E3"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DISENGAGED_STUDENTSRow DISENGAGED_STUDENTSRow {
+                get {
+                    return ((DISENGAGED_STUDENTSRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E4"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E4"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SEARCH_STUDENTRow SEARCH_STUDENTRow {
+                get {
+                    return ((SEARCH_STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E5"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATTENDANC__stude__2A4B4B5E5"]);
                 }
             }
             
@@ -19933,6 +20217,54 @@ namespace SSS_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetActivityRatingNull() {
                 this[this.tableATTENDANCE_AND_ACTIVITY.ActivityRatingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_arrivedNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.student_arrivedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_arrivedNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.student_arrivedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_descriptionNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.student_activity_descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_descriptionNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_weekNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.student_activity_weekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_weekNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_weekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstudent_activity_pointvalueNull() {
+                return this.IsNull(this.tableATTENDANCE_AND_ACTIVITY.student_activity_pointvalueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstudent_activity_pointvalueNull() {
+                this[this.tableATTENDANCE_AND_ACTIVITY.student_activity_pointvalueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -34333,6 +34665,12 @@ WHERE        (SESSION.group_id = @groupId) OR
             tableMapping.ColumnMappings.Add("student_activity_name", "student_activity_name");
             tableMapping.ColumnMappings.Add("TutorRating", "TutorRating");
             tableMapping.ColumnMappings.Add("ActivityRating", "ActivityRating");
+            tableMapping.ColumnMappings.Add("student_arrived", "student_arrived");
+            tableMapping.ColumnMappings.Add("student_activity_description", "student_activity_description");
+            tableMapping.ColumnMappings.Add("student_activity_week", "student_activity_week");
+            tableMapping.ColumnMappings.Add("student_activity_pointvalue", "student_activity_pointvalue");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("student_id", "student_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -34349,7 +34687,10 @@ WHERE        (SESSION.group_id = @groupId) OR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        ATTENDANCE.student_activity_id, ATTENDANCE.student_activity_tutorrating AS 'TutorRating', ATTENDANCE.student_activity_rating AS 'ActivityRating', STUDENT_ACTIVITY.student_activity_name
+            this._commandCollection[0].CommandText = @"SELECT        ATTENDANCE.student_activity_id, ATTENDANCE.student_activity_tutorrating AS 'TutorRating', ATTENDANCE.student_activity_rating AS 'ActivityRating', 
+                         STUDENT_ACTIVITY.student_activity_name, ATTENDANCE.student_arrived, STUDENT_ACTIVITY.student_activity_description, 
+                         STUDENT_ACTIVITY.student_activity_week, STUDENT_ACTIVITY.student_activity_pointvalue, STUDENT_ACTIVITY.student_activity_id AS Expr1, 
+                         ATTENDANCE.student_id
 FROM            ATTENDANCE INNER JOIN
                          STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

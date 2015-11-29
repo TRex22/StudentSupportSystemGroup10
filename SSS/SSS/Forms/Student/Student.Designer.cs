@@ -51,18 +51,18 @@
             this.createStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
             this.createTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip10 = new System.Windows.Forms.MenuStrip();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCoordinatorName = new System.Windows.Forms.Label();
+            this.tmrSecond = new System.Windows.Forms.Timer(this.components);
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.STUDENTTableAdapter();
-            this.tmrSecond = new System.Windows.Forms.Timer(this.components);
-            this.activityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -280,6 +280,20 @@
             this.createTutorToolStripMenuItem.Text = "Rate Tutor";
             this.createTutorToolStripMenuItem.Click += new System.EventHandler(this.createTutorToolStripMenuItem_Click);
             // 
+            // activityToolStripMenuItem
+            // 
+            this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
+            this.activityToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.activityToolStripMenuItem.Text = "Activity";
+            this.activityToolStripMenuItem.Click += new System.EventHandler(this.activityToolStripMenuItem_Click);
+            // 
+            // consultationToolStripMenuItem
+            // 
+            this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
+            // 
             // menuStrip10
             // 
             this.menuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -333,6 +347,12 @@
             this.lblCoordinatorName.Size = new System.Drawing.Size(0, 13);
             this.lblCoordinatorName.TabIndex = 0;
             // 
+            // tmrSecond
+            // 
+            this.tmrSecond.Enabled = true;
+            this.tmrSecond.Interval = 1000;
+            this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
+            // 
             // iS2G10_DBSSSDataSet
             // 
             this.iS2G10_DBSSSDataSet.DataSetName = "IS2G10_DBSSSDataSet";
@@ -346,24 +366,6 @@
             // sTUDENTTableAdapter
             // 
             this.sTUDENTTableAdapter.ClearBeforeFill = true;
-            // 
-            // tmrSecond
-            // 
-            this.tmrSecond.Enabled = true;
-            this.tmrSecond.Interval = 1000;
-            this.tmrSecond.Tick += new System.EventHandler(this.tmrSecond_Tick);
-            // 
-            // activityToolStripMenuItem
-            // 
-            this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
-            this.activityToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.activityToolStripMenuItem.Text = "Activity";
-            // 
-            // consultationToolStripMenuItem
-            // 
-            this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.consultationToolStripMenuItem.Text = "Consultation";
             // 
             // Student
             // 

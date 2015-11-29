@@ -1210,7 +1210,10 @@ FROM            TUTOR </CommandText>
               <DbSource ConnectionRef="IS2G10_DBSSSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ATTENDANCE.student_activity_id, ATTENDANCE.student_activity_tutorrating AS 'TutorRating', ATTENDANCE.student_activity_rating AS 'ActivityRating', STUDENT_ACTIVITY.student_activity_name
+                    <CommandText>SELECT        ATTENDANCE.student_activity_id, ATTENDANCE.student_activity_tutorrating AS 'TutorRating', ATTENDANCE.student_activity_rating AS 'ActivityRating', 
+                         STUDENT_ACTIVITY.student_activity_name, ATTENDANCE.student_arrived, STUDENT_ACTIVITY.student_activity_description, 
+                         STUDENT_ACTIVITY.student_activity_week, STUDENT_ACTIVITY.student_activity_pointvalue, STUDENT_ACTIVITY.student_activity_id AS Expr1, 
+                         ATTENDANCE.student_id
 FROM            ATTENDANCE INNER JOIN
                          STUDENT_ACTIVITY ON ATTENDANCE.student_activity_id = STUDENT_ACTIVITY.student_activity_id</CommandText>
                     <Parameters />
@@ -1223,6 +1226,12 @@ FROM            ATTENDANCE INNER JOIN
               <Mapping SourceColumn="student_activity_name" DataSetColumn="student_activity_name" />
               <Mapping SourceColumn="TutorRating" DataSetColumn="TutorRating" />
               <Mapping SourceColumn="ActivityRating" DataSetColumn="ActivityRating" />
+              <Mapping SourceColumn="student_arrived" DataSetColumn="student_arrived" />
+              <Mapping SourceColumn="student_activity_description" DataSetColumn="student_activity_description" />
+              <Mapping SourceColumn="student_activity_week" DataSetColumn="student_activity_week" />
+              <Mapping SourceColumn="student_activity_pointvalue" DataSetColumn="student_activity_pointvalue" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="student_id" DataSetColumn="student_id" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2672,6 +2681,18 @@ ORDER BY STUDENT_ACTIVITY.student_activity_id</CommandText>
               </xs:element>
               <xs:element name="TutorRating" msprop:Generator_ColumnVarNameInTable="columnTutorRating" msprop:Generator_ColumnPropNameInRow="TutorRating" msprop:Generator_ColumnPropNameInTable="TutorRatingColumn" msprop:Generator_UserColumnName="TutorRating" type="xs:int" minOccurs="0" />
               <xs:element name="ActivityRating" msprop:Generator_ColumnVarNameInTable="columnActivityRating" msprop:Generator_ColumnPropNameInRow="ActivityRating" msprop:Generator_ColumnPropNameInTable="ActivityRatingColumn" msprop:Generator_UserColumnName="ActivityRating" type="xs:int" minOccurs="0" />
+              <xs:element name="student_arrived" msprop:Generator_ColumnVarNameInTable="columnstudent_arrived" msprop:Generator_ColumnPropNameInRow="student_arrived" msprop:Generator_ColumnPropNameInTable="student_arrivedColumn" msprop:Generator_UserColumnName="student_arrived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="student_activity_description" msprop:Generator_ColumnVarNameInTable="columnstudent_activity_description" msprop:Generator_ColumnPropNameInRow="student_activity_description" msprop:Generator_ColumnPropNameInTable="student_activity_descriptionColumn" msprop:Generator_UserColumnName="student_activity_description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="student_activity_week" msprop:Generator_ColumnVarNameInTable="columnstudent_activity_week" msprop:Generator_ColumnPropNameInRow="student_activity_week" msprop:Generator_ColumnPropNameInTable="student_activity_weekColumn" msprop:Generator_UserColumnName="student_activity_week" type="xs:int" minOccurs="0" />
+              <xs:element name="student_activity_pointvalue" msprop:Generator_ColumnVarNameInTable="columnstudent_activity_pointvalue" msprop:Generator_ColumnPropNameInRow="student_activity_pointvalue" msprop:Generator_ColumnPropNameInTable="student_activity_pointvalueColumn" msprop:Generator_UserColumnName="student_activity_pointvalue" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+              <xs:element name="student_id" msprop:Generator_ColumnVarNameInTable="columnstudent_id" msprop:Generator_ColumnPropNameInRow="student_id" msprop:Generator_ColumnPropNameInTable="student_idColumn" msprop:Generator_UserColumnName="student_id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -3485,6 +3506,12 @@ ORDER BY STUDENT_ACTIVITY.student_activity_id</CommandText>
       <xs:selector xpath=".//mstns:SEARCH_TUTOR" />
       <xs:field xpath="mstns:tutor_id" />
     </xs:unique>
+    <xs:unique name="ATTENDANCE_AND_ACTIVITY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ATTENDANCE_AND_ACTIVITY" />
+      <xs:field xpath="mstns:student_activity_id" />
+      <xs:field xpath="mstns:Expr1" />
+      <xs:field xpath="mstns:student_id" />
+    </xs:unique>
     <xs:unique name="USERPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:USERPROFILE" />
       <xs:field xpath="mstns:user_id" />
@@ -3605,6 +3632,9 @@ ORDER BY STUDENT_ACTIVITY.student_activity_id</CommandText>
       <msdata:Relationship name="FK__ATTENDANC__stude__2A4B4B5E1" msdata:parent="DISENGAGED_STUDENTS" msdata:child="ACTIVITY_FULL_DATA" msdata:parentkey="student_id" msdata:childkey="student_id" msprop:Generator_UserChildTable="ACTIVITY_FULL_DATA" msprop:Generator_ChildPropName="GetACTIVITY_FULL_DATARows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2A4B4B5E1" msprop:Generator_ParentPropName="DISENGAGED_STUDENTSRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2A4B4B5E1" msprop:Generator_UserParentTable="DISENGAGED_STUDENTS" />
       <msdata:Relationship name="FK__ATTENDANC__stude__2A4B4B5E2" msdata:parent="SEARCH_STUDENT" msdata:child="ACTIVITY_FULL_DATA" msdata:parentkey="student_id" msdata:childkey="student_id" msprop:Generator_UserChildTable="ACTIVITY_FULL_DATA" msprop:Generator_ChildPropName="GetACTIVITY_FULL_DATARows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2A4B4B5E2" msprop:Generator_ParentPropName="SEARCH_STUDENTRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2A4B4B5E2" msprop:Generator_UserParentTable="SEARCH_STUDENT" />
       <msdata:Relationship name="FK__ATTENDANC__stude__2B3F6F97" msdata:parent="STUDENT_ACTIVITY" msdata:child="ACTIVITY_FULL_DATA" msdata:parentkey="student_activity_id" msdata:childkey="student_activity_id" msprop:Generator_UserChildTable="ACTIVITY_FULL_DATA" msprop:Generator_ChildPropName="GetACTIVITY_FULL_DATARows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2B3F6F97" msprop:Generator_ParentPropName="STUDENT_ACTIVITYRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2B3F6F97" msprop:Generator_UserParentTable="STUDENT_ACTIVITY" />
+      <msdata:Relationship name="FK__ATTENDANC__stude__2A4B4B5E3" msdata:parent="STUDENT" msdata:child="ATTENDANCE_AND_ACTIVITY" msdata:parentkey="student_id" msdata:childkey="student_id" msprop:Generator_UserChildTable="ATTENDANCE_AND_ACTIVITY" msprop:Generator_ChildPropName="GetATTENDANCE_AND_ACTIVITYRows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2A4B4B5E3" msprop:Generator_ParentPropName="STUDENTRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2A4B4B5E3" msprop:Generator_UserParentTable="STUDENT" />
+      <msdata:Relationship name="FK__ATTENDANC__stude__2A4B4B5E4" msdata:parent="DISENGAGED_STUDENTS" msdata:child="ATTENDANCE_AND_ACTIVITY" msdata:parentkey="student_id" msdata:childkey="student_id" msprop:Generator_UserChildTable="ATTENDANCE_AND_ACTIVITY" msprop:Generator_ChildPropName="GetATTENDANCE_AND_ACTIVITYRows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2A4B4B5E4" msprop:Generator_ParentPropName="DISENGAGED_STUDENTSRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2A4B4B5E4" msprop:Generator_UserParentTable="DISENGAGED_STUDENTS" />
+      <msdata:Relationship name="FK__ATTENDANC__stude__2A4B4B5E5" msdata:parent="SEARCH_STUDENT" msdata:child="ATTENDANCE_AND_ACTIVITY" msdata:parentkey="student_id" msdata:childkey="student_id" msprop:Generator_UserChildTable="ATTENDANCE_AND_ACTIVITY" msprop:Generator_ChildPropName="GetATTENDANCE_AND_ACTIVITYRows" msprop:Generator_UserRelationName="FK__ATTENDANC__stude__2A4B4B5E5" msprop:Generator_ParentPropName="SEARCH_STUDENTRow" msprop:Generator_RelationVarName="relationFK__ATTENDANC__stude__2A4B4B5E5" msprop:Generator_UserParentTable="SEARCH_STUDENT" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

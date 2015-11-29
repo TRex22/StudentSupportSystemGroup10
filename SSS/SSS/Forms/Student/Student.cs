@@ -21,6 +21,8 @@ namespace SSS_Windows_Forms
         public readonly StudentDashboardModal StudentDashboardModal;
         public readonly RegisterGroupModal RegisterGroupModal;
         public readonly CreateConsultationModal CreateConsultationModal;
+        private readonly RateConsultationModal _rateConsultationModal;
+        private readonly RateActivityModal _rateActivityModal;
 
         public Student(int userId)
         {
@@ -32,6 +34,8 @@ namespace SSS_Windows_Forms
             _updateStudentProfileModalModal = new UpdateStudentProfileModal(userId);
             RegisterGroupModal = new RegisterGroupModal(userId, this);
             CreateConsultationModal = new CreateConsultationModal(userId, _studentData);
+            _rateConsultationModal = new RateConsultationModal(userId);
+            _rateActivityModal = new RateActivityModal(userId, _studentData.coordinator_id);
             InitModals();
 
             //check if user has a group
@@ -46,6 +50,8 @@ namespace SSS_Windows_Forms
             this.panel7.Controls.Add(StudentDashboardModal);
             this.panel7.Controls.Add(RegisterGroupModal);
             this.panel7.Controls.Add(CreateConsultationModal);
+            this.panel7.Controls.Add(_rateConsultationModal);
+            this.panel7.Controls.Add(_rateActivityModal);
         }
 
         private void HideAllModals()
@@ -83,6 +89,7 @@ namespace SSS_Windows_Forms
         private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllModals();
+            _rateActivityModal.Show();
         }
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,6 +119,17 @@ namespace SSS_Windows_Forms
         private void tmrSecond_Tick(object sender, EventArgs e)
         {
             lblDate.Text = String.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString());
+        }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
+            _rateConsultationModal.Show();
+        }
+
+        private void activityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllModals();
         }
     }
 }

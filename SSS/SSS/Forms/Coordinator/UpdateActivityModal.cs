@@ -101,6 +101,8 @@ namespace SSS_Windows_Forms.Forms.Tutor
             activity.student_activity_pointvalue = Convert.ToInt32(textBox3.Text);
             activity.student_activity_week = Convert.ToInt32(textBox4.Text);
             activity.student_activity_description = richTextBox1.Text;
+
+            MessageBox.Show(SSS_Library.Properties.Resources.UpdateStudentActivitySuccess, SSS_Library.Properties.Resources.UpdateStudentActivitySuccess);
         }
     }
 }
