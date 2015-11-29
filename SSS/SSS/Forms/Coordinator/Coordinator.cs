@@ -220,5 +220,10 @@ namespace SSS_Windows_Forms.Forms.Coordinator
             HideAllModals();
             _updateActivityModal.Show();
         }
+
+        private void assignTutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

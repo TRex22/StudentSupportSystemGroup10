@@ -96,6 +96,12 @@
     <Compile Include="Forms\Administrator\BrandingModal.Designer.cs">
       <DependentUpon>BrandingModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Coordinator\AssignTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\AssignTutor.Designer.cs">
+      <DependentUpon>AssignTutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\AverageActivityRatingsModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrator\BrandingModal.resx">
       <DependentUpon>BrandingModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\AssignTutor.resx">
+      <DependentUpon>AssignTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\AverageActivityRatingsModal.resx">
       <DependentUpon>AverageActivityRatingsModal.cs</DependentUpon>
