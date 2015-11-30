@@ -48,7 +48,7 @@ namespace SSS_Windows_Forms
         {
             if (_branding != null)
             {
-                _timeSpec = _branding.splash_time.TotalMilliseconds;
+                _timeSpec = 5000;
                 _splashImage = SSS_Library.DataServices.ByteImageConverter.ConvertBytesToImage(_branding.system_logo);
                 _programIcon = SSS_Library.DataServices.ByteImageConverter.ConvertBytesToIcon(_branding.program_icon);
                 _splashProgramName = _branding.system_name;
