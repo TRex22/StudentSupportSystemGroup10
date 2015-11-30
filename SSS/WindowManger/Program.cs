@@ -49,7 +49,7 @@ namespace WindowManger
         /// </summary>
         private static void HandleTypeOfWindowSystem()
         {
-            //ShowSplashScreen(); //TODO add this back at end
+            ShowSplashScreen(); 
             int? result = null;
 
             while (result != 0 || result == 3)
