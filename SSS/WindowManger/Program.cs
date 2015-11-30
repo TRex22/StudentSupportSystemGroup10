@@ -8,6 +8,7 @@ using SSS_Windows_Forms;
 using SSS_Windows_Forms.Forms;
 using SSS_Materials_Design_Forms;
 using System.Diagnostics;
+using System.Threading;
 using SSS_Library.ProcessHandler;
 
 namespace WindowManger
@@ -49,7 +50,7 @@ namespace WindowManger
         /// </summary>
         private static void HandleTypeOfWindowSystem()
         {
-            ShowSplashScreen(); 
+            ShowSplashScreen();
             int? result = null;
 
             while (result != 0 || result == 3)

@@ -17,7 +17,7 @@ namespace SSS_Windows_Forms
     {
         private static System.Timers.Timer _timer;
         private readonly SSS_Library.IS2G10_DBSSSDataSetTableAdapters.BRANDINGTableAdapter _brandingTableAdapter = new BRANDINGTableAdapter();
-        private readonly SSS_Library.IS2G10_DBSSSDataSet.BRANDINGRow _branding;
+        private SSS_Library.IS2G10_DBSSSDataSet.BRANDINGRow _branding;
         private double _timeSpec = 0;
         private Image _splashImage;
         private Icon _programIcon;
@@ -26,8 +26,7 @@ namespace SSS_Windows_Forms
 
         public SplashScreen()
         {
-            _branding = _brandingTableAdapter.GetData().FirstOrDefault();
-            BindBranding();
+            Task<int> result = BindBranding();
             InitializeComponent();
             InsertDbBranding();
             _timer = new System.Timers.Timer {Interval = _timeSpec};
@@ -44,11 +43,13 @@ namespace SSS_Windows_Forms
             this.ForeColor = _splashColour;
         }
 
-        private void BindBranding()
+        private async Task<int> BindBranding()
         {
+            _branding = _brandingTableAdapter.GetData().FirstOrDefault();
+
             if (_branding != null)
             {
-                _timeSpec = 5000;
+                _timeSpec = _branding.splash_time.TotalMilliseconds;
                 _splashImage = SSS_Library.DataServices.ByteImageConverter.ConvertBytesToImage(_branding.system_logo);
                 _programIcon = SSS_Library.DataServices.ByteImageConverter.ConvertBytesToIcon(_branding.program_icon);
                 _splashProgramName = _branding.system_name;
@@ -62,6 +63,7 @@ namespace SSS_Windows_Forms
                 _splashProgramName = "Student Support Program Default";
                 _splashColour = SystemColors.Control;
             }
+            return 0;
         }
 
         private void SplashScreen_FormClosed(object sender, FormClosedEventArgs e)
