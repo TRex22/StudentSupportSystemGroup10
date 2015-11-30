@@ -201,4 +201,7 @@
   <data name="NoConsultationsAttendedError" xml:space="preserve">
     <value>Sorry you have not attended any consultations, please attend a consultation before rating.</value>
   </data>
+  <data name="AddEnrollmentSuccess" xml:space="preserve">
+    <value>Enrollment Added Successfully.</value>
+  </data>
 </root>

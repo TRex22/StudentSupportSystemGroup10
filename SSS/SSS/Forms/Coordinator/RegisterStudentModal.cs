@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using SSS_Library;
 using SSS_Library.Properties;
+using SSS_Windows_Forms.Forms.Coordinator;
 
 namespace SSS_Windows_Forms
 {
     public partial class RegisterStudentModal : Form
     {
-        private int _coordinatorId;
+        private readonly int _coordinatorId;
 
         //database
         //private readonly SSS_Library.IS2G10_DBSSSDataSet.STUDENTRow _studentData;
@@ -35,7 +38,7 @@ namespace SSS_Windows_Forms
 
         // Holds a value determining if this is the first time the box has been clicked
         // So that the text value is not always wiped out.
-        
+
         private void studentIdTxtBox_Enter(object sender, EventArgs e)
         {
             TextBox box = sender as TextBox;
@@ -201,14 +204,25 @@ namespace SSS_Windows_Forms
                 userprofileTableAdapter1.Insert(studentId, email, 4, null, null, null, null, false, true, true);
 
                 ResetAllFields();
+
+                GotoAddEnrollmentModal(studentId);
+
                 MessageBox.Show(Resources.CreateStudent_SuccessfulMessage, Resources.CreateStudent_SuccessfulMessage);
                 MessageBox.Show(Resources.SendEmailSuccessfulMessage, Resources.SendEmailSuccessfulMessage);
             }
             else
             {
                 MessageBox.Show("Please fill all fields.", "Error");
-
             }
+        }
+
+        private void GotoAddEnrollmentModal(int studentId)
+        {
+            AddStudentEnrollmentModal addStudentEnrollmentModal = new AddStudentEnrollmentModal(studentId);
+            Coordinator coordinator = (Coordinator)Application.OpenForms["Coordinator"];
+            coordinator.SetModal(addStudentEnrollmentModal);
+            Hide();
+            addStudentEnrollmentModal.Show();
         }
 
         private void ResetAllFields()

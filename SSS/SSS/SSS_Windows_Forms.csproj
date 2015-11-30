@@ -96,6 +96,24 @@
     <Compile Include="Forms\Administrator\BrandingModal.Designer.cs">
       <DependentUpon>BrandingModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Coordinator\AddCourseModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\AddCourseModal.Designer.cs">
+      <DependentUpon>AddCourseModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\AddStudentEnrollmentModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\AddStudentEnrollmentModal.Designer.cs">
+      <DependentUpon>AddStudentEnrollmentModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\UpdateCoordinatorProfileModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\UpdateCoordinatorProfileModal.Designer.cs">
+      <DependentUpon>UpdateCoordinatorProfileModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Coordinator\AssignTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +203,12 @@
     </Compile>
     <Compile Include="Forms\Coordinator\TutorTraining\TutorTrainingStatusModal.Designer.cs">
       <DependentUpon>TutorTrainingStatusModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinator\UpdateCourseModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinator\UpdateCourseModal.Designer.cs">
+      <DependentUpon>UpdateCourseModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Coordinator\ViewDisengagedStudentsModal.cs">
       <SubType>Form</SubType>
@@ -330,6 +354,15 @@
     <EmbeddedResource Include="Forms\Administrator\BrandingModal.resx">
       <DependentUpon>BrandingModal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\AddCourseModal.resx">
+      <DependentUpon>AddCourseModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\AddStudentEnrollmentModal.resx">
+      <DependentUpon>AddStudentEnrollmentModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\UpdateCoordinatorProfileModal.resx">
+      <DependentUpon>UpdateCoordinatorProfileModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\AssignTutor.resx">
       <DependentUpon>AssignTutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\TutorTraining\TutorTrainingStatusModal.resx">
       <DependentUpon>TutorTrainingStatusModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinator\UpdateCourseModal.resx">
+      <DependentUpon>UpdateCourseModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Coordinator\ViewDisengagedStudentsModal.resx">
       <DependentUpon>ViewDisengagedStudentsModal.cs</DependentUpon>

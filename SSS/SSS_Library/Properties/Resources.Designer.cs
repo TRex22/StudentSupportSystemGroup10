@@ -79,6 +79,15 @@ namespace SSS_Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enrollment Added Successfully..
+        /// </summary>
+        public static string AddEnrollmentSuccess {
+            get {
+                return ResourceManager.GetString("AddEnrollmentSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Fill in All Required Fields..
         /// </summary>
         public static string BrandingErrorMessage {

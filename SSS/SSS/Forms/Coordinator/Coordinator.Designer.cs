@@ -51,8 +51,6 @@
             this.tutorTrainingStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorsWithoutTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorsWithTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorMenuStrip = new System.Windows.Forms.MenuStrip();
             this.tutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerTutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,13 +77,16 @@
             this.iS2G10_DBSSSDataSet = new SSS_Library.IS2G10_DBSSSDataSet();
             this.sSSCOORDINATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sSS_COORDINATORTableAdapter = new SSS_Library.IS2G10_DBSSSDataSetTableAdapters.SSS_COORDINATORTableAdapter();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
-            this.menuStrip4.SuspendLayout();
             this.tutorMenuStrip.SuspendLayout();
             this.studentMenuStrip.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -95,6 +96,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).BeginInit();
+            this.menuStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,10 +131,10 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.menuStrip4);
             this.panel6.Controls.Add(this.menuStrip1);
             this.panel6.Controls.Add(this.menuStrip2);
             this.panel6.Controls.Add(this.menuStrip3);
-            this.panel6.Controls.Add(this.menuStrip4);
             this.panel6.Controls.Add(this.tutorMenuStrip);
             this.panel6.Controls.Add(this.studentMenuStrip);
             this.panel6.Controls.Add(this.panel8);
@@ -146,7 +148,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 135);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(241, 27);
             this.menuStrip1.TabIndex = 30;
@@ -164,7 +166,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateProfileToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 135);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 108);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(241, 27);
             this.menuStrip2.TabIndex = 29;
@@ -176,13 +178,14 @@
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
             this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(113, 23);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
             // menuStrip3
             // 
             this.menuStrip3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generateReportToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 108);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 81);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(241, 27);
             this.menuStrip3.TabIndex = 28;
@@ -283,24 +286,6 @@
             this.tutorsWithTrainingToolStripMenuItem.Text = "Tutors With Training";
             this.tutorsWithTrainingToolStripMenuItem.Click += new System.EventHandler(this.tutorsWithTrainingToolStripMenuItem_Click);
             // 
-            // menuStrip4
-            // 
-            this.menuStrip4.Font = new System.Drawing.Font("Calibri", 12F);
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 81);
-            this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(241, 27);
-            this.menuStrip4.TabIndex = 26;
-            this.menuStrip4.Text = "menuStrip4";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 23);
-            this.toolStripMenuItem1.Text = "Search Consultations";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // tutorMenuStrip
             // 
             this.tutorMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -392,6 +377,7 @@
             this.updateStudentConsultationToolStripMenuItem.Name = "updateStudentConsultationToolStripMenuItem";
             this.updateStudentConsultationToolStripMenuItem.Size = new System.Drawing.Size(264, 24);
             this.updateStudentConsultationToolStripMenuItem.Text = "Update Student Consultation";
+            this.updateStudentConsultationToolStripMenuItem.Click += new System.EventHandler(this.updateStudentConsultationToolStripMenuItem_Click);
             // 
             // searchStudentsToolStripMenuItem
             // 
@@ -509,6 +495,40 @@
             // 
             this.sSS_COORDINATORTableAdapter.ClearBeforeFill = true;
             // 
+            // menuStrip4
+            // 
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip4.Location = new System.Drawing.Point(0, 162);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(241, 27);
+            this.menuStrip4.TabIndex = 31;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCourseToolStripMenuItem,
+            this.updateCourseToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 23);
+            this.toolStripMenuItem1.Text = "Courses";
+            // 
+            // addCourseToolStripMenuItem
+            // 
+            this.addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
+            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.addCourseToolStripMenuItem.Text = "Add Course";
+            this.addCourseToolStripMenuItem.Click += new System.EventHandler(this.addCourseToolStripMenuItem_Click);
+            // 
+            // updateCourseToolStripMenuItem
+            // 
+            this.updateCourseToolStripMenuItem.Name = "updateCourseToolStripMenuItem";
+            this.updateCourseToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.updateCourseToolStripMenuItem.Text = "Update Course";
+            this.updateCourseToolStripMenuItem.Click += new System.EventHandler(this.updateCourseToolStripMenuItem_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,8 +551,6 @@
             this.menuStrip2.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
-            this.menuStrip4.ResumeLayout(false);
-            this.menuStrip4.PerformLayout();
             this.tutorMenuStrip.ResumeLayout(false);
             this.tutorMenuStrip.PerformLayout();
             this.studentMenuStrip.ResumeLayout(false);
@@ -549,6 +567,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iS2G10_DBSSSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sSSCOORDINATORBindingSource)).EndInit();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -600,9 +620,11 @@
         private System.Windows.Forms.ToolStripMenuItem tutorTrainingStatusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tutorsWithoutTrainingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tutorsWithTrainingToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.MenuStrip menuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCourseToolStripMenuItem;
     }
 }
