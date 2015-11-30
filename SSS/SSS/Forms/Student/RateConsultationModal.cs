@@ -37,7 +37,7 @@ namespace SSS_Windows_Forms.Forms.Student
             _attendedConsultations = consultationTableAdapter1.GetData().Where(m => m.student_arrived == true && m.student_id == _studentId).ToList();
             if (_attendedConsultations == null || !_attendedConsultations.Any())
             {
-                MessageBox.Show(SSS_Library.Properties.Resources.NoConsultationsAttendedError);
+                //MessageBox.Show(SSS_Library.Properties.Resources.NoConsultationsAttendedError);
                 //listView1.Enabled = false;
             }
             else

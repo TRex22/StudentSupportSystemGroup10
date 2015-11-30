@@ -110,7 +110,7 @@ namespace SSS_Windows_Forms.Forms.Student
             _attendedActivities = attendancE_AND_ACTIVITYTableAdapter1.GetData().Where(m => m.student_arrived == true && m.student_id == _studentId).ToList();
             if (_attendedActivities == null || !_attendedActivities.Any())
             {
-                MessageBox.Show(SSS_Library.Properties.Resources.NoActivitiesAttendedError);
+                //MessageBox.Show(SSS_Library.Properties.Resources.NoActivitiesAttendedError);
                 //listView1.Enabled = false;
             }
             else

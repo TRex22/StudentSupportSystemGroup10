@@ -73,7 +73,7 @@ namespace SSS_Windows_Forms
             var activitiesTable = studenT_ACTIVITYTableAdapter1.GetData();
             foreach (var activity in activitiesTable)
             {
-                CreateAttendance(_userId, activity.student_activity_id, null, null, false);
+                CreateAttendance(_userId, activity.student_activity_id, -1, -1, false);
             }
             
             MessageBox.Show(Resources.UpdateGroupSuccess, Resources.UpdateGroupSuccess);

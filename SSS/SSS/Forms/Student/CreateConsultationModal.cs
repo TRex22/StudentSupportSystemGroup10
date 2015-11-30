@@ -73,7 +73,7 @@ namespace SSS_Windows_Forms.Forms.Student
                 availableTime.booked = true;
                 _availableTimesTableAdapter.Update(availableTime);
 
-                this.consultationTableAdapter1.Insert(_studentData.coordinator_id, Convert.ToInt32(tutorComboboxItem.Value), _userId, detailsTextBox.Text, consultationDate, null, -1);
+                this.consultationTableAdapter1.Insert(_studentData.coordinator_id, Convert.ToInt32(tutorComboboxItem.Value), _userId, detailsTextBox.Text, consultationDate, false, -1);
                 
                 MessageBox.Show(SSS_Library.Properties.Resources.CreateConsultationSuccess, SSS_Library.Properties.Resources.CreateConsultationSuccess);
                 ClearForm();
